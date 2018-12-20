@@ -3,7 +3,7 @@
 set -e
 
 [ -z "${GITHUB_PAT}" ] && exit 0
-[ "${TRAVIS_BRANCH}" != "dev" ] && exit 0
+[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
 
 git config --global user.email "michael.rustler@kompetenz-wasser.de"
 git config --global user.name "Michael Rustler"
