@@ -107,7 +107,7 @@ cmds <- sprintf('call "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"
                 normalizePath(file.path(python_path, "Scripts/activate.bat")), 
                 env,
                 normalizePath(getwd()),
-                "publications_kwb_cleaned.bib",
+                "publications_kwb.bib",
                 option_overwrite)
 
 writeLines(cmds,con = "import_bibtex_kwb.bat")
