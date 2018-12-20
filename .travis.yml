@@ -3,7 +3,7 @@ dist: trusty
 sudo: false
 branches:
   only:
-    - dev
+    - master
 cache:
   packages: yes
   directories:
