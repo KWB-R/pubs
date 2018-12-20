@@ -16,7 +16,7 @@ relativeURLs = true
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
 copyright = "&copy; 2018 Michael Rustler"
-publishDir = "docs"
+publishDir = "public"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
