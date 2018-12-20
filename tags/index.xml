@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on KWB Publications</title>
-    <link>https://kwb-r/publications/tags/</link>
+    <link>https://kwb-r.github.io/publications/tags/</link>
     <description>Recent content in Tags on KWB Publications</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2018 Michael Rustler</copyright>
     
-	<atom:link href="https://kwb-r/publications/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kwb-r.github.io/publications/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
