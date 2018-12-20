@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types on KWB Publications</title>
-    <link>https://kwb-r.github.io/publication_types/</link>
+    <link>https://kwb-r.github.io/publications/publication_types/</link>
     <description>Recent content in Publication_types on KWB Publications</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2019 Kompetenzzentrum Wasser Berlin gGmbH</copyright>
     <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kwb-r.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kwb-r.github.io/publications/publication_types/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2</title>
-      <link>https://kwb-r.github.io/publication_types/2/</link>
+      <link>https://kwb-r.github.io/publications/publication_types/2/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication_types/2/</guid>
+      <guid>https://kwb-r.github.io/publications/publication_types/2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>3</title>
-      <link>https://kwb-r.github.io/publication_types/3/</link>
+      <link>https://kwb-r.github.io/publications/publication_types/3/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication_types/3/</guid>
+      <guid>https://kwb-r.github.io/publications/publication_types/3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>4</title>
-      <link>https://kwb-r.github.io/publication_types/4/</link>
+      <link>https://kwb-r.github.io/publications/publication_types/4/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication_types/4/</guid>
+      <guid>https://kwb-r.github.io/publications/publication_types/4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>5</title>
-      <link>https://kwb-r.github.io/publication_types/5/</link>
+      <link>https://kwb-r.github.io/publications/publication_types/5/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication_types/5/</guid>
+      <guid>https://kwb-r.github.io/publications/publication_types/5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>6</title>
-      <link>https://kwb-r.github.io/publication_types/6/</link>
+      <link>https://kwb-r.github.io/publications/publication_types/6/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication_types/6/</guid>
+      <guid>https://kwb-r.github.io/publications/publication_types/6/</guid>
       <description></description>
     </item>
     
