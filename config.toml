@@ -15,7 +15,7 @@ relativeURLs = true
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018 Michael Rustler"
+copyright = "&copy; 2019 Kompetenzzentrum Wasser Berlin gGmbH"
 publishDir = "public"
 theme = "hugo-academic"
 enableEmoji = true
@@ -25,7 +25,7 @@ preserveTaxonomyNames = true
 paginate = 10
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = "mrustl"
+disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
