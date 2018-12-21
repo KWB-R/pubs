@@ -9,7 +9,7 @@
 baseurl = "https://kwb-r.github.io/pubs/"  # End your URL with a `/` trailing slash.
 
 # Title of your site
-title = "KWB Publications"
+title = ""
 
 relativeURLs = false
 
@@ -48,9 +48,6 @@ defaultContentLanguageInSubdir = false
 [params]
   # AUTHOR SETUP
 
-  # Your details.
-  name = "Michael Rustler"
-  role = "Data scientist"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -58,10 +55,10 @@ defaultContentLanguageInSubdir = false
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "author.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "michael.rustler@kompetenz-wasser.de"
+  email = "kontakt@kompetenz-wasser.de"
   address = "Cicerostraße 24, 10709 Berlin, Germany"
   office_hours = ""
-  phone = "+49 (0)30 536 53 825"
+  phone = "+49 (0)30 536 53 800"
   skype = ""
   telegram = ""
   keybase = ""  # Your keybase.io username.
@@ -107,17 +104,17 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
-  description = ""
+  description = "Publications and Talks by Kompetenzzentrum Wasser Berlin gGmbH"
 
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
   sharing_image = ""
 
   # Twitter username (without @). Used when a vistor shares your site on Twitter.
-  twitter = ""
+  twitter = "kompetenzwasser"
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-  logo = ""
+  logo = "logo.png"
 
   # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
@@ -253,62 +250,23 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fas"
-    link = "mailto:michael.rustler@kompetenz-wasser.de"
+    link = "mailto:kontakt@kompetenz-wasser.de"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fab"
-    link = "https://twitter.com/MichaelRustler"
+    link = "https://twitter.com/kompetenzwasser"
 
   [[params.social]]
     icon = "linkedin"
     icon_pack = "fab"
-    link = "https://linkedin.com/in/michael-rustler-61497911"
+    link = "https://www.linkedin.com/company/kompetenzzentrum-wasser-berlin/"
 
-  [[params.social]]
-    icon = "google-scholar"
-    icon_pack = "ai"
-    link = "https://scholar.google.de/citations?user=hD2epVEAAAAJ&hl=de&oi=ao"
-
-  [[params.social]]
-    icon = "orcid"
-    icon_pack = "ai"
-    link = "https://orcid.org/0000-0003-0647-7726"
-
-  [[params.social]]
-    icon = "researchgate"
-    icon_pack = "ai"
-    link = "https://researchgate.net/profile/Michael_Rustler"
-
-  [[params.social]]
-    icon = "osf"
-    icon_pack = "ai"
-    link = "https://osf.io/85sxj"	
-
-  [[params.social]]
-    icon = "zotero"
-    icon_pack = "ai"
-    link = "https://zotero.org/mrustl"
-
-  [[params.social]]
-    icon = "mendeley"
-    icon_pack = "ai"
-    link = "https:///mendeley.com/profiles/michael-rustler"
-    
-  [[params.social]]
-    icon = "depsy"
-    icon_pack = "ai"
-    link = "https://depsy.org/person/335215"    
     
   [[params.social]]
     icon = "github"
     icon_pack = "fab"
-    link = "https://github.com/mrustl"
-    
-  [[params.social]]
-    icon = "impactstory"
-    icon_pack = "ai"
-    link = "https://profiles.impactstory.org/u/0000-0003-0647-7726"
+    link = "https://github.com/kwb-r/"
 
   # Link to a PDF of your resume/CV from the About widget.
   # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -377,8 +335,8 @@ defaultContentLanguageInSubdir = false
   languageCode = "en"
 
 # Uncomment the lines below to configure your website in a second language.
-#[languages.de]
-#  languageCode = "de"
+[languages.de]
+ languageCode = "de"
 #  title = ""
 #  [languages.de.params]
 #    name = "Michael Rustler"
