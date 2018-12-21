@@ -2,146 +2,146 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KWB Publications on KWB Publications</title>
-    <link>https://kwb-r.github.io/</link>
+    <link>https://kwb-r.github.io/pubs/</link>
     <description>Recent content in KWB Publications on KWB Publications</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2019 Kompetenzzentrum Wasser Berlin gGmbH</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <atom:link href="/pubs/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bewertung verschiedener Modellansätze zur Vorhersage des Zustands von Abwasserkanälen am Beispiel von Berlin</title>
-      <link>https://kwb-r.github.io/publication/rn-1059/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1059/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1059/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1059/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ergebnisse des Projekts KURAS - Integrierte Maßnahmenplanung unter Berücksichtigung der vielfältigen Potentiale der Regenwasserbewirtschaftung</title>
-      <link>https://kwb-r.github.io/publication/rn-1052/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1052/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1052/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1052/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newfert D6.1: Methodology for LCA and LCC</title>
-      <link>https://kwb-r.github.io/publication/rn-1055/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1055/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1055/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1055/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newfert D6.2: Environmental Impact for innovative secondary nutrient valorization compared to fossil nutrient based fertilizers</title>
-      <link>https://kwb-r.github.io/publication/rn-1056/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1056/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1056/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1056/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newfert D6.3: Cost for innovative secondary nutrient valorization compared to fossil nutrient based fertilizers</title>
-      <link>https://kwb-r.github.io/publication/rn-1058/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1058/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1058/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1058/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On the implementation of reliable early warning systems at European bathing waters using multivariate Bayesian regression modelling</title>
-      <link>https://kwb-r.github.io/publication/rn-1051/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1051/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1051/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1051/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Phorwärts Abschlussbericht: Ökobilanzieller Vergleich der P-Rückgewinnung aus dem Abwasserstrom mit der Düngemittelproduktion aus Rohphosphaten unter Einbeziehung von Umweltfolgeschäden und deren Vermeidung</title>
-      <link>https://kwb-r.github.io/publication/rn-1053/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1053/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1053/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1053/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Phosphorus processing  potentials for higher efficiency</title>
-      <link>https://kwb-r.github.io/publication/rn-1057/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1057/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1057/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1057/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Practical benchmarking of statistical and machinelearning models for predicting the condition of sewerpipes in Berlin, Germany</title>
-      <link>https://kwb-r.github.io/publication/rn-1060/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1060/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1060/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1060/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ökobilanzieller Vergleich der konventionellen P-Düngemittelproduktion aus Rohphosphat mit der Phosphorrückgewinnung aus dem Abwasserpfad</title>
-      <link>https://kwb-r.github.io/publication/rn-1054/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1054/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1054/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1054/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Analyse und Modellierung des Zustands von Abwasserkanälen in Berlin - Bericht des Forschungsvorhabens SEMA-Berlin (D2 und D4).</title>
-      <link>https://kwb-r.github.io/publication/rn-1029/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1029/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1029/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1029/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Assessing environmental impacts and benefits of wastewater treatment plants</title>
-      <link>https://kwb-r.github.io/publication/rn-1006/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1006/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1006/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1006/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Berücksichtigung der vielfältigen Potenziale der Regenwasserbewirtschaftung in der Planung - Ergebnisse aus dem Verbundprojekt KURAS</title>
-      <link>https://kwb-r.github.io/publication/rn-1025/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1025/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1025/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1025/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beschreibung der Schlauchliner in Berlin und statistische Analyse zu Zustand und Schäden - Kurzbericht des Forschungsvorhabens SEMA-Berlin (Memo).</title>
-      <link>https://kwb-r.github.io/publication/rn-1028/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1028/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1028/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1028/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Biozide im Regenwasserabfluss Berlins</title>
-      <link>https://kwb-r.github.io/publication/rn-1041/</link>
+      <link>https://kwb-r.github.io/pubs/publication/rn-1041/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publication/rn-1041/</guid>
+      <guid>https://kwb-r.github.io/pubs/publication/rn-1041/</guid>
       <description></description>
     </item>
     
