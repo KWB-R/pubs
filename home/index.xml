@@ -2,121 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on KWB Publications</title>
-    <link>https://kwb-r.github.io/publications/home/</link>
+    <link>https://kwb-r.github.io/pubs/home/</link>
     <description>Recent content in Homes on KWB Publications</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2019 Kompetenzzentrum Wasser Berlin gGmbH</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kwb-r.github.io/publications/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kwb-r.github.io/pubs/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://kwb-r.github.io/publications/home/hero_carousel/</link>
+      <link>https://kwb-r.github.io/pubs/home/hero_carousel/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/hero_carousel/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/hero_carousel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Academic</title>
-      <link>https://kwb-r.github.io/publications/home/hero/</link>
+      <link>https://kwb-r.github.io/pubs/home/hero/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/hero/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/hero/</guid>
       <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://kwb-r.github.io/publications/home/about/</link>
+      <link>https://kwb-r.github.io/pubs/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/about/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/about/</guid>
       <description>Biography Michael Rustler works as data scientist at the Kompetenzzentrum Wasser Berlin gGmbH (KWB). His research interests include reproducible research, data management and programmable matter. He currently leads the project FAKIN with the goal to improve the research data management and workflows at KWB, a small non-university institute (~ 20 scientists in three departments).</description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>https://kwb-r.github.io/publications/home/skills/</link>
+      <link>https://kwb-r.github.io/pubs/home/skills/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/skills/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>https://kwb-r.github.io/publications/home/experience/</link>
+      <link>https://kwb-r.github.io/pubs/home/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/experience/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Publications</title>
-      <link>https://kwb-r.github.io/publications/home/publications_selected/</link>
+      <link>https://kwb-r.github.io/pubs/home/publications_selected/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/publications_selected/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/publications_selected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Publications</title>
-      <link>https://kwb-r.github.io/publications/home/publications/</link>
+      <link>https://kwb-r.github.io/pubs/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/publications/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Talks</title>
-      <link>https://kwb-r.github.io/publications/home/talks_selected/</link>
+      <link>https://kwb-r.github.io/pubs/home/talks_selected/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/talks_selected/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/talks_selected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://kwb-r.github.io/publications/home/talks/</link>
+      <link>https://kwb-r.github.io/pubs/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/talks/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>https://kwb-r.github.io/publications/home/posts/</link>
+      <link>https://kwb-r.github.io/pubs/home/posts/</link>
       <pubDate>Sun, 09 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/posts/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://kwb-r.github.io/publications/home/projects/</link>
+      <link>https://kwb-r.github.io/pubs/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/projects/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>https://kwb-r.github.io/publications/home/teaching/</link>
+      <link>https://kwb-r.github.io/pubs/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/teaching/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/teaching/</guid>
       <description>This is an example of using the custom widget to create your own homepage section.
 I am a teaching instructor for the following courses at University X:
  CS101: An intro to computer science CS102: An intro to computer science CS103: An intro to computer science CS104: An intro to computer science CS105: An intro to computer science CS106: An intro to computer science CS107: An intro to computer science  </description>
@@ -124,19 +124,19 @@ I am a teaching instructor for the following courses at University X:
     
     <item>
       <title>Tags</title>
-      <link>https://kwb-r.github.io/publications/home/tags/</link>
+      <link>https://kwb-r.github.io/pubs/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/tags/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://kwb-r.github.io/publications/home/contact/</link>
+      <link>https://kwb-r.github.io/pubs/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kwb-r.github.io/publications/home/contact/</guid>
+      <guid>https://kwb-r.github.io/pubs/home/contact/</guid>
       <description></description>
     </item>
     
