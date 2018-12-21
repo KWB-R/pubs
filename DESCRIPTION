@@ -3,4 +3,4 @@ Type: Website
 Title: Does not matter.
 Version: 0.0.1
 Imports: blogdown
-Remotes: rstudio/blogdown
+Remotes: rstudio/blogdown@ccdfebb
