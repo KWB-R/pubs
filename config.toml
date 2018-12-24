@@ -317,9 +317,9 @@ defaultContentLanguageInSubdir = false
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
   [params.search.algolia]
-    app_id = ""
-    api_key = ""
-    index_name = ""
+    app_id = "FUZHRLXPF4"
+    api_key = "7fb333226a19b1a7af131612dd428928"
+    index_name = "kwb_pubs"
     show_logo = false
 # Taxonomies.
 [taxonomies]
