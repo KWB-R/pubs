@@ -284,19 +284,20 @@ defaultContentLanguageInSubdir = false
   align_right = true
 
 [[menu.main]]
-  name = "Home"
-  url = "#about"
+  name = "Last Publications"
+  url = "#publications"
   weight = 1
 
 [[menu.main]]
   name = "Publications"
-  url = "#publications"
+  url = "publications"
   weight = 2
   
+  
 [[menu.main]]
-  name = "Talks"
-  url = "#talks"
-  weight = 2
+  name = "Tags"
+  url = "#tags"
+  weight = 4
 
 
 # Link to a PDF of your resume/CV from the menu.
@@ -319,7 +320,7 @@ defaultContentLanguageInSubdir = false
   [params.search.algolia]
     app_id = "FUZHRLXPF4"
     api_key = "7fb333226a19b1a7af131612dd428928"
-    index_name = "kwb_pubs"
+    index_name = "pubs"
     show_logo = false
 # Taxonomies.
 [taxonomies]
@@ -335,8 +336,8 @@ defaultContentLanguageInSubdir = false
   languageCode = "en"
 
 # Uncomment the lines below to configure your website in a second language.
-[languages.de]
- languageCode = "de"
+#[languages.de]
+# languageCode = "de"
 #  title = ""
 #  [languages.de.params]
 #    name = "Michael Rustler"
