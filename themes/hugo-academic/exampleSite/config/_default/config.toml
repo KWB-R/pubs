@@ -5,16 +5,16 @@
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
 # Title of your site
-title = ""
+title = "Academic"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "https://kwb-r.gitlab.io/pubs/" 
+baseurl = "/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2019 Kompetenzzentrum Wasser Berlin gGmbH"
-publishDir = "public"
+copyright = ""
+
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
 
@@ -26,10 +26,10 @@ disqusShortname = ""
 ############################
 
 # Name of Academic theme folder in `themes/`.
-theme = "hugo-academic"
+theme = "academic"
 
 # Get last modified date for content from Git?
-enableGitInfo = true
+enableGitInfo = false
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
