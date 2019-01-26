@@ -3,7 +3,7 @@ title = "Modeling Seasonal Redox Dynamics and the Corresponding Fate for the Pha
 date = 2006-01-01
 authors = ["J. Greskowiak", "H. Prommer", "G. Massmann", "G. Nützmann"]
 publication_types = ["2"]
-abstract = ""
+abstract = "Reactive multicomponent transport modeling was used to investigate and quantify the factors that affect redox zonation and the fate of the pharmaceutical residue phenazone during artificial recharge of groundwater at an infiltration site in Berlin, Germany. The calibrated model and the corresponding sensitivity analysis demonstrated that temporal and spatial redox zonation at the study site was driven by seasonally changing, temperature-dependent organic matter degradation rates. Breakthrough of phenazone at monitoring wells occurred primarily during the warmer summer months, when anaerobic conditions developed. Assuming a redoxsensitive phenazone degradation behavior the model results provided an excellent agreement between simulated and measured phenazone concentrations. Therefore, the fate of phenazone was shown to be indirectly controlled by the infiltration water temperature through its effect on the aquifer’s redox conditions. Other factors such as variable residence times appeared to be of less importance."
 selected = false
 publication = "*Environmental Science & Technology*"
 +++
