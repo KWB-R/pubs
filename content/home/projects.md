@@ -1,8 +1,8 @@
 +++
 # Projects widget.
 widget = "projects"
-active = false
-date = 2016-04-20T00:00:00
+active = true
+date = 2019-01-27T00:00:00
 
 title = "Projects"
 subtitle = ""
@@ -40,17 +40,17 @@ filter_default = 0
   name = "All"
   tag = "*"
 
-[[filter]]
-  name = "Data management"
-  tag = "data-management"
+#[[filter]]
+#  name = "Data management"
+#  tag = "data-management"
 
-[[filter]]
-  name = "Reproducible research"
-  tag = "reproducible-research"
+#[[filter]]
+#  name = "Reproducible research"
+#  tag = "reproducible-research"
   
-[[filter]]
-  name = "Energy efficiency"
-  tag = "energy-efficiency"
+#[[filter]]
+#  name = "Energy efficiency"
+#  tag = "energy-efficiency"
 
 +++
 

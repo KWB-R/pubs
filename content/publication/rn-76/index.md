@@ -7,5 +7,6 @@ abstract = "Two configurations of membrane bioreactors were identified to achiev
 selected = false
 publication = "*Water Science & Technology*"
 url_pdf = "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Citation&list_uids=16459821"
+projects = ["imf"]
 +++
 

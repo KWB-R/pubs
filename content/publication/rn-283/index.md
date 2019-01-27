@@ -7,5 +7,6 @@ abstract = ""
 selected = false
 publication = ""
 url_pdf = "http://kompetenz-wasser.de/fileadmin/user_upload/pdf/downloads/Schriftenreihe_KWB_bd1_ECOLOG.pdf"
+projects = ["pprp"]
 +++
 

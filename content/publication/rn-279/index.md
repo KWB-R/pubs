@@ -7,5 +7,6 @@ abstract = "Within the EU-funded demonstration project 'Sanitation Concepts for 
 selected = false
 publication = ""
 url_pdf = "http://kompetenz-wasser.de/fileadmin/user_upload/pdf/forschung/scst/SCST_Urine_Treatment_FinalReport_Task_7__TUHH__Tettenborn_5.9.2007_.pdf"
+projects = ["scst"]
 +++
 

@@ -7,5 +7,6 @@ abstract = "A new method for the assessment of the filterability in membrane bio
 selected = false
 publication = "*Water Science & Technology*"
 doi = "10.2166/wst.2010.084"
+projects = ["mbrtrain"]
 +++
 

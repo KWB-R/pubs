@@ -7,5 +7,6 @@ abstract = "The practice of using the wastewater of the city of Braunschweig for
 selected = false
 publication = "*KA Korrespondenz Abwasser, Abfall*"
 doi = "10.3242/kae2015.12.002"
+projects = ["demoware"]
 +++
 

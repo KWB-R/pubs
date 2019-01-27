@@ -7,5 +7,6 @@ abstract = "The Berliner Wasserbetriebe are the largest water supply and wastewa
 selected = false
 publication = "*Chemical Engineering Transactions*"
 doi = "http://dx.doi.org/10.3303/CET1023000"
+projects = ["odocoartnose"]
 +++
 

@@ -7,5 +7,6 @@ abstract = ""
 selected = false
 publication = "*Water Research*"
 doi = "DOI:10.1016/j.watres.2007.05.046"
+projects = ["enrem"]
 +++
 

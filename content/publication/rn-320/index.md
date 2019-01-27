@@ -6,5 +6,6 @@ publication_types = ["2"]
 abstract = ""
 selected = false
 publication = "*Wasserwirtschaft Wassertechnik (wwt)*"
+projects = ["enrem"]
 +++
 

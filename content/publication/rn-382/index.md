@@ -7,5 +7,6 @@ abstract = "Neurotoxic paralytic shellfish poisoning (PSP) toxins, anatoxin-a (A
 selected = false
 publication = "*Applied and Environmental Microbiology*"
 doi = "doi:10.1128/AEM.02285-09"
+projects = ["nostotox"]
 +++
 

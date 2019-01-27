@@ -6,5 +6,6 @@ publication_types = ["2"]
 abstract = ""
 selected = false
 publication = "*wwt - Wasserwirtschaft Wassertechnik: Modernisierungsreport 2013*"
+projects = ["miacso"]
 +++
 

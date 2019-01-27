@@ -6,5 +6,6 @@ publication_types = ["2"]
 abstract = ""
 selected = false
 publication = "*IWA Water Reuse Newsletter July 2011*"
+projects = ["wsstp"]
 +++
 

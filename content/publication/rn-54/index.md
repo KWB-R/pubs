@@ -6,5 +6,6 @@ publication_types = ["2"]
 abstract = "Four international projects subsidised by the European Commission should push forward the development and application of membrane bioreactor processes in the municipal wastewater sector."
 selected = false
 publication = "*Filtration+Separation*"
+projects = ["amedeus"]
 +++
 

@@ -6,5 +6,6 @@ publication_types = ["2"]
 abstract = ""
 selected = false
 publication = "*bbr Fachmagazin für Brunnen- und Leitungsbau*"
+projects = ["wellma1"]
 +++
 

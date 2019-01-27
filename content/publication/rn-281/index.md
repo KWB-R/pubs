@@ -7,5 +7,6 @@ abstract = "The goal of this study is the identification of ecological advantage
 selected = false
 publication = ""
 url_pdf = "http://kompetenz-wasser.de/fileadmin/user_upload/pdf/forschung/scst/SCST_LCA_Final_Report_Task_5__TUB__Remy_22.8.2007_.pdf"
+projects = ["scst"]
 +++
 

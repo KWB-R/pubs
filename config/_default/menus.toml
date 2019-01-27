@@ -18,10 +18,10 @@
 #  url = "#posts"
 #  weight = 3
 
-#[[main]]
-#  name = "Projects"
-#  url = "#projects"
-#  weight = 4
+[[main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 4
 
 #[[main]]
 #  name = "Tutorials"

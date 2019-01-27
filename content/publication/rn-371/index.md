@@ -7,5 +7,6 @@ abstract = "GaN-based ultraviolet-C (UVeC) light emitting diodes (LEDs) are of g
 selected = false
 publication = "*IWA Water Research 45 (2011) 1481-1489*"
 doi = "10.1016/j.watres.2010.11.015"
+projects = ["techneau"]
 +++
 

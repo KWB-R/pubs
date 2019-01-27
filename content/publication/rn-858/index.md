@@ -7,5 +7,6 @@ abstract = "Der vorliegende Abschlussbericht fasst die Ergebnisse des Forschungs
 selected = false
 publication = ""
 doi = "http://dx.doi.org/10.14279/depositonce-4942"
+projects = ["ist4r"]
 +++
 

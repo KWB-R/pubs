@@ -6,5 +6,6 @@ publication_types = ["6"]
 abstract = ""
 selected = false
 publication = "*Energie aus Abfall*"
+projects = ["prex"]
 +++
 

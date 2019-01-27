@@ -7,5 +7,6 @@ abstract = "In the densely populated semi-arid territory around Delhi, the water
 selected = false
 publication = "*Environmental Earth Sciences*"
 doi = "DOI 10.1007/s12665-010-0458-x"
+projects = ["techneau"]
 +++
 

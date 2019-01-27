@@ -7,5 +7,6 @@ abstract = ""
 selected = false
 publication = "*KA Abwasser Abfall*"
 doi = "DOI: 10.3242/kae2011.06.006"
+projects = ["codigreen"]
 +++
 

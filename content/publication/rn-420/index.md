@@ -7,5 +7,6 @@ abstract = "The herbicide Glyphosate was detected in River Havel (Berlin, German
 selected = false
 publication = "*IWA Water Research*"
 doi = "10.1016/j.watres.2011.02.015"
+projects = ["aquisafe1"]
 +++
 

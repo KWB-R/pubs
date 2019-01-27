@@ -7,5 +7,6 @@ abstract = ""
 selected = false
 publication = "*Aqua Urbanica 2017*"
 doi = "10.3217/978-3-85125-534-8"
+projects = ["kuras"]
 +++
 

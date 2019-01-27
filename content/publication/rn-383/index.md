@@ -8,5 +8,6 @@ selected = false
 publication = "*Ground Water *"
 url_pdf = "http://onlinelibrary.wiley.com/doi/10.1111/j.1745-6584.2010.00771.x/abstract"
 doi = "10.1111/j.1745-6584.2010.00771.x"
+projects = ["techneau"]
 +++
 

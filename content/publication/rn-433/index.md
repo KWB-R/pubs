@@ -7,5 +7,6 @@ abstract = "Large-scale dispersion was studied in an unconsolidated, sandy, glac
 selected = false
 publication = "*Water Resources Research*"
 doi = "doi:10.1029/2007WR006746"
+projects = ["nasri"]
 +++
 

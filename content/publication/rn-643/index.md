@@ -6,5 +6,6 @@ publication_types = ["6"]
 abstract = ""
 selected = false
 publication = "*Re-source  Designing the Recycling Society*"
+projects = ["prex"]
 +++
 

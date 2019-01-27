@@ -7,5 +7,6 @@ abstract = "The recycling of plant-nutrients as nitrogen, potassium and phosphor
 selected = false
 publication = ""
 url_pdf = "http://kompetenz-wasser.de/fileadmin/user_upload/pdf/forschung/scst/SCST_Report_Task8.pdf"
+projects = ["scst"]
 +++
 

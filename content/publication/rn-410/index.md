@@ -7,5 +7,6 @@ abstract = ""
 selected = false
 publication = ""
 url_pdf = "www.techneau.org"
+projects = ["techneau"]
 +++
 

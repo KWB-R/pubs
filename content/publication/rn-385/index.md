@@ -7,5 +7,6 @@ abstract = "The effect of combined sewer overflow (CSO) control measures should 
 selected = false
 publication = "*Water Science & Technology*"
 doi = "10.2166/wst.2011.058"
+projects = ["miacso"]
 +++
 

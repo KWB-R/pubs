@@ -7,5 +7,6 @@ abstract = "The occurrence of the cyanobacterial toxins anatoxin-a (ATX) and cyl
 selected = false
 publication = "*Water Research*"
 doi = "10.1016/j.watres.2010.10.019"
+projects = ["nostotox"]
 +++
 

@@ -7,5 +7,6 @@ abstract = "Cyanobacterial toxins are toxic substances produced by cyanobacteria
 selected = false
 publication = "*Bundesgesundheitsblatt - Gesundheitsforschung - Gesundheitsschutz 2007*"
 doi = "DOI 10.1007/s00103-007-0161-6"
+projects = ["nasri"]
 +++
 

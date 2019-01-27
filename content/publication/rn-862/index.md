@@ -6,5 +6,6 @@ publication_types = ["2"]
 abstract = ""
 selected = false
 publication = "*World of Mining*"
+projects = ["rwebo"]
 +++
 

@@ -6,5 +6,6 @@ publication_types = ["6"]
 abstract = ""
 selected = false
 publication = "*Climate Change, Water Supply and Sanitation. Risk assessment, management, mitigation and reduction*"
+projects = ["prepared"]
 +++
 

@@ -7,5 +7,6 @@ abstract = "The presented work studies the influence of the sampling strategy on
 selected = false
 publication = "*Water Practice and Technology*"
 doi = "10.2166/wpt.2013.042"
+projects = ["miacso"]
 +++
 

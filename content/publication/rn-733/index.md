@@ -7,5 +7,6 @@ abstract = "Different types of managed aquifer recharge (MAR) schemes are widely
 selected = false
 publication = ""
 url_pdf = "www.demeau-fp7.eu"
+projects = ["demeau"]
 +++
 

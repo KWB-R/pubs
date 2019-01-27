@@ -7,5 +7,6 @@ abstract = "To support decision makers in planning effective combined sewer over
 selected = false
 publication = "*Water Research*"
 doi = "http://dx.doi.org/10.1016/j.watres.2016.08.017"
+projects = ["miacso"]
 +++
 

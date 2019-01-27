@@ -7,5 +7,6 @@ abstract = "Numerous papers have been published studying the causes of fouling i
 selected = false
 publication = "*Desalination and Water Treatment*"
 doi = "10.5004/dwt.2010.1783"
+projects = ["mbrtrain"]
 +++
 

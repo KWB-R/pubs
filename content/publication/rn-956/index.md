@@ -7,5 +7,6 @@ abstract = "UV/Vis spectrophotometers have been used for one decade to monitor w
 selected = false
 publication = "*Water Research*"
 doi = "http://dx.doi.org/10.1016/j.watres.2016.05.070"
+projects = ["sema"]
 +++
 

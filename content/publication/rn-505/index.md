@@ -7,5 +7,6 @@ abstract = "Data play an important role in water-related research. In the field 
 selected = false
 publication = "*Water Practice & Technology*"
 doi = "10.2166/wpt.2013.039"
+projects = ["miacso"]
 +++
 

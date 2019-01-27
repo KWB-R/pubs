@@ -6,5 +6,6 @@ publication_types = ["2"]
 abstract = ""
 selected = false
 publication = "*International Journal of Systematic and Evolutionary Microbiology*"
+projects = ["cylin"]
 +++
 

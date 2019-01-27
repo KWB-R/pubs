@@ -7,5 +7,6 @@ abstract = "The study aims at assessing in long-term trials a gravity-driven ult
 selected = false
 publication = "*Desalination and Water Treatment*"
 doi = "10/5004/dwt.2012.2468"
+projects = ["techneau"]
 +++
 

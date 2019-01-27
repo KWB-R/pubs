@@ -7,5 +7,6 @@ abstract = ""
 selected = false
 publication = "*IWA Water Research*"
 doi = "10.1016/j.watres.2011.06.040"
+projects = ["icnasri"]
 +++
 

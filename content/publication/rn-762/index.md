@@ -7,5 +7,6 @@ abstract = "Diffuse nitrate (NO3) contamination from intense agriculture adverse
 selected = false
 publication = "*Water Science & Technology: Water Supply*"
 doi = "10.2166/ws.2015.008"
+projects = ["aquisafe"]
 +++
 

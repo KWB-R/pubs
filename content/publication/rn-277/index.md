@@ -7,5 +7,6 @@ abstract = "With the application of advanced treated wastewater to the ancient w
 selected = false
 publication = ""
 url_pdf = "http://kompetenz-wasser.de/fileadmin/user_upload/pdf/forschung/scst/SCST_Layman_Report__deu___PF_23.5.2007__01.pdf"
+projects = ["scst"]
 +++
 

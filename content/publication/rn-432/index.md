@@ -7,5 +7,6 @@ abstract = "Redox processes during bank filtration were evaluated in Berlin, whe
 selected = false
 publication = "*Environmental Geology*"
 doi = "DOI 10.1007/s00254-007-0792-9"
+projects = ["nasri"]
 +++
 
