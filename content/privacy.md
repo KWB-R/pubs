@@ -1,8 +1,8 @@
 +++
 title = "Privacy Policy"
 
-date = 2018-06-28T00:00:00
-draft = true
+date = 2019-01-27T00:00:00
+draft = false
 share = false
 
 # [header]
