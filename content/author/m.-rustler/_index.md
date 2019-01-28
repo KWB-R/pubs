@@ -1,0 +1,119 @@
++++
+# Display name
+#name = "Michael Rustler"
+
+name = "Michael Rustler"
+
+# Is this the primary user of the site?
+superuser = false
+
+# Role/position
+role = "Research Assistant"
+
+# Organizations/Affiliations
+#   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
+organizations = [ { name = "Kompetenzzentrum Wasser gGmbH", url = "https://kompetenz-wasser.de" } ]
+
+# Short bio (displayed in user profile at end of posts)
+bio = "My research interests include reproducible resarch, data management and programming (R & Python)."
+
+# Enter email to display Gravatar (if Gravatar enabled in Config)
+email = ""
+
+# List (academic) interests or hobbies
+#interests = [
+#  "Artificial Intelligence",
+#  "Computational Linguistics",
+#  "Information Retrieval"
+#]
+#<interests>
+
+# List qualifications (such as academic degrees)
+#[[education.courses]]
+#  course = "PhD in Artificial Intelligence"
+#  institution = "Stanford University"
+#  year = 2012
+#
+#[[education.courses]]
+#  course = "MEng in Artificial Intelligence"
+#  institution = "Massachusetts Institute of Technology"
+#  year = 2009
+#
+#[[education.courses]]
+#  course = "BSc in Artificial Intelligence"
+#  institution = "Massachusetts Institute of Technology"
+#  year = 2008
+
+#<education>
+
+# Social/Academic Networking
+#
+# Icon pack "fab" includes the following social network icons:
+#
+#   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
+#   youtube, instagram, soundcloud
+#
+#   For email icon, use "fas" icon pack, "envelope" icon, and
+#   "mailto:your@email.com" as the link.
+#
+#   Full list: https://fontawesome.com/icons
+#
+# Icon pack "ai" includes the following academic icons:
+#
+#   cv, google-scholar, arxiv, orcid, researchgate, mendeley
+#
+#   Full list: https://jpswalsh.github.io/academicons/
+
+
+[[social]]
+  icon = "envelope"
+  icon_pack = "fas"
+  link = "mailto:michael.rustler@kompetenz-wasser.de"
+
+
+[[social]]
+  icon = "orcid"
+  icon_pack = "ai"
+  link = "https://orcid.org/0000-0003-0647-7726"
+
+
+[[social]]
+  icon = "home"
+  icon_pack = "fas"
+  link = "https://mrustl.de"
+
+
+[[social]]
+  icon = "github"
+  icon_pack = "fab"
+  link = "https://github.com/mrustl"
+
+
+[[social]]
+  icon = "twitter"
+  icon_pack = "fab"
+  link = "https://twitter.com/MichaelRustler"
+
+
+[[social]]
+  icon = "linkedin"
+  icon_pack = "fab"
+  link = "https://linkedin.com/in/michael-rustler-61497911"
+
+
+[[social]]
+  icon = "researchgate"
+  icon_pack = "ai"
+  link = "https://researchgate.net/profile/Michael_Rustler"
+
+
+[[social]]
+  icon = "google-scholar"
+  icon_pack = "ai"
+  link = "https://scholar.google.de/citations?user=hD2epVEAAAAJ&hl=de&oi=ao"
+
+
+
++++
+
+"Michael Rustler works as data scientist at the Kompetenzzentrum Wasser Berlin gGmbH (KWB). His research interests include reproducible research, data management and programmable matter. He currently leads the project FAKIN with the goal to improve the research data management and workflows at KWB, a small non-university institute (~ 20 scientists in three departments)."
