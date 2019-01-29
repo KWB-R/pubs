@@ -26,7 +26,14 @@ email = ""
 #  "Computational Linguistics",
 #  "Information Retrieval"
 #]
-#<interests>
+
+
+interests = [
+  "Reproducible research",
+  "Data management",
+  "Programming (R & Python)"
+]
+
 
 # List qualifications (such as academic degrees)
 #[[education.courses]]
@@ -44,7 +51,11 @@ email = ""
 #  institution = "Massachusetts Institute of Technology"
 #  year = 2008
 
-#<education>
+
+[[education.courses]]
+  course = "Diplom Geoökologe (Dipl. Geoecologist)"
+  year = "2008"
+
 
 # Social/Academic Networking
 #
@@ -116,4 +127,4 @@ email = ""
 
 +++
 
-"Michael Rustler works as data scientist at the Kompetenzzentrum Wasser Berlin gGmbH (KWB). His research interests include reproducible research, data management and programmable matter. He currently leads the project FAKIN with the goal to improve the research data management and workflows at KWB, a small non-university institute (~ 20 scientists in three departments)."
+Michael Rustler works as data scientist at the Kompetenzzentrum Wasser Berlin gGmbH (KWB). His research interests include reproducible research, data management and programmable matter. He currently leads the project FAKIN with the goal to improve the research data management and workflows at KWB, a small non-university institute (~ 20 scientists in three departments).

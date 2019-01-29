@@ -26,7 +26,8 @@ email = ""
 #  "Computational Linguistics",
 #  "Information Retrieval"
 #]
-#<interests>
+
+
 
 # List qualifications (such as academic degrees)
 #[[education.courses]]
@@ -44,7 +45,7 @@ email = ""
 #  institution = "Massachusetts Institute of Technology"
 #  year = 2008
 
-#<education>
+
 
 # Social/Academic Networking
 #
@@ -86,4 +87,4 @@ email = ""
 
 +++
 
-""
+
