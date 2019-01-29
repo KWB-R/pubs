@@ -79,12 +79,6 @@ email = ""
 
 
 [[social]]
-  icon = "home"
-  icon_pack = "fas"
-  link = "https://github.com/hsonne"
-
-
-[[social]]
   icon = "github"
   icon_pack = "fab"
   link = "https://github.com/hsonne"

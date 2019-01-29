@@ -2,13 +2,13 @@
 # Display name
 #name = "Michael Rustler"
 
-name = "Christoph Sprenger"
+name = "Fabian Kraus"
 
 # Is this the primary user of the site?
 superuser = false
 
 # Role/position
-role = "Head of Department \"Groundwater\""
+role = "Research Assistant"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -64,6 +64,18 @@ email = ""
 #   cv, google-scholar, arxiv, orcid, researchgate, mendeley
 #
 #   Full list: https://jpswalsh.github.io/academicons/
+
+
+[[social]]
+  icon = "envelope"
+  icon_pack = "fas"
+  link = "mailto:fabian.kraus@kompetenz-wasser.de"
+
+
+[[social]]
+  icon = "twitter"
+  icon_pack = "fab"
+  link = "https://twitter.com/nutrient_rec"
 
 
 

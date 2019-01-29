@@ -75,7 +75,7 @@ email = ""
 [[social]]
   icon = "twitter"
   icon_pack = "fab"
-  link = "https://twitter.com/Cloderer"
+  link = "https://twitter.com/CLoderer"
 
 
 
