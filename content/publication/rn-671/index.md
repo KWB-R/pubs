@@ -1,7 +1,7 @@
 +++
 title = "Phosphorpotenziale im Land Berlin - Abschlussbericht Projekt P-Pot"
 date = 2014-01-01
-authors = ["C. Kabbe", "D. Bäger", "R. Mancke"]
+authors = ["C. Kabbe", "D. Baeger", "R. Mancke"]
 publication_types = ["4"]
 abstract = ""
 selected = false

@@ -1,7 +1,7 @@
 +++
 title = "Behaviour and redox sensitivity of antimicrobial residues during bank filtration"
 date = 2008-01-01
-authors = ["Thomas Heberer", "Gudrun Massmann", "Britta Franck", "Thomas Taute", "UIwe Dünnbier"]
+authors = ["Thomas Heberer", "Gudrun Massmann", "Britta Franck", "Thomas Taute", "UIwe Duennbier"]
 publication_types = ["2"]
 abstract = ""
 selected = false

@@ -1,7 +1,7 @@
 +++
 title = "Report on current research needs in managed aquifer recharge published by the WssTP"
 date = 2011-01-01
-authors = ["G. Grützmacher", "C. Kazner", "T. Wintgens"]
+authors = ["G. Gruetzmacher", "C. Kazner", "T. Wintgens"]
 publication_types = ["2"]
 abstract = ""
 selected = false

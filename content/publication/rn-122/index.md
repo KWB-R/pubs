@@ -1,7 +1,7 @@
 +++
 title = "lst die Uferfiltration eine effektive Barriere gegen organische Substanzen und Arzneimittelrückstände?"
 date = 2007-01-01
-authors = ["M. Jekel", "S. Grünheid"]
+authors = ["M. Jekel", "S. Gruenheid"]
 publication_types = ["2"]
 abstract = ""
 selected = false

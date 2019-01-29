@@ -1,7 +1,7 @@
 +++
 title = "Hypolimnetic Oxygen Depletion in Eutrophic Lakes"
 date = 2012-01-01
-authors = ["B. Müller", "L. D. Bryant", "A. Matzinger", "A. Wüest"]
+authors = ["B. Mueller", "L. D. Bryant", "A. Matzinger", "A. Wueest"]
 publication_types = ["2"]
 abstract = ""
 selected = false
