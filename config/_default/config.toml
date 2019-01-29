@@ -13,7 +13,7 @@ baseurl = "https://kwb-r.gitlab.io/pubs/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2019 Kompetenzzentrum Wasser Berlin gGmbH"
+copyright = "&copy; 2019 [Kompetenzzentrum Wasser Berlin gGmbH](https://www.kompetenz-wasser.de)"
 publishDir = "public"
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
