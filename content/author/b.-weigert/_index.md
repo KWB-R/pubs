@@ -2,13 +2,13 @@
 # Display name
 #name = "Michael Rustler"
 
-name = "Hella Schwarzmüller"
+name = "Bodo Weigert"
 
 # Is this the primary user of the site?
 superuser = false
 
 # Role/position
-role = "Head of Department \"Groundwater\""
+role = "Deputy Director, Head of Finances, Administration, Communication"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -69,7 +69,7 @@ email = ""
 [[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:hella.schwarzmueller@kompetenz-wasser.de"
+  link = "mailto:bodo.weigert@kompetenz-wasser.de"
 
 
 
