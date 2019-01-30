@@ -2,7 +2,7 @@
 # Display name
 #name = "Michael Rustler"
 
-name = "Regina Gnirss"
+name = "Regina Gnirß"
 
 # Is this the primary user of the site?
 superuser = false
@@ -70,6 +70,12 @@ email = ""
   icon = "envelope"
   icon_pack = "fas"
   link = "mailto:regina.gnirss@kompetenz-wasser.de"
+
+
+[[social]]
+  icon = "twitter"
+  icon_pack = "fab"
+  link = "https://twitter.com/rgnirss"
 
 
 

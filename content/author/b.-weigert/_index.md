@@ -72,6 +72,12 @@ email = ""
   link = "mailto:bodo.weigert@kompetenz-wasser.de"
 
 
+[[social]]
+  icon = "twitter"
+  icon_pack = "fab"
+  link = "https://twitter.com/kompetenzwasser"
+
+
 
 +++
 
