@@ -2,7 +2,7 @@
 # Display name
 #name = "Michael Rustler"
 
-name = "Richards Günsch"
+name = "Richard Günsch"
 
 # Is this the primary user of the site?
 superuser = false
