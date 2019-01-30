@@ -72,6 +72,12 @@ email = ""
   link = "mailto:ulf.miehe@kompetenz-wasser.de"
 
 
+[[social]]
+  icon = "twitter"
+  icon_pack = "fab"
+  link = "https://twitter.com/UlfMiehe"
+
+
 
 +++
 
