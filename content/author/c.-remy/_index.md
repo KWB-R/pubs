@@ -67,6 +67,12 @@ email = ""
 
 
 [[social]]
+  icon = "phone"
+  icon_pack = "fas"
+  link = "tel:+493053653808"
+
+
+[[social]]
   icon = "envelope"
   icon_pack = "fas"
   link = "mailto:christian.remy@kompetenz-wasser.de"

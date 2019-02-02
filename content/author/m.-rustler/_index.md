@@ -77,6 +77,12 @@ interests = [
 
 
 [[social]]
+  icon = "phone"
+  icon_pack = "fas"
+  link = "tel:+493053653825"
+
+
+[[social]]
   icon = "envelope"
   icon_pack = "fas"
   link = "mailto:michael.rustler@kompetenz-wasser.de"

@@ -67,6 +67,12 @@ email = ""
 
 
 [[social]]
+  icon = "phone"
+  icon_pack = "fas"
+  link = "tel:+493053653836"
+
+
+[[social]]
   icon = "envelope"
   icon_pack = "fas"
   link = "mailto:rabea-luisa.schubert@kompetenz-wasser.de"
