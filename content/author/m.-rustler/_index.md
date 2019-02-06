@@ -1,8 +1,14 @@
 +++
 # Display name
-#name = "Michael Rustler"
 
 name = "Michael Rustler"
+
+# Author name (required for "people" without content) 
+# for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
+
+
+authors = ["M. Rustler"]
+
 
 # Is this the primary user of the site?
 superuser = false
@@ -33,6 +39,12 @@ interests = [
   "Data management",
   "Programming (R & Python)"
 ]
+
+
+# Organizational groups that you belong to (for People widget)
+#   Set this to `[]` or comment out if you are not using People widget.
+
+user_groups = ["Researchers"]
 
 
 # List qualifications (such as academic degrees)
