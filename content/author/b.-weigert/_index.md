@@ -7,7 +7,7 @@ name = "Bodo Weigert"
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
 
 
-authors = ["B. Weigert", "Bodo Weigert"]
+authors = ["B. Weigert"]
 
 
 # Is this the primary user of the site?
