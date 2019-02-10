@@ -1,13 +1,12 @@
 +++
 # Display name
-
 name = "Jeannette Jährig"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
+# Username (this should match the folder name)
 
-
-authors = ["J. Jaehrig"]
+authors = ["j.-jaehrig"]
 
 
 # Is this the primary user of the site?

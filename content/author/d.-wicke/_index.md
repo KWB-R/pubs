@@ -1,13 +1,12 @@
 +++
 # Display name
-
 name = "Daniel Wicke"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
+# Username (this should match the folder name)
 
-
-authors = ["D. Wicke"]
+authors = ["d.-wicke"]
 
 
 # Is this the primary user of the site?

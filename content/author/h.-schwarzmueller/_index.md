@@ -1,13 +1,12 @@
 +++
 # Display name
-
 name = "Hella Schwarzmüller"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
+# Username (this should match the folder name)
 
-
-authors = ["H. Schwarzmueller"]
+authors = ["h.-schwarzmueller"]
 
 
 # Is this the primary user of the site?

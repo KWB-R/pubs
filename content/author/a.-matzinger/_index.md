@@ -1,13 +1,12 @@
 +++
 # Display name
-
 name = "Andreas Matzinger"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
+# Username (this should match the folder name)
 
-
-authors = ["A. Matzinger"]
+authors = ["a.-matzinger"]
 
 
 # Is this the primary user of the site?
