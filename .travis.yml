@@ -1,14 +1,13 @@
 language: r
-dist: trusty
-sudo: false
+dist: xenial
+sudo: true
 branches:
   only:
-    - master
+    - dev
 cache:
   packages: yes
   directories:
     - $HOME/bin
-pandoc_version: 2.5
 before_script:
   - chmod +x ./_build.sh
   - chmod +x ./_deploy.sh
