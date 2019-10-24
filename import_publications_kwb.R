@@ -170,3 +170,22 @@ fs::dir_delete(pub_dir)
 }}
 # delete_publication(c(380,426))
 # blogdown::build_site()
+
+update_citations <- function(pub_dir = "content/publication") {
+  
+  stopifnot(fs::dir_exists(pub_dir))
+
+citations <- list.files(pub_dir, pattern = ".bib$", 
+           recursive = TRUE, 
+           full.names = TRUE)
+
+sapply(citations, function(citation) {
+  new_cite <- file.path(dirname(citation), "cite.bib")
+  if(citation != new_cite) {
+  fs::file_move(citation, new_path = new_cite)
+  } else {
+   message(sprintf("Citation '%s' already up-to-date!"))  
+  }
+})
+
+}
