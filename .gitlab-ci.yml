@@ -3,6 +3,7 @@ image: debian:buster-slim
 before_script:
   - apt-get update && apt-get -y install pandoc r-base git
   - R -e "install.packages('remotes',repos='http://cran.rstudio.com')"
+  - R -e "remotes::install_github('kwb-r/algoliar')"
   - R -e "remotes::install_github('rstudio/blogdown')"
   - R -e "blogdown::install_hugo()"
 
@@ -10,6 +11,7 @@ pages:
   script:
     - R -e "file.copy('config/_default/config.toml', 'config.toml', overwrite = TRUE)"
     - R -e "blogdown::build_site()"
+    - R -e "algoliar::algolia_post_batch()" 
   artifacts:
     paths:
       - public
