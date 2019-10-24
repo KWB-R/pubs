@@ -1,8 +1,9 @@
 +++
+headless = true 
 # Recent Publications widget.
 # This widget displays recent publications from `content/publication/`.
 widget = "publications"  # Do not modify this line!
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 
 title = "Recent Publications"
 subtitle = ""
@@ -11,7 +12,7 @@ subtitle = ""
 weight = 20
 
 # Number of publications to list.
-count = 10
+count = 1
 
 # View.
 #   1 = List
@@ -34,4 +35,3 @@ publication_type = "-1"
 # Exclude publications that are shown in the Featured Publications widget?
 exclude_featured = false
 +++
-
