@@ -1,7 +1,7 @@
 +++
 title = "Gewässerschutz durch kombinierte dezentrale und zentrale Maßnahmen der Regenwasserbewirtschaftung - Modellstudie am Beispiel Berlins"
 date = 2017-01-01
-authors = ["M. Riechel", "A. Matzinger", "M. Pallasch", "B. Heinzmann", "K. Joswig", "P. Rouault"]
+authors = ["riechel", "matzinger", "M. Pallasch", "B. Heinzmann", "K. Joswig", "rouault"]
 publication_types = ["6"]
 abstract = ""
 selected = false

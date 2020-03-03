@@ -1,7 +1,7 @@
 +++
 title = "Numerical and analytical models for natural water treatment systems in the Indian context "
 date = 2016-01-01
-authors = ["C. Sprenger", "B. Monninkhoff", "C. Tomsu", "W. Kloppmann"]
+authors = ["sprenger", "B. Monninkhoff", "C. Tomsu", "W. Kloppmann"]
 publication_types = ["6"]
 abstract = ""
 selected = false

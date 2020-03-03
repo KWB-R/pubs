@@ -1,7 +1,7 @@
 +++
 title = "Phosphorrecycling aus Klärschlamm"
 date = 2016-01-01
-authors = ["F. Kraus"]
+authors = ["kraus"]
 publication_types = ["2"]
 abstract = ""
 selected = false

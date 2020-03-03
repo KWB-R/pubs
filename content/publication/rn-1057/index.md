@@ -1,7 +1,7 @@
 +++
 title = "Phosphorus processing  potentials for higher efficiency"
 date = 2018-01-01
-authors = ["L. Hermann", "F. Kraus", "R. Hermann"]
+authors = ["L. Hermann", "kraus", "R. Hermann"]
 publication_types = ["2"]
 abstract = ""
 selected = false

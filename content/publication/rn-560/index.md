@@ -1,7 +1,7 @@
 +++
 title = "Auswirkung unterschiedlicher Schüttmaterialien auf die Verockerung und Regenerierbarkeit von Brunnen"
 date = 2013-01-01
-authors = ["H. Schwarzmueller", "C. Menz", "T. Taute", "H. Dlubek"]
+authors = ["schwarzmueller", "menz", "T. Taute", "H. Dlubek"]
 publication_types = ["2"]
 abstract = ""
 selected = false
