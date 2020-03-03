@@ -1,7 +1,7 @@
 +++
 title = "Vom Klärwerk zum Kraftwerk"
 date = 2014-01-01
-authors = ["B. Weigert"]
+authors = ["weigert"]
 publication_types = ["2"]
 abstract = ""
 selected = false

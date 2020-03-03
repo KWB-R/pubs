@@ -1,7 +1,7 @@
 +++
 title = "Demonstration of a planning instrument for integrated and impact based CSO control under climate change conditions"
 date = 2015-01-01
-authors = ["M. Riechel", "M. Uldack", "B. Heinzmann", "E. Pawlowsky-Reusing", "A. Matzinger"]
+authors = ["riechel", "M. Uldack", "B. Heinzmann", "E. Pawlowsky-Reusing", "matzinger"]
 publication_types = ["6"]
 abstract = ""
 selected = false

@@ -1,7 +1,7 @@
 +++
 title = "Kapitel 6. Ökobilanzierung (under review)"
 date = 2015-01-01
-authors = ["D. Mutz", "C. Remy"]
+authors = ["D. Mutz", "remy"]
 publication_types = ["6"]
 abstract = ""
 selected = false

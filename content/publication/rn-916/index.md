@@ -1,7 +1,7 @@
 +++
 title = "Semi-Analytical Model for Estimation of Unsteady Seepage from a Large Water Body Influenced by Variable Flows"
 date = 2015-01-01
-authors = ["Narayan C Ghosh", "Sumant Kumar", "Gesche Gruetzmacher", "Shakeel Ahmed", "Surjeet Singh", "Christoph Sprenger", "RajPal Singh", "Biswajit Das", "Tanvi Arora"]
+authors = ["Narayan C Ghosh", "Sumant Kumar", "Gesche Gruetzmacher", "Shakeel Ahmed", "Surjeet Singh", "sprenger", "RajPal Singh", "Biswajit Das", "Tanvi Arora"]
 publication_types = ["2"]
 abstract = ""
 selected = false
