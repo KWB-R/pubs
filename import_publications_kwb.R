@@ -43,7 +43,7 @@ readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 ### Saved original "KWB.txt" in Rstudio with
 ### "Save with Encoding "Windows-1252" and define encoding "latin1" for import
 ### now works
-bib_txt_path <- "KWB_documents_20190709.txt"
+bib_txt_path <- "KWB-documents_20191205.txt"
 readr::guess_encoding(bib_txt_path)
 bib_txt_utf8 <- kwb.fakin::read_lines(bib_txt_path, encoding = "UTF-8", fileEncoding = "UTF-8-BOM")
 bib_txt_utf8_path <- "KWB_documents_20190709_utf-8.txt"
