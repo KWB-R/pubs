@@ -97,7 +97,7 @@ encoding = "UTF-8"
 
 # bib_txt_latin1 <- kwb.fakin::read_lines(bib_txt_path, encoding = "latin1", fileEncoding = "UTF-8-BOM")
 # bib_txt_latin1_path <- "KWB_documents_20190709_latin1.txt"
-# writeLines(text = bib_txt_latin1, bib_txt_latin1_path)
+# write_lines(text = bib_txt_latin1, bib_txt_latin1_path, "latin1")
 
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
@@ -131,6 +131,10 @@ nrow(kwb_bib_all_df)
 
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
+options(encoding="windows-1252")
+tmp <- bib2df::bib2df(bib_txt_path)
+options(encoding="UTF-8")
+bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 
 kwb_bib_valid <-  RefManageR::ReadBib(bib_txt_utf8_path,
                                       .Encoding = encoding)
@@ -171,6 +175,10 @@ with %s", length(idx_TechReport), default_institution))
 #                      file = "publications_kwb.bib") 
 
 
+selection <- stringr::str_detect(kwb_bib_valid_df$month, pattern = "[0-9]{4}-[0-1][0-9]-[0-3][0-9]") & !is.na(kwb_bib_valid_df$month)
+
+kwb_bib_valid_df$month[selection] <- format(as.Date(kwb_bib_valid_df$month[selection]), format = "%m")
+
 RefManageR::WriteBib(RefManageR::as.BibEntry(kwb_bib_valid_df),
                      file = "publications_kwb.bib") 
 
@@ -204,7 +212,7 @@ reticulate::py_install(packages = "academic",
 
 
 ## Should existing publications in content/publication folder be overwritten?
-overwrite <- FALSE
+overwrite <- TRUE
 
 option_overwrite <- ifelse(overwrite, "--overwrite", "")
 
@@ -284,6 +292,11 @@ update_citations <- function(pub_dir = "content/publication") {
   citations <- list.files(pub_dir, pattern = ".bib$", 
                           recursive = TRUE, 
                           full.names = TRUE)
+  
+  
+  valid_pubs <- stringr::str_replace(kwb.file:::remove_common_root(dirname((citations))), "rn-", "RN")
+  
+  tmp[!tmp$BIBTEXKEY %in% valid_pubs,]
   
   sapply(citations, function(citation) {
     new_cite <- file.path(dirname(citation), "cite.bib")
