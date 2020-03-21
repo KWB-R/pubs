@@ -1,19 +1,19 @@
 +++
 # Display name
-name = "Jeannette Jährig"
+name = "Tobias Evel"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
 # Username (this should match the folder name)
 
-authors = ["jaehrig"]
+authors = ["evel"]
 
 
 # Is this the primary user of the site?
 superuser = false
 
 # Role/position
-role = "Researcher"
+role = "Commercial project management"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -36,8 +36,6 @@ email = ""
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-
-user_groups = ["Researchers"]
 
 
 # List qualifications (such as academic degrees)
@@ -80,13 +78,13 @@ user_groups = ["Researchers"]
 [[social]]
   icon = "phone"
   icon_pack = "fas"
-  link = "tel:+493053653843"
+  link = "tel:+493053653831"
 
 
 [[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:jeannette.jaehrig@kompetenz-wasser.de"
+  link = "mailto:tobias.evel@kompetenz-wasser.de"
 
 
 

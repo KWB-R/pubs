@@ -1,19 +1,19 @@
 +++
 # Display name
-name = "Jeannette Jährig"
+name = "Vahid Toutian"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
 # Username (this should match the folder name)
 
-authors = ["jaehrig"]
+authors = ["toutian"]
 
 
 # Is this the primary user of the site?
 superuser = false
 
 # Role/position
-role = "Researcher"
+role = "PhD Student"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -78,15 +78,9 @@ user_groups = ["Researchers"]
 
 
 [[social]]
-  icon = "phone"
-  icon_pack = "fas"
-  link = "tel:+493053653843"
-
-
-[[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:jeannette.jaehrig@kompetenz-wasser.de"
+  link = "mailto:vahid.toutian@kompetenz-wasser.de"
 
 
 
