@@ -1,3 +1,8 @@
+### Update KWB authors 
+
+kwb.pubs::add_authors_index_md(overwrite = TRUE)
+kwb.pubs::add_authors_avatar(overwrite = TRUE)
+
 Sys.setlocale(category = "LC_ALL", locale = "German")
 
 library(dplyr)
