@@ -1,19 +1,19 @@
 +++
 # Display name
-name = "Christian Menz"
+name = "Tobias Evel"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
 # Username (this should match the folder name)
 
-authors = ["menz"]
+authors = ["evel"]
 
 
 # Is this the primary user of the site?
 superuser = false
 
 # Role/position
-role = "Research Assistant"
+role = "Commercial project management"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -36,8 +36,6 @@ email = ""
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-
-user_groups = ["Researchers"]
 
 
 # List qualifications (such as academic degrees)
@@ -80,19 +78,13 @@ user_groups = ["Researchers"]
 [[social]]
   icon = "phone"
   icon_pack = "fas"
-  link = "tel:+493053653843"
+  link = "tel:+493053653831"
 
 
 [[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:christian.menz@kompetenz-wasser.de"
-
-
-[[social]]
-  icon = "github"
-  icon_pack = "fab"
-  link = "https://github.com/chmenz"
+  link = "mailto:tobias.evel@kompetenz-wasser.de"
 
 
 

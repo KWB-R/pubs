@@ -13,7 +13,7 @@ authors = ["sprenger"]
 superuser = false
 
 # Role/position
-role = "Head of Department \"Groundwater\""
+role = "Researcher"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -37,7 +37,7 @@ email = ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 
-user_groups = ["Department Leaders"]
+user_groups = ["Researchers"]
 
 
 # List qualifications (such as academic degrees)
@@ -87,6 +87,12 @@ user_groups = ["Department Leaders"]
   icon = "envelope"
   icon_pack = "fas"
   link = "mailto:christoph.sprenger@kompetenz-wasser.de"
+
+
+[[social]]
+  icon = "orcid"
+  icon_pack = "ai"
+  link = "https://orcid.org/0000-0002-0178-6645"
 
 
 

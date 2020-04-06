@@ -1,19 +1,19 @@
 +++
 # Display name
-name = "Roberto Tratis Muvdi"
+name = "Elisa Rose"
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
 # Username (this should match the folder name)
 
-authors = ["tratis-muvdi"]
+authors = ["rose"]
 
 
 # Is this the primary user of the site?
 superuser = false
 
 # Role/position
-role = "Research Assistant"
+role = "Researcher"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -78,15 +78,9 @@ user_groups = ["Researchers"]
 
 
 [[social]]
-  icon = "phone"
-  icon_pack = "fas"
-  link = "tel:+493053653813"
-
-
-[[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:roberto.tratis-muvdi@kompetenz-wasser.de"
+  link = "mailto:elisa.rose@kompetenz-wasser.de"
 
 
 

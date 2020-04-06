@@ -13,7 +13,7 @@ authors = ["seis"]
 superuser = false
 
 # Role/position
-role = "Research Assistant"
+role = "Researcher"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -93,6 +93,12 @@ user_groups = ["Researchers"]
   icon = "orcid"
   icon_pack = "ai"
   link = "https://orcid.org/0000-0002-7436-8575"
+
+
+[[social]]
+  icon = "github"
+  icon_pack = "fab"
+  link = "https://github.com/wseis"
 
 
 

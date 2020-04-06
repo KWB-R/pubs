@@ -13,7 +13,7 @@ authors = ["caradot"]
 superuser = false
 
 # Role/position
-role = "Research Assistant"
+role = "Researcher"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -87,6 +87,12 @@ user_groups = ["Researchers"]
   icon = "envelope"
   icon_pack = "fas"
   link = "mailto:nicolas.caradot@kompetenz-wasser.de"
+
+
+[[social]]
+  icon = "twitter"
+  icon_pack = "fab"
+  link = "https://twitter.com/CaradotNico"
 
 
 
