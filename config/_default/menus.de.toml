@@ -1,0 +1,56 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[main]]
+  name = "Home"
+  url = "https://www.kompetenz-wasser.de/de/"
+  weight = 1
+
+[[main]]
+  name = "Über uns"
+  url = "https://www.kompetenz-wasser.de/de/ueber-uns/"
+  weight = 2
+
+[[main]]
+  name = "Forschung"
+  url = "https://www.kompetenz-wasser.de/de/forschung/"
+  weight = 3
+
+[[main]]
+  name = "Veranstaltungen"
+  url = "https://www.kompetenz-wasser.de/de/veranstaltungen/"
+  weight = 4
+
+[[main]]
+  name = "Partner"
+  url = "https://www.kompetenz-wasser.de/de/partner/"
+  weight = 5
+  
+[[main]]
+  name = "Publikationen"
+  url = "publication"
+  weight = 6
+
+#[[main]]
+#  name = "Tutorials"
+#  url = "/tutorial/"
+#  weight = 5
+
+#[[main]]
+#  name = "Tags"
+#  url = "#tags"
+#  weight = 6
+
+#[[main]]
+#  name = "Contact"
+#  url = "#contact"
+#  weight = 7
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+# [[main]]
+#    name = "CV"
+#    url = "files/cv.pdf"
+#    weight = 7
