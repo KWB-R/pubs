@@ -12,6 +12,7 @@ pages:
   script:
     - R -e "file.copy('config/_default/config.toml', 'config.toml', overwrite = TRUE)"
     - R -e "blogdown::build_site()"
+    - R -e "file.copy('public/de/index.json', 'public/index.json', overwrite = TRUE)"
     - R -e "algoliar::algolia_post_batch()" 
   artifacts:
     paths:
