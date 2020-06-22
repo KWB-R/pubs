@@ -1,192 +1,152 @@
 ### Update KWB authors 
+authors_metadata <- kwb.pubs::add_authors_metadata()
 
-kwb.pubs::add_authors_index_md(overwrite = TRUE)
-kwb.pubs::add_authors_avatar(overwrite = TRUE)
+construct_authorname <- function (firstname, lastname) 
+{
+  author_firstname <- unlist(lapply(seq_along(firstname), function(idx) {
+    tmp <- firstname[idx] %>% stringr::str_trim() %>% stringr::str_split("-|\\s+") %>% 
+      unlist() %>% stringr::str_sub(1, 1) %>% stringr::str_to_upper() #%>% 
+      #replace_umlauts()
+    paste0(sprintf("%s.", tmp), collapse = " ")
+  }))
+  author_lastname <- lastname %>% stringr::str_trim() %>% stringr::str_replace_all("\\s+", 
+                                                                                   " ") %>% stringr::str_to_title() #%>% replace_umlauts()
+  sprintf("%s, %s", author_lastname, author_firstname)
+}
+
+authors_metadata$author_name <- construct_authorname(authors_metadata$firstname, 
+                                                     lastname = authors_metadata$lastname)
+
+authors_metadata$author_name <- gsub("Schubert.*", "Schubert, R.-L.", authors_metadata$author_name)
+
+authors_metadata$fullname <- authors_metadata$author_name
+
+kwb.pubs::add_authors_index_md(authors_metadata, overwrite = TRUE)
+kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
 
 Sys.setlocale(category = "LC_ALL", locale = "German")
 
 library(dplyr)
 library(reticulate)
+  
+remotes::install_github("pixgarden/xsitemap")
 
 sites <- xsitemap::xsitemapGet("https://www.kompetenz-wasser.de")
 projects_site <- sites[sites$origin == "de/project-sitemap.xml",]
 project_ids_site <- stringr::str_split_fixed(projects_site$loc, "/", n = 7)[,6]
 project_ids_site <- project_ids_site[order(project_ids_site)]
 
-project_ids_dms <- readLines("project-id.txt")
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200617.xml")
+endnote_df <- kwb.endnote::create_references_df(endnote_list)
+
+confidential_pubs_idx <- endnote_df$rec_number[which(endnote_df$caption == "confidential")]
+
+is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
+
+public_report_ids <- endnote_df$rec_number[is_public_report]
+
+project_ids_dms <- strsplit(x = endnote_df$label[!is.na(endnote_df$label)], 
+                            split = ",\\s+") %>% 
+  unlist() %>% 
+  kwb.pubs::get_unique_project_names()
+
+project_ids_dms_public <- strsplit(x = endnote_df$label[!is.na(endnote_df$label) & endnote_df$caption != "confidential" | is.na(endnote_df$caption)], 
+                            split = ",\\s+") %>% 
+  unlist() %>% 
+  kwb.pubs::get_unique_project_names()
+
+
+
+#project_ids_dms <- readLines("project-id.txt")
 
 site <- tibble::tibble(project_ids = project_ids_site)
 site1 <- cbind(site, source_website = "yes")
-dms <- tibble::tibble(project_ids  = readLines("project-id.txt"))
+dms <- tibble::tibble(project_ids  = project_ids_dms) %>% 
+  dplyr::mutate(project_ids = dplyr::if_else(project_ids == "ufo_wwv", 
+                                             "wwv", 
+                                             project_ids))
 
 dms1 <- cbind(dms, source_dms = "yes")
 
 
 ids_all <- dplyr::full_join(site, dms) %>%
   dplyr::arrange(project_ids) %>%  
-  left_join(site1) %>%  
-  left_join(dms1) 
+  dplyr::left_join(site1) %>%  
+  dplyr::left_join(dms1) 
 
-project_ids_clean <- kwb.utils::multiSubstitute(ids_all$project_ids, 
-                                                replacements = list("digitalwatercity" = "dwc", 
-                                                                    "networks$" = "networks4", 
-                                                                    "ufo-wwv" = "wwv")) %>% 
-  unique() 
+all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
+all_projects$project_ids
 
-
-
-writeLines(project_ids_clean[order(project_ids_clean)], con = "project-ids.txt")
+kwb.pubs::create_projects(all_projects$project_ids)
 
 readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 
-### Exported from KWB Endnote:
-#bib_txt <- "KWB.txt"
-#encoding <- "UTF-8"
-#org <- readLines(bib_txt, encoding = "UTF-8")
-
-
-write_lines <- function (text, file, fileEncoding = "", ...)
-{
-  if (is.character(file)) {
-    con <- if (nzchar(fileEncoding)) {
-      file(file, "wt", encoding = fileEncoding)
-    }
-    else {
-      file(file, "wt")
-    }
-    on.exit(close(con))
-  }
-  else {
-    con <- file
-  }
-  writeLines(text, con, ...)
-}
-
-### Saved original "KWB.txt" in Rstudio with
-### "Save with Encoding "Windows-1252" and define encoding "latin1" for import
-### now works
-#bib_txt_path <- "KWB-documents_20191205_no-abstracts.txt"
-bib_txt_path <- "KWB-documents_20191205_with-abstracts.txt"
-readr::guess_encoding(bib_txt_path)
-bib_txt_utf8 <- kwb.fakin::read_lines(bib_txt_path, encoding = "UTF-8", fileEncoding = "UTF-8-BOM")
-
-starts <- which(startsWith(bib_txt_utf8, "@"))
-
-bib_txt_utf8_path <- "KWB_documents_20190709_utf-8.txt"
-
-write_lines(bib_txt_utf8, bib_txt_utf8_path, fileEncoding = "UTF-8")  
-
-
-encoding = "UTF-8"
-
-# contents <- lapply(starts[-1L], function(i) {
-#   
-#   print(i)
-#   
-#   write_lines(bib_txt_utf8[seq_len(i-1)], bib_txt_utf8_path, fileEncoding = "UTF-8")  
-# 
-#   try(RefManageR::ReadBib(bib_txt_utf8_path, .Encoding = encoding, check = FALSE))
-# })
-
-
-# for(i in starts[-1L]) {
-#   
-#   print(bib_txt_utf8[i])
-#   
-#   write_lines(bib_txt_utf8[seq_len(i-1)], bib_txt_utf8_path, fileEncoding = "UTF-8")  
-#   
-#   try(RefManageR::ReadBib(bib_txt_utf8_path, .Encoding = encoding, check = FALSE))
-# }
-
-#readr::write_lines(bib_txt_utf8, bib_txt_utf8_path)
-
-# bib_txt_latin1 <- kwb.fakin::read_lines(bib_txt_path, encoding = "latin1", fileEncoding = "UTF-8-BOM")
-# bib_txt_latin1_path <- "KWB_documents_20190709_latin1.txt"
-# write_lines(text = bib_txt_latin1, bib_txt_latin1_path, "latin1")
-
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
-encoding = "UTF-8"
-kwb_bib_all <- RefManageR::ReadBib(bib_txt_utf8_path, 
-                                   .Encoding = encoding,
-                                   check = FALSE)
+#options(encoding="windows-1252")
+options(encoding="UTF-8-BOM")
+tmp <- bib2df::bib2df("KWB-documents_2020617_with-abstracts.txt")
+tmp$URL <- NA_character_
+tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
+tmp <- tmp[order(tmp$en_id),]
 
+is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
 
+public_report_ids <- endnote_df$rec_number[is_public_report]
 
-tmp <- lapply(kwb_bib_all, function(x) try(capture.output(x))) 
+public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
+dms_dir <- fs::path_abs("../../dms/2020-06-17/KWB-documents_20191205.Data/PDF")
+public_reports$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
+                                  replacement = dms_dir,
+                                  public_reports$urls_pdf01)
 
-is_simple_error <- function(x) inherits(x, "simpleError")
+fs::file_copy(path = public_reports$urls_pdf01, 
+              new_path = file.path(fs::path_abs("../../RProjects/pubs_update/static/pdf"), 
+                                   basename(public_reports$urls_pdf01)))
 
-is_error <- sapply(lapply(tmp , function(x) attr(x,"condition")), 
-                   is_simple_error)
+tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%  
+  dplyr::mutate(URL = ifelse(!is.na(.data$urls_pdf01), 
+                             sprintf("../../../pdf/%s", basename(.data$urls_pdf01)),
+                             NA_character_)) %>%  
+  dplyr::select(- .data$en_id, - .data$urls_pdf01)
 
-bib_errors_txt <- gsub(pattern = ".*:\\s+\n\\s+", replacement = "", x = unlist(tmp[is_error]))
-stringr::str_extract(bib_errors_txt, "^RN[0-9]{1,4}")
-bib_errors_df <- tibble::tibble("endnote_record-number" = stringr::str_extract(bib_errors_txt, "^RN[0-9]{1,4}") %>%  
-                                  stringr::str_remove("RN") %>%  as.integer(),
-                                error_text = stringr::str_extract(bib_errors_txt, pattern = "A bibentry.*")) %>% 
-  dplyr::arrange(.data$`endnote_record-number`)
+#endnote_df$urls_pdf01[tmp$en_id %in% public_report_ids]
 
-## Not working as not all required data are provided for the references
-# RefManageR::WriteBib(kwb_bib_all, file = "temp.bib", biblatex = TRUE)
+tmp$MONTH <- format(as.Date(tmp$MONTH), format = "%m")
+dates <- as.Date(tmp$DATE, format = "%Y-%m-%d")
+valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
+tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
 
-kwb_bib_all_df <- as.data.frame(kwb_bib_all)
-
-nrow(kwb_bib_all_df)
-
-### Import all (same cannot due to parsing errors:
-### "The name list field author cannot be parsed"
-options(encoding="windows-1252")
-tmp <- bib2df::bib2df(bib_txt_path)
 options(encoding="UTF-8")
 bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 
-kwb_bib_valid <-  RefManageR::ReadBib(bib_txt_utf8_path,
-                                      .Encoding = encoding)
 
-kwb_bib_valid_df <- as.data.frame(kwb_bib_valid)
+kwb_authors <- setNames(lapply(authors_metadata$dir_name, "["), 
+                        nm = authors_metadata$author_name)
 
-nrow(kwb_bib_valid_df)
+tmp$AUTHOR_KWB <- lapply(tmp$AUTHOR, FUN = function(authors) {
+  if(any(!is.na(authors))) {
+  kwb.utils::multiSubstitute(authors, replacements = kwb_authors)
+  } else {message("no author entry")}
+})
 
-nrow(kwb_bib_valid_df)/nrow(kwb_bib_all_df)
-
-
-check_technical_report <- function(bib_df,
-                                   default_institution = "Kompetenzzentrum Wasser Berlin gGmbH") { 
-  
-  
-  idx_TechReport <- which(bib_df$bibtype == "TechReport")
-  
-  if(length(idx_TechReport)>0) {
-    print(sprintf("Replacing  missing 'institution' %d entries for 'TechnicalReport'
-with %s", length(idx_TechReport), default_institution))
-    no_institution_idx <- is.na(bib_df$institution[idx_TechReport]) 
-    bib_df$institution[idx_TechReport] <- default_institution 
-    
-  } else {
-    "No missing entries for 'institution' for 'TechnicalReport'"  
-  }
-  
-  bib_df
+get_publication_index_md_paths <- function (hugo_root_dir = ".") 
+{
+  pub_dir <- fs::path_abs(hugo_root_dir, "content/de/publication")
+  fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
 }
 
-## filter out conference reports in "Misc" or "Unpublished" not exported correctply
-# kwb_bib_valid_df_noMisc_unpublished <-  kwb_bib_valid_df[!kwb_bib_valid_df$bibtype %in% c("Misc", "Unpublished"),] 
-# kwb_bib_valid_df_noMisc_unpublished[kwb_bib_valid_df_noMisc_unpublished$bibtype == "PhdThesis",]
-# nrow(kwb_bib_valid_df_noMisc_unpublished)                       
-# 
-# 
-# RefManageR::WriteBib(RefManageR::as.BibEntry(kwb_bib_valid_df_noMisc_unpublished),
-#                      file = "publications_kwb.bib") 
 
+replace_authors_with_kwb_in_pub_index_md <- function (hugo_root_dir = ".", encoding = "UTF-8") 
+{
+  paths <- get_publication_index_md_paths(hugo_root_dir)
+  sapply(paths, replace_author_umlauts_in_pub_index_md, encoding = encoding)
+}
 
-selection <- stringr::str_detect(kwb_bib_valid_df$month, pattern = "[0-9]{4}-[0-1][0-9]-[0-3][0-9]") & !is.na(kwb_bib_valid_df$month)
-
-kwb_bib_valid_df$month[selection] <- format(as.Date(kwb_bib_valid_df$month[selection]), format = "%m")
-
-RefManageR::WriteBib(RefManageR::as.BibEntry(kwb_bib_valid_df),
-                     file = "publications_kwb.bib") 
-
+tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) sprintf("authors: [ %s ]", paste0('"', authors, '"', collapse = ", ")))
+      
+authors <- unique(unlist(tmp$AUTHOR))
+authors[order(authors)]
 ###############################################################################
 ### Step 2: Import .bibtex file to publications with Python 
 ###############################################################################
@@ -204,16 +164,16 @@ reticulate::use_python(python_path)
 ### Define conda environment name with "env"
 env <- "academic"
 
-reticulate::conda_create(envname = env)#,conda = conda_path)
+#reticulate::conda_create(envname = env)#,conda = conda_path)
 reticulate::use_condaenv(env,conda_path)
 
 ### Install required Python library "academic" 
 ### for details see:
 # browseURL("https://github.com/sourcethemes/academic-admin")
 
-reticulate::py_install(packages = "academic", 
-                       envname = env, 
-                       pip = TRUE, pip_ignore_installed = TRUE) 
+#reticulate::py_install(packages = "academic", 
+#                       envname = env, 
+#                       pip = TRUE, pip_ignore_installed = TRUE) 
 
 
 ## Should existing publications in content/publication folder be overwritten?
@@ -238,8 +198,10 @@ for (i in 1:10) {
 ### Now check the folder "content/publication". Your publications should be added
 ### now!
 
+### Add Project ids 
+kwb.pubs::add_projects_to_pub_index_md(endnote_df, col_project = "label")
 
-bad_pub_ids <- c(380,426)
+
 
 
 delete_pubs_with_problems <- function() {
@@ -312,4 +274,158 @@ update_citations <- function(pub_dir = "content/publication") {
     }
   })
   
+}
+
+if (FALSE) {
+  # project_ids_clean <- kwb.utils::multiSubstitute(ids_all$project_ids, 
+  #                                                 replacements = list("digitalwatercity" = "dwc", 
+  #                                                                     "networks$" = "networks4", 
+  #                                                                     "ufo-wwv" = "wwv")) %>% 
+  #   unique() 
+  
+  
+  
+  writeLines(project_ids_clean[order(project_ids_clean)], con = "project-ids.txt")
+  
+  ### Exported from KWB Endnote:
+  #bib_txt <- "KWB.txt"
+  #encoding <- "UTF-8"
+  #org <- readLines(bib_txt, encoding = "UTF-8")
+  
+  
+  kwb_bib_valid <-  RefManageR::ReadBib(bib_txt_utf8_path,
+                                        .Encoding = encoding)
+  
+  kwb_bib_valid_df <- as.data.frame(kwb_bib_valid)
+  
+  nrow(kwb_bib_valid_df)
+  
+  nrow(kwb_bib_valid_df)/nrow(kwb_bib_all_df)
+  
+  write_lines <- function (text, file, fileEncoding = "", ...)
+  {
+    if (is.character(file)) {
+      con <- if (nzchar(fileEncoding)) {
+        file(file, "wt", encoding = fileEncoding)
+      }
+      else {
+        file(file, "wt")
+      }
+      on.exit(close(con))
+    }
+    else {
+      con <- file
+    }
+    writeLines(text, con, ...)
+  }
+  
+  ### Saved original "KWB.txt" in Rstudio with
+  ### "Save with Encoding "Windows-1252" and define encoding "latin1" for import
+  ### now works
+  #bib_txt_path <- "KWB-documents_20191205_no-abstracts.txt"
+  bib_txt_path <- "KWB-documents_2020617_with-abstracts.txt"
+  readr::guess_encoding(bib_txt_path)
+  bib_txt_utf8 <- kwb.fakin::read_lines(bib_txt_path, encoding = "UTF-8", fileEncoding = "UTF-8-BOM")
+  
+  starts <- which(startsWith(bib_txt_utf8, "@"))
+  
+  bib_txt_utf8_path <- "KWB_documents_utf-8.txt"
+  
+  write_lines(bib_txt_utf8, bib_txt_utf8_path, fileEncoding = "UTF-8")  
+  
+  
+  encoding = "UTF-8"
+  
+  # contents <- lapply(starts[-1L], function(i) {
+  #   
+  #   print(i)
+  #   
+  #   write_lines(bib_txt_utf8[seq_len(i-1)], bib_txt_utf8_path, fileEncoding = "UTF-8")  
+  # 
+  #   try(RefManageR::ReadBib(bib_txt_utf8_path, .Encoding = encoding, check = FALSE))
+  # })
+  
+  
+  # for(i in starts[-1L]) {
+  #   
+  #   print(bib_txt_utf8[i])
+  #   
+  #   write_lines(bib_txt_utf8[seq_len(i-1)], bib_txt_utf8_path, fileEncoding = "UTF-8")  
+  #   
+  #   try(RefManageR::ReadBib(bib_txt_utf8_path, .Encoding = encoding, check = FALSE))
+  # }
+  
+  #readr::write_lines(bib_txt_utf8, bib_txt_utf8_path)
+  
+  bib_txt_latin1 <- kwb.fakin::read_lines(bib_txt_path, encoding = "latin1", fileEncoding = "UTF-8-BOM")
+  bib_txt_latin1_path <- "KWB_documents_20190709_latin1.txt"
+  write_lines(text = bib_txt_latin1, bib_txt_latin1_path, "latin1")
+  
+  ### Import all (same cannot due to parsing errors:
+  ### "The name list field author cannot be parsed"
+  encoding = "latin1"
+  kwb_bib_all <- RefManageR::ReadBib(bib_txt_latin1_path, 
+                                     .Encoding = encoding,
+                                     check = FALSE)
+  
+  ris("KWB-documents_2020617_RefMan-RIS_Export.txt")
+  
+  
+  tmp <- lapply(kwb_bib_all, function(x) try(capture.output(x))) 
+  
+  is_simple_error <- function(x) inherits(x, "simpleError")
+  
+  is_error <- sapply(lapply(tmp , function(x) attr(x,"condition")), 
+                     is_simple_error)
+  
+  bib_errors_txt <- gsub(pattern = ".*:\\s+\n\\s+", replacement = "", x = unlist(tmp[is_error]))
+  stringr::str_extract(bib_errors_txt, "^RN[0-9]{1,4}")
+  bib_errors_df <- tibble::tibble("endnote_record-number" = stringr::str_extract(bib_errors_txt, "^RN[0-9]{1,4}") %>%  
+                                    stringr::str_remove("RN") %>%  as.integer(),
+                                  error_text = stringr::str_extract(bib_errors_txt, pattern = "A bibentry.*")) %>% 
+    dplyr::arrange(.data$`endnote_record-number`)
+  
+  ## Not working as not all required data are provided for the references
+  # RefManageR::WriteBib(kwb_bib_all, file = "temp.bib", biblatex = TRUE)
+  
+  kwb_bib_all_df <- as.data.frame(kwb_bib_all)
+  
+  nrow(kwb_bib_all_df)
+  
+  
+  check_technical_report <- function(bib_df,
+                                     default_institution = "Kompetenzzentrum Wasser Berlin gGmbH") { 
+    
+    
+    idx_TechReport <- which(bib_df$bibtype == "TechReport")
+    
+    if(length(idx_TechReport)>0) {
+      print(sprintf("Replacing  missing 'institution' %d entries for 'TechnicalReport'
+with %s", length(idx_TechReport), default_institution))
+      no_institution_idx <- is.na(bib_df$institution[idx_TechReport]) 
+      bib_df$institution[idx_TechReport] <- default_institution 
+      
+    } else {
+      "No missing entries for 'institution' for 'TechnicalReport'"  
+    }
+    
+    bib_df
+  }
+  
+  ## filter out conference reports in "Misc" or "Unpublished" not exported correctply
+  # kwb_bib_valid_df_noMisc_unpublished <-  kwb_bib_valid_df[!kwb_bib_valid_df$bibtype %in% c("Misc", "Unpublished"),] 
+  # kwb_bib_valid_df_noMisc_unpublished[kwb_bib_valid_df_noMisc_unpublished$bibtype == "PhdThesis",]
+  # nrow(kwb_bib_valid_df_noMisc_unpublished)                       
+  # 
+  # 
+  # RefManageR::WriteBib(RefManageR::as.BibEntry(kwb_bib_valid_df_noMisc_unpublished),
+  #                      file = "publications_kwb.bib") 
+  
+  
+  selection <- stringr::str_detect(kwb_bib_valid_df$month, pattern = "[0-9]{4}-[0-1][0-9]-[0-3][0-9]") & !is.na(kwb_bib_valid_df$month)
+  
+  kwb_bib_valid_df$month[selection] <- format(as.Date(kwb_bib_valid_df$month[selection]), format = "%m")
+  
+  RefManageR::WriteBib(RefManageR::as.BibEntry(kwb_bib_valid_df),
+                       file = "publications_kwb.bib")
 }
