@@ -4,16 +4,16 @@ before_script:
   - apt-get update && apt-get -y install pandoc r-base git
   - apt-get -y install libcurl4-openssl-dev libxml2-dev libssl-dev
   - R -e "install.packages('remotes',repos='http://cran.rstudio.com')"
-  - R -e "remotes::install_github('kwb-r/algoliar')"
+#  - R -e "remotes::install_github('kwb-r/algoliar')"
   - R -e "remotes::install_github('rstudio/blogdown')"
-  - R -e "blogdown::install_hugo()"
+  - R -e "blogdown::install_hugo(version = "0.70.0")"
 
 pages:
   script:
     - R -e "file.copy('config/_default/config.toml', 'config.toml', overwrite = TRUE)"
     - R -e "blogdown::build_site()"
-    - R -e "file.copy('public/de/index.json', 'public/index.json', overwrite = TRUE)"
-    - R -e "algoliar::algolia_post_batch()" 
+#    - R -e "file.copy('public/de/index.json', 'public/index.json', overwrite = TRUE)"
+#    - R -e "algoliar::algolia_post_batch()" 
   artifacts:
     paths:
       - public
