@@ -1,12 +1,13 @@
-+++
-title = "Beteiligung der Öffentlichkeit im Koordinierungsraum Havel"
-date = 2004-01-01
-authors = ["Nicole Kranz", "Antje Vorwerk", "Wenke Hansen"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-url_pdf = "http://kompetenz-wasser.de/fileadmin/user_upload/pdf/downloads/Schriftenreihe_KWB_bd1_ECOLOG.pdf"
-projects = ["pprp"]
-+++
+---
+title: "Beteiligung der Öffentlichkeit im Koordinierungsraum Havel"
+date: 2004-01-01
+publishDate: 2020-07-03T20:16:35.681434Z
+authors: [ "Kranz, N.", "Vorwerk, A.", "Hansen, W." ]
+publication_types: ["4"]
+abstract: ""
+featured: false
+publication: ""
+url_pdf: "../../../pdf/Kranz-2004-283.pdf"
+projects: ["pprp"]
+---
 

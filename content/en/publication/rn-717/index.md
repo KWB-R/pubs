@@ -1,10 +1,12 @@
-+++
-title = "Mikrobielle Verockerung in technischen Systemen - Teil 2: Molekularbiologische und mikrobiologische Untersuchungen von Ockerproben"
-date = 2014-01-01
-authors = ["Josephin Schroeder", "Burga Braun", "schwarzmueller", "menz", "Gesche Gruetzmacher", "gnirss", "Volker Jordan", "Thomas Grischek", "Wolfgang Macheleidt", "Ulrich Szewzyk"]
-publication_types = ["2"]
-abstract = ""
-selected = false
-publication = "*wwt*"
-+++
+---
+title: "Mikrobielle Verockerung in technischen Systemen - Teil 2: Molekularbiologische und mikrobiologische Untersuchungen von Ockerproben"
+date: 2014-01-01
+publishDate: 2020-07-03T20:16:42.357433Z
+authors: [ "SchrÃ¶der, J.", "Braun, B.", "schwarzmueller", "Menz, C.", "GrÃ¼tzmacher, G.", "GnirÃŸ, R.", "Jordan, V.", "Grischek, T.", "Macheleidt, W.", "Szewzyk, U." ]
+publication_types: ["2"]
+abstract: ""
+featured: false
+publication: "*wwt Wasserwirtschaft Wassertechnik*"
+projects: ["antiocker"]
+---
 

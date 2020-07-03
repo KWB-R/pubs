@@ -1,0 +1,12 @@
+---
+title: "Identification of individual rain events and evaluation of their specific characteristics from pluviograph records: A review with analysis of data from a project investigating micro pollutant loads in Berlin rainwater runoff"
+date: 2015-01-01
+publishDate: 2020-07-03T20:16:43.161430Z
+authors: [ "Masch, M." ]
+publication_types: ["7"]
+abstract: "Rain water runoff is the largest untreated source of potentially high loads of micro pollutants to urban surface waters. Given first findings it can be expected that new rainwater based micro pollutants will be included in future lists of priority substances of the EU Water Framework Directive (WFD). Knowledge of the type and amount of micro pollutants is (therefore) pivotal for enabling good management. Pollutant concentrations depend heavily on rain event characteristics such as rain depth, mean rain rate, intensity, duration and dry-weather-period. As rainfall is usually reported to fall in events and is separated by rainless intervals of a certain duration, the minimum interevent time (MIT) plays a major role within the criteria for defining such rain events. Surprisingly little attention has been paid to the importance of rain event definitions in similar published works, which limits the significance of the results and their comparability to other researches. That is why this work aims to identify independent rain events from a pluviograph record with the help of further hydraulic data. It is also the goal to examine rainfall characteristics of (5) sub-catchments within in the larger catchment Berlin and their sensibility through the variation of rain event definitions, like the very important Minimum-Inter-event Time Definition (MITD). Several rain gauges close-by as well as sensors to measure the water level and the flow inside a storm water sewer of a separated sewage system supply the necessary data. Additionally a number of criteria, found in literature, help to identify the most stable definition of a rain event for these catchments. It is also the intention to set the basis for further analysis (within the project this thesis is realized in) in order to generate the most adequate concentration data of micro pollutants in Berlin’s urban rain water runoff, as this definition will play a major role for further project analysis. Moreover this work intents to emphasize the relevance of the selection and documentation of rain event criteria in studies that apply event-based data analysis."
+featured: false
+publication: ""
+projects: ["ogre"]
+---
+

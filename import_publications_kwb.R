@@ -109,11 +109,11 @@ readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 options(encoding="UTF-8-BOM")
 tmp <- bib2df::bib2df("KWB-documents_2020623_with-abstracts_caption-label.txt")
 tmp$URL <- NA_character_
-tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
+#tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
 tmp <- tmp[order(tmp$en_id),]
 is_public <- is.na(tmp$ACCESS) | tmp$ACCESS == "public"
-
+tmp$ACCESS[is_public] <- "public"
 tmp <- tmp[is_public,]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
@@ -148,60 +148,14 @@ valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
 tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
 
 
-
-kwb_authors <- setNames(lapply(authors_metadata$dir_name, "["), 
-                        nm = authors_metadata$author_name)
-
-tmp$AUTHOR_KWB <- lapply(tmp$AUTHOR, FUN = function(authors) {
-  if(any(!is.na(authors))) {
-  kwb.utils::multiSubstitute(authors, replacements = kwb_authors)
-  } else {message("no author entry")}
-})
-
 options(encoding="UTF-8")
 bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 
-
-get_publication_index_md_paths <- function (hugo_root_dir = ".") 
-{
-  pub_dir <- fs::path_abs(hugo_root_dir, "content/de/publication")
-  fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
-}
-
-replace_kwb_authors_in_pub_index_md <- function (path, encoding = "UTF-8") {
-  pub_index_txt <- readLines(path, encoding = encoding)
-  idx <- which(stringr::str_detect(pub_index_txt, pattern = "^author"))
-  if (idx > 0) {
-    message(sprintf("Replacing KWB authors in '%s'", 
-                    path))
-    pub_index_txt[idx] <- replace_umlauts(pub_index_txt[idx])
-    writeLines(pub_index_txt, path, useBytes = TRUE)
-  }
-}
+fs::dir_delete(path = list.dirs("content/publication/"))
+fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
+fs::dir_delete(path = list.dirs("content/en/publication/")[-1])
 
 
-
-replace_authors_with_kwb_in_pub_index_md <- function (pubs_path = "content/publication/", encoding = "UTF-8") 
-{
-  paths <- get_publication_index_md_paths(hugo_root_dir)
-  sapply(paths, replace_author_umlauts_in_pub_index_md, encoding = encoding)
-}
-
-tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) sprintf("authors: [ %s ]", paste0('"', authors, '"', collapse = ", ")))
-      
-authors <- unique(unlist(tmp$AUTHOR))
-authors[order(authors)]
-
-
-# old_names <- basename(list.dirs("content/publication"))[-1]
-# new_names <- stringr::str_remove(old_names, "rn-")
-# 
-# for(i in seq_along(old_names)) {
-# shell(paste('rename', 
-#             sprintf("%s", old_names[i]),
-#             sprintf("%s", new_name[i])))
-# }
-      
 ###############################################################################
 ### Step 2: Import .bibtex file to publications with Python 
 ###############################################################################
@@ -249,14 +203,76 @@ cmds <- sprintf('call "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"
 writeLines(cmds,con = "import_bibtex_kwb.bat")
 
 # repeat a few times due to errors:
-for (i in 1:10) {
+#for (i in 1:10) {
   shell("import_bibtex_kwb.bat")
-}
+#}
 ### Now check the folder "content/publication". Your publications should be added
 ### now!
 
 ### Add Project ids 
 kwb.pubs::add_projects_to_pub_index_md(endnote_df, col_project = "label")
+
+
+
+kwb_authors <- setNames(lapply(authors_metadata$dir_name, "["), 
+                        nm = authors_metadata$author_name)
+
+tmp$AUTHOR_KWB <- lapply(tmp$AUTHOR, FUN = function(authors) {
+  if(any(!is.na(authors))) {
+    kwb.utils::multiSubstitute(authors, replacements = kwb_authors)
+  } else {message("no author entry")}
+})
+
+tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) {
+  sprintf("authors: [ %s ]", paste0('"', authors, '"', collapse = ", "))
+  }
+  )
+
+tmp$id <- as.numeric(stringr::str_extract(tmp$BIBTEXKEY,
+                                          pattern = "[0-9]+"))
+saveRDS(tmp, "publications_kwb.Rds")
+
+
+get_publication_index_md_paths <- function (hugo_root_dir = ".") 
+{
+  pub_dir <- fs::path_abs(hugo_root_dir, "content/publication")
+  fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
+}
+
+replace_kwb_authors_in_pub_index_md <- function (path, 
+                                                 file_encoding = "UTF-8",
+                                                 dbg = TRUE) {
+  
+  id <- as.numeric(stringr::str_extract(basename(dirname(path)), 
+                                        pattern = "[0-9]+"))
+  
+  
+  authors <- unlist(tmp$AUTHOR_KWB[tmp$id == id])
+  
+  if(!is.null(authors)) {
+  
+  pub_index_txt <- kwb.fakin::read_lines(path, 
+                                         fileEncoding = file_encoding)
+  idx <- which(stringr::str_detect(pub_index_txt, pattern = "^author"))
+  if (idx > 0) {
+    if(dbg) message(sprintf("Replacing KWB authors in '%s'", path))
+    pub_index_txt[idx] <- unlist(tmp$hugo_authors[tmp$id == id])
+    writeLines(pub_index_txt, path, useBytes = TRUE)
+  }
+  }
+}
+  
+
+
+sapply(paths, function(path) replace_kwb_authors_in_pub_index_md(path))
+
+
+fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
+fs::dir_copy(path = "content/publication", "content/en/publication", overwrite = TRUE)
+fs::dir_delete(path = "content/publication")
+
+authors <- unique(unlist(tmp$AUTHOR))
+authors[order(authors)]
 
 
 

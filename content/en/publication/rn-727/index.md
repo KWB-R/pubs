@@ -1,0 +1,12 @@
+---
+title: "Auslöser von Alterungsprozessen in Brunnen und deren Verminderung im Betrieb"
+date: 2012-01-01
+publishDate: 2020-07-03T20:16:42.457434Z
+authors: [ "schwarzmueller", "Thronicker, O.", "Maiwald, U.", "Menz, C.", "Taute, T." ]
+publication_types: ["0"]
+abstract: ""
+featured: false
+publication: "*10. Berlin-Brandenburger Brunnentage*"
+projects: ["wellma-2"]
+---
+

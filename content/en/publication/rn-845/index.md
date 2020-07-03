@@ -1,11 +1,13 @@
-+++
-title = "Weiterentwicklung des Klima- und Ressourceneffizienzpotentials durch HTC-Behandlung ausgewählter Berliner Klärschlämme - HTC-Berlin (11443UEPII/2)"
-date = 2015-01-01
-authors = ["remy", "J. Stueber"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["htcberlin"]
-+++
+---
+title: "Weiterentwicklung des Klima- und Ressourceneffizienzpotentials durch HTC-Behandlung ausgewählter Berliner Klärschlämme - HTC-Berlin (11443UEPII/2)"
+date: 2015-01-01
+publishDate: 2020-07-03T20:16:43.425436Z
+authors: [ "remy", "StÃ¼ber, J." ]
+publication_types: ["4"]
+abstract: "Die vorliegende wissenschaftliche Studie untersucht Potenziale und Grenzen der Hydrothermalen Karbonisierung (HTC) von entwässertem Klärschlamm zur Verbesserung der Energie- und Klimabilanz der Klärschlammentsorgung in Berlin. Für vier Berliner Klärwerke wurden Laborversuche zur HTC mit entwässertem Klärschlamm durchgeführt, um die Produkte HTC-Filtrat und hochentwässerter Klärschlamm zu charakterisieren. Mit diesen Daten und den Prozessangaben des HTC-Anbieters Terranova wurden Energieund Treibhausgasbilanzen für vier Klärwerke erstellt, die neben dem Referenzzustand 2013 für verschiedene Entsorgungswege auch die Implementierung eines HTC-Prozesses vorsehen. Abschließend wurde das HTC-Verfahren in einem technischen Pilotversuch mit zwei Berliner Klärschlämmen getestet und ebenfalls bilanziert. Die Laborversuche bestätigten die hohe Belastung des HTC-Filtrats mit CSB und N. Die organische Fracht im HTC-Filtrat zeigt im Biomethantest gute anaerobe Abbaubarkeit und einen entsprechenden Faulgasertrag. Der verbleibende CSB ist noch weiter aerob abbaubar (Zahn-Wellens-Test), so dass letztlich zwischen 1-14% der CSB-Fracht im Filtrat (7,4-14,5 g/L) als refraktär angesehen werden. Eine merkliche Rücklösung von Phoshor und Schwermetallen lässt sich erst bei stark sauren Bedingungen während der HTC (pH < 3) feststellen. Die Pilotversuche mit Klärschlamm aus Waßmannsdorf und Münchehofe in der Anlage des Anbieters Terranova konnten aufgrund von Problemen bei der Klärschlammaufgabe nicht kontinuierlich durchgeführt werden. Zudem wurde bei der abschließenden Entwässerung nicht der hohe prognostizierte TR-Gehalt im Klärschlamm erreicht (> 65% TR). Damit bleiben erhebliche Zweifel an der Betriebsstabilität und den prognostizierten Entwässerungsergebnissen bestehen. Die Energie- und Klimabilanz auf Basis der Labordaten und Herstellerangaben zeigt, dass die Einführung eines HTC-Prozesses für alle betrachteten Szenarien deutliche Vorteile bieten kann. Dabei spielt vor allem der erhöhte Faulgasertrag aus dem Prozesswasser (+16-19%) und der hohe Heizwert des hochentwässerten Klärschlamms eine Rolle. Die zusätzlichen Aufwendungen für den Prozess (Erdgas, Strom, Säure) und die höhere Rückbelastung des Klärwerks werden durch die Gutschriften ausgeglichen. Die Abwärme für den HTC-Prozess ist auf allen Klärwerken mit Faulung zu über 90% vorhanden, im Klärwerk Ruhleben sollte dazu eine separate Faulstufe für das HTC-Filtrat vorgesehen werden. Die Bilanzierung auf Basis der Daten aus den Pilotversuchen zeigt jedoch, dass die Vorteile der HTC deutlich geringer ausfallen, wenn Faulgasertrag im Filtrat und Entwässerbarkeit nicht erreicht werden. Der refraktäre CSB aus dem HTC-Filtrat kann im Ablauf der Klärwerke maximal zu einer Erhöhung des CSB-Ablaufwerts von 7-12 mg/L führen, was bei einzelnen Klärwerken eine Überschreitung der Überwachungswerte zur Folge haben kann. Dieser Aspekt ist bei der weiteren Betrachtung des HTC-Verfahrens unbedingt zu berücksichtigen. Eine Kombination von Phosphorrückgewinnung und HTC lässt sich über eine Rückgewinnung aus der Asche der Monoverbrennung oder eine vorgeschaltete P-Extraktion erreichen. Die abgeschätzten Betriebskosten der HTC-Anlage können ggf. durch Einsparungen bei der Schlammentsorgung ausgeglichen werden, wobei die Investitionskosten für eine HTC-Anlage noch unbekannt sind."
+featured: false
+publication: ""
+url_pdf: "../../../pdf/Remy-2015-845.pdf"
+projects: ["htc-berlin"]
+---
 

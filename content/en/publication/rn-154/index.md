@@ -1,11 +1,12 @@
-+++
-title = "Medikamente verlangen dem Klärwerk Höchstleistungen ab"
-date = 2005-01-01
-authors = ["Rolf-Juergen Schwarz"]
-publication_types = ["2"]
-abstract = ""
-selected = false
-publication = "*VDI Nachrichten*"
-projects = ["rkm"]
-+++
+---
+title: "Medikamente verlangen dem Klärwerk Höchstleistungen ab"
+date: 2005-01-01
+publishDate: 2020-07-03T20:16:33.013432Z
+authors: [ "Schwarz, R.-J." ]
+publication_types: ["2"]
+abstract: ""
+featured: false
+publication: "*VDI Nachrichten*"
+projects: ["rkm"]
+---
 

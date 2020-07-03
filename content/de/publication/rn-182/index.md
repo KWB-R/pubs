@@ -1,11 +1,13 @@
-+++
-title = "Spurenstoffe in Mischwassereinleitungen"
-date = 2008-01-01
-authors = ["Stephan Plume", "matzinger", "rouault", "Doreen Richter"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["monitor1"]
-+++
+---
+title: "Spurenstoffe in Mischwassereinleitungen"
+date: 2008-01-01
+publishDate: 2020-07-03T20:16:33.241444Z
+authors: [ "Plume, S.", "matzinger", "rouault", "Richter, D." ]
+publication_types: ["4"]
+abstract: "The study “Trace pollutants in combined sewer overflows” provides an overview on the input of trace substances (organic or inorganic trace substances) to surface waters during combined sewer overflows (CSO). The study outlines substance pathways, types of substances, expected loads as well as possible impacts on the receiving water. The study shall aid the discussion and further handling of trace substances within the project Monitor-1, which is currently carried out at the Berlin Centre of Competence for Water (KWB). The study has identified more than 300 substances, which could reach the Berlin surface water bodies via CSO. Moreover, it is assumed that there is a large number of substances and metabolites, which are still unknown. Sewage-related substances in combined sewers can stem from:  household products (e.g. surfactants from cleaning agents),  leaching (e.g. amines from textile colours or Bisphenol A from plastic coatings), wash-off of cosmetic products (e.g. Benzophenone-3 from sunblocks) or health lotions, excretion of ingested products (e.g. the pain killer Diclofenac). Stormwater-related substances in combined sewers can stem from abrasion from car and railway traffic (e.g. cadmium from break lining abrasion), erosion of building materials (e.g. copper from eaves gutters), application (e.g. glyphosate for weed control on pavements) or atmospheric deposition (e.g. polychlorinated dibenzofurans from exhaust fumes). In the framework of this study available substance data was assembled, containing: general information like synonyms and CAS-No., chemical properties, elimination rate in wastewater treatment plant (WWTP), observed concentrations in surface waters and toxicity. A complete list of the substances as well as selected substance properties is attached in table A6 (Appendix). Some of these substances can be used as tracers to distinguish different pollution pathways to surface waters. Suitable indicators should enter surface waters mainly via one pathway, their half-life in surface waters should be sufficiently long, concentrations should show no seasonal fluctuations and they should be well-measurable. For instance, caffeine is a good indicator for inflows of untreated sewage via CSO, as it is very well degraded in WWTP. As an indicator for treated sewage the almost nondegradable anti-epileptic Carbamazepine could be used. Finally, polycyclic aromatic hydrocarbons (PAH) could be used as indicator for stormwater-related pollution. In road traffic, PAHs result from incomplete combustion processes, adsorb on atmospheric particles, deposit on the surface and are washed off by rainfall runoff. In this study the relevance of the path “CSO” for trace substance emissions from the Berlin wastewater system in comparison to the other paths (storm drainage and WWTP) was assessed. Therefore, a simple balance of the fraction of CSO in total emissions to the Berlin surface waters was carried out. The balance was based on the annual volumes of WWTP effluents, storm drainage and CSO. Due to a lack in substancespecific measurement information the balance was calculated dependent on the elimination rate of substances in WWTPs. Based on the resulting figures A, B, C, D and E the fraction of CSO in total loads to the Berlin surface waters can be assessed for each substance with known elimination rate in WWTPs. In the study we distinguished between: (i) sewage related substances / stormwater related substances, (ii) balance area „Berlin total“ (5 WWTPs with 622,000 m³/d, 97 km2 combined sewer system, 231 km2 storm drainage system) / balance area „Berlin city centre“ (60% of the WWTP Münchehofe with 39,000 m³/d, 83 km2 combined sewer system, 112 km2 storm drainage system) and (iii) total annual loads / event based loads."
+featured: false
+publication: ""
+url_pdf: "../../../pdf/Plume-2008-182.pdf"
+projects: ["monitor"]
+---
 

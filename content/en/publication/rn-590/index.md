@@ -1,11 +1,13 @@
-+++
-title = "RIKO-1 Durchführung und Ergebnisse der Tracerversuche an Brunnen im Wasserwerk Jungfernheide"
-date = 2013-01-01
-authors = ["menz"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["riko1"]
-+++
+---
+title: "RIKO-1 RISIKOANALYSE DES EINTRAGS MIKROBIELLER KONTAMINATION IN TRINKWASSERBRUNNEN UND ABLEITUNG VON VERMEIDUNGSSTRATEGIEN – PHASE 1"
+date: 2013-01-01
+publishDate: 2020-07-03T20:16:40.701433Z
+authors: [ "Menz, C." ]
+publication_types: ["4"]
+abstract: ""
+featured: false
+publication: ""
+url_pdf: "../../../pdf/Menz-2013-590.pdf"
+projects: ["riko"]
+---
 

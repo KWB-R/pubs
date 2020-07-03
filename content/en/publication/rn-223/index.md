@@ -1,11 +1,13 @@
-+++
-title = "Möglichkeiten und Grenzen der Revitalisierung der Stadtspree als Lebensraum für die Fischfauna"
-date = 2009-01-01
-authors = ["Marc Leszinski", "Frank Schumacher"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["samcso"]
-+++
+---
+title: "Möglichkeiten und Grenzen der Revitalisierung der Stadtspree als Lebensraum für die Fischfauna"
+date: 2009-01-01
+publishDate: 2020-07-03T20:16:34.317434Z
+authors: [ "Leszinski, M.", "Schumacher, F." ]
+publication_types: ["4"]
+abstract: ""
+featured: false
+publication: ""
+url_pdf: "../../../pdf/Leszinski-2009-223.pdf"
+projects: ["sam-cso"]
+---
 

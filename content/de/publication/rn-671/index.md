@@ -1,11 +1,13 @@
-+++
-title = "Phosphorpotenziale im Land Berlin - Abschlussbericht Projekt P-Pot"
-date = 2014-01-01
-authors = ["C. Kabbe", "D. Baeger", "R. Mancke"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["ppot"]
-+++
+---
+title: "Phosphorpotenziale im Land Berlin - Abschlussbericht Projekt P-Pot"
+date: 2014-01-01
+publishDate: 2020-07-03T20:16:41.917432Z
+authors: [ "Kabbe, C.", "BÃ¤ger, D.", "Mancke, R." ]
+publication_types: ["4"]
+abstract: ""
+featured: false
+publication: ""
+url_pdf: "../../../pdf/Kabbe-2014-671.pdf"
+projects: ["p-pot"]
+---
 
