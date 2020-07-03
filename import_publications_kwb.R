@@ -121,16 +121,17 @@ public_report_ids <- endnote_df$rec_number[is_public_report]
 public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
 
 
-
-
+### path PDF files of exported Endnote DB (needs to be same as .XML and .txt files!)
 dms_dir <- fs::path_abs("../../dms/2020-06-23/KWB-documents_20191205.Data/PDF")
+
 public_reports$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
                                   replacement = dms_dir,
                                   public_reports$urls_pdf01)
 
+fs::dir_create("static/pdf")
 
 fs::file_copy(path = public_reports$urls_pdf01, 
-              new_path = file.path(fs::path_abs("../../RProjects/pubs_update/static/pdf"), 
+              new_path = file.path(fs::path_abs("static/pdf"), 
                                    basename(public_reports$urls_pdf01)), overwrite = TRUE)
 
 tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%  
