@@ -23,8 +23,19 @@ authors_metadata$author_name <- gsub("Schubert.*", "Schubert, R.-L.", authors_me
 
 authors_metadata$fullname <- authors_metadata$author_name
 
+working_at_kwb <- ! authors_metadata$lastname %in% c("ro\u00DFbach", "gnir\u00DF")
+
+authors_metadata <- authors_metadata[working_at_kwb,]
+
 kwb.pubs::add_authors_index_md(authors_metadata, overwrite = TRUE)
 kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
+
+fs::dir_delete(path = "content/en/authors")
+fs::dir_copy(path = "content/authors", "content/en/authors", overwrite = TRUE)
+## currently the same content as in "en" (should be changed to "de"
+## required to add a new "config" file)
+fs::dir_delete(path = "content/de/authors")
+fs::dir_copy(path = "content/authors", "content/de/authors", overwrite = TRUE)
 
 Sys.setlocale(category = "LC_ALL", locale = "German")
 
