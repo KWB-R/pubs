@@ -2,7 +2,7 @@
 title: "Hydrogeological and static structural geological model implementation - Technical report -"
 date: 2013-01-01
 publishDate: 2020-07-03T20:16:42.373436Z
-authors: [ "Thomas, L.", "Taute, T.", "Schneider, M.", "SchÃ¶ne, E.", "RÃ¶hmann, L.", "Kempka, T.", "KÃ¼hn, M." ]
+authors: [ "Thomas, L.", "Taute, T.", "Schneider, M.", "Schöne, E.", "Röhmann, L.", "Kempka, T.", "Kühn, M." ]
 publication_types: ["4"]
 abstract: ""
 featured: false

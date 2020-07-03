@@ -2,7 +2,7 @@
 title: "Behavior of bulk organics and trace pollutants during bank filtration and groundwater recharge of wastewater-impacted surface waters"
 date: 2004-01-01
 publishDate: 2020-07-03T20:16:32.245432Z
-authors: [ "GrÃ¼nheid, S.", "Schittko, S.", "Jekel, M." ]
+authors: [ "Grünheid, S.", "Schittko, S.", "Jekel, M." ]
 publication_types: ["0"]
 abstract: ""
 featured: false

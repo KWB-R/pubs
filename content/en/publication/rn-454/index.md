@@ -2,7 +2,7 @@
 title: "Synthesis Report on Practical Implications and Opportunities for Transfer to Field Scale"
 date: 2011-01-01
 publishDate: 2020-07-03T20:16:39.069433Z
-authors: [ "miehe", "Staub, M.", "GrÃ¼tzmacher, G." ]
+authors: [ "miehe", "Staub, M.", "Grützmacher, G." ]
 publication_types: ["4"]
 abstract: ""
 featured: false

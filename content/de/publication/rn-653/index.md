@@ -2,7 +2,7 @@
 title: "Bank Filtration and Aquifer Recharde for Drinking Water Production: Application, Efficiency and Perspectives - An Integration of NASRI outcomes and International Experiences"
 date: 2011-01-01
 publishDate: 2020-07-03T20:16:41.657431Z
-authors: [ "GrÃ¼tzmacher, G.", "Wiese, B.", "HÃ¼lshoff, I.", "Orlikowski, D.", "Hoa, E.", "Moreau-Le Golvan, Y." ]
+authors: [ "Grützmacher, G.", "Wiese, B.", "Hülshoff, I.", "Orlikowski, D.", "Hoa, E.", "Moreau-Le Golvan, Y." ]
 publication_types: ["4"]
 abstract: ""
 featured: false

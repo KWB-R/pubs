@@ -2,7 +2,7 @@
 title: "Zones tampons pour prévenir la pollution diffuse en milieu rural et semi-rural – présentation du projet “Aquisafe“."
 date: 2010-01-01
 publishDate: 2020-07-03T20:16:47.581430Z
-authors: [ "matzinger", "Sautjeau, B.", "GuÃ©gain, C.", "Litz, N.", "Krause, B.", "Tedesco, L. P.", "Julich, S.", "Bugey, A.", "PÃ©rillon, C.", "Orlikowski, D.", "Schroeder, K." ]
+authors: [ "matzinger", "Sautjeau, B.", "Guégain, C.", "Litz, N.", "Krause, B.", "Tedesco, L. P.", "Julich, S.", "Bugey, A.", "Périllon, C.", "Orlikowski, D.", "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false

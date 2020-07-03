@@ -38,7 +38,6 @@ fs::dir_delete(path = "content/de/authors")
 fs::dir_copy(path = "content/authors", "content/de/authors", overwrite = TRUE)
 fs::dir_delete(path = "content/authors")
 
-Sys.setlocale(category = "LC_ALL", locale = "German")
 
 library(dplyr)
 library(reticulate)
@@ -144,9 +143,9 @@ tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%
 
 tmp$MONTH <- format(as.Date(tmp$MONTH), format = "%m")
 dates <- as.Date(tmp$DATE, format = "%Y-%m-%d")
+tmp$DATE <- dates
 valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
 tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
-
 
 options(encoding="UTF-8")
 bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
@@ -239,6 +238,22 @@ get_publication_index_md_paths <- function (hugo_root_dir = ".")
   fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
 }
 
+write_lines <- function (text, file, fileEncoding = "", ...) {
+  if (is.character(file)) {
+    con <- if (nzchar(fileEncoding)) {
+      file(file, "wt", encoding = fileEncoding)
+    }
+    else {
+      file(file, "wt")
+    }
+    on.exit(close(con))
+  }
+  else {
+    con <- file
+  }
+  writeLines(text, con, ...)
+}
+
 replace_kwb_authors_in_pub_index_md <- function (path, 
                                                  file_encoding = "UTF-8",
                                                  dbg = TRUE) {
@@ -257,18 +272,19 @@ replace_kwb_authors_in_pub_index_md <- function (path,
   if (idx > 0) {
     if(dbg) message(sprintf("Replacing KWB authors in '%s'", path))
     pub_index_txt[idx] <- unlist(tmp$hugo_authors[tmp$id == id])
-    writeLines(pub_index_txt, path, useBytes = TRUE)
+    write_lines(pub_index_txt, path, file_encoding)
   }
   }
 }
   
 
+#Sys.setlocale(category = "LC_ALL", locale = "German")
 
-sapply(paths, function(path) replace_kwb_authors_in_pub_index_md(path))
+sapply(get_publication_index_md_paths(), function(path) replace_kwb_authors_in_pub_index_md(path))
 
 
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
-fs::dir_copy(path = "content/publication", "content/en/publication", overwrite = TRUE)
+fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
 fs::dir_delete(path = "content/publication")
 
 authors <- unique(unlist(tmp$AUTHOR))
@@ -375,22 +391,7 @@ if (FALSE) {
   
   nrow(kwb_bib_valid_df)/nrow(kwb_bib_all_df)
   
-  write_lines <- function (text, file, fileEncoding = "", ...)
-  {
-    if (is.character(file)) {
-      con <- if (nzchar(fileEncoding)) {
-        file(file, "wt", encoding = fileEncoding)
-      }
-      else {
-        file(file, "wt")
-      }
-      on.exit(close(con))
-    }
-    else {
-      con <- file
-    }
-    writeLines(text, con, ...)
-  }
+
   
   ### Saved original "KWB.txt" in Rstudio with
   ### "Save with Encoding "Windows-1252" and define encoding "latin1" for import

@@ -2,7 +2,7 @@
 title: "Ten persistent myths and the realities of the MBR technology for municipal applications"
 date: 2010-01-01
 publishDate: 2020-07-03T20:16:38.029440Z
-authors: [ "Lesjean, B.", "Tazi-Pain, A.", "ThaurÃ©, D.", "Moeslang, H.", "Buisson, H." ]
+authors: [ "Lesjean, B.", "Tazi-Pain, A.", "Thauré, D.", "Moeslang, H.", "Buisson, H." ]
 publication_types: ["0"]
 abstract: "Twelve years after the first full scale municipal application in Europe of the membrane bioreactor (MBR) technology, the process is now accepted as a technology of choice for wastewater treatment, and the market is showing sustained growth. However early misconceptions about the technology are persistent and false statements are commonly encountered in articles and conferences, generating unnecessary research efforts or even fuelling either fascination or scepticism with regards to the technology, which is ultimately detrimental to the perception of the process by water professionals. We try to provide some factual and rational clarifications on ten issues which are often wrongly reported about MBR technology."
 featured: false
