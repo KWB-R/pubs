@@ -16,4 +16,4 @@ git rm -rf *
 cp -r ../public/* ./
 git add --all *
 git commit -m "update homepage (travis build ${TRAVIS_BUILD_NUMBER})" || true
-git push -q origin master
+git push -q origin gh-pages

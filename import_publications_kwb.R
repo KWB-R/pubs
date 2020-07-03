@@ -1,3 +1,5 @@
+library(dplyr)
+
 ### Update KWB authors 
 authors_metadata <- kwb.pubs::add_authors_metadata()
 
@@ -36,7 +38,7 @@ projects_site <- sites[sites$origin == "de/project-sitemap.xml",]
 project_ids_site <- stringr::str_split_fixed(projects_site$loc, "/", n = 7)[,6]
 project_ids_site <- project_ids_site[order(project_ids_site)]
 
-endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200617.xml")
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200623.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
 
 confidential_pubs_idx <- endnote_df$rec_number[which(endnote_df$caption == "confidential")]
@@ -85,24 +87,31 @@ readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 ### "The name list field author cannot be parsed"
 #options(encoding="windows-1252")
 options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df("KWB-documents_2020617_with-abstracts.txt")
+tmp <- bib2df::bib2df("KWB-documents_2020623_with-abstracts_caption-label.txt")
 tmp$URL <- NA_character_
+tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
 tmp <- tmp[order(tmp$en_id),]
+is_public <- is.na(tmp$ACCESS) | tmp$ACCESS == "public"
+
+tmp <- tmp[is_public,]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
-
 public_report_ids <- endnote_df$rec_number[is_public_report]
-
 public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
-dms_dir <- fs::path_abs("../../dms/2020-06-17/KWB-documents_20191205.Data/PDF")
+
+
+
+
+dms_dir <- fs::path_abs("../../dms/2020-06-23/KWB-documents_20191205.Data/PDF")
 public_reports$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
                                   replacement = dms_dir,
                                   public_reports$urls_pdf01)
 
+
 fs::file_copy(path = public_reports$urls_pdf01, 
               new_path = file.path(fs::path_abs("../../RProjects/pubs_update/static/pdf"), 
-                                   basename(public_reports$urls_pdf01)))
+                                   basename(public_reports$urls_pdf01)), overwrite = TRUE)
 
 tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%  
   dplyr::mutate(URL = ifelse(!is.na(.data$urls_pdf01), 
@@ -117,8 +126,6 @@ dates <- as.Date(tmp$DATE, format = "%Y-%m-%d")
 valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
 tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
 
-options(encoding="UTF-8")
-bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 
 
 kwb_authors <- setNames(lapply(authors_metadata$dir_name, "["), 
@@ -130,14 +137,30 @@ tmp$AUTHOR_KWB <- lapply(tmp$AUTHOR, FUN = function(authors) {
   } else {message("no author entry")}
 })
 
+options(encoding="UTF-8")
+bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
+
+
 get_publication_index_md_paths <- function (hugo_root_dir = ".") 
 {
   pub_dir <- fs::path_abs(hugo_root_dir, "content/de/publication")
   fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
 }
 
+replace_kwb_authors_in_pub_index_md <- function (path, encoding = "UTF-8") {
+  pub_index_txt <- readLines(path, encoding = encoding)
+  idx <- which(stringr::str_detect(pub_index_txt, pattern = "^author"))
+  if (idx > 0) {
+    message(sprintf("Replacing KWB authors in '%s'", 
+                    path))
+    pub_index_txt[idx] <- replace_umlauts(pub_index_txt[idx])
+    writeLines(pub_index_txt, path, useBytes = TRUE)
+  }
+}
 
-replace_authors_with_kwb_in_pub_index_md <- function (hugo_root_dir = ".", encoding = "UTF-8") 
+
+
+replace_authors_with_kwb_in_pub_index_md <- function (pubs_path = "content/publication/", encoding = "UTF-8") 
 {
   paths <- get_publication_index_md_paths(hugo_root_dir)
   sapply(paths, replace_author_umlauts_in_pub_index_md, encoding = encoding)
@@ -147,6 +170,17 @@ tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) sprintf("authors: [
       
 authors <- unique(unlist(tmp$AUTHOR))
 authors[order(authors)]
+
+
+# old_names <- basename(list.dirs("content/publication"))[-1]
+# new_names <- stringr::str_remove(old_names, "rn-")
+# 
+# for(i in seq_along(old_names)) {
+# shell(paste('rename', 
+#             sprintf("%s", old_names[i]),
+#             sprintf("%s", new_name[i])))
+# }
+      
 ###############################################################################
 ### Step 2: Import .bibtex file to publications with Python 
 ###############################################################################
