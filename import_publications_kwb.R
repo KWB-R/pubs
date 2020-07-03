@@ -36,6 +36,7 @@ fs::dir_copy(path = "content/authors", "content/en/authors", overwrite = TRUE)
 ## required to add a new "config" file)
 fs::dir_delete(path = "content/de/authors")
 fs::dir_copy(path = "content/authors", "content/de/authors", overwrite = TRUE)
+fs::dir_delete(path = "content/authors")
 
 Sys.setlocale(category = "LC_ALL", locale = "German")
 
@@ -90,7 +91,15 @@ ids_all <- dplyr::full_join(site, dms) %>%
 all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
 all_projects$project_ids
 
+fs::dir_delete(path = "content/de/project/")
+fs::dir_delete(path = "content/en/project/")
+### Relax and take a coffee (takes ~ 5 minutes)
 kwb.pubs::create_projects(all_projects$project_ids)
+fs::dir_copy(path = "content/de/project", "content/en/project", overwrite = TRUE)
+
+### to do: add "links" to KWB project factsheets (add in R package kwb.pubs)
+
+
 
 readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 
@@ -219,7 +228,9 @@ reticulate::use_condaenv(env,conda_path)
 #reticulate::py_install(packages = "academic", 
 #                       envname = env, 
 #                       pip = TRUE, pip_ignore_installed = TRUE) 
-
+# Manually replace with own modification: 
+# https://github.com/mrustl/academic-admin/commit/ea5c6a23d5b8cb482c2dd5afe15e71c1a049afbe
+# (re-mapping pub_id = "0" -> "proceedings" and "9" -> "misc")
 
 ## Should existing publications in content/publication folder be overwritten?
 overwrite <- TRUE
