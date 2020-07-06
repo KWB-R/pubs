@@ -232,8 +232,7 @@ tmp$id <- as.numeric(stringr::str_extract(tmp$BIBTEXKEY,
 saveRDS(tmp, "publications_kwb.Rds")
 
 
-get_publication_index_md_paths <- function (hugo_root_dir = ".") 
-{
+get_publication_index_md_paths <- function (hugo_root_dir = ".") {
   pub_dir <- fs::path_abs(hugo_root_dir, "content/publication")
   fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
 }
@@ -324,13 +323,39 @@ replace_publishDate_in_pub_index_md <- function (path,
     idx <- which(stringr::str_detect(pub_index_txt, pattern = "^publishDate"))
     if (idx > 0) {
       if(dbg) message(sprintf("Replacing publishDate in '%s'", path))
-      pub_index_txt[idx] <- sprintf('publishDate: "%s"', ref$publishDate)
+      pub_index_txt[idx] <- sprintf('publishDate: %s', ref$publishDate)
       write_lines(pub_index_txt, path, file_encoding)
     }
   }
 }
 
 sapply(get_publication_index_md_paths(), function(path) replace_publishDate_in_pub_index_md(path))
+
+replace_date_in_pub_index_md <- function (path, 
+                                          file_encoding = "UTF-8",
+                                          dbg = TRUE) {
+  
+  id <- as.numeric(stringr::str_extract(basename(dirname(path)), 
+                                        pattern = "[0-9]+"))
+  
+  
+  ref <- endnote_sdb[endnote_sdb$id == id, ]
+  
+  if(nrow(ref) == 1) {
+    
+    pub_index_txt <- kwb.fakin::read_lines(path, 
+                                           fileEncoding = file_encoding)
+    idx <- which(stringr::str_detect(pub_index_txt, pattern = "^date"))
+    if (idx > 0) {
+      if(dbg) message(sprintf("Replacing year in '%s'", path))
+      pub_index_txt[idx] <- sprintf('date: %s-01-01', ref$year)
+      write_lines(pub_index_txt, path, file_encoding)
+    }
+  }
+}
+
+
+sapply(get_publication_index_md_paths(), function(path) replace_date_in_pub_index_md(path))
 
 
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
