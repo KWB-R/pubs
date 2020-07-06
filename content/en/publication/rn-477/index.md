@@ -1,7 +1,7 @@
 ---
 title: "Potentiale für den Einsatz von Nährstoff-Filtersystemen in Deutschland zur Verringerung der Nährstoffeinträge in Oberflächengewässer"
 date: 2012-01-01
-publishDate: 2020-07-03T20:16:39.529435Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Holsten, B.", "Bednarek, A.", "Fier, A.", "Fohrer, N.", "Heckrath, G.", "Höper, H.", "Hugenschmidt, C.", "Kjærgaard, C.", "Krause, B.", "Litz, N.", "matzinger", "Orlikowski, D.", "Périllon, C.", "Pfannerstill, M.", "rouault", "Schäfer, W.", "Trepel, M.", "Ubraniak, M.", "Zalewski, M." ]
 publication_types: ["2"]
 abstract: "Der Einsatz von Filtern zur Reduzierung von Stickstoff- und Phosphoreinträgen aus der Landwirtschaft in die Oberflächengewässer wurde in Deutschland bisher kaum untersucht. In einem Workshop wurde der Stand der Untersuchungen von Projekten in Polen, Dänemark, Deutschland und Frankreich vorgestellt. Um das Potential dieser Maßnahmen auszuschöpfen, sind die Entwicklung von Entscheidungsunterstützungssystemen für geeignete Einsatzorte und weitere Demonstrationsprojekte unter Feldbedingungen notwendig."

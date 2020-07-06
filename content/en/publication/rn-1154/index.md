@@ -1,7 +1,7 @@
 ---
 title: "Development of a GIS Method to Localize Critical Source Areas of Diffuse Nitrate Pollution – Application to the Ic Catchment, France."
 date: 2009-01-01
-publishDate: 2020-07-03T20:16:47.589437Z
+publishDate: 2020-03-26T10:07:30Z
 authors: [ "Bugey, A." ]
 publication_types: ["7"]
 abstract: ""

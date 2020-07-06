@@ -1,7 +1,7 @@
 ---
 title: "Räumlich und zeitlich hochaufgelöste Niederschlagsanalyse in Berlin als Randbedingung für die Abwasserförderung"
-date: 2007-01-01
-publishDate: 2020-07-03T20:16:34.633428Z
+date: 2007-06-14
+publishDate: 2020-03-12T15:13:31Z
 authors: [ "Reimer, E." ]
 publication_types: ["0"]
 abstract: ""

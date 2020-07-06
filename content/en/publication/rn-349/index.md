@@ -1,7 +1,7 @@
 ---
 title: "Die Kombination von Ozon und Flockung als Behandlungsstufe vor einer Membranfiltration (Oxeram)"
 date: 2010-01-01
-publishDate: 2020-07-03T20:16:37.265434Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Genz, C.", "miehe", "Gnirß, R.", "Jekel, M." ]
 publication_types: ["0"]
 abstract: ""

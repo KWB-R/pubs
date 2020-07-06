@@ -1,7 +1,7 @@
 ---
 title: "Results on the background work and data integration of MAR systems for an Integrated Water Resource Management"
 date: 2007-06-01
-publishDate: 2020-07-03T20:16:38.313436Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Lorenzen, G.", "sprenger", "Greskowiak, J." ]
 publication_types: ["4"]
 abstract: ""

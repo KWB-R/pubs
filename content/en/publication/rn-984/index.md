@@ -1,7 +1,7 @@
 ---
 title: "Phosphorrückgewinnung aus Klärschlamm (Praxisbeispiel)"
 date: 2016-09-11
-publishDate: 2020-07-03T20:16:45.041438Z
+publishDate: 2020-03-12T15:15:26Z
 authors: [ "kraus", "Kabbe, C." ]
 publication_types: ["1"]
 abstract: ""

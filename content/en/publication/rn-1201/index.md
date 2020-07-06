@@ -1,7 +1,7 @@
 ---
 title: "Info-Broschüre: Einsatzmöglichkeiten für Nährstoffrezyklate im Ökolandbau (Projekt nurec4org)"
 date: 2018-01-01
-publishDate: 2020-07-03T20:16:48.353433Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "nurec4org" ]
 publication_types: ["4"]
 abstract: ""

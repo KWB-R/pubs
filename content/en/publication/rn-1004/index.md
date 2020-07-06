@@ -1,7 +1,7 @@
 ---
 title: "Neue Wege in der Abwassertechnik: Großtechnische Erfahrungen mit dem CARISMO-Verfahren"
 date: 2017-01-01
-publishDate: 2020-07-03T20:16:45.397429Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "remy", "Loderer, C.", "schubert" ]
 publication_types: ["0"]
 abstract: ""

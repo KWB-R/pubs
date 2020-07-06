@@ -1,7 +1,7 @@
 ---
 title: "Klärschlamm: Phosphorstrategie infolge neuer rechtlicher Regelungen"
 date: 2016-09-11
-publishDate: 2020-07-03T20:16:45.061437Z
+publishDate: 2020-03-12T15:15:20Z
 authors: [ "kraus", "Kabbe, C." ]
 publication_types: ["1"]
 abstract: ""

@@ -1,7 +1,7 @@
 ---
 title: "Overview of common well regeneration methods"
 date: 2012-01-01
-publishDate: 2020-07-03T20:16:40.669430Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "schwarzmueller" ]
 publication_types: ["4"]
 abstract: ""

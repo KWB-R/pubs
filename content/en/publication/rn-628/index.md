@@ -1,7 +1,7 @@
 ---
 title: "Abschlussbericht OXERAM 2"
-date: 2013-08-01
-publishDate: 2020-07-03T20:16:41.357431Z
+date: 2013-08-21
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "miehe", "Stüber, J.", "remy", "Langer, M.", "Godehardt, M.", "Boulestreau, M." ]
 publication_types: ["4"]
 abstract: ""

@@ -1,7 +1,7 @@
 ---
 title: "Leitfaden für die Sammlung von Patientenurin in Krankenhäusern"
 date: 2006-01-01
-publishDate: 2020-07-03T20:16:47.545438Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Heinzmann, B.", "Schwarz, R.-J." ]
 publication_types: ["4"]
 abstract: ""

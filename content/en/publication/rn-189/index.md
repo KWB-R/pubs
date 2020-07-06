@@ -1,7 +1,7 @@
 ---
 title: "Optimierung von Brunnenbetrieb und –instandhaltung ein interdisziplinäres Forschungsprojekt in Berlin"
 date: 2008-01-01
-publishDate: 2020-07-03T20:16:33.393439Z
+publishDate: 2020-05-25T15:14:05Z
 authors: [ "Wiacek, H." ]
 publication_types: ["0"]
 abstract: ""

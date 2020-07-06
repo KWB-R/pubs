@@ -1,7 +1,7 @@
 ---
 title: "Beschreibung der Schlauchliner in Berlin und statistische Analyse zu Zustand und Schäden - Kurzbericht des Forschungsvorhabens SEMA-Berlin (Memo)."
 date: 2017-01-01
-publishDate: 2020-07-03T20:16:45.777444Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "riechel" ]
 publication_types: ["4"]
 abstract: ""

@@ -1,7 +1,7 @@
 ---
 title: "Spatial Identification and Optimization of Upland Wetlands in Agricultural Watersheds"
 date: 2013-01-01
-publishDate: 2020-07-03T20:16:47.565429Z
+publishDate: 2020-05-25T13:05:22Z
 authors: [ "Babbar-Segens, M.", "Barr, R. C.", "Tedesco, L. P.", "Anderson, M." ]
 publication_types: ["2"]
 abstract: ""

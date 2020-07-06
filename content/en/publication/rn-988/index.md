@@ -1,7 +1,7 @@
 ---
 title: "Phosphorrecycling – Aktueller Stand und Perspektiven"
 date: 2016-02-17
-publishDate: 2020-07-03T20:16:45.161430Z
+publishDate: 2020-03-12T15:20:58Z
 authors: [ "Kabbe, C.", "kraus" ]
 publication_types: ["1"]
 abstract: ""

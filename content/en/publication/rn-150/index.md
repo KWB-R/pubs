@@ -1,7 +1,7 @@
 ---
 title: "Strategy and Current Status of Combating Eutrophication in 2 Berlin Lakes for Safeguarding Drinking Water Resources"
 date: 2006-01-01
-publishDate: 2020-07-03T20:16:32.989437Z
+publishDate: 2020-02-24T14:16:02Z
 authors: [ "Schauser, I.", "Chorus, I.", "Heinzmann, B." ]
 publication_types: ["2"]
 abstract: ""

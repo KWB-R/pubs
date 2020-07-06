@@ -1,7 +1,7 @@
 ---
 title: "Bewertung von Strategien der Abflusssteuerung mittels Kanalnetzsimulation"
-date: 2004-01-01
-publishDate: 2020-07-03T20:16:34.017435Z
+date: 2004-08-19
+publishDate: 2020-05-25T15:14:05Z
 authors: [ "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""

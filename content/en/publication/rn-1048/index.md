@@ -1,7 +1,7 @@
 ---
 title: "Bewertung umgesetzter urbaner Maßnahmen zur Nährstoffreduktion. NITROLIMIT 2, Gemeinsamer Ergebnisbericht, Kap. 3.1.2"
 date: 2016-01-01
-publishDate: 2020-07-03T20:16:46.157428Z
+publishDate: 2020-06-02T08:20:24Z
 authors: [ "riechel", "matzinger", "Weinkauf, M.", "Lutscher, K.", "rouault" ]
 publication_types: ["4"]
 abstract: ""

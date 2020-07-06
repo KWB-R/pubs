@@ -1,7 +1,7 @@
 ---
 title: "Wie angewandte Forschung hilft, die Brunnenalterung zu verlangsamen"
 date: 2010-01-01
-publishDate: 2020-07-03T20:16:37.185430Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "schwarzmueller", "Taute, T.", "Menz, C.", "Thronicker, O." ]
 publication_types: ["0"]
 abstract: ""
