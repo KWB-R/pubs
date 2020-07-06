@@ -12,15 +12,14 @@
 <section id="profile-page" class="pt-5">
   <div class="container">
     {{/* Show the About widget if an account exists for this user. */}}
-	{{ $author:= .Title}}
-    {{ if .File }}
+	{{ $author := .Title}}
+	{{ if .File }}
       {{ $widget := "widgets/about.html" }}
-      {{ $author := (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
-	  {{ $params := dict "root" $ "page" . "author" $author }}
+	  {{ $author = (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
+	  {{ $params := dict "root" $ "page" . "author" $author}}
       {{ partial $widget $params }}
     {{end}}
 
-    
     <div class="article-widget content-widget-hr">
 	{{ $items := where (where site.RegularPages "Type" "post") ".Params.authors" "intersect" (slice $author) }}
     {{ $pubs_len := len $items }}
