@@ -12,15 +12,17 @@
 <section id="profile-page" class="pt-5">
   <div class="container">
     {{/* Show the About widget if an account exists for this user. */}}
-	{{ $username := (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
+	{{ $author:= .Title}}
     {{ if .File }}
       {{ $widget := "widgets/about.html" }}
-      {{ $params := dict "root" $ "page" . "author" $username }}
+      {{ $author := (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
+	  {{ $params := dict "root" $ "page" . "author" $author }}
       {{ partial $widget $params }}
     {{end}}
 
+    
     <div class="article-widget content-widget-hr">
-	{{ $items := where (where site.RegularPages "Type" "post") ".Params.authors" "intersect" (slice $username) }}
+	{{ $items := where (where site.RegularPages "Type" "post") ".Params.authors" "intersect" (slice $author) }}
     {{ $pubs_len := len $items }}
     {{ if ge $pubs_len 1 }}
         <h2>{{ (i18n "posts") }}</h2>
@@ -35,7 +37,7 @@
         {{ end }}
       {{ end }}
 
-	{{ $items := where (where site.RegularPages "Type" "publication") ".Params.authors" "intersect" (slice $username) }}
+	{{ $items := where (where site.RegularPages "Type" "publication") ".Params.authors" "intersect" (slice $author) }}
     {{ $pubs_len := len $items }}
     {{ if ge $pubs_len 1 }}
         <h2>{{ (i18n "publications") }}</h2>
@@ -52,7 +54,7 @@
         {{ end }}
     {{ end }}
 
-      {{ $items := where (where site.RegularPages "Type" "talk") ".Params.authors" "intersect" (slice $username) }}
+      {{ $items := where (where site.RegularPages "Type" "talk") ".Params.authors" "intersect" (slice $author) }}
       {{ $talks_len := len $items }}
       {{ if ge $talks_len 1 }}
         <h2>{{ (i18n "talks") }}</h2>
