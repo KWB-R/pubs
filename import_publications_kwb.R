@@ -354,7 +354,7 @@ replace_date_in_pub_index_md <- function (path,
     idx <- which(stringr::str_detect(pub_index_txt, pattern = "^date"))
     if (idx > 0) {
       if(dbg) message(sprintf("Replacing year in '%s'", path))
-      pub_index_txt[idx] <- sprintf('date: %s-01-01', ref$year)
+      pub_index_txt[idx] <- sprintf("date: %s", ref$date_cleaned)
       write_lines(pub_index_txt, path, file_encoding)
     }
   }
