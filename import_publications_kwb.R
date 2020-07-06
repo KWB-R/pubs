@@ -294,14 +294,20 @@ contents <- lapply(setNames(nm = table_names), DBI::dbReadTable, con = con)
 
 DBI::dbDisconnect(con)
 
-endnote_sdb <- contents$refs[,c("id", "year", "record_last_updated")] %>%  
+endnote_sdb <- contents$refs[,c("id", "year", "date", "record_last_updated")] %>%  
   tibble::as_tibble() %>% 
   ## + 3600s (fix as Endnote exports are otherwise 1h before "real" export time)
   dplyr::mutate(publish_datetime = as.POSIXct(as.POSIXct("1970-01-01 00:00:00") + .data$record_last_updated + 3600, tz = "CEST") %>% 
                   lubridate::with_tz(tzone = "UTC"), 
                 publishDate = sprintf("%sT%sZ", 
                                       format(publish_datetime, "%Y-%m-%d"), 
-                                      format(publish_datetime, "%H:%M:%S")))
+                                      format(publish_datetime, "%H:%M:%S")),
+                date_cleaned = dplyr::if_else(!is.na(lubridate::ymd(.data$date)),
+                                              as.character(lubridate::ymd(.data$date)),
+                                              dplyr::if_else(stringr::str_detect(.data$year, 
+                                                                                 "[1-2][0-9][0-9][0-9]"), 
+                                                             sprintf("%s-01-01", .data$year), 
+                                                             "")))
 
 
 
