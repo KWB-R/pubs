@@ -1,7 +1,7 @@
 ---
 title: "Rolling literature review on pathogen reduction by water treatment processes"
 date: 2019-01-01
-publishDate: 2020-07-03T20:16:48.657436Z
+publishDate: 2020-05-20T09:59:14Z
 authors: [ "Smeets, P. W. M. H.", "Linden, K.", "miehe" ]
 publication_types: ["0"]
 abstract: ""

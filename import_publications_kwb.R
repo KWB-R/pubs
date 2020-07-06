@@ -283,6 +283,56 @@ replace_kwb_authors_in_pub_index_md <- function (path,
 sapply(get_publication_index_md_paths(), function(path) replace_kwb_authors_in_pub_index_md(path))
 
 
+
+### Replace auto-generated publish date with "record_last_modified" (in "UTC")
+
+#con <- dbConnect(RSQLite::SQLite(), "~/Projekte2/dms/pdb.eni")
+con <- DBI::dbConnect(RSQLite::SQLite(), "../../dms/2020-06-23/KWB-documents_20191205.Data/sdb/sdb.eni")
+
+table_names <- DBI::dbListTables(con)
+
+contents <- lapply(setNames(nm = table_names), DBI::dbReadTable, con = con)
+
+DBI::dbDisconnect(con)
+
+endnote_sdb <- contents$refs[,c("id", "year", "record_last_updated")] %>%  
+  tibble::as_tibble() %>% 
+  ## + 3600s (fix as Endnote exports are otherwise 1h before "real" export time)
+  dplyr::mutate(publish_datetime = as.POSIXct(as.POSIXct("1970-01-01 00:00:00") + .data$record_last_updated + 3600, tz = "CEST") %>% 
+                  lubridate::with_tz(tzone = "UTC"), 
+                publishDate = sprintf("%sT%sZ", 
+                                      format(publish_datetime, "%Y-%m-%d"), 
+                                      format(publish_datetime, "%H:%M:%S")))
+
+
+
+
+replace_publishDate_in_pub_index_md <- function (path, 
+                                                 file_encoding = "UTF-8",
+                                                 dbg = TRUE) {
+  
+  id <- as.numeric(stringr::str_extract(basename(dirname(path)), 
+                                        pattern = "[0-9]+"))
+  
+  
+  ref <- endnote_sdb[endnote_sdb$id == id, ]
+  
+  if(nrow(ref) == 1) {
+    
+    pub_index_txt <- kwb.fakin::read_lines(path, 
+                                           fileEncoding = file_encoding)
+    idx <- which(stringr::str_detect(pub_index_txt, pattern = "^publishDate"))
+    if (idx > 0) {
+      if(dbg) message(sprintf("Replacing publishDate in '%s'", path))
+      pub_index_txt[idx] <- sprintf('publishDate: "%s"', ref$publishDate)
+      write_lines(pub_index_txt, path, file_encoding)
+    }
+  }
+}
+
+sapply(get_publication_index_md_paths(), function(path) replace_publishDate_in_pub_index_md(path))
+
+
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
 fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
 fs::dir_delete(path = "content/publication")

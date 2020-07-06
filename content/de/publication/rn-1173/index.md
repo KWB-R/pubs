@@ -1,7 +1,7 @@
 ---
 title: "Energetic comparison of advanced oxidation processes"
 date: 2011-01-01
-publishDate: 2020-07-03T20:16:47.921435Z
+publishDate: 2020-05-25T12:27:27Z
 authors: [ "remy" ]
 publication_types: ["0"]
 abstract: ""

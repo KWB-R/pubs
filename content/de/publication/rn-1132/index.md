@@ -1,7 +1,7 @@
 ---
 title: "Implementation of a fluorescence (FDOM) online measurement at an ozonation plant used for micropollutant elimination – operational aspects and comparison to UVA254, Ozone and Advanced Oxidation. Leading-edge science and technologies"
 date: 2019-01-01
-publishDate: 2020-07-03T20:16:47.405434Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "stapf", "schuetz", "Thiyagarajan, V.", "miehe" ]
 publication_types: ["0"]
 abstract: ""

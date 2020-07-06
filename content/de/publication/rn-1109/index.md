@@ -1,7 +1,7 @@
 ---
 title: "Einsatzmöglichkeiten für Nährstoffrezyklate im Ökolandbau - Abschlussbericht des Projektes nurec4org"
 date: 2019-01-01
-publishDate: 2020-07-03T20:16:47.073435Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "kraus", "zamzow", "Hoffmann, C.", "Bessai, A.-K.", "Fischinger, S.", "Muskolus, A.", "Kabbe, C." ]
 publication_types: ["4"]
 abstract: ""

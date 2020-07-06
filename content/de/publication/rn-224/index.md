@@ -1,7 +1,7 @@
 ---
 title: "WSSTP - Urban Pilot Theme 1: Project proposals and Demonstration Sites. Managing rain events and flooding in urban areas"
 date: 2008-01-01
-publishDate: 2020-07-03T20:16:34.333435Z
+publishDate: 2020-05-25T15:14:05Z
 authors: [ "Lynggaard-Jensen, A.", "Schroeder, K." ]
 publication_types: ["4"]
 abstract: ""

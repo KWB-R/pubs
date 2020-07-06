@@ -1,7 +1,7 @@
 ---
 title: "Effectiveness of Riparian Zones in Contaminant Mitigation Project acronym: AQUISAFE 1"
 date: 2009-01-01
-publishDate: 2020-07-03T20:16:48.457433Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Vidon, P.", "Tedesco, L.", "Jacinthe, P.-A." ]
 publication_types: ["4"]
 abstract: ""

@@ -1,7 +1,7 @@
 ---
 title: "SPREE2011, AP 1.2 - Schmutzfrachtsimulation zur Bestimmung der hydraulischen und qualitativen Belastung des Regenbeckens"
 date: 2007-01-01
-publishDate: 2020-07-03T20:16:33.161431Z
+publishDate: 2020-05-25T15:14:05Z
 authors: [ "Schroeder, K.", "sonnenberg", "rouault" ]
 publication_types: ["4"]
 abstract: ""

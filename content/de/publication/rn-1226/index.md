@@ -1,7 +1,7 @@
 ---
 title: "Die Vorgaben der Klärschlammverwertung zur Phosphorrückgewinnung – ein Interpretationsversuch"
 date: 2019-01-01
-publishDate: 2020-07-03T20:16:48.569431Z
+publishDate: 2020-05-20T09:40:02Z
 authors: [ "kraus" ]
 publication_types: ["0"]
 abstract: ""

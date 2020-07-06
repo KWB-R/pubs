@@ -1,7 +1,7 @@
 ---
 title: "Energiepositive Abwasserreinigung: Das CARISMO-Verfahren und seine Umsetzung in die Praxis"
 date: 2015-01-01
-publishDate: 2020-07-03T20:16:42.601428Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Lesjean, B.", "remy", "Boulestreau, M." ]
 publication_types: ["0"]
 abstract: ""

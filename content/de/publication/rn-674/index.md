@@ -1,7 +1,7 @@
 ---
 title: "Angewandte Wasserforschung"
 date: 2014-01-01
-publishDate: 2020-07-03T20:16:41.941432Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "weigert" ]
 publication_types: ["2"]
 abstract: "Das Berliner Wissenschaftszentrum sorgt für Qualität und Kontinuität in der Beforschung wasserwirtschaftlicher Sachverhalte."

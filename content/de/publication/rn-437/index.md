@@ -1,7 +1,7 @@
 ---
 title: "Retention and elimination of cynobacterial toxins (microcystins) through artificial recharge and bank filtration"
 date: 2006-01-01
-publishDate: 2020-07-03T20:16:38.865436Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Chorus, I.", "Bartel, H." ]
 publication_types: ["4"]
 abstract: ""

@@ -1,7 +1,7 @@
 ---
 title: "Integrating concepts for energy and resource recovery from municipal wastewater with LCA."
 date: 2014-01-01
-publishDate: 2020-07-03T20:16:42.121448Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "remy", "Boulestreau, M.", "Warneke, J.", "Siemers, C.", "Lesjean, B." ]
 publication_types: ["0"]
 abstract: "Energy and resource recovery from raw municipal wastewater is a pre-requisite for an efficient and sustainable wastewater treatment in the future. This paper evaluates several processes for upgrading existing wastewater treatment plants or new concepts towards energy positive and resource efficient wastewater treatment in their life-cyle impacts on the energy balance. In addition, future challenges for integrating both energy and resource recovery in wastewater treatment schemes are identified and discussed."

@@ -1,7 +1,7 @@
 ---
 title: "Projekt REEF 2W – energetische  Potenziale ausschöpfen"
 date: 2020-01-01
-publishDate: 2020-07-03T20:16:48.797443Z
+publishDate: 2020-06-15T09:28:01Z
 authors: [ "habibi" ]
 publication_types: ["2"]
 abstract: ""

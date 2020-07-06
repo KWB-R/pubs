@@ -1,7 +1,7 @@
 ---
 title: "The Effect of Hydraulic Retention Time and Flow Patch on Ntrate and Atrazine Attenuation in a Bioretention Swale"
 date: 2012-01-01
-publishDate: 2020-07-03T20:16:47.569434Z
+publishDate: 2020-03-26T11:06:13Z
 authors: [ "Smith, A. N.", "Tedesco, L. P.", "Jacinthe, P.-A.", "Babbar-Sebens, M." ]
 publication_types: ["0"]
 abstract: ""

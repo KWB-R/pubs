@@ -1,7 +1,7 @@
 ---
 title: "Ökobilanz von ausgesuchten Maßnahmen im urbanen Bereich. NITROLIMIT2, Gemeinsamer Ergebnisbericht, Kap. 3.6"
 date: 2016-01-01
-publishDate: 2020-07-03T20:16:46.169432Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Mutz, D.", "remy" ]
 publication_types: ["4"]
 abstract: ""

@@ -1,7 +1,7 @@
 ---
 title: "Gewässerschutz durch kombinierte dezentrale und zentrale Maßnahmen der Regenwasserbewirtschaftung - Modellstudie am Beispiel Berlins"
 date: 2017-01-01
-publishDate: 2020-07-03T20:16:45.557431Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "riechel", "matzinger", "Pallasch, M.", "Heinzmann, B.", "Joswig, K.", "rouault" ]
 publication_types: ["6"]
 abstract: ""

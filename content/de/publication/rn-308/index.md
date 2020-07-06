@@ -1,7 +1,7 @@
 ---
 title: "Challenges and opportunities of Managed Aquifer Recharge"
 date: 13-15 November 2008-01
-publishDate: 2020-07-03T20:16:36.373431Z
+publishDate: 2020-05-25T15:14:06Z
 authors: [ "Grützmacher, G.", "Gräber, I.", "David, B.", "Kazner, C.", "Moreau-Le Golvan, Y." ]
 publication_types: ["1"]
 abstract: ""
