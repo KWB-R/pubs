@@ -1,6 +1,6 @@
 ---
 title: "The influence of local calibration on the quality of UV-VIS spectrometer measurements in urban stormwater monitoring"
-date: 2013-01-01
+date: 2013-11-07
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "caradot", "sonnenberg", "riechel", "matzinger", "rouault" ]
 publication_types: ["2"]

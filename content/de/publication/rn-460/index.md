@@ -1,6 +1,6 @@
 ---
 title: "Risk assessment of the wastewater-reuse strategy of Braunschweig concerning impacts on the environment and human health"
-date: 2011-01-01
+date: 2011-12-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "seis" ]
 publication_types: ["7"]

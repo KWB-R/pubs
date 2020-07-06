@@ -1,6 +1,6 @@
 ---
 title: "Labor- und Praxistest von Onlinemesstechnik"
-date: 2008-01-01
+date: 2008-11-27
 publishDate: 2020-03-12T15:27:08Z
 authors: [ "Barjenbruch, M.", "Rettig, S." ]
 publication_types: ["0"]

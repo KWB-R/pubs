@@ -1,6 +1,6 @@
 ---
 title: "Verbundprojekt Mikrobielle Verockerung, Teilprojekt 5: \"Untersuchung der Abhängigkeit zwischen dem Auftreten mikrobieller Verockerung und den hydrochemischen und betrieblichen Eigenschaften von Trinkwasserbrunnen"
-date: 2014-10-01
+date: 2014-10-30
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "schwarzmueller", "Menz, C.", "weigert" ]
 publication_types: ["4"]

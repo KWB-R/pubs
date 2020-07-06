@@ -1,6 +1,6 @@
 ---
 title: "Semi-Analytical Model for Estimation of Unsteady Seepage from a Large Water Body Influenced by Variable Flows"
-date: 2015-01-01
+date: 2015-07-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Ghosh, N. C.", "Kumar, S.", "Grützmacher, G.", "Ahmed, S.", "Singh, S.", "sprenger", "Singh, R. P.", "Das, B.", "Arora, T." ]
 publication_types: ["2"]

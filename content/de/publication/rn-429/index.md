@@ -1,6 +1,6 @@
 ---
 title: "Removal kinetics of organic compounds and sum parameters under field conditions for managed aquifer recharge"
-date: 2011-01-01
+date: 2011-10-15
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Wiese, B.", "Massmann, G.", "Jekel, M.", "Heberer, T.", "Dünnbier, U.", "Orlikowski, D.", "Grützmacher, G." ]
 publication_types: ["2"]

@@ -1,6 +1,6 @@
 ---
 title: "Modelling of Dynamic and Static Adaptation Measures for Combined Sewer System Optimisation: Case-Study of Wilmersdorf Catchment, Berlin"
-date: 2014-01-01
+date: 2014-08-15
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Salvan, L." ]
 publication_types: ["7"]

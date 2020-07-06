@@ -1,6 +1,6 @@
 ---
 title: "Long term comparison of trace organics removal performances between conventional and membrane activated sludge processes"
-date: 2006-01-01
+date: 2006-12-01
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Zühlke, S.", "Dünnbier, U.", "Lesjean, B.", "Gnirß, R.", "Buisson, H." ]
 publication_types: ["2"]

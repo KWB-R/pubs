@@ -1,6 +1,6 @@
 ---
 title: "State of Implementation of RTC in Berlin, Germany"
-date: 2007-01-01
+date: 2007-06-25
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Pawlowsky-Reusing, E.", "Schroeder, K." ]
 publication_types: ["0"]

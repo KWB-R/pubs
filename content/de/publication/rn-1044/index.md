@@ -1,6 +1,6 @@
 ---
 title: "Spurenstoffe im Regenwasserabfluss Berlins"
-date: 2017-01-01
+date: 2017-10-26
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "wicke", "matzinger", "sonnenberg", "caradot", "schubert", "rouault", "Heinzmann, B.", "Dünnbier, U.", "von Seggern, D." ]
 publication_types: ["0"]

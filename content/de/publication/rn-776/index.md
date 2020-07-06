@@ -1,6 +1,6 @@
 ---
 title: "Abschlussbericht Projekt Abluft „Vorversuche zur Abluftbehandlung auf der Kläranlage Schönerlinde“"
-date: 2014-07-01
+date: 2014-07-25
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "schubert", "miehe" ]
 publication_types: ["4"]

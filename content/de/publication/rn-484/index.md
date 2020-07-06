@@ -1,6 +1,6 @@
 ---
 title: "Energetischer Vergleich der erweiterten Oxidationsverfahren"
-date: 2011-01-01
+date: 2011-02-24
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "remy" ]
 publication_types: ["0"]

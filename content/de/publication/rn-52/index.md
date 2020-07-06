@@ -1,6 +1,6 @@
 ---
 title: "Final Report 2005 Preliminary investigations for the Margaretenhöhe MBR demonstration plant"
-date: 2005-11-01
+date: 2005-11-23
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Vocks, M.", "Kraume, M." ]
 publication_types: ["4"]

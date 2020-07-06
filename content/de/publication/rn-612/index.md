@@ -1,6 +1,6 @@
 ---
 title: "The evaluation of rainfall influence on CSO characteristics: the Berlin case study"
-date: 2013-01-01
+date: 2013-11-07
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Sandoval, S.", "Torres, A.", "Pawlowsky-Reusing, E.", "riechel", "caradot" ]
 publication_types: ["2"]

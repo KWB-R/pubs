@@ -1,6 +1,6 @@
 ---
 title: "SCST, Technical interim report 2005"
-date: 2005-03-01
+date: 2005-03-31
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Pawlowski, L." ]
 publication_types: ["4"]

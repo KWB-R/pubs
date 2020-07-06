@@ -1,6 +1,6 @@
 ---
 title: "Removal of bulk dissolved organic carbon (DOC) and trace organic compounds by bank filtration and artificial recharge"
-date: 2005-01-01
+date: 2005-07-15
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Grünheid, S.", "Amy, G.", "Jekel, M." ]
 publication_types: ["2"]

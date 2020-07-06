@@ -1,6 +1,6 @@
 ---
 title: "Phosphorus recovery from municipal and fertilizer wastewater: China's potential and perspective"
-date: 2017-01-01
+date: 2017-02-01
 publishDate: 2020-03-12T15:09:25Z
 authors: [ "zhou", "Barjenbruch, M.", "Kabbe, C.", "Inial, G.", "remy" ]
 publication_types: ["2"]

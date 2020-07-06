@@ -1,6 +1,6 @@
 ---
 title: "Enhanced post-denitrification without addition of an external carbon source in membrane bioreactors"
-date: 2005-01-01
+date: 2005-05-30
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Vocks, M.", "Adam, C.", "Lesjean, B.", "Gnirß, R.", "Kraume, M." ]
 publication_types: ["2"]

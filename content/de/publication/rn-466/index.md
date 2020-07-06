@@ -1,6 +1,6 @@
 ---
 title: "Determination of the carbonate scaling potential of drinking water abstraction wells from hydrochemical data using hydro-geochemical modelling software PhreeqC"
-date: 2011-01-01
+date: 2011-09-23
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Josse, J." ]
 publication_types: ["7"]

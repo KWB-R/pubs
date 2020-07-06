@@ -1,6 +1,6 @@
 ---
 title: "Untersuchungen der Leistungsfähigkeit von bepflanzten Vertikalbodenfiltern zur Elimination von Spurenstoffen nach der Ozonung im Vergleich zu Sandfiltern"
-date: 2017-01-01
+date: 2017-12-18
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Weidlich, S." ]
 publication_types: ["7"]

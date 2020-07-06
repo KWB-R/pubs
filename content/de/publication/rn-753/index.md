@@ -1,6 +1,6 @@
 ---
 title: "Challenges and opportunities of German-Chinese cooperation in water science and technology"
-date: 2015-01-01
+date: 2015-02-21
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Chen, C.", "Börnick, H.", "Cai, Q.", "Dai, X.", "Jähnig, S. C.", "Kong, Y.", "Krebs, P.", "Künzer, C.", "Kunstmann, H.", "Liu, Y.", "Nixdorf, E.", "Pang, Z.", "Rode, M.", "Schueth, C.", "Song , Y.", "Yue, T.", "zhou", "Zhang , J.", "Kolditz, O." ]
 publication_types: ["2"]

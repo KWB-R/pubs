@@ -1,6 +1,6 @@
 ---
 title: "Phosphorrückgewinnung und -recycling aus Abwasser in Europa"
-date: 7-8 October 2015-01
+date: 2015-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Kabbe, C.", "kraus" ]
 publication_types: ["1"]

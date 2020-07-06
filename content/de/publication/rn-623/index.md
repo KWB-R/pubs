@@ -1,6 +1,6 @@
 ---
 title: "Tertiary treatment combining ozonation and membrane filtration – Pilot scale investigations"
-date: 2013-08-01
+date: 2013-08-21
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Stüber, J.", "Godehardt, M." ]
 publication_types: ["4"]

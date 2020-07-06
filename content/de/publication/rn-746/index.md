@@ -1,6 +1,6 @@
 ---
 title: "Quantifying the effects of urban stormwater management - Towards a novel approach for integrated planning"
-date: 7.-12. September 2014-01
+date: 2014-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "matzinger", "Schmidt, M.", "riechel", "Hein, A.", "Bräcker, J.", "Strehl, C.", "Nickel, D.", "Libbe, J.", "Sieker, H.", "Pallasch, M.", "Köhler, M.", "Kaiser, D.", "Brückmann, S.", "Möller, C.", "Büter, B.", "Gross, G.", "Günther, R.", "Säumel, I.", "Taute, T.", "schwarzmueller", "Bartel, H.", "Heise, S.", "remy", "sonnenberg", "Schmitt, T. G.", "Heinzmann, B.", "Joswig, K.", "Rehfeld-Klein, M.", "Reichmann, B.", "rouault" ]
 publication_types: ["1"]

@@ -1,6 +1,6 @@
 ---
 title: "Stickstofflimitation in Binnengewässern - Teilprojekt: Sensitivitätsanalyse zur Modellierung des Stickstoffumsatzes in Fließgewässern und Life Cycle Assessment von Reinigungsverfahren"
-date: 2014-04-01
+date: 2014-04-23
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "rouault", "matzinger", "Mutz, D.", "remy", "riechel" ]
 publication_types: ["4"]

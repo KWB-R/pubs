@@ -1,6 +1,6 @@
 ---
 title: "Catalogue of European adaptive initiatives of the water sector to face climate change impacts V3 (Updated 2012 Release)"
-date: 2012-09-01
+date: 2012-09-20
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Staub, M.", "Moreau-Le Golvan, Y.", "Grützmacher, G." ]
 publication_types: ["4"]

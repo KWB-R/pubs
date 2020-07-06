@@ -1,6 +1,6 @@
 ---
 title: "Progress Report No. 01 - Sanitation Concepts for Separate Treatment of Urine, Faeces and Greywater (SCST)"
-date: 2004-07-01
+date: 2004-07-12
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Luck, F." ]
 publication_types: ["4"]

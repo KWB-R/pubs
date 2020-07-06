@@ -1,6 +1,6 @@
 ---
 title: "Analysis of nanoparticles in treated domestic wastewater for improved understanding and prevention of membrane fouling"
-date: 2011-01-01
+date: 2011-11-04
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Schulz, M.", "Godehardt, M.", "Boulestreau, M.", "Ernst, M.", "miehe", "Lesjean, B.", "Jekel, M." ]
 publication_types: ["0"]

@@ -1,6 +1,6 @@
 ---
 title: "Relevance of Different CSO Outlets for Bathing Water Quality in a River System"
-date: 23–26 Sep 2018-01-01
+date: 2018-01-01
 publishDate: 2020-06-23T15:46:04Z
 authors: [ "riechel", "seis", "matzinger", "Pawlowsky-Reusing, E.", "rouault" ]
 publication_types: ["1"]

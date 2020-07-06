@@ -1,6 +1,6 @@
 ---
 title: "Enhanced Nutrients Removal in Membrane Bioreactor (ENREM) - Progress report 1- LIFE 04 ENV/D/058"
-date: 2005-02-01
+date: 2005-02-04
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Luck, F." ]
 publication_types: ["4"]

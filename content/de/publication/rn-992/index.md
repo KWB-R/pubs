@@ -1,6 +1,6 @@
 ---
 title: "Temperature measurements during Managed Aquifer Recharge for safeguarding subsurface travel times"
-date: 20.-24.06.2016-01
+date: 2016-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "sprenger", "schwarzmueller", "Schimmelpfennig, S.", "Lorenzen, G.", "Gnirß, R.", "Grützmacher, G." ]
 publication_types: ["1"]

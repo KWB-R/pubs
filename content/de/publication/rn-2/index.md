@@ -1,6 +1,6 @@
 ---
 title: "Beteiligung der Öffentlichkeit im Koordinierungsraum Havel (Berlin-Brandenburg)"
-date: 2003-12-01
+date: 2003-12-31
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Kranz, N.", "Vorwerk, A.", "Hansen, W." ]
 publication_types: ["4"]

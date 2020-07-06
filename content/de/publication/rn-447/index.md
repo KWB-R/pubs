@@ -1,6 +1,6 @@
 ---
 title: "Elektronische Nasen als Tool für Geruchsmanagement in Abwasserkanalisationen – Test und Bewertung von vier Multigas-Sensorsystemen"
-date: 29-30 November 2011-01
+date: 2011-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Schwarzböck, T.", "Frey, M.", "Skirlo, H.", "Waschnewski, J.", "rouault" ]
 publication_types: ["1"]

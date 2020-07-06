@@ -1,6 +1,6 @@
 ---
 title: "Operation of gravity-driven ultrafiltration prototype for decentralised water supply"
-date: 2012-01-01
+date: 2012-04-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Boulestreau, M.", "Hoa, E.", "Peter-Varbanets, M.", "Pronk, W.", "Rajagopaul, R.", "Lesjean, B." ]
 publication_types: ["2"]

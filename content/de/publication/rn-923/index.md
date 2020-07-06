@@ -1,6 +1,6 @@
 ---
 title: "Comparison between different filter systems as a post treatment after tertiary ozonation"
-date: 19.-21.Juni 2014-01
+date: 2014-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "stapf", "miehe", "Wiedemann, B.", "Jekel, M." ]
 publication_types: ["1"]

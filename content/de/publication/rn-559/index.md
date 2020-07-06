@@ -1,6 +1,6 @@
 ---
 title: "Transport of primidone, carbamazepine, and sulfamethoxazole in thermally treated sediments—laboratory column experiments"
-date: 2013-01-01
+date: 2013-05-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Müller, B.", "Scheytt, T.", "Grützmacher, G." ]
 publication_types: ["2"]

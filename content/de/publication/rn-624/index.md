@@ -1,6 +1,6 @@
 ---
 title: "Guidelines for the use of online fouling monitoring in tertiary treatment"
-date: 2013-08-01
+date: 2013-08-21
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Boulestreau, M.", "miehe" ]
 publication_types: ["4"]

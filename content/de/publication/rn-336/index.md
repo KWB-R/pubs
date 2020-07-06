@@ -1,6 +1,6 @@
 ---
 title: "Retention and Degradation of the cyanobacterial Toxin Cylindrospermopsin in Sediments - The Role of Sediment preconditioning and DOM composition"
-date: 2010-01-01
+date: 2010-05-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Klitzke, S.", "Apelt, S.", "Weiler, C.", "Fastner, J.", "Chorus, I." ]
 publication_types: ["2"]

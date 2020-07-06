@@ -1,6 +1,6 @@
 ---
 title: "Hydrogeochemical and isotopic insights into mineralization processes and groundwater recharge from an intermittent monsoon channel to an overexploited aquifer in eastern Haryana (India)"
-date: 2016-01-01
+date: 2016-02-24
 publishDate: 2020-03-12T15:34:26Z
 authors: [ "Baudron, P.", "sprenger", "Lorenzen, G.", "Ronghang, M." ]
 publication_types: ["2"]

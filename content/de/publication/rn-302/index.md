@@ -1,6 +1,6 @@
 ---
 title: "Adaption eines neuartigen MBR-Prozesses auf Monosubstrat zur Untersuchung des mikrobiologischen Stoffwechsels mittels in-vivo C-MNR"
-date: 2009-01-01
+date: 2009-10-22
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Bost, M." ]
 publication_types: ["7"]

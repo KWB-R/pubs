@@ -1,6 +1,6 @@
 ---
 title: "Wirtschaftliche Betrachtung semizentraler MBR-Anlagen in Abhängigkeit von den Reinigungszielen."
-date: 2009-01-01
+date: 2009-10-06
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Schallehn, F." ]
 publication_types: ["7"]

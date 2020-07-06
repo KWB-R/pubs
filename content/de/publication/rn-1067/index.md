@@ -1,6 +1,6 @@
 ---
 title: "Sixty years of global progress in managed aquifer recharge"
-date: 2018-01-01
+date: 2018-09-07
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Dillon, P.", "Stuyfzand, P.", "Grischek, T.", "Lluria, M.", "Pyne, R. D. G.", "Jain, R. C.", "Bear, J.", "Schwarz, R.-J.", "Wang, W.", "Fernandez, E.", "Stefan, C.", "Pettenati, M.", "van der Gun, J.", "sprenger", "Massmann, G.", "Scanlon, B. R.", "Xanke, J.", "Jokela, P.", "Zheng, Y.", "Rossetto, R.", "Shamrukh, M.", "Pavelic, P.", "Murray, E.", "Ross, A.", "Bonilla Valverde, J. P.", "Palma Nava, A.", "Ansems, N.", "Posavec, K.", "Ha, K.", "Martin, R.", "Sapiano, M." ]
 publication_types: ["2"]

@@ -1,6 +1,6 @@
 ---
 title: "Stand und Perspektiven beim Phosphorrecycling"
-date: 20-21 September 2017-01
+date: 2017-01-01
 publishDate: 2020-03-09T12:12:34Z
 authors: [ "kraus" ]
 publication_types: ["1"]

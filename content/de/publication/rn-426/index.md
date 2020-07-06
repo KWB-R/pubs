@@ -1,6 +1,6 @@
 ---
 title: "Competitiveness of invasive and native cyanobacteria from temperate freshwaters under various light and temperature conditions"
-date: 2010-01-01
+date: 2010-04-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Mehnert, G.", "Leunert, F.", "Cirés, S.", "Jöhnk, K.", "Rücker, J.", "Nixdorf, B.", "Wiedner, C." ]
 publication_types: ["2"]

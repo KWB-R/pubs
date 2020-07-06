@@ -1,6 +1,6 @@
 ---
 title: "Function and relevance of aquifer recharge techniques to enable sustainable water resources management in developing and newly-industrialized countries"
-date: 17.-19.06.2009-01
+date: 2009-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Grützmacher, G.", "Hülshoff, I.", "Wiese, B.", "Moreau-Le Golvan, Y.", "sprenger", "Lorenzen, G.", "Pekdeger, A." ]
 publication_types: ["1"]

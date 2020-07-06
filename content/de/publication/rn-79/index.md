@@ -1,6 +1,6 @@
 ---
 title: "Impact of colloidal and soluble organic material on membrane performance in membrane bioreactors for municipal waste water treatment"
-date: 2006-01-01
+date: 2005-11-20
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Rosenberger, S.", "Laabs, C.", "Lesjean, B.", "Gnirß, R.", "Amy, G.", "Jekel, M.", "Schrotter, J.-C." ]
 publication_types: ["2"]

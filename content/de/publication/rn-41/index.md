@@ -1,6 +1,6 @@
 ---
 title: "Machbarkeitsstudie für die Einrichtung eines Informations- und Testzentrums Messtechnik (ITZM) im Wasser- und Abwasserbereich"
-date: 2004-11-01
+date: 2004-11-14
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Lühr, H.-P.", "Henning, A.", "Stock, R.", "Schäfer, W.", "Sterger, O.", "Lüdtke, T." ]
 publication_types: ["4"]

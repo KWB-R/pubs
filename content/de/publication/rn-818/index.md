@@ -1,6 +1,6 @@
 ---
 title: "P-Rückgewinnung und Recycling in Europa - Schlussfolgerungen aus dem Projekt P-REX"
-date: 24-25 June 2015-01
+date: 2015-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Kabbe, C.", "kraus", "remy" ]
 publication_types: ["1"]

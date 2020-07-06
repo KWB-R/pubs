@@ -1,6 +1,6 @@
 ---
 title: "Indirect Potable Reuse: A Risk Assessment for Vendée Eau"
-date: 2016-01-01
+date: 2016-11-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Pacheco Fernández, M." ]
 publication_types: ["7"]

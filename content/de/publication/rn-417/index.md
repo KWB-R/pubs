@@ -1,6 +1,6 @@
 ---
 title: "Decision support system for the multi-objective optimization of bank filtration systems"
-date: 2010-01-01
+date: 2010-09-10
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "rustler", "Grützmacher, G.", "Holzbecher, E." ]
 publication_types: ["0"]

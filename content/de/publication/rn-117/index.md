@@ -1,6 +1,6 @@
 ---
 title: "The impact of variably saturated conditions on hydrogeochemical changes during artificial recharge of groundwater"
-date: 2005-01-01
+date: 2005-06-13
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Greskowiak, J.", "Prommer, H.", "Massmann, G.", "Johnston, C. D.", "Nützmann, G.", "Pekdeger, A." ]
 publication_types: ["2"]

@@ -1,6 +1,6 @@
 ---
 title: "Occurrence and Fate of Pharmaceuticals During Bank Filtration"
-date: 2003-01-01
+date: 2003-11-01
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Heberer, T.", "Mechlinski, A.", "Fanck, B." ]
 publication_types: ["0"]

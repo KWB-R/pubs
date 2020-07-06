@@ -1,6 +1,6 @@
 ---
 title: "Integrating Ozonation or Adsorption on Activated Carbon into Tertiary Wastewater Treatment: Environmental Impacts with Life Cycle Assessment"
-date: 6 – 9 September 2015-01-01
+date: 2015-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Mutz, D.", "miehe", "remy", "Sperlich, A.", "Windelberg, G." ]
 publication_types: ["1"]

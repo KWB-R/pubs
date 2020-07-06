@@ -1,6 +1,6 @@
 ---
 title: "Development of a monitoring concept for combined sewer overflows - testing of modern online-sensors"
-date: 2009-01-01
+date: 2009-05-21
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Rettig, S.", "Barjenbruch, M.", "rouault", "Schroeder, K." ]
 publication_types: ["0"]

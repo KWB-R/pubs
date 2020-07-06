@@ -1,6 +1,6 @@
 ---
 title: "UVA as control parameter for the effective ozonation of organic poolutants in secondary effluent"
-date: 2006-01-01
+date: 2006-04-03
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "Bahr, C.", "Schumacher, J.", "Ernst, M.", "Luck, F.", "Heinzmann, B.", "Jekel, M." ]
 publication_types: ["0"]

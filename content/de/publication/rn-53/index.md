@@ -1,6 +1,6 @@
 ---
 title: "Progress Report 2004 -  Preliminary investigations for the Margaretenhöhe MBR demonstration plant"
-date: 2004-02-01
+date: 2005-02-26
 publishDate: 2020-05-25T15:14:05Z
 authors: [ "Vocks, M.", "Kraume, M." ]
 publication_types: ["4"]
