@@ -306,7 +306,8 @@ endnote_sdb <- contents$refs[,c("id", "year", "date", "record_last_updated")] %>
                                               as.character(lubridate::ymd(.data$date)),
                                               dplyr::if_else(stringr::str_detect(.data$year, 
                                                                                  "[1-2][0-9][0-9][0-9]"), 
-                                                             sprintf("%s-01-01", .data$year), 
+                                                             sprintf("%s-01-01", 
+                                                                     stringr::str_trim(.data$year)), 
                                                              "")))
 
 
