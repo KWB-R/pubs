@@ -30,6 +30,19 @@ authors_metadata <- authors_metadata[working_at_kwb,]
 kwb.pubs::add_authors_index_md(authors_metadata, overwrite = TRUE)
 kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
 
+## Fix avatars for "newcomers" (with own photos, where default values for 
+## cropping were not a good choice!)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "habibi",],
+                             x_off = 300, width = 380, height = 480)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "toutian",],
+                             x_off = 360, y_off = 40, width = 300, height = 400)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "rose",],
+                             x_off = 290, y_off = 10, width = 380, height = 400)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "knoche",],
+                             x_off = 100)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "conzelmann",],
+                             x_off = 230, y_off = 40, height = 250)
+
 fs::dir_delete(path = "content/en/authors")
 fs::dir_copy(path = "content/authors", "content/en/authors", overwrite = TRUE)
 ## currently the same content as in "en" (should be changed to "de"
