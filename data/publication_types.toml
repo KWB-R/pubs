@@ -1,7 +1,7 @@
 # Publication types.
 # Each item in the list corresponds to an item in the language packs.
-types = [ "pub_proceedings",
-          "pub_conf",
+types = [ "pub_conf",
+          "pub_proceedings",
           "pub_journal",
           "pub_preprint",
           "pub_report",
