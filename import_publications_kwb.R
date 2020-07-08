@@ -3,8 +3,6 @@ library(dplyr)
 ### Update KWB authors 
 authors_config <- kwb.pubs::get_authors_config()
 authors_config$lastname <- gsub("tatis muvdi", "tatis-muvdi", authors_config$lastname)
-#authors_metadata$author_name <- gsub("Tatis Muvdi.*", "Tatis-Muvdi, R.", authors_metadata$author_name)
-
 
 authors_metadata <- kwb.pubs::add_authors_metadata(authors_config)
 
@@ -23,6 +21,7 @@ construct_authorname <- function (firstname, lastname)
 
 authors_metadata$author_name <- construct_authorname(authors_metadata$firstname, 
                                                      lastname = authors_metadata$lastname)
+
 
 authors_metadata$author_name <- gsub("Schubert.*", "Schubert, R.-L.", authors_metadata$author_name)
 
@@ -67,7 +66,7 @@ projects_site <- sites[sites$origin == "de/project-sitemap.xml",]
 project_ids_site <- stringr::str_split_fixed(projects_site$loc, "/", n = 7)[,6]
 project_ids_site <- project_ids_site[order(project_ids_site)]
 
-endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200623.xml")
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
 
 confidential_pubs_idx <- endnote_df$rec_number[which(endnote_df$caption == "confidential")]
@@ -304,7 +303,7 @@ sapply(get_publication_index_md_paths(), function(path) replace_kwb_authors_in_p
 ### Replace auto-generated publish date with "record_last_modified" (in "UTC")
 
 #con <- dbConnect(RSQLite::SQLite(), "~/Projekte2/dms/pdb.eni")
-con <- DBI::dbConnect(RSQLite::SQLite(), "../../dms/2020-06-23/KWB-documents_20191205.Data/sdb/sdb.eni")
+con <- DBI::dbConnect(RSQLite::SQLite(), "../../dms/2020-07-08/KWB-documents_20191205.Data/sdb/sdb.eni")
 
 table_names <- DBI::dbListTables(con)
 
