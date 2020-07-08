@@ -1,8 +1,8 @@
 ---
-title: "Kalibrierung eines Schmutzfrachtmodells mit InfoWorks CS - Sensitivita¨tsanalyse und Kalibrierung"
+title: "Kalibrierung eines Schmutzfrachtmodells mit InfoWorks CS - Sensitivitätsanalyse und Kalibrierung"
 date: 2011-01-01
-publishDate: 2020-05-25T12:25:52Z
-authors: [ "stapf" ]
+publishDate: 2020-07-08T09:05:09Z
+authors: [ "Stapf, M." ]
 publication_types: ["7"]
 abstract: ""
 featured: false

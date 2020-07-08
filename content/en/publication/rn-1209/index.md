@@ -1,8 +1,8 @@
 ---
-title: "Neues Fru¨hwarnsystem zur Belastung von Badestellen"
+title: "Neues Frühwarnsystem zur Belastung von Badestellen"
 date: 2019-01-01
-publishDate: 2020-05-25T12:27:09Z
-authors: [ "rouault" ]
+publishDate: 2020-07-08T09:05:55Z
+authors: [ "Rouault, P." ]
 publication_types: ["2"]
 abstract: ""
 featured: false

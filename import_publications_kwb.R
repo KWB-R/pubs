@@ -68,7 +68,7 @@ project_ids_site <- project_ids_site[order(project_ids_site)]
 
 endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
-
+#endnote_df <- endnote_df[endnote_df$rec_number %in% updated_ids,]
 confidential_pubs_idx <- endnote_df$rec_number[which(endnote_df$caption == "confidential")]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
@@ -123,10 +123,11 @@ readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 ### "The name list field author cannot be parsed"
 #options(encoding="windows-1252")
 options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df("KWB-documents_2020623_with-abstracts_caption-label.txt")
+tmp <- bib2df::bib2df("KWB-documents_2020708_with-abstracts_caption-label.txt")
 tmp$URL <- NA_character_
 #tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
+#tmp <- tmp[tmp$en_id %in% updated_ids,]
 tmp <- tmp[order(tmp$en_id),]
 is_public <- is.na(tmp$ACCESS) | tmp$ACCESS == "public"
 tmp$ACCESS[is_public] <- "public"
@@ -138,7 +139,7 @@ public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
 
 
 ### path PDF files of exported Endnote DB (needs to be same as .XML and .txt files!)
-dms_dir <- fs::path_abs("../../dms/2020-06-23/KWB-documents_20191205.Data/PDF")
+dms_dir <- fs::path_abs("../../dms/2020-07-08/KWB-documents_20191205.Data/PDF")
 
 public_reports$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
                                   replacement = dms_dir,
@@ -383,7 +384,7 @@ sapply(get_publication_index_md_paths(), function(path) replace_date_in_pub_inde
 
 
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
-fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
+fs::dir_copy(path = "content/publication", "content/en/publication", overwrite = TRUE)
 fs::dir_delete(path = "content/publication")
 
 authors <- unique(unlist(tmp$AUTHOR))
