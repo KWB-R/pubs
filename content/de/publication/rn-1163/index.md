@@ -2,7 +2,7 @@
 title: "Verschmutzung von Regenwasser und Mischwasser"
 date: 2015-01-01
 publishDate: 2020-07-08T08:58:44Z
-authors: [ "Rouault, P.", "Matzinger, A.", "Caradot, N.", "Wicke, D.", "Welker, A." ]
+authors: [ "rouault", "matzinger", "caradot", "wicke", "Welker, A." ]
 publication_types: ["6"]
 abstract: ""
 featured: false
