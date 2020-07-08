@@ -1,7 +1,12 @@
 library(dplyr)
 
 ### Update KWB authors 
-authors_metadata <- kwb.pubs::add_authors_metadata()
+authors_config <- kwb.pubs::get_authors_config()
+authors_config$lastname <- gsub("tatis muvdi", "tatis-muvdi", authors_config$lastname)
+#authors_metadata$author_name <- gsub("Tatis Muvdi.*", "Tatis-Muvdi, R.", authors_metadata$author_name)
+
+
+authors_metadata <- kwb.pubs::add_authors_metadata(authors_config)
 
 construct_authorname <- function (firstname, lastname) 
 {
