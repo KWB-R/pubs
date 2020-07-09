@@ -6,7 +6,7 @@ authors: [ "kleyboecker", "Kim, A.", "Hofman, J.", "Serra, A.", "Casas, S.", "Mo
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH, UBATH, EURECAT"
 url_pdf: "../../../pdf/Kleyböcker-2019-1133.pdf"
 projects: ["nextgen"]
 ---

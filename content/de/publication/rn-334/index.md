@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "Grelot, A.", "Jimenez, J.", "De Wever, H.", "Brauns, 
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Lesjean-2010-334.pdf"
 projects: ["amedeus"]
 ---

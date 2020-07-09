@@ -6,7 +6,7 @@ authors: [ "Schroeder, K.", "Buchholz, K." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Schroeder-2008-229.pdf"
 projects: ["eva"]
 ---

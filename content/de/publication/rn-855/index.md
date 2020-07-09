@@ -6,7 +6,7 @@ authors: [ "riechel", "Uldack, M.", "Heinzmann, B.", "Pawlowsky-Reusing, E.", "m
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: "*Climate Change, Water Supply and Sanitation. Risk assessment, management, mitigation and reduction*"
+publication: " *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Climate Change, Water Supply and Sanitation. Risk assessment, management, mitigation and reduction. IWA Publishing"
 projects: ["prepared"]
 ---
 

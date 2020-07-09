@@ -6,7 +6,7 @@ authors: [ "Funke, F." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Master Thesis. Fachbereich Geowissenschaften. Freie Universität Berlin"
 projects: ["networks4"]
 ---
 

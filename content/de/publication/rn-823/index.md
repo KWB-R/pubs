@@ -6,7 +6,7 @@ authors: [ "Barjenbruch, M.", "Heinzmann, B.", "Kober, P.", "Post, M.", "remy", 
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Technische Universität Berlin"
 url_pdf: "../../../pdf/Barjenbruch-2016-823.pdf"
 projects: ["dswt"]
 ---

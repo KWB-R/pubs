@@ -6,7 +6,7 @@ authors: [ "wicke", "matzinger", "rouault" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*2nd Workshop on Environmental Monitoring of Biocides in Europe*"
+publication: " p 17 *In:* 2nd Workshop on Environmental Monitoring of Biocides in Europe. Berlin, Germany. 25-26 June 2015"
 projects: ["ogre"]
 ---
 

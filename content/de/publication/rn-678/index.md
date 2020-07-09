@@ -6,7 +6,7 @@ authors: [ "Gröschke, M.", "Frommen, T.", "Grützmacher, G.", "Schneider, M." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*IAP  Interfaces Against Pollution*"
+publication: " p 14 *In:* IAP  Interfaces Against Pollution. Leeuwarden, Netherlands. 25-28 May 2014"
 projects: ["saph-pani"]
 ---
 

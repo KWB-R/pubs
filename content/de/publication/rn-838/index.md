@@ -6,6 +6,6 @@ authors: [ "Kabbe, C." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*Water & Wastewater International*"
+publication: " *Water & Wastewater International* 30 (2)"
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "remy", "Bourdon, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*EWA conference at IFAT*"
+publication: " p 10 *In:* EWA conference at IFAT. Munich, Germany. 5-9 May 2014"
 projects: ["carismo"]
 ---
 

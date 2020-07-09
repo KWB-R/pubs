@@ -6,7 +6,7 @@ authors: [ "Peter-Fröhlich, A.", "Bonhomme, A.", "Oldenburg, M.", "Gnirß, R.",
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Peter-Fröhlich-2007-278.pdf"
 projects: ["scst"]
 ---

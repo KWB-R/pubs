@@ -6,7 +6,7 @@ authors: [ "Nenz, D.", "matzinger", "Trapp, J. H.", "Reichmann, B.", "Funke, F."
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*Ernst & Sohn Special 2019 - Regenwasser-Management*"
+publication: " *Ernst & Sohn Special 2019 - Regenwasser-Management*"
 projects: ["networks4"]
 ---
 

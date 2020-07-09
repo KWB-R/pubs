@@ -6,6 +6,6 @@ authors: [ "Lesjean, B." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*International Congress on Membranes and Membrane Processes 2011 (ICOM)*"
+publication: " *In:* International Congress on Membranes and Membrane Processes 2011 (ICOM). Amsterdam. 23.07.-29.07. 2011"
 ---
 

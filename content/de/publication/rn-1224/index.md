@@ -6,6 +6,6 @@ authors: [ "Gnirß, R.", "rouault", "seis" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*52. Essener Tagung für Wasserwirtschaft*"
+publication: " *In:* 52. Essener Tagung für Wasserwirtschaft. Aachen, Germany. 20-22 March 2019"
 ---
 

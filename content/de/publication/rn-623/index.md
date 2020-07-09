@@ -6,7 +6,7 @@ authors: [ "Stüber, J.", "Godehardt, M." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Stüber-2013-623.pdf"
 projects: ["oxeram-2"]
 ---

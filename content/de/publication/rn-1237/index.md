@@ -6,7 +6,7 @@ authors: [ "rouault" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Rouault-2009-1237.pdf"
 projects: ["monitor"]
 ---

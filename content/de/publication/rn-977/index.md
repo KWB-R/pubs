@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Menz, C.", "rustler", "Pfeiffer, I.", "Lorenzen, G
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*DVGW Energie | Wasser-Praxis*"
+publication: " *DVGW Energie | Wasser-Praxis* 9: 22-26"
 projects: ["antiocker"]
 ---
 

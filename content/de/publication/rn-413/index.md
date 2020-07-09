@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Thronicker, O.", "Rauch, R.", "Szewzyk, U.", "Maiw
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*DVGW Energie | Wasser-Praxis*"
+publication: " *DVGW Energie | Wasser-Praxis* 62 (3): 16-19"
 projects: ["wellma-2"]
 ---
 

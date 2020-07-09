@@ -6,6 +6,6 @@ authors: [ "Schulz, M.", "Boulestreau, M.", "Godehardt, M.", "miehe", "Lesjean, 
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*ICOM*"
+publication: " *In:* ICOM. Amsterdam. 23.07.-29.07. 2011"
 ---
 

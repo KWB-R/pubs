@@ -6,7 +6,7 @@ authors: [ "Pawlowsky-Reusing, E.", "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*5th Seminar on Real Time Control organised by the Work Group on Real Time Control of Urban Drainage Systems of the International Joint Committee on Urban Drainage, Lyon*"
+publication: " p 20 *In:* 5th Seminar on Real Time Control organised by the Work Group on Real Time Control of Urban Drainage Systems of the International Joint Committee on Urban Drainage, Lyon. Lyon. 2007-06-25"
 projects: ["eva"]
 ---
 

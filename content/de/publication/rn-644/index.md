@@ -6,7 +6,7 @@ authors: [ "Mutz, D.", "remy", "rouault", "Gnirß, R.", "Bartholomäus, C.", "Dr
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*29. Jahrestagung der Deutschen Gesellschaft für Limnologie e.V. (DGL 2013)*"
+publication: " p 13 *In:* 29. Jahrestagung der Deutschen Gesellschaft für Limnologie e.V. (DGL 2013). Potsdam, Germany. 9-13 September 2013"
 projects: ["nitrolimit"]
 ---
 

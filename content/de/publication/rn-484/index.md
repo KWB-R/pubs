@@ -6,7 +6,7 @@ authors: [ "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*TTP Seminar Oxidationsverfahren für die Behandlung von Trink- und Abwasser*"
+publication: " p 7 *In:* TTP Seminar Oxidationsverfahren für die Behandlung von Trink- und Abwasser. ZU Berlin. 2011-02-24"
 projects: ["oxeram-1"]
 ---
 

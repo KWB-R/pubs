@@ -6,6 +6,6 @@ authors: [ "rouault", "caradot", "riechel" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*6. Wassertage Münster*"
+publication: " *In:* 6. Wassertage Münster. Münster, Germany. 26-27 February 2019"
 ---
 

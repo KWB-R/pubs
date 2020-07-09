@@ -6,7 +6,7 @@ authors: [ "remy", "miehe", "Lesjean, B." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*26. Karlsruher Flockungstage*"
+publication: " p 13 *In:* 26. Karlsruher Flockungstage. Karlsruhe, Germany. 13-14 November 2012"
 projects: ["oxeram-2"]
 ---
 

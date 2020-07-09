@@ -6,6 +6,6 @@ authors: [ "Lesjean, B.", "schwarzmueller" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*IWA World Water Congress*"
+publication: " p 18 *In:* IWA World Water Congress. Lisbon, Portugal. 21-26 September 2014"
 ---
 

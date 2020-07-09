@@ -6,7 +6,7 @@ authors: [ "wicke", "matzinger", "rouault" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*31. Hamburger Kolloquium zur Abwasserwirtschaft*"
+publication: " *In:* 31. Hamburger Kolloquium zur Abwasserwirtschaft. Hamburg, Germany. 18-19  September 2019"
 projects: ["ogre"]
 ---
 

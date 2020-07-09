@@ -6,7 +6,7 @@ authors: [ "riechel" ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Diploma Thesis. Fakultät III Prozesswissenschaften, Institut für Technischen Umweltschutz. Technische Universität Berlin"
 projects: ["sam-cso"]
 ---
 

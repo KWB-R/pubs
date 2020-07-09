@@ -6,7 +6,7 @@ authors: [ "Sommer, J." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Master Thesis. Institut für Siedlungswasserwirtschaft. Technische Universität Braunschweig"
 projects: ["kuras"]
 ---
 

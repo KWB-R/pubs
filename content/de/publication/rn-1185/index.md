@@ -6,6 +6,6 @@ authors: [ "caradot" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*IWA World Water Congress*"
+publication: " *In:* IWA World Water Congress. Lisbon, Portugal. 21-26.09. 2014"
 ---
 

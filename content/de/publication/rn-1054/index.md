@@ -6,7 +6,7 @@ authors: [ "kraus", "zamzow", "conzelmann" ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: "*Verwertung von Klärschlamm*"
+publication: " p 535 *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Verwertung von Klärschlamm. Thomé-Kozmiensky Verlag GmbH. Berlin"
 projects: ["phorwaerts"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "matzinger", "Fischer, H.", "Schmid, M." ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: "*Handbuch Angewandte Limnologie – 29. Erg.Lfg. 5/12 1*"
+publication: " p 1 *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Handbuch Angewandte Limnologie – 29. Erg.Lfg. 5/12 1. Wiley-VCH Verlag. Weinheim"
 projects: ["mia-cso"]
 ---
 

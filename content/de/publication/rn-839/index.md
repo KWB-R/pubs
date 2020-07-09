@@ -6,7 +6,7 @@ authors: [ "Kabbe, C.", "kraus", "Nättorp, A." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Kabbe-2015-839.pdf"
 projects: ["p-rex"]
 ---

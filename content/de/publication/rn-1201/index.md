@@ -6,7 +6,7 @@ authors: [ "nurec4org" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/nurec4org-2018-1201.pdf"
 projects: ["nurec4org"]
 ---

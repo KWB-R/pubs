@@ -1,4 +1,6 @@
-library(dplyr)
+
+remotes::install_github("kwb-r/kwb.pubs@dev")
+library(kwb.pubs)
 
 ### Update KWB authors 
 authors_config <- kwb.pubs::get_authors_config()
@@ -250,26 +252,9 @@ tmp$id <- as.numeric(stringr::str_extract(tmp$BIBTEXKEY,
 saveRDS(tmp, "publications_kwb.Rds")
 
 
-get_publication_index_md_paths <- function (hugo_root_dir = ".") {
-  pub_dir <- fs::path_abs(hugo_root_dir, "content/publication")
-  fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
-}
+pub_md_paths <- kwb.pubs::get_publication_index_md_paths(lang = "de")
 
-write_lines <- function (text, file, fileEncoding = "", ...) {
-  if (is.character(file)) {
-    con <- if (nzchar(fileEncoding)) {
-      file(file, "wt", encoding = fileEncoding)
-    }
-    else {
-      file(file, "wt")
-    }
-    on.exit(close(con))
-  }
-  else {
-    con <- file
-  }
-  writeLines(text, con, ...)
-}
+
 
 replace_kwb_authors_in_pub_index_md <- function (path, 
                                                  file_encoding = "UTF-8",
@@ -289,98 +274,31 @@ replace_kwb_authors_in_pub_index_md <- function (path,
   if (idx > 0) {
     if(dbg) message(sprintf("Replacing KWB authors in '%s'", path))
     pub_index_txt[idx] <- unlist(tmp$hugo_authors[tmp$id == id])
-    write_lines(pub_index_txt, path, file_encoding)
+    kwb.pubs::write_lines(pub_index_txt, path, file_encoding)
   }
   }
 }
   
 
-#Sys.setlocale(category = "LC_ALL", locale = "German")
 
-sapply(get_publication_index_md_paths(), function(path) replace_kwb_authors_in_pub_index_md(path))
+sapply(pub_md_paths, function(path) replace_kwb_authors_in_pub_index_md(path))
 
 
 
 ### Replace auto-generated publish date with "record_last_modified" (in "UTC")
 
-#con <- dbConnect(RSQLite::SQLite(), "~/Projekte2/dms/pdb.eni")
-con <- DBI::dbConnect(RSQLite::SQLite(), "../../dms/2020-07-08/KWB-documents_20191205.Data/sdb/sdb.eni")
+path_en_db <- "../../dms/2020-07-08/KWB-documents_20191205.Data/sdb/sdb.eni"
+contents <- kwb.pubs::read_endnote_db(path_en_db)
 
-table_names <- DBI::dbListTables(con)
+en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)
+en_refs$publication <- sprintf('\"%s\"', en_refs$publication)
 
-contents <- lapply(setNames(nm = table_names), DBI::dbReadTable, con = con)
-
-DBI::dbDisconnect(con)
-
-endnote_sdb <- contents$refs[,c("id", "year", "date", "record_last_updated")] %>%  
-  tibble::as_tibble() %>% 
-  ## + 3600s (fix as Endnote exports are otherwise 1h before "real" export time)
-  dplyr::mutate(publish_datetime = as.POSIXct(as.POSIXct("1970-01-01 00:00:00") + .data$record_last_updated + 3600, tz = "CEST") %>% 
-                  lubridate::with_tz(tzone = "UTC"), 
-                publishDate = sprintf("%sT%sZ", 
-                                      format(publish_datetime, "%Y-%m-%d"), 
-                                      format(publish_datetime, "%H:%M:%S")),
-                date_cleaned = dplyr::if_else(!is.na(lubridate::ymd(.data$date)),
-                                              as.character(lubridate::ymd(.data$date)),
-                                              dplyr::if_else(stringr::str_detect(.data$year, 
-                                                                                 "[1-2][0-9][0-9][0-9]"), 
-                                                             sprintf("%s-01-01", 
-                                                                     stringr::str_trim(.data$year)), 
-                                                             "")))
-
-
-
-
-replace_publishDate_in_pub_index_md <- function (path, 
-                                                 file_encoding = "UTF-8",
-                                                 dbg = TRUE) {
-  
-  id <- as.numeric(stringr::str_extract(basename(dirname(path)), 
-                                        pattern = "[0-9]+"))
-  
-  
-  ref <- endnote_sdb[endnote_sdb$id == id, ]
-  
-  if(nrow(ref) == 1) {
-    
-    pub_index_txt <- kwb.fakin::read_lines(path, 
-                                           fileEncoding = file_encoding)
-    idx <- which(stringr::str_detect(pub_index_txt, pattern = "^publishDate"))
-    if (idx > 0) {
-      if(dbg) message(sprintf("Replacing publishDate in '%s'", path))
-      pub_index_txt[idx] <- sprintf('publishDate: %s', ref$publishDate)
-      write_lines(pub_index_txt, path, file_encoding)
-    }
-  }
-}
-
-sapply(get_publication_index_md_paths(), function(path) replace_publishDate_in_pub_index_md(path))
-
-replace_date_in_pub_index_md <- function (path, 
-                                          file_encoding = "UTF-8",
-                                          dbg = TRUE) {
-  
-  id <- as.numeric(stringr::str_extract(basename(dirname(path)), 
-                                        pattern = "[0-9]+"))
-  
-  
-  ref <- endnote_sdb[endnote_sdb$id == id, ]
-  
-  if(nrow(ref) == 1) {
-    
-    pub_index_txt <- kwb.fakin::read_lines(path, 
-                                           fileEncoding = file_encoding)
-    idx <- which(stringr::str_detect(pub_index_txt, pattern = "^date"))
-    if (idx > 0) {
-      if(dbg) message(sprintf("Replacing year in '%s'", path))
-      pub_index_txt[idx] <- sprintf("date: %s", ref$date_cleaned)
-      write_lines(pub_index_txt, path, file_encoding)
-    }
-  }
-}
-
-
-sapply(get_publication_index_md_paths(), function(path) replace_date_in_pub_index_md(path))
+kwb.pubs::replace_dates_in_pub_index_md(md_paths = pub_md_paths, 
+                                        endnote_db_refs = en_refs)
+kwb.pubs::replace_publishDates_in_pub_index_md(md_paths = pub_md_paths, 
+                                               endnote_db_refs = en_refs)
+kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths, 
+                                               endnote_db_refs = en_refs)
 
 
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)

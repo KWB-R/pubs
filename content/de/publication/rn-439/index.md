@@ -6,7 +6,7 @@ authors: [ "Jekel, M." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Technische Universität Berlin"
 url_pdf: "../../../pdf/Jekel-2006-439.pdf"
 projects: ["nasri"]
 ---

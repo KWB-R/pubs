@@ -6,7 +6,7 @@ authors: [ "Böhler, M. A.", "remy", "Löwenberg, J.", "Hagemann, N.", "Hernande
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*3. Aachener Tagung Wassertechnologie*"
+publication: " *In:* 3. Aachener Tagung Wassertechnologie. Aachen, Germany. 9-30 Oktober 2019"
 projects: ["askuris"]
 ---
 

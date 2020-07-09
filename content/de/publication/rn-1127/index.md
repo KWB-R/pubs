@@ -6,7 +6,7 @@ authors: [ "riechel", "caradot", "Geerts, T.", "Grenier, J.", "Eckert, E.", "Len
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*9th International Conference on Sewer Processes and Networks*"
+publication: " *In:* 9th International Conference on Sewer Processes and Networks. Aalborg, Denmark"
 projects: ["sema-berlin-2"]
 ---
 

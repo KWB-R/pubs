@@ -6,7 +6,7 @@ authors: [ "Peter-Fröhlich, A.", "Kraume, I.", "Lesouëf, A.", "Phan, L.", "Gom
 publication_types: ["0"]
 abstract: "Zur Ermittlung der zu testenden neuen, nachhaltigen Sanitärkonzepte wurde eine Vorstudie durchgeführt. Diese Studie beinhaltet einen Kostenvergleich zwischen zwei neuen Sanitärkonzepten mit Schwerkraft- und Vakuumseparationstoiletten und dem konventionellen System. Es konnte gezeigt werden, dass die neuen Sanitärsysteme, abhängig von den Rahmenbedingungen, Kostenvorteile haben. Aus diesem Grund wurde das Pilotprojekt zum Test der oben genannten neuen Sanitärkonzepte unter realistischen Bedingungen in Berlin/Brandenburg gestartet. Das Sanitärkonzept mit Schwerkrafttrenntoiletten wird voraussichtlich im Sommer 2003 in Betrieb gehen."
 featured: false
-publication: "*2nd International Symposium on Ecological Sanitation 2003*"
+publication: " p 9 *In:* 2nd International Symposium on Ecological Sanitation 2003. Lübeck. 6. - 11.4.2003"
 projects: ["scst"]
 ---
 

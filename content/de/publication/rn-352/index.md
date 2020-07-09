@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Orlikowski, D.", "Grützmacher, G." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*bluefacts*"
+publication: " *bluefacts* 2010: 40-46"
 projects: ["wellma-2"]
 ---
 

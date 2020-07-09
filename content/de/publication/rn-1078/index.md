@@ -6,7 +6,7 @@ authors: [ "Hofmann, R." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Master thesis. Bauingenieur- und Geoinformationswesen. Beuth Hochschule für Technik Berlin"
 projects: ["ogre"]
 ---
 

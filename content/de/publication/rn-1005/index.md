@@ -6,7 +6,7 @@ authors: [ "remy", "kraus" ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: "*Phosphorus Recovery and Recycling*"
+publication: " *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Phosphorus Recovery and Recycling. Springer. Tokyo, Japan"
 projects: ["p-rex"]
 ---
 

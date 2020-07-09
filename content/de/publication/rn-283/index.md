@@ -6,7 +6,7 @@ authors: [ "Kranz, N.", "Vorwerk, A.", "Hansen, W." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "KompetenzZentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Kranz-2004-283.pdf"
 projects: ["pprp"]
 ---

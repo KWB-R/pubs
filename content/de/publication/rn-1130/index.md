@@ -6,7 +6,7 @@ authors: [ "wicke", "Vosse, J.", "miehe" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Wicke-2019-1130.pdf"
 projects: ["aquanes"]
 ---

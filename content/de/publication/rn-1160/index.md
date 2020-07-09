@@ -6,6 +6,6 @@ authors: [ "Kabbe, C." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*Aqua Strategy*"
+publication: " *Aqua Strategy* 1 (3)"
 ---
 

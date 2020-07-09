@@ -6,7 +6,7 @@ authors: [ "rustler", "miehe", "Grützmacher, G." ]
 publication_types: ["0"]
 abstract: "Bank filtration, i.e. the abstraction of groundwater from wells along a river or lake, thus inducing infiltration has a long history as (pre-) treatment step for drinking water production in Europe. The goal of this study is to assess whether groundwater waterworks using BF have a cost advantage compared to SWTPs if both, water abstraction and treatment processes are considered."
 featured: false
-publication: "*Groundwater 2011*"
+publication: " p 5 *In:* Groundwater 2011. Orléans, France. 14.-16.03.2011"
 projects: ["techneau"]
 ---
 

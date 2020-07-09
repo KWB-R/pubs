@@ -6,6 +6,6 @@ authors: [ "Hartmann, A." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Berlin Water Dialogues*"
+publication: " *In:* Berlin Water Dialogues. Berlin. 4.05.-05.05. 2011"
 ---
 

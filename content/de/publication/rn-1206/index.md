@@ -6,6 +6,6 @@ authors: [ "stapf" ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Diploma Thesis. Institut fu¨r Siedlungswasserbau, Wassergu¨te- und Abfallwirtschaft. Universita¨t Stuttgart"
 ---
 

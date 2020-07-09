@@ -6,6 +6,6 @@ authors: [ "matzinger", "riechel", "Uldack, M.", "caradot", "sonnenberg", "rouau
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*Aqua & Gas*"
+publication: " *Aqua & Gas* 10: 46-51"
 ---
 

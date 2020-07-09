@@ -6,7 +6,7 @@ authors: [ "Pekdeger, A." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Freie Universität Berlin"
 url_pdf: "../../../pdf/Pekdeger-2006-440.pdf"
 projects: ["nasri"]
 ---

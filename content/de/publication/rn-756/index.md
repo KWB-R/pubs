@@ -6,7 +6,7 @@ authors: [ "Kabbe, C." ]
 publication_types: ["2"]
 abstract: "Commercialisation of nutrient recovery technologies are progressing across Europe, with a contract signed earlier this year to recycle phosphorus from 60,000 tons of sewage sludge ash. This article looks at progress and options from other companies against market barriers such as raw material prices and legal frameworks."
 featured: false
-publication: "*Water & Wastewater International*"
+publication: " *Water & Wastewater International* April-Mai 2015: 30-33"
 projects: ["p-rex"]
 ---
 

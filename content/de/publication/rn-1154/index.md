@@ -6,7 +6,7 @@ authors: [ "Bugey, A." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Master Thesis. Eberhard Karls Universtität Tübingen"
 projects: ["aquisafe-1"]
 ---
 

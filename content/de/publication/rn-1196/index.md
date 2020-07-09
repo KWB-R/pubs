@@ -6,7 +6,7 @@ authors: [ "Bethke, M. K. L." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Bachelor Thesis. Technischer Umweltschutz. Technische Universita¨t Berlin"
 projects: ["aquanes"]
 ---
 

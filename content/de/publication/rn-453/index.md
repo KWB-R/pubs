@@ -6,7 +6,7 @@ authors: [ "López-Pila, J. M.", "Szewzyk, R. G.", "Dizer, H." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Umweltbundesamt"
 url_pdf: "../../../pdf/López-Pila-2006-453.pdf"
 projects: ["nasri"]
 ---
