@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "Tazi-Pain, A.", "Thauré, D.", "Moeslang, H.", "Buiss
 publication_types: ["0"]
 abstract: "Twelve years after the first full scale municipal application in Europe of the membrane bioreactor (MBR) technology, the process is now accepted as a technology of choice for wastewater treatment, and the market is showing sustained growth. However early misconceptions about the technology are persistent and false statements are commonly encountered in articles and conferences, generating unnecessary research efforts or even fuelling either fascination or scepticism with regards to the technology, which is ultimately detrimental to the perception of the process by water professionals. We try to provide some factual and rational clarifications on ten issues which are often wrongly reported about MBR technology."
 featured: false
-publication: " p 10 *In:* IWA World Water Congress. Montréal, Canada. 20-24 September 2010"
+publication: ' p 10 *In:* IWA World Water Congress. Montréal, Canada. 20-24 September 2010'
 projects: ["amedeus"]
 ---
 

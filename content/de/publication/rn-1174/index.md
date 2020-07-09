@@ -6,6 +6,6 @@ authors: [ "rouault", "matzinger" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* wat + WASSER BERLIN INTERNATIONAL 2011. Berlin. 02.-05.05. 2011"
+publication: ' *In:* wat + WASSER BERLIN INTERNATIONAL 2011. Berlin. 02.-05.05. 2011'
 ---
 

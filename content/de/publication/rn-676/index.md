@@ -6,7 +6,7 @@ authors: [ "Stemann, J.", "Kabbe, C.", "Adam, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 17 *In:* Berliner Abfallwirtschafts- und Energiekonferenz. Berlin. 27-28 January 2014"
+publication: ' p 17 *In:* Berliner Abfallwirtschafts- und Energiekonferenz. Berlin. 27-28 January 2014'
 projects: ["p-rex"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Kabbe, C.", "kraus" ]
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: " *In:* DWA Nord: Die Zukunft der Klärschlammverwertung in Schleswig-Holstein. Rendsburg. 2016-02-17"
+publication: ' *In:* DWA Nord: Die Zukunft der Klärschlammverwertung in Schleswig-Holstein. Rendsburg. 2016-02-17'
 projects: ["p-rex"]
 ---
 

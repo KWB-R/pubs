@@ -6,7 +6,7 @@ authors: [ "Daspres, N." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Diploma Thesis. Génie de l’environnement et génie hydrologique. Agrocampus Ouest (Rennes)"
+publication: ' Diploma Thesis. Génie de l’environnement et génie hydrologique. Agrocampus Ouest (Rennes)'
 projects: ["ism"]
 ---
 

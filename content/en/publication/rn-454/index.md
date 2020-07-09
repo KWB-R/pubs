@@ -6,7 +6,7 @@ authors: [ "miehe", "Staub, M.", "Grützmacher, G." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
 url_pdf: "../../../pdf/Miehe-2011-454.pdf"
 projects: ["oxired-2"]
 ---

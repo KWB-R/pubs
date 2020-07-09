@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "remy", "Boulestreau, M." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 12 *In:* DWA Nord-Ost Landesverbandstagung. Wernigerode, Germany. 28-29 May 2015"
+publication: ' p 12 *In:* DWA Nord-Ost Landesverbandstagung. Wernigerode, Germany. 28-29 May 2015'
 projects: ["carismo"]
 ---
 

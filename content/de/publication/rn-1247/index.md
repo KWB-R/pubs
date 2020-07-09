@@ -6,7 +6,7 @@ authors: [ "habibi" ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *wwt Wasserwirtschaft Wassertechnik*: 40-41"
+publication: ' *wwt Wasserwirtschaft Wassertechnik*: 40-41'
 projects: ["reef2w"]
 ---
 

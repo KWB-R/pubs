@@ -6,6 +6,6 @@ authors: [ "Prasse, C.", "Alexander, J.", "Hammers-Wirtz, M.", "Happel, O.", "Kn
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *Vom Wasser* 03/2014 (112): 140-141"
+publication: ' *Vom Wasser* 03/2014 (112): 140-141'
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Behrends, U." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Diploma Thesis. Fachhochschule für Technik und Wirtschaft Berlin"
+publication: ' Diploma Thesis. Fachhochschule für Technik und Wirtschaft Berlin'
 projects: ["eva"]
 ---
 

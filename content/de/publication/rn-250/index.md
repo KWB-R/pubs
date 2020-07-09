@@ -6,7 +6,7 @@ authors: [ "sonnenberg" ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Internship Report. Fakultät III Prozesswissenschaften, Institut für Technischen Umweltschutz. Technische Universität Berlin"
+publication: ' Internship Report. Fakultät III Prozesswissenschaften, Institut für Technischen Umweltschutz. Technische Universität Berlin'
 projects: ["ism"]
 ---
 

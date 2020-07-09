@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Sperlich, A.", "Dlubek, H.", "Wittstock, E.", "Gni
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 17 *In:* AG Wasser"
+publication: ' p 17 *In:* AG Wasser'
 projects: ["antiocker"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Fritz, B.", "Massmann, G.", "Knappe, A.", "Pekdeger, A." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *Hydroplus*: 6"
+publication: ' *Hydroplus*: 6'
 projects: ["nasri"]
 ---
 

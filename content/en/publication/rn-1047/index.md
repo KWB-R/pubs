@@ -6,7 +6,7 @@ authors: [ "tatis-muvdi", "riechel", "matzinger", "rouault" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
 url_pdf: "../../../pdf/Tatis-Muvdi-2016-1047.pdf"
 projects: ["nitrolimit"]
 ---

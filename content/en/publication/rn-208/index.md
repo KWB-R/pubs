@@ -6,7 +6,7 @@ authors: [ "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 16 *In:* Wasser Berlin 2009. Berlin. 2009-04-02"
+publication: ' p 16 *In:* Wasser Berlin 2009. Berlin. 2009-04-02'
 projects: ["ic-pharma"]
 ---
 

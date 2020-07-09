@@ -6,7 +6,7 @@ authors: [ "Grützmacher, G.", "Gräber, I.", "David, B.", "Kazner, C.", "Moreau
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: " p 3 *In:* EU Groundwater Conference. Paris, UNESCO. 13-15 November 2008"
+publication: ' p 3 *In:* EU Groundwater Conference. Paris, UNESCO. 13-15 November 2008'
 projects: ["ic-nasri"]
 ---
 

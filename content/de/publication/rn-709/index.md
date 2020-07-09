@@ -6,6 +6,6 @@ authors: [ "rouault", "Leszinski, M.", "caradot" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 15 *In:* IWA World Water Congress, Lisbon. Lisbon, Portugal. 21-26 September 2014"
+publication: ' p 15 *In:* IWA World Water Congress, Lisbon. Lisbon, Portugal. 21-26 September 2014'
 ---
 

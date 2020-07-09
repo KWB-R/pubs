@@ -6,6 +6,6 @@ authors: [ "matzinger", "riechel" ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *bluefacts*: 30-37"
+publication: ' *bluefacts*: 30-37'
 ---
 

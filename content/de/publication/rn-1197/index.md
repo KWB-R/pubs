@@ -6,7 +6,7 @@ authors: [ "Blümm, M." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Master Thesis. Technische Universita¨t Berlin"
+publication: ' Master Thesis. Technische Universita¨t Berlin'
 projects: ["bephor"]
 ---
 

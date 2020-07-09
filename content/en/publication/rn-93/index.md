@@ -6,7 +6,7 @@ authors: [ "Fritz, B.", "Massmann, G.", "Grünheid, S.", "Heberer, T.", "Pekdege
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 6 *In:* Chemrawn XV. Paris. 21. - 23.6.2004"
+publication: ' p 6 *In:* Chemrawn XV. Paris. 21. - 23.6.2004'
 projects: ["nasri"]
 ---
 

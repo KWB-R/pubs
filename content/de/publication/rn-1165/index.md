@@ -6,6 +6,6 @@ authors: [ "Lesjean, B." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* Greentech Colloquim. Basel, Switzerland. 14.10. 2010"
+publication: ' *In:* Greentech Colloquim. Basel, Switzerland. 14.10. 2010'
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Lesjean, B." ]
 publication_types: ["5"]
 abstract: ""
 featured: false
-publication: " p 265. Kompetenzzentrum Wasser Berlin gGmbH. Berlin"
+publication: ' p 265. Kompetenzzentrum Wasser Berlin gGmbH. Berlin'
 projects: ["mbr-train"]
 ---
 

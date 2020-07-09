@@ -6,7 +6,7 @@ authors: [ "Baumer, E." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Diploma Thesis. Institut für Verfahrenstechnik. Technische Universität Berlin"
+publication: ' Diploma Thesis. Institut für Verfahrenstechnik. Technische Universität Berlin'
 projects: ["enrem"]
 ---
 

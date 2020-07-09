@@ -6,7 +6,7 @@ authors: [ "Thomas, L.", "Taute, T.", "Schneider, M.", "Kempka, T.", "Kühn, M."
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Freie Universität Berlin, Deutsches GeoForschungsZentrum"
+publication: 'Freie Universität Berlin, Deutsches GeoForschungsZentrum'
 url_pdf: "../../../pdf/Thomas-2013-573.pdf"
 projects: ["cosma"]
 ---

@@ -6,7 +6,7 @@ authors: [ "Uldack, M.", "rouault", "Hartmann, A." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
 url_pdf: "../../../pdf/Uldack-2012-1199.pdf"
 projects: ["gstew"]
 ---

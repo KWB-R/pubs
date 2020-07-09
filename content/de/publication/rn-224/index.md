@@ -6,7 +6,7 @@ authors: [ "Lynggaard-Jensen, A.", "Schroeder, K." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Europäische Wasser Plattform WssTP"
+publication: 'Europäische Wasser Plattform WssTP'
 url_pdf: "../../../pdf/Lynggaard-Jensen-2008-224.pdf"
 projects: ["wsstp"]
 ---

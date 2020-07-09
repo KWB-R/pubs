@@ -6,7 +6,7 @@ authors: [ "Stüber, J.", "Lüdicke, C.", "Gnirß, R.", "Lesjean, B.", "Kraume, 
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 15 *In:* MDIW2008. Toulouse, France. 20-24 October 2008"
+publication: ' p 15 *In:* MDIW2008. Toulouse, France. 20-24 October 2008'
 projects: ["enrem"]
 ---
 

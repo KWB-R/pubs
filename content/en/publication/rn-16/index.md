@@ -6,7 +6,7 @@ authors: [ "Schroeder, K.", "Pawlowsky-Reusing, E." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *wwt Wasserwirtschaft Wassertechnik* (7-8): 19-22"
+publication: ' *wwt Wasserwirtschaft Wassertechnik* (7-8): 19-22'
 projects: ["ism"]
 ---
 

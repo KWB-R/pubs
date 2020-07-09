@@ -6,7 +6,7 @@ authors: [ "stapf", "schuetz", "Thiyagarajan, V.", "miehe" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* IOA WORLD. 24th World Congress & Exhibition. Nice, France. 20–25 October 2019"
+publication: ' *In:* IOA WORLD. 24th World Congress & Exhibition. Nice, France. 20–25 October 2019'
 projects: ["merezon"]
 ---
 

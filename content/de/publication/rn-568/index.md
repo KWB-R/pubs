@@ -6,7 +6,7 @@ authors: [ "weigert" ]
 publication_types: ["2"]
 abstract: "Die reinigung von Abwasser ist sehr energieintensiv. die kommunale abwasserbehandlung zählt deshalb noch vor Schulen und krankenhäusern zu den größten Stromverbrauchern. in den rund 10.000 deutschen kläranlagen schlummern allerdings erhebliche einsparpotenziale und sogar bislang ungenutzte energieressourcen, die noch erschlossen werden können."
 featured: false
-publication: " *green facts* 2: 26-30"
+publication: ' *green facts* 2: 26-30'
 projects: ["powerstep"]
 ---
 

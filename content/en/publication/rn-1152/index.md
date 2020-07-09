@@ -6,7 +6,7 @@ authors: [ "Smith, A. N.", "Tedesco, L. P.", "Jacinthe, P.-A.", "Babbar-Sebens, 
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* 9th Intecol International Wetland Conference. Orlando, Fl. June, 2012"
+publication: ' *In:* 9th Intecol International Wetland Conference. Orlando, Fl. June, 2012'
 projects: ["aquisafe-1"]
 ---
 

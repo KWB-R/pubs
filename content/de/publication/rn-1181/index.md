@@ -6,7 +6,7 @@ authors: [ "schwarzmueller" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
 url_pdf: "../../../pdf/Schwarzmüller-2011-1181.pdf"
 projects: ["wellma-2"]
 ---

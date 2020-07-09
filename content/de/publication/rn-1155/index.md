@@ -6,7 +6,7 @@ authors: [ "matzinger", "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* Wasser Berlin, Trinkwassergewinnung und Ressourcenschutz – Aktuelle Forschungsvorhaben des Kompetenzzentrums Wasser Berlin. Berlin. 02. April 2009"
+publication: ' *In:* Wasser Berlin, Trinkwassergewinnung und Ressourcenschutz – Aktuelle Forschungsvorhaben des Kompetenzzentrums Wasser Berlin. Berlin. 02. April 2009'
 projects: ["aquisafe-1"]
 ---
 

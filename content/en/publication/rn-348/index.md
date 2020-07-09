@@ -6,7 +6,7 @@ authors: [ "Genz, C.", "miehe", "Gnirß, R.", "Jekel, M." ]
 publication_types: ["0"]
 abstract: "The impact of a pre-treatment by pre-ozonation (2-10 mg O3/L) and subsequent coagulation (FeCl3: 2-6 mg Fe3+/L) on the performance of a polymeric ultrafiltration membrane was studied. No free dissolved ozone was in contact with the membrane. Lab tests were performed using Amicon test cells fed with secondary effluent and the flux decline during filtration tests was measured. Flux decline was reduced with increasing coagulant concentration as well as with increasing ozone dosage. This effect was confirmed by a reduction in the amount of biopolymers measured with size exclusion chromatography by organic carbon detection (LC-OCD). Conducted multi filtration cycles revealed a significant increase in irreversible fouling after pre-ozonation that might be caused by increasing colloidal iron concentrations. Phosphorus in the permeate was successfully reduced to concentrations < 60 µg/L"
 featured: false
-publication: " p 9 *In:* MDIW Membranes in Drinking and Industrial Water Treatment. Trondheim. 27-30 June 2010"
+publication: ' p 9 *In:* MDIW Membranes in Drinking and Industrial Water Treatment. Trondheim. 27-30 June 2010'
 projects: ["oxeram-2"]
 ---
 

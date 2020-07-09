@@ -6,7 +6,7 @@ authors: [ "Fischbacher, A. F." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Bachelor Thesis. Technischer Umweltschutz. Technische Universita¨t Berlin"
+publication: ' Bachelor Thesis. Technischer Umweltschutz. Technische Universita¨t Berlin'
 projects: ["e-vent"]
 ---
 

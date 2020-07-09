@@ -6,7 +6,7 @@ authors: [ "weigert" ]
 publication_types: ["2"]
 abstract: "Das Berliner Wissenschaftszentrum sorgt für Qualität und Kontinuität in der Beforschung wasserwirtschaftlicher Sachverhalte."
 featured: false
-publication: " *wwt Wasserwirtschaft Wassertechnik* (4): 6-8"
+publication: ' *wwt Wasserwirtschaft Wassertechnik* (4): 6-8'
 projects: ["mia-cso"]
 ---
 

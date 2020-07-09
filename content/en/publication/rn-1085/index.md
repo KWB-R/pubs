@@ -6,7 +6,7 @@ authors: [ "Loderer, C.", "Griese, R." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
 url_pdf: "../../../pdf/Loderer-2018-1085.pdf"
 projects: ["reef2w"]
 ---

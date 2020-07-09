@@ -6,7 +6,7 @@ authors: [ "Mitchell, R.-L.", "Nickel, D.", "Thamsen, P. U.", "matzinger" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "NA *In:* Cities of the Future Conference. Mühlheim, Germany. 28-30 April 2015"
+publication: 'NA *In:* Cities of the Future Conference. Mühlheim, Germany. 28-30 April 2015'
 projects: ["kuras"]
 ---
 

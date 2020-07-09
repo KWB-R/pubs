@@ -6,7 +6,7 @@ authors: [ "Morel-Fatio, A." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *IWA Specialist group on diffuse pollution. Newsletter* (28): 17-17"
+publication: ' *IWA Specialist group on diffuse pollution. Newsletter* (28): 17-17'
 projects: ["aquisafe-1"]
 ---
 

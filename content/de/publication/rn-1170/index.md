@@ -6,6 +6,6 @@ authors: [ "Hartmann, A." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* Forum Green Cities. Regensburg. 29.09.-30.09. 2011"
+publication: ' *In:* Forum Green Cities. Regensburg. 29.09.-30.09. 2011'
 ---
 

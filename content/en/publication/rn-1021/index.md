@@ -6,7 +6,7 @@ authors: [ "matzinger", "Schmid, M.", "Strehl, C.", "Nickel, D.", "Pallasch, M."
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *ICUD*: 1881-1887"
+publication: ' *ICUD*: 1881-1887'
 projects: ["kuras"]
 ---
 

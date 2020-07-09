@@ -6,7 +6,7 @@ authors: [ "Barjenbruch, M.", "Rettig, S." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "NA *In:* Kläranlagennachbarschaftstag der Kläranlagennachbarschaft 52 (Vorpommern), Grimmen. Grimmen. 2008-11-27"
+publication: 'NA *In:* Kläranlagennachbarschaftstag der Kläranlagennachbarschaft 52 (Vorpommern), Grimmen. Grimmen. 2008-11-27'
 projects: ["monitor"]
 ---
 

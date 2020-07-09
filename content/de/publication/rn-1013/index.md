@@ -6,7 +6,7 @@ authors: [ "Kabbe, C." ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: " *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Phosphorus Recovery and Recycling. Springer Verlag. Tokyo, Japan"
+publication: ' *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Phosphorus Recovery and Recycling. Springer Verlag. Tokyo, Japan'
 projects: ["p-rex"]
 ---
 

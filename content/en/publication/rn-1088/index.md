@@ -6,7 +6,7 @@ authors: [ "Müller, A.", "Loderer, C.", "Griese, R." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "ENEA"
+publication: 'ENEA'
 url_pdf: "../../../pdf/Müller-2018-1088.pdf"
 projects: ["reef2w"]
 ---

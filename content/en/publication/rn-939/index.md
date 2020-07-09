@@ -6,7 +6,7 @@ authors: [ "Mutz, D.", "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 8 *In:* Life Cycle Assessment Workshop. Montanuniversität Leoben, Austria. 2014-02-06"
+publication: ' p 8 *In:* Life Cycle Assessment Workshop. Montanuniversität Leoben, Austria. 2014-02-06'
 projects: ["p-rex"]
 ---
 

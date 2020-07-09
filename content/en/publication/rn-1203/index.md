@@ -6,7 +6,7 @@ authors: [ "Vosse, J." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Master Thesis. Technische Hochschule Ko¨ln"
+publication: ' Master Thesis. Technische Hochschule Ko¨ln'
 projects: ["aquanes"]
 ---
 

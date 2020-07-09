@@ -6,7 +6,7 @@ authors: [ "Bäumle, R.", "Menz, C.", "Reich, M.", "Koeniger, P.", "Krekeler, T.
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: " *In:* International Symposium on Isotope Hydrology: Advancing the Understanding of Water Cycle Processes CN-271. Vienna"
+publication: ' *In:* International Symposium on Isotope Hydrology: Advancing the Understanding of Water Cycle Processes CN-271. Vienna'
 projects: ["rwe-bo"]
 ---
 

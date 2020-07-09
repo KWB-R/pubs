@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "remy", "Boulestreau, M.", "Stüber, J." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 38 *In:* 38. Berliner Wasserwerkstatt. Berlin, Germany. 2015-06-18"
+publication: ' p 38 *In:* 38. Berliner Wasserwerkstatt. Berlin, Germany. 2015-06-18'
 projects: ["carismo"]
 ---
 

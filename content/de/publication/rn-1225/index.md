@@ -6,7 +6,7 @@ authors: [ "jaehrig", "Vredenbregt, L.", "wicke", "miehe", "Sperlich, A." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* Wasserfachtagung „Innovationen in der Trinkwasseraufbereitung“. Muttenz, Switzerland. 14 May 2019"
+publication: ' *In:* Wasserfachtagung „Innovationen in der Trinkwasseraufbereitung“. Muttenz, Switzerland. 14 May 2019'
 projects: ["aquanes"]
 ---
 

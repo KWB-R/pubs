@@ -6,7 +6,7 @@ authors: [ "Schulz, M.", "Boulestreau, M.", "miehe", "Lesjean, B.", "Godehardt, 
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "NA *In:* 14th Aachener Membran Kolloquium.. Aachen, Germany. 7-8 November 2012"
+publication: 'NA *In:* 14th Aachener Membran Kolloquium.. Aachen, Germany. 7-8 November 2012'
 projects: ["oxeram-2"]
 ---
 

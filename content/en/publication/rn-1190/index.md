@@ -6,6 +6,6 @@ authors: [ "Kabbe, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* 8th International Phosphorus Workshop. Rostock, Germany. 12.09. –16.09. 2016"
+publication: ' *In:* 8th International Phosphorus Workshop. Rostock, Germany. 12.09. –16.09. 2016'
 ---
 

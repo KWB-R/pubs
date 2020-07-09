@@ -6,7 +6,7 @@ authors: [ "Stüber, J.", "Lesjean, B.", "Lüdicke, C.", "Gnirß, R." ]
 publication_types: ["2"]
 abstract: "Demonstrationsprojekt Berlin-Margaretenhöhe: Dezentrale Klärtechnik vor Ort erprobt und auf Wirtschaftlichkeit geprüft."
 featured: false
-publication: " *wwt Wasserwirtschaft Wassertechnik* (September 2009): 43-46"
+publication: ' *wwt Wasserwirtschaft Wassertechnik* (September 2009): 43-46'
 projects: ["enrem"]
 ---
 

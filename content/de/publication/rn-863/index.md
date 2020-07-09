@@ -6,7 +6,7 @@ authors: [ "Pachali, H.-L." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Bachelor Thesis. Fakultät für Sozialwissenschaft, 2-Fach-B.A. in Geographie und Politik, Wirtschaft und Gesellschaft:. Ruhr-Universität Bochum"
+publication: ' Bachelor Thesis. Fakultät für Sozialwissenschaft, 2-Fach-B.A. in Geographie und Politik, Wirtschaft und Gesellschaft:. Ruhr-Universität Bochum'
 projects: ["kuras"]
 ---
 

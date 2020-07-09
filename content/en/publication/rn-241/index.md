@@ -6,7 +6,7 @@ authors: [ "Mannel, R.", "Pawlowsky-Reusing, E." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 13 *In:* ATV-DVWK und VDI/VDE Gemeinschaftstagung "Mess- und Regelungstechnik in abwassertechnischen Anlagen". Wuppertal. 25. - 26.11.2003"
+publication: ' p 13 *In:* ATV-DVWK und VDI/VDE Gemeinschaftstagung "Mess- und Regelungstechnik in abwassertechnischen Anlagen". Wuppertal. 25. - 26.11.2003'
 projects: ["ism"]
 ---
 

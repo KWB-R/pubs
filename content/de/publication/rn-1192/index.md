@@ -6,6 +6,6 @@ authors: [ "schwarzmueller" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* Berlin-Brandenburger Brunnentage. Potsdam, Germany. 23.05.-24.05. 2016"
+publication: ' *In:* Berlin-Brandenburger Brunnentage. Potsdam, Germany. 23.05.-24.05. 2016'
 ---
 

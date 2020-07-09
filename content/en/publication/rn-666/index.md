@@ -6,7 +6,7 @@ authors: [ "Michalski, A." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Master Thesis. Environmental Protection. Hochschule Esslingen"
+publication: ' Master Thesis. Environmental Protection. Hochschule Esslingen'
 projects: ["p-rex"]
 ---
 

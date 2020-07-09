@@ -6,7 +6,7 @@ authors: [ "remy", "Boulestreau, M.", "Lesjean, B." ]
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: " p 16 *In:* 47. Essener Tagung. Essen, Germany. 19.-21.03.2014"
+publication: ' p 16 *In:* 47. Essener Tagung. Essen, Germany. 19.-21.03.2014'
 projects: ["carismo"]
 ---
 

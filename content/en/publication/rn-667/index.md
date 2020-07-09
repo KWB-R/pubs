@@ -6,7 +6,7 @@ authors: [ "zhou" ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Master Thesis. Siedlungswasserwirtschaft. Technische Universität Berlin"
+publication: ' Master Thesis. Siedlungswasserwirtschaft. Technische Universität Berlin'
 projects: ["decamax"]
 ---
 

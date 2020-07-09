@@ -6,7 +6,7 @@ authors: [ "stapf", "schuetz", "miehe" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* 11. Fachtagung Mess- und Regelungstechnik in abwassertechnischen Anlagen. Bad Soden, Germany. 6-27 June 2019"
+publication: ' *In:* 11. Fachtagung Mess- und Regelungstechnik in abwassertechnischen Anlagen. Bad Soden, Germany. 6-27 June 2019'
 projects: ["merezon"]
 ---
 

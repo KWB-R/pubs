@@ -6,7 +6,7 @@ authors: [ "Guégain, C.", "Pagotto, C.", "Randon, G.", "rouault", "Sautjeau, B.
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* PollDiff’Eau 2013. Paris, France. 18-20 Sept. 2013"
+publication: ' *In:* PollDiff’Eau 2013. Paris, France. 18-20 Sept. 2013'
 projects: ["aquisafe-1"]
 ---
 

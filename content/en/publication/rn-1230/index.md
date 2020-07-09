@@ -6,6 +6,6 @@ authors: [ "riechel", "caradot", "sonnenberg", "rouault" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " *In:* 6th European workshop on sewer asset management EURO-SAM. Delft, Netherlands. 18-19 June 2019"
+publication: ' *In:* 6th European workshop on sewer asset management EURO-SAM. Delft, Netherlands. 18-19 June 2019'
 ---
 

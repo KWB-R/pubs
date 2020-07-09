@@ -6,7 +6,7 @@ authors: [ "Mutz, D.", "remy" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Institut für Gewässerökologie und Binnenfischerei"
+publication: 'Institut für Gewässerökologie und Binnenfischerei'
 url_pdf: "../../../pdf/Mutz-2016-1049.pdf"
 projects: ["nitrolimit"]
 ---

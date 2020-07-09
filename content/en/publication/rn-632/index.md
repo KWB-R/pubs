@@ -6,7 +6,7 @@ authors: [ "Waschnewski, J.", "Lesjean, B.", "Schlächter, C.", "Schaller, J.", 
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 11 *In:* VDI Wissenforum „Klärschlammbehandlung“. Dortmund. 6-7 November 2013"
+publication: ' p 11 *In:* VDI Wissenforum „Klärschlammbehandlung“. Dortmund. 6-7 November 2013'
 projects: ["decamax"]
 ---
 

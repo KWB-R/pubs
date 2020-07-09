@@ -6,7 +6,7 @@ authors: [ "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 15 *In:* Wasser Berlin, KWB Symposium “Trends und Entwicklungen in der Abwasserbehandlung”. Berlin. 2013-05-23"
+publication: ' p 15 *In:* Wasser Berlin, KWB Symposium “Trends und Entwicklungen in der Abwasserbehandlung”. Berlin. 2013-05-23'
 projects: ["carismo"]
 ---
 

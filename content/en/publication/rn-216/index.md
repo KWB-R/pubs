@@ -6,7 +6,7 @@ authors: [ "Helling, K." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Diploma Thesis. Fachgebiet Wasserwirtschaft und Hydrosystemmodellierung. Technische Universität Berlin"
+publication: ' Diploma Thesis. Fachgebiet Wasserwirtschaft und Hydrosystemmodellierung. Technische Universität Berlin'
 projects: ["sam-cso"]
 ---
 

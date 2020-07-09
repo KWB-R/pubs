@@ -6,7 +6,7 @@ authors: [ "Luck, F.", "Pineau, C.", "Chorus, I.", "Fastner, J.", "Preußel, K."
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 11 *In:* Journées Information Eaux 2004. Poitiers, France. 29.9. - 1.10.2004"
+publication: ' p 11 *In:* Journées Information Eaux 2004. Poitiers, France. 29.9. - 1.10.2004'
 projects: ["erdre"]
 ---
 

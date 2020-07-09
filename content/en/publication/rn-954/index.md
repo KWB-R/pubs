@@ -6,7 +6,7 @@ authors: [ "Adlakha, L. K.", "Boisson, A.", "Fischer, S.", "Ghosh, N. C.", "Gris
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: "Bureau de recherches géologiques et minières, Kompetenzzentrum Wasser Berlin gGmbH"
+publication: 'Bureau de recherches géologiques et minières, Kompetenzzentrum Wasser Berlin gGmbH'
 url_pdf: "../../../pdf/Adlakha-2012-954.pdf"
 projects: ["saph-pani"]
 ---

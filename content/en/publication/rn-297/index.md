@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Orlikowski, D.", "Taute, T.", "Thronicker, O.", "D
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *wwt Wasserwirtschaft Wassertechnik* 9 (09): 36-39"
+publication: ' *wwt Wasserwirtschaft Wassertechnik* 9 (09): 36-39'
 projects: ["wellma-1"]
 ---
 

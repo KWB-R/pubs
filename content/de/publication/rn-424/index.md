@@ -6,7 +6,7 @@ authors: [ "Gnirß, R.", "Grützmacher, G.", "Hübner, U.", "Jekel, M." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *DVGW Energie | Wasser-Praxis* (6): 36-39"
+publication: ' *DVGW Energie | Wasser-Praxis* (6): 36-39'
 projects: ["oxired-2"]
 ---
 

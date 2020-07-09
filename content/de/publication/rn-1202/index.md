@@ -6,7 +6,7 @@ authors: [ "Flöter, C." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Master Thesis. Technischer Umweltschutz. Technische Universita¨t Berlin"
+publication: ' Master Thesis. Technischer Umweltschutz. Technische Universita¨t Berlin'
 projects: ["aquanes"]
 ---
 

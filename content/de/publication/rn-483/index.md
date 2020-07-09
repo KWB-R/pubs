@@ -6,7 +6,7 @@ authors: [ "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 38 *In:* Advanced Wastewater Treatment and Reuse. TU Berlin. 2012-01-04"
+publication: ' p 38 *In:* Advanced Wastewater Treatment and Reuse. TU Berlin. 2012-01-04'
 projects: ["codigreen"]
 ---
 

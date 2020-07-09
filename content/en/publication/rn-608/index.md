@@ -6,7 +6,7 @@ authors: [ "remy", "Mutz, D.", "rouault", "Gnirß, R.", "Bartholomäus, C.", "Dr
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 16 *In:* Statuseminar NITROLIMIT. Berlin. 2013-05-13"
+publication: ' p 16 *In:* Statuseminar NITROLIMIT. Berlin. 2013-05-13'
 projects: ["nitrolimit"]
 ---
 

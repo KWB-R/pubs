@@ -6,7 +6,7 @@ authors: [ "Grützmacher, G.", "Hildebrand, M.", "Lynggaard-Jensen, A.", "Hulsma
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "NA *In:* IWA European Utility Conference. Vienna, Austria. 18-20 April 2012"
+publication: 'NA *In:* IWA European Utility Conference. Vienna, Austria. 18-20 April 2012'
 projects: ["prepared"]
 ---
 

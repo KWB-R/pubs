@@ -6,7 +6,7 @@ authors: [ "remy", "Boulestreau, M.", "Lesjean, B." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: " *wwt Wasserwirtschaft Wassertechnik* (4/2015): 28-32"
+publication: ' *wwt Wasserwirtschaft Wassertechnik* (4/2015): 28-32'
 projects: ["carismo"]
 ---
 

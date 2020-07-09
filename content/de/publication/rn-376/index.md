@@ -6,7 +6,7 @@ authors: [ "Périllon, C.", "Orlikowski, D.", "Krause, B.", "Guégain, C.", "Sau
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: " p 1 *In:* IWA International Specialist Conference on Diffuse Pollution (DIPCON). Beaupré, Quebec, Canada. 12-17 September 2010"
+publication: ' p 1 *In:* IWA International Specialist Conference on Diffuse Pollution (DIPCON). Beaupré, Quebec, Canada. 12-17 September 2010'
 projects: ["aquisafe-2"]
 ---
 
