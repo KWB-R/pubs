@@ -6,7 +6,7 @@ authors: [ "conzelmann", "kraus", "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* 3rd IWA Resource Recovery Conference. Venice, Italy. 8-12 September 2019'
+publication: " *In:* 3rd IWA Resource Recovery Conference. Venice, Italy. 8-12 September 2019"
 projects: ["phorwaerts"]
 ---
 

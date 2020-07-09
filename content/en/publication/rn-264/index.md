@@ -6,7 +6,7 @@ authors: [ "Gnirß, R.", "Lesjean, B.", "Lüdicke, C.", "Vocks, M." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Berliner Wasserbetriebe, Kompetenzzentrum Wasser Berlin gGmbH'
+publication: "Berliner Wasserbetriebe, Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Gnirß-2007-264.pdf"
 projects: ["enrem"]
 ---

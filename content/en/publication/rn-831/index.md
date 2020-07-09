@@ -6,7 +6,7 @@ authors: [ "kraus", "Kabbe, C.", "remy", "Lesjean, B." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *KA Korrespondenz Abwasser, Abfall* 63 (6): 528-537'
+publication: " *KA Korrespondenz Abwasser, Abfall* 63 (6): 528-537"
 projects: ["p-rex"]
 ---
 

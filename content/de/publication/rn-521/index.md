@@ -6,7 +6,7 @@ authors: [ "Stüber, J." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 25 *In:* Understanding Fouling of RO Membranes in Reclamation of Secondary Effluent and its Minimization by Pre-Treatment.. Dresden, Germany. 27-28 February 2012'
+publication: " p 25 *In:* Understanding Fouling of RO Membranes in Reclamation of Secondary Effluent and its Minimization by Pre-Treatment.. Dresden, Germany. 27-28 February 2012"
 projects: ["oxeram-2"]
 ---
 

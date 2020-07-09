@@ -6,7 +6,7 @@ authors: [ "Herna´ndez, N.", "caradot", "sonnenberg", "rouault" ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *Water Practice & Technology* 13 (4): 794-802 [10.2166/wpt.2018.085](https://doi.org/10.2166/wpt.2018.085)'
+publication: " *Water Practice & Technology* 13 (4): 794-802 [10.2166/wpt.2018.085](https://doi.org/10.2166/wpt.2018.085)"
 doi: "10.2166/wpt.2018.085"
 ---
 

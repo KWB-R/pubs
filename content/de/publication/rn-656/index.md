@@ -6,7 +6,7 @@ authors: [ "rouault", "Schwarzböck, T.", "riechel", "Frey, M.", "Giebel, S.", "
 publication_types: ["0"]
 abstract: "In order to efficiently tackle odour problems from sewers which are connected with resident’s complaints and health risks, reliable online odour monitoring is necessary. Multi-gas sensor systems (electronic noses), which display a broad range of odorants, may substitute common online odour monitoring devices in the future. Four electronic noses with different configurations were tested over a period of 8 months at a sewer research plant of Berliner Wasserbetriebe. The objective was to analyse the applicability of four electronic noses for sewer odour management. 11 evaluation criteria were defined to evaluate the E-noses measurement behaviour, stability and their general practicability and handling. Generally it can be mentioned that the results are promising and the E-noses show good potentials. The E-noses which showed good results in predicting the odour concentration at the site have lack of some practical features. Whereas the systems which provide more possibilities (e.g. remote control, direct odour display) and have more complex gas preparation or measurements modes (like thermal desorption) showed lower capabilities to measure the actual odour at the site."
 featured: false
-publication: ' p 4 *In:* 7th International Conference on Sewer Processes & Networks. Sheffield, United Kingdom. 28-30 August2013.'
+publication: " p 4 *In:* 7th International Conference on Sewer Processes & Networks. Sheffield, United Kingdom. 28-30 August2013."
 projects: ["odoco-artnose"]
 ---
 

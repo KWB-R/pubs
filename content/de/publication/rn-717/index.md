@@ -6,7 +6,7 @@ authors: [ "Schröder, J.", "Braun, B.", "schwarzmueller", "Menz, C.", "Grützma
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *wwt Wasserwirtschaft Wassertechnik* (3): 33-36'
+publication: " *wwt Wasserwirtschaft Wassertechnik* (3): 33-36"
 projects: ["antiocker"]
 ---
 

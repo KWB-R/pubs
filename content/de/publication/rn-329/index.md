@@ -6,7 +6,7 @@ authors: [ "Dizer, H.", "Grützmacher, G.", "Klitzke, S.", "Lopez-Pila, J. M.", 
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 36 *In:* EPA Symposium on Groundwater-borne Infectious Disease Epidemiology, Etiologic Agents and Indicators. Carnegie Institute Of Washington, Washington D.C.. 26-27 January 2010'
+publication: " p 36 *In:* EPA Symposium on Groundwater-borne Infectious Disease Epidemiology, Etiologic Agents and Indicators. Carnegie Institute Of Washington, Washington D.C.. 26-27 January 2010"
 projects: ["nasri"]
 ---
 

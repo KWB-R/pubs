@@ -6,7 +6,7 @@ authors: [ "Schwarz, R.-J." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *VDI Nachrichten*'
+publication: " *VDI Nachrichten*"
 projects: ["rkm"]
 ---
 

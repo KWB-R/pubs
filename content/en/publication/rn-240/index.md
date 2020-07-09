@@ -6,7 +6,7 @@ authors: [ "Hoppe, H.", "Schroeder, K.", "Strube, I." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *KA Korrespondenz Abwasser, Abfall* 52 (1): 17-21'
+publication: " *KA Korrespondenz Abwasser, Abfall* 52 (1): 17-21"
 projects: ["ism"]
 ---
 

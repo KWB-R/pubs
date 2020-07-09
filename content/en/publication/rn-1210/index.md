@@ -6,6 +6,6 @@ authors: [ "seis", "Meier, S.", "Osaki, M.", "Hemmers, L.", "Sagebiel, D.", "Hop
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *KW Korrespondenz Wasserwirtschaft* 9'
+publication: " *KW Korrespondenz Wasserwirtschaft* 9"
 ---
 

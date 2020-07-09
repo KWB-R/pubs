@@ -6,6 +6,6 @@ authors: [ "Lüdicke, C.", "Stüber, J." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* 6th IWA Specialist Conference on Membrane Technology for Water and Wastewater Treatment. Aachen. 04.-07.10 2011'
+publication: " *In:* 6th IWA Specialist Conference on Membrane Technology for Water and Wastewater Treatment. Aachen. 04.-07.10 2011"
 ---
 

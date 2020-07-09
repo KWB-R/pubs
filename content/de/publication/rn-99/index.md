@@ -6,7 +6,7 @@ authors: [ "Grünheid, S.", "Schittko, S.", "Jekel, M." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 4 *In:* Annually Meeting of the Society for Water Chemistry (GdCh). Bad Saarow, Germany. 17. - 19.5.2004'
+publication: " p 4 *In:* Annually Meeting of the Society for Water Chemistry (GdCh). Bad Saarow, Germany. 17. - 19.5.2004"
 projects: ["nasri"]
 ---
 

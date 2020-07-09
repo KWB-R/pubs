@@ -6,7 +6,7 @@ authors: [ "rustler", "Busse, J.", "Grützmacher, G.", "Lischeid, G." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: 'NA *In:* 10th International Conference on Hydroinformatics. Hamburg, Germany. 14-18 July 2012'
+publication: "NA *In:* 10th International Conference on Hydroinformatics. Hamburg, Germany. 14-18 July 2012"
 projects: ["techneau"]
 ---
 

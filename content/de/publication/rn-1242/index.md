@@ -6,7 +6,7 @@ authors: [ "Reichmann, B.", "Nenz, D.", "Trapp, J. H.", "Anterola, J.", "Möller
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Deutsches Institut für Urbanistik gGmbH'
+publication: "Deutsches Institut für Urbanistik gGmbH"
 url_pdf: "../../../pdf/Reichmann-2020-1242.pdf"
 projects: ["networks4"]
 ---

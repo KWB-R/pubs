@@ -6,7 +6,7 @@ authors: [ "Chorus, I.", "Bartel, H." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Umweltbundesamt'
+publication: "Umweltbundesamt"
 url_pdf: "../../../pdf/Chorus-2006-437.pdf"
 projects: ["nasri"]
 ---

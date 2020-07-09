@@ -6,7 +6,7 @@ authors: [ "Hoff, T." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ' Master Thesis. Fakultät für Verfahrens- und Chemietechnik. Hochschule Mannheim'
+publication: " Master Thesis. Fakultät für Verfahrens- und Chemietechnik. Hochschule Mannheim"
 projects: ["aquanes"]
 ---
 

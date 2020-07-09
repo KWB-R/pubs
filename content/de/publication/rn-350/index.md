@@ -6,7 +6,7 @@ authors: [ "Newcombe, G.", "Harding, W.", "Dugan, N.", "Baker, P.", "Burch, M.",
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: 'NA *In:* IWA World Water Congress and Exhibition. Montreal, Canada. 19–24 September 2010'
+publication: "NA *In:* IWA World Water Congress and Exhibition. Montreal, Canada. 19–24 September 2010"
 projects: ["nostotox"]
 ---
 

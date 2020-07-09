@@ -6,7 +6,7 @@ authors: [ "sonnenberg", "rustler", "riechel", "caradot", "matzinger", "rouault"
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* New Developments in IT & Water.. Amsterdam, Netherlands. 4-6 November 2012'
+publication: " *In:* New Developments in IT & Water.. Amsterdam, Netherlands. 4-6 November 2012"
 projects: ["mia-cso"]
 ---
 

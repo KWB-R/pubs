@@ -6,7 +6,7 @@ authors: [ "Lorenzen, G.", "sprenger", "Greskowiak, J." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Freie Universität Berlin, Kompetenzzentrum Wasser Berlin gGmbH'
+publication: "Freie Universität Berlin, Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Lorenzen-2007-404.pdf"
 projects: ["techneau"]
 ---

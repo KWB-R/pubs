@@ -6,7 +6,7 @@ authors: [ "matzinger", "Reichmann, B.", "rouault" ]
 publication_types: ["2"]
 abstract: "Im BMBF-Forschungsprojekt KURAS wurde eine Methode vorgeschlagen, mit der Maßnahmen der Regenwasserbewirtschaftung für konkrete Stadtquartiere ausgewählt und platziert werden können. Hinsichtlich der möglichen Ziele geht die Methode über die wasserwirtschaftliche Wirkung hinaus und betrachtet zusätzlich Effekte auf Umwelt (Grundwasser und Oberflächengewässer, Biodiversität) und Bewohner (Stadtklima, Freiraumqualität, Gebäudeebene) sowie den Aufwand an Kosten und Ressourcen."
 featured: false
-publication: ' *Neue Landschaft* 6: 32-35'
+publication: " *Neue Landschaft* 6: 32-35"
 projects: ["kuras"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Schroeder, K.", "Pawlowsky-Reusing, E." ]
 publication_types: ["2"]
 abstract: "Simulation tools help develop an integrated approach for Berlin’s combined sewage system in which sewage overflows pose risk to groundwater and surface water quality"
 featured: false
-publication: ' *Water & Wastewater International* 19 (7): 32-33'
+publication: " *Water & Wastewater International* 19 (7): 32-33"
 projects: ["ism"]
 ---
 

@@ -6,6 +6,6 @@ authors: [ "Boulestreau, M.", "Sakti Raspati, G." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* International Congress on Membranes and Membrane Processes. Amsterdam. 23.07.- 29.07. 2011'
+publication: " *In:* International Congress on Membranes and Membrane Processes. Amsterdam. 23.07.- 29.07. 2011"
 ---
 

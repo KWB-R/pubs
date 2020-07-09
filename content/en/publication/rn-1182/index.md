@@ -6,6 +6,6 @@ authors: [ "caradot", "sonnenberg", "riechel", "matzinger", "rouault" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* 7th International Conference on Sewer Processes & Networks. Sheffield, United Kingdom. 28.08.-30.08. 2013'
+publication: " *In:* 7th International Conference on Sewer Processes & Networks. Sheffield, United Kingdom. 28.08.-30.08. 2013"
 ---
 

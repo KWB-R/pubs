@@ -6,7 +6,7 @@ authors: [ "seis", "remy", "Ackermann, R." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 13 *In:* International confernece ReWater Braunschweig. Braunschweig, Germany. 6-7 November 2013'
+publication: " p 13 *In:* International confernece ReWater Braunschweig. Braunschweig, Germany. 6-7 November 2013"
 projects: ["codigreen"]
 ---
 

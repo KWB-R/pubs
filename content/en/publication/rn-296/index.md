@@ -6,7 +6,7 @@ authors: [ "Grützmacher, G.", "Wittstock, E.", "Gnirß, R.", "Dünnbier, U." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 12 *In:* WssTP workshop on Managed Aquifer Recharge. Graz, Austria. 29.-30.06.2009'
+publication: " p 12 *In:* WssTP workshop on Managed Aquifer Recharge. Graz, Austria. 29.-30.06.2009"
 projects: ["wsstp"]
 ---
 

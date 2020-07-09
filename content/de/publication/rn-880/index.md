@@ -6,7 +6,7 @@ authors: [ "Heller, J." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ' Diploma Thesis. Versorgungs- und Umwelttechnik. Staatliche Studienakademie Glauchau'
+publication: " Diploma Thesis. Versorgungs- und Umwelttechnik. Staatliche Studienakademie Glauchau"
 projects: ["powerstep"]
 ---
 

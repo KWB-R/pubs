@@ -6,7 +6,7 @@ authors: [ "Klein, D.", "Fülling, K.", "Mieske, R.", "Dockhorn, T." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Technische Universität Braunschweig'
+publication: "Technische Universität Braunschweig"
 url_pdf: "../../../pdf/Klein-2012-554.pdf"
 projects: ["codigreen"]
 ---

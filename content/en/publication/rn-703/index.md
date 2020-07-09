@@ -6,6 +6,6 @@ authors: [ "Lesjean, B." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 16 *In:* R3WATER Workshop. Brussels, Belgium. 2014-12-01'
+publication: " p 16 *In:* R3WATER Workshop. Brussels, Belgium. 2014-12-01"
 ---
 

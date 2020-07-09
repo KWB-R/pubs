@@ -6,7 +6,7 @@ authors: [ "Reimer, E." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: 'NA *In:* Kolloquium der Fachgebiete Wasserwirtschaft und Hydroinformatik, Wasserbau sowie Siedlungswasserwirtschaft der TU Berlin. Berlin. 2007-06-14'
+publication: "NA *In:* Kolloquium der Fachgebiete Wasserwirtschaft und Hydroinformatik, Wasserbau sowie Siedlungswasserwirtschaft der TU Berlin. Berlin. 2007-06-14"
 projects: ["eva"]
 ---
 

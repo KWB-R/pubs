@@ -6,7 +6,7 @@ authors: [ "kraus", "zamzow", "Hoffmann, C.", "Bessai, A.-K.", "Fischinger, S.",
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Kraus-2019-1109.pdf"
 projects: ["nurec4org"]
 ---

@@ -6,7 +6,7 @@ authors: [ "sprenger", "Parimala Renganayaki, S.", "Elango, L.", "Schneider, M."
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 17 *In:* Managed Aquifer Recharge: Meeting the Water Resource Challenge on Managed Aquifer Recharge (ISMAR8). Beijing, VR China. 15-19 October 2013'
+publication: " p 17 *In:* Managed Aquifer Recharge: Meeting the Water Resource Challenge on Managed Aquifer Recharge (ISMAR8). Beijing, VR China. 15-19 October 2013"
 projects: ["saph-pani"]
 ---
 

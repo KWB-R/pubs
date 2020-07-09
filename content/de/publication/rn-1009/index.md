@@ -6,7 +6,7 @@ authors: [ "Kabbe, C.", "kraus", "remy" ]
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: ' *In:* SYMPHOS 2017 - 4th International Symposium on Innovation and Technology in the Phosphate Industry. Benguerir, Morocco'
+publication: " *In:* SYMPHOS 2017 - 4th International Symposium on Innovation and Technology in the Phosphate Industry. Benguerir, Morocco"
 projects: ["phorwaerts"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "matzinger", "Schroeder, K." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *Mittendrin* 36 (2): 6-6'
+publication: " *Mittendrin* 36 (2): 6-6"
 projects: ["aquisafe-2"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Pawlowsky-Reusing, E.", "Meier, I.", "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 3 *In:* International User Conference Wallingford Software. Wallingford, UK. 11-13.9.2007'
+publication: " p 3 *In:* International User Conference Wallingford Software. Wallingford, UK. 11-13.9.2007"
 projects: ["ism"]
 ---
 

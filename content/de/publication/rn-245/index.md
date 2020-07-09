@@ -6,7 +6,7 @@ authors: [ "Thronicker, O.", "Popiol, M.", "Knobel, K.", "Szewzyk, U." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 1 *In:* ISME-12. Cairns, Australia. 17. - 22.8.2008'
+publication: " p 1 *In:* ISME-12. Cairns, Australia. 17. - 22.8.2008"
 projects: ["wellma-dna"]
 ---
 

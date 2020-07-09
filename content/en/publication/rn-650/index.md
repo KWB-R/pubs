@@ -6,7 +6,7 @@ authors: [ "Scheibler, F.", "Hannappel, S.", "sprenger", "Hartog, N.", "Grützma
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 16 *In:* Managed Aquifer Recharge: Meeting the Water Resource Challenge on Managed Aquifer Recharge (ISMAR8). Beijing, PR China. 15-19 October 2013'
+publication: " p 16 *In:* Managed Aquifer Recharge: Meeting the Water Resource Challenge on Managed Aquifer Recharge (ISMAR8). Beijing, PR China. 15-19 October 2013"
 projects: ["demeau"]
 ---
 

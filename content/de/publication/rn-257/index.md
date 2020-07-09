@@ -6,7 +6,7 @@ authors: [ "Bracklow, U.", "Drews, A.", "Gnirß, R.", "Klamm, S.", "Lesjean, B."
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 8 *In:* MDIW2008. Toulouse. 20. - 24.10.2008'
+publication: " p 8 *In:* MDIW2008. Toulouse. 20. - 24.10.2008"
 projects: ["enrem"]
 ---
 

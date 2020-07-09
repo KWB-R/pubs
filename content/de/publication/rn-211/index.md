@@ -6,7 +6,7 @@ authors: [ "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 27 *In:* 1. Berliner Wasserwerkstatt. Berlin. 2004-08-19'
+publication: " p 27 *In:* 1. Berliner Wasserwerkstatt. Berlin. 2004-08-19"
 projects: ["ism"]
 ---
 

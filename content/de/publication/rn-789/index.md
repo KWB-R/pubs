@@ -6,7 +6,7 @@ authors: [ "Mutz, D.", "Horbat, A.", "matzinger", "remy", "rouault", "Meyerhoff,
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 19 *In:* 2015 ASLO Aquatic Sciences Meeting. Granada, Spain. 2015-02-26'
+publication: " p 19 *In:* 2015 ASLO Aquatic Sciences Meeting. Granada, Spain. 2015-02-26"
 projects: ["nitrolimit"]
 ---
 

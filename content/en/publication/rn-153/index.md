@@ -6,7 +6,7 @@ authors: [ "Heinzmann, B.", "Schuster, P.", "Schwarz, R.-J." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *GWF Wasser/Abwasser* 147 (11): 710-716'
+publication: " *GWF Wasser/Abwasser* 147 (11): 710-716"
 projects: ["rkm"]
 ---
 

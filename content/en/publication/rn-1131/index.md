@@ -6,7 +6,7 @@ authors: [ "stapf", "schuetz", "Thiyagarajan, V.", "miehe" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* 13. Aachener Tagung Wassertechnologie. Aachen, Germany'
+publication: " *In:* 13. Aachener Tagung Wassertechnologie. Aachen, Germany"
 projects: ["merezon"]
 ---
 

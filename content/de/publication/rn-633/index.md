@@ -6,6 +6,6 @@ authors: [ "Hartmann, A.", "Cornel, P.", "Müller, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 26 *In:* Water reuse – overview for practitioners and case studies. Brunswick. 4-5 November 2013'
+publication: " p 26 *In:* Water reuse – overview for practitioners and case studies. Brunswick. 4-5 November 2013"
 ---
 

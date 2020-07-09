@@ -6,7 +6,7 @@ authors: [ "Krause, B.", "Weigert, A.", "Heise, S.", "Litz, N." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Umweltbundesamt'
+publication: "Umweltbundesamt"
 url_pdf: "../../../pdf/Krause-2009-1146.pdf"
 projects: ["trace"]
 ---

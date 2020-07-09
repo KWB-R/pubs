@@ -6,6 +6,6 @@ authors: [ "caradot", "sonnenberg", "rouault", "Gruber, G." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* 13th IAHR/IWA International Conference on Urban Drainage. Sarawak, Malaysia. 07.-12. 09. 2014'
+publication: " *In:* 13th IAHR/IWA International Conference on Urban Drainage. Sarawak, Malaysia. 07.-12. 09. 2014"
 ---
 

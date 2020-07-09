@@ -6,7 +6,7 @@ authors: [ "Mangeot, C." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ' Master Thesis. University Joseph Fourier, Grenoble, France'
+publication: " Master Thesis. University Joseph Fourier, Grenoble, France"
 projects: ["aquisafe-1"]
 ---
 

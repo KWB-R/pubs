@@ -6,7 +6,7 @@ authors: [ "Fritz, B.", "Pekdeger, A.", "Lorenzen, G.", "sprenger", "Taute, T." 
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Fritz-2006-287.pdf"
 projects: ["idb-india"]
 ---

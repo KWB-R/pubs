@@ -6,7 +6,7 @@ authors: [ "Thomas, L.", "Taute, T.", "Schneider, M.", "Schöne, E.", "Röhmann,
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Thomas-2013-724.pdf"
 projects: ["cosma"]
 ---

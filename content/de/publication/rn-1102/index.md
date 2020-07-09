@@ -6,7 +6,7 @@ authors: [ "Nenz, D.", "Trapp, J. H.", "matzinger", "Funke, F.", "rouault" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 29 *In:* Aqua Urbanica. Rigi Kaltbad, Switzerland. 9-10 September 2019'
+publication: " p 29 *In:* Aqua Urbanica. Rigi Kaltbad, Switzerland. 9-10 September 2019"
 projects: ["networks4"]
 ---
 

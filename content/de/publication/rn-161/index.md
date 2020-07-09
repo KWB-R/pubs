@@ -6,7 +6,7 @@ authors: [ "Peter-Fröhlich, A.", "Kraume, I.", "Lesouëf, A.", "Oldenburg, M." 
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *KA Korrespondenz Abwasser, Abfall* 31 (1): 38-43'
+publication: " *KA Korrespondenz Abwasser, Abfall* 31 (1): 38-43"
 projects: ["scst"]
 ---
 

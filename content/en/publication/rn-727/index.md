@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Thronicker, O.", "Maiwald, U.", "Menz, C.", "Taute
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 42 *In:* 10. Berlin-Brandenburger Brunnentage. Potsdam'
+publication: " p 42 *In:* 10. Berlin-Brandenburger Brunnentage. Potsdam"
 projects: ["wellma-2"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Nicke, T." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ' Diploma Thesis. Fachbereich Naturwissenschaftliche Technik. Hochschule für Angewandte Wissenschaften Hamburg'
+publication: " Diploma Thesis. Fachbereich Naturwissenschaftliche Technik. Hochschule für Angewandte Wissenschaften Hamburg"
 projects: ["enrem"]
 ---
 

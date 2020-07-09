@@ -6,7 +6,7 @@ authors: [ "Schuster, P.", "Heinzmann, B.", "Schwarz, R.-J.", "Wiemann, M.", "Sc
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Kompetenzzentrum Wasser Berlin gGmbH, Berliner Wasserbetriebe'
+publication: "Kompetenzzentrum Wasser Berlin gGmbH, Berliner Wasserbetriebe"
 url_pdf: "../../../pdf/Schuster-2006-748.pdf"
 projects: ["rkm"]
 ---

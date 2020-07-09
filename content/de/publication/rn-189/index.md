@@ -6,7 +6,7 @@ authors: [ "Wiacek, H." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 21 *In:* Potsdamer Brunnentage 2008. Potsdam. 2. - 3.6.2008'
+publication: " p 21 *In:* Potsdamer Brunnentage 2008. Potsdam. 2. - 3.6.2008"
 projects: ["wellma-1"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Wittstock, E." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 26 *In:* WASSER BERLIN 2009: Trinkwassergewinnung und Resourcenschutz - Fachtagung des Kompetenzzentrum Wasser Berlin im Rahmen der Wasser Berlin 2009. Berlin. 2009-04-02'
+publication: " p 26 *In:* WASSER BERLIN 2009: Trinkwassergewinnung und Resourcenschutz - Fachtagung des Kompetenzzentrum Wasser Berlin im Rahmen der Wasser Berlin 2009. Berlin. 2009-04-02"
 projects: ["wellma-1"]
 ---
 

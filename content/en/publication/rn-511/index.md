@@ -6,7 +6,7 @@ authors: [ "seis", "Staub, M.", "Massat, L.", "Grützmacher, G." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: 'Kompetenzzentrum Wasser Berlin gGmbH'
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Seis-2013-511.pdf"
 projects: ["cosma"]
 ---

@@ -6,7 +6,7 @@ authors: [ "Nützmann, G.", "Holzbecher, E.", "Strahl, G.", "Wiese, B.", "Licht,
 publication_types: ["0"]
 abstract: "Successful predictions of the fate and transport of solutes during bank filtration and artificial groundwater recharge depends on the availability of accurate transport parameters. We expand the CXTFIT code (Toride et al., 1995) in order to improve the handling by pre- and post processing modules under Microsoft EXCEL. Inverse modelling results of column experiments with tracers, pharmaceutical residuals and algae toxins demonstrate the applicability of the advanced simulation tool."
 featured: false
-publication: ' p 6 *In:* 5th International Symposium on Management of Aquifer Recharge / IHP-VI, Series on Groundwater. Berlin. 11. - 16.6.2005'
+publication: " p 6 *In:* 5th International Symposium on Management of Aquifer Recharge / IHP-VI, Series on Groundwater. Berlin. 11. - 16.6.2005"
 projects: ["nasri"]
 ---
 

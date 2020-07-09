@@ -6,7 +6,7 @@ authors: [ "remy", "Warneke, J.", "Lesjean, B.", "Chauzy, J.", "Sardet, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 20 *In:* HTC-Workshop by KWB, Veolia and BV-HTC. Berlin, Germany. 2013-09-26'
+publication: " p 20 *In:* HTC-Workshop by KWB, Veolia and BV-HTC. Berlin, Germany. 2013-09-26"
 projects: ["htc-check"]
 ---
 

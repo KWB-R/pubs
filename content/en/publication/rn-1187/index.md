@@ -6,6 +6,6 @@ authors: [ "Mutz, D.", "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* Life Cycle Assessment Workshop. Montanuniversita¨t Leoben, Austria. 2014-02-06'
+publication: " *In:* Life Cycle Assessment Workshop. Montanuniversita¨t Leoben, Austria. 2014-02-06"
 ---
 

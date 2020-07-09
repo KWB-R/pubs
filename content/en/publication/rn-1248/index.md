@@ -6,7 +6,7 @@ authors: [ "schubert", "miehe", "remy", "Loderer, C.", "Biegel, M.", "Lesjean, B
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *wwt Wasserwirtschaft Wassertechnik* (4): 29-35'
+publication: " *wwt Wasserwirtschaft Wassertechnik* (4): 29-35"
 projects: ["powerstep"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "miehe", "tatis-muvdi", "rouault" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* 6th International Conference on Environmental Simulation and Pollution Control. Beijing, China. 4-5 November 2019'
+publication: " *In:* 6th International Conference on Environmental Simulation and Pollution Control. Beijing, China. 4-5 November 2019"
 projects: ["keys"]
 ---
 

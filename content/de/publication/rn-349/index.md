@@ -6,7 +6,7 @@ authors: [ "Genz, C.", "miehe", "Gnirß, R.", "Jekel, M." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 5 *In:* Jahrestagung der Wasserchemischen Gesellschaft. Bayreuth. 10-12 May 2010'
+publication: " p 5 *In:* Jahrestagung der Wasserchemischen Gesellschaft. Bayreuth. 10-12 May 2010"
 projects: ["oxeram-2"]
 ---
 

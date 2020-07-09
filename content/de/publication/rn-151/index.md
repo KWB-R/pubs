@@ -6,7 +6,7 @@ authors: [ "Schwarz, R.-J." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: 'NA *In:* Arbeitskreis der Deutschen Krankenhausgesellschaft. Charité Campus Virchow-Klinikum. 2006-09-25'
+publication: "NA *In:* Arbeitskreis der Deutschen Krankenhausgesellschaft. Charité Campus Virchow-Klinikum. 2006-09-25"
 projects: ["rkm"]
 ---
 

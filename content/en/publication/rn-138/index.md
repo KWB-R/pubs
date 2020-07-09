@@ -6,7 +6,7 @@ authors: [ "Massmann, G.", "Knappe, A.", "Richter, D.", "Pekdeger, A." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 6 *In:* Riverbank Filtration - The Future is Now. Cincinnati Ohio, USA. 16. - 19.9.2003'
+publication: " p 6 *In:* Riverbank Filtration - The Future is Now. Cincinnati Ohio, USA. 16. - 19.9.2003"
 projects: ["nasri"]
 ---
 

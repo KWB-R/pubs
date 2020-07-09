@@ -6,7 +6,7 @@ authors: [ "Stemann, J.", "Kabbe, C.", "Adam, C." ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: ' p 749 *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Energie aus Abfall. Thomé-Kozmiensky Verlag, Neuruppin'
+publication: " p 749 *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Energie aus Abfall. Thomé-Kozmiensky Verlag, Neuruppin"
 projects: ["p-rex"]
 ---
 

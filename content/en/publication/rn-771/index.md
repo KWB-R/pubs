@@ -6,7 +6,7 @@ authors: [ "Massat, L." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ' Master Thesis. École Nationale Supérieure de Géologie de Nancy'
+publication: " Master Thesis. École Nationale Supérieure de Géologie de Nancy"
 projects: ["cosma"]
 ---
 

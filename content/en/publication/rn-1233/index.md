@@ -6,6 +6,6 @@ authors: [ "seis", "rouault", "Medema, G." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' *In:* Health Related Water Microbiology. Vienna, Austria'
+publication: " *In:* Health Related Water Microbiology. Vienna, Austria"
 ---
 

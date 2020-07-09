@@ -6,7 +6,7 @@ authors: [ "matzinger", "Nenz, D.", "Trapp, J. H.", "Anterola, J.", "Gunkel, M."
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 20 *In:* 31. Hamburger Kolloquium zur Abwasserwirtschaft“. TUHH Hamburg, Germany. 18-19 September 2019'
+publication: " p 20 *In:* 31. Hamburger Kolloquium zur Abwasserwirtschaft“. TUHH Hamburg, Germany. 18-19 September 2019"
 projects: ["networks4"]
 ---
 

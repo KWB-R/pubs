@@ -6,7 +6,7 @@ authors: [ "Kabbe, C.", "Lesjean, B." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 6 *In:* IFAT Trade Fair for Water, Sewage, Waste and Raw Materials Management - Industry Forum. Munich, Germany. 5-9 May 2014'
+publication: " p 6 *In:* IFAT Trade Fair for Water, Sewage, Waste and Raw Materials Management - Industry Forum. Munich, Germany. 5-9 May 2014"
 projects: ["p-rex"]
 ---
 

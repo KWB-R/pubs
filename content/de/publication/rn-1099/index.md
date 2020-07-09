@@ -6,7 +6,7 @@ authors: [ "kleyboecker", "kraus", "conzelmann", "remy", "miehe" ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *wwt Wasserwirtschaft Wassertechnik* 5: 8-12'
+publication: " *wwt Wasserwirtschaft Wassertechnik* 5: 8-12"
 projects: ["circularagro"]
 ---
 

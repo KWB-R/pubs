@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Menz, C.", "Grützmacher, G.", "Gnirß, R.", "Jord
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *wwt Wasserwirtschaft Wassertechnik* (1-2): 31-33'
+publication: " *wwt Wasserwirtschaft Wassertechnik* (1-2): 31-33"
 projects: ["antiocker"]
 ---
 

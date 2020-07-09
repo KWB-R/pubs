@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "Hervé-Bazin, C." ]
 publication_types: ["5"]
 abstract: ""
 featured: false
-publication: ' p 45. WssTP. Brussels, Belgium'
+publication: " p 45. WssTP. Brussels, Belgium"
 projects: ["wsstp"]
 ---
 

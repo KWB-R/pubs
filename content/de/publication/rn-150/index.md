@@ -6,7 +6,7 @@ authors: [ "Schauser, I.", "Chorus, I.", "Heinzmann, B." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: ' *Water Science & Technology* 54 (11-12): 93-100 [10.2166/wst.2006.833](https://doi.org/10.2166/wst.2006.833)'
+publication: " *Water Science & Technology* 54 (11-12): 93-100 [10.2166/wst.2006.833](https://doi.org/10.2166/wst.2006.833)"
 doi: "10.2166/wst.2006.833"
 projects: ["oligo"]
 ---

@@ -6,7 +6,7 @@ authors: [ "matzinger", "Mutz, D.", "Uldack, M.", "remy", "rouault", "Pawlowsky-
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: ' p 13 *In:* 29. Jahrestagung der Deutschen Gesellschaft für Limnologie e.V. (DGL). Potsdam, Germany. 9-13 September 2013'
+publication: " p 13 *In:* 29. Jahrestagung der Deutschen Gesellschaft für Limnologie e.V. (DGL). Potsdam, Germany. 9-13 September 2013"
 projects: ["nitrolimit"]
 ---
 
