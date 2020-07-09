@@ -6,6 +6,6 @@ authors: [ "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Presentation at TTP seminar “Oxidation processes for water treatment”, TU Berlin*"
+publication: " *In:* Presentation at TTP seminar “Oxidation processes for water treatment”, TU Berlin. Berlin. 24.02. 2011"
 ---
 

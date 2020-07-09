@@ -6,7 +6,7 @@ authors: [ "schwarzmueller" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*11. Berlin-Brandenburger Brunnentage*"
+publication: " p 1 *In:* 11. Berlin-Brandenburger Brunnentage. Potsdam. 12.-13.05."
 projects: ["wellma-2"]
 ---
 

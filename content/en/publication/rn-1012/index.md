@@ -6,7 +6,7 @@ authors: [ "Kabbe, C.", "kraus" ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*Fertilizer International*"
+publication: " *Fertilizer International* 479 (Phosphorus sustainability)"
 projects: ["p-rex"]
 ---
 

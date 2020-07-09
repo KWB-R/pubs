@@ -6,6 +6,6 @@ authors: [ "remy" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*12th IWA Leading Edge Conference on Water and Wastewater Technologies*"
+publication: " *In:* 12th IWA Leading Edge Conference on Water and Wastewater Technologies. Hong Kong, PR China. 30.05. – 03.06. 2015"
 ---
 

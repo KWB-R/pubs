@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "Kabbe, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*WssTP Water Innovation Europe 2015*"
+publication: " p 25 *In:* WssTP Water Innovation Europe 2015. Brussels, Belgium. 24-26 June 2015"
 projects: ["p-rex"]
 ---
 

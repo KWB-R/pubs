@@ -6,7 +6,7 @@ authors: [ "remy", "Loderer, C.", "schubert" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Landesverbandstagung der DWA-Nord 2017*"
+publication: " p 13 *In:* Landesverbandstagung der DWA-Nord 2017. Ilsede. 14 September 2017"
 projects: ["carismo"]
 ---
 

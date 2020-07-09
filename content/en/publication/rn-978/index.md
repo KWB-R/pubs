@@ -6,7 +6,7 @@ authors: [ "rouault", "matzinger", "riechel", "sonnenberg", "remy", "schwarzmuel
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: "*SAMUWA Abschlussveranstaltung „Schritte zu einem anpassungsfähigen Management des urbanen Wasserhaushalts“*"
+publication: " p 2 *In:* SAMUWA Abschlussveranstaltung „Schritte zu einem anpassungsfähigen Management des urbanen Wasserhaushalts“. Stuttgart, Germany. 10 May 2016"
 projects: ["kuras"]
 ---
 

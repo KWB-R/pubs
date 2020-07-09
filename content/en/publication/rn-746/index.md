@@ -6,7 +6,7 @@ authors: [ "matzinger", "Schmidt, M.", "riechel", "Hein, A.", "Bräcker, J.", "S
 publication_types: ["1"]
 abstract: "Integrated planning of stormwater management requires a quantitative description of positive and negative effects of possible measures. We suggest quantifying these effects with generic performance indicators within eight categories: building physics and services, landscape quality, urban climate, biodiversity, groundwater, surface water, direct costs and indirect environmental costs. First results indicate that the defined performance indicators allow an objective pre-selection of measures based on their ability to reach local stormwater management goals. The final selection of measures should be based on an evaluation for a specific city quarter (to reduce indicator uncertainty) and reviewed by local stake holders."
 featured: false
-publication: "*International Conference on Urban Drainage (ICUD)*"
+publication: " p 8 *In:* International Conference on Urban Drainage (ICUD). Kuching, Borneo, Malaysia. 7.-12. September 2014"
 projects: ["kuras"]
 ---
 

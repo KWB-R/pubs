@@ -6,6 +6,6 @@ authors: [ "Oppermann, S." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Diploma Thesis. Fakulta¨t III Prozesswissenschaften, Institut fu¨r Technischen Umweltschutz, FG Wasserreinhaltung. Technische Universita¨t Berlin"
 ---
 

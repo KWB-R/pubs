@@ -6,7 +6,7 @@ authors: [ "habibi" ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Master Thesis. Department VIII, Mechanical Engineering-Renewable Energy. Beuth Hochschule für Technik Berlin"
 projects: ["reef2w"]
 ---
 

@@ -6,6 +6,6 @@ authors: [ "riechel", "sonnenberg", "caradot", "Lengemann, N.", "Eckert, E.", "R
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Kommunales Infrastruktur-Management*"
+publication: " *In:* Kommunales Infrastruktur-Management. Berlin, Germany. 2019-09-26"
 ---
 

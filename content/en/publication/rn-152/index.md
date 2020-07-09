@@ -6,7 +6,7 @@ authors: [ "Heinzmann, B.", "Pineau, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*IWA World Congress and Exhibition*"
+publication: " p 16 *In:* IWA World Congress and Exhibition. Beijing, China. 10. - 14.9.2006"
 projects: ["rkm"]
 ---
 

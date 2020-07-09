@@ -6,7 +6,7 @@ authors: [ "Hürter, H.", "riechel", "stapf", "Schmitt, T. G." ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: "*Wasserinfrastrukturen für die zukunftsfähige Stadt - Beiträge aus der INIS-Forschung*"
+publication: " p 74 *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Wasserinfrastrukturen für die zukunftsfähige Stadt - Beiträge aus der INIS-Forschung. Deutsches Institut für Urbanistik gGmbH. Berlin"
 projects: ["kuras"]
 ---
 

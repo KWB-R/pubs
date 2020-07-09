@@ -6,6 +6,6 @@ authors: [ "Lesjean, B.", "Kaye, S." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*WssTP Stakeholder event*"
+publication: " *In:* WssTP Stakeholder event. Brussels, Belgium. 01.06. 2010"
 ---
 

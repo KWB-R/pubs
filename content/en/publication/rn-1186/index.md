@@ -6,6 +6,6 @@ authors: [ "caradot" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*DWA Inspektions- und Sanierungstage*"
+publication: " *In:* DWA Inspektions- und Sanierungstage. Dortmund, Germany. 12-13.11. 2014"
 ---
 

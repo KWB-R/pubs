@@ -6,7 +6,7 @@ authors: [ "Barjenbruch, M.", "Hinkelmann, R.", "Hüttl, R.", "Huhnt, W.", "Krä
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Barjenbruch-2008-169.pdf"
 projects: ["odoco-1"]
 ---

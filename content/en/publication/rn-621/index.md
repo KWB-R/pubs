@@ -6,7 +6,7 @@ authors: [ "stapf", "miehe", "Lesjean, B.", "Wiedemann, B.", "Jekel, M." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*DWA–Tagung: Mess- und Regelungstechnik in abwassertechnischen Anlagen*"
+publication: " p 21 *In:* DWA–Tagung: Mess- und Regelungstechnik in abwassertechnischen Anlagen. Fulda, Germany. 15-16 October 2013"
 projects: ["ist4r"]
 ---
 

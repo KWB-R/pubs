@@ -6,7 +6,7 @@ authors: [ "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*II. International Water Conference in Berlin*"
+publication: " p 17 *In:* II. International Water Conference in Berlin. Berlin. 12. - 14.9.2007"
 projects: ["ism"]
 ---
 

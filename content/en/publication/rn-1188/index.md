@@ -6,6 +6,6 @@ authors: [ "Mutz, D." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Jahrestagung der Deutschen Gesellschaft für Limnologie*"
+publication: " *In:* Jahrestagung der Deutschen Gesellschaft für Limnologie. Essen, Germany. 21.-25.09.2015"
 ---
 

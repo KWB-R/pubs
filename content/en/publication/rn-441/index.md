@@ -6,7 +6,7 @@ authors: [ "Nützmann, G." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Leibniz-Institut für Gewässerökologie und Binnenfischerei"
 url_pdf: "../../../pdf/Nützmann-2006-441.pdf"
 projects: ["nasri"]
 ---

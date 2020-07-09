@@ -6,7 +6,7 @@ authors: [ "Villwock, J." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Diploma Thesis. Ingenieurwissenschaften II. Fachhochschule für Technik und Wirtschaft Berlin"
 projects: ["enrem"]
 ---
 

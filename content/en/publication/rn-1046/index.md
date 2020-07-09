@@ -6,7 +6,7 @@ authors: [ "Wiedner, C.", "Nixdorf, B.", "Rücker, J.", "Grüneberg, B.", "Dolma
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Brandenburgische Technische Universität Cottbus - Senftenberg"
 url_pdf: "../../../pdf/Wiedner-2016-1046.pdf"
 projects: ["nitrolimit"]
 ---

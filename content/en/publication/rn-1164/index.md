@@ -6,6 +6,6 @@ authors: [ "Kabbe, C.", "kraus", "remy" ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: "*Proceedings / International Fertiliser Society ; 763*"
+publication: " p 31 *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Proceedings / International Fertiliser Society ; 763. International Fertiliser Society. London, United Kingdom"
 ---
 

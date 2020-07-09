@@ -6,7 +6,7 @@ authors: [ "Hürter, H.", "riechel", "Schütze, M.", "Waschnewski, J.", "Schmitt
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*10th International Urban Drainage Modelling Conference*"
+publication: "NA *In:* 10th International Urban Drainage Modelling Conference. Québec, Canada. 20-23 September 2015"
 projects: ["kuras"]
 ---
 

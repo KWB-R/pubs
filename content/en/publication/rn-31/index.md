@@ -6,7 +6,7 @@ authors: [ "Peter-Fröhlich, A.", "Pawlowski, L.", "Bonhomme, A.", "Oldenburg, M
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*39. Essener Tagung*"
+publication: " p 18 *In:* 39. Essener Tagung. Essen. 29. - 31.3.2006"
 projects: ["scst"]
 ---
 

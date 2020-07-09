@@ -6,7 +6,7 @@ authors: [ "riechel", "matzinger", "Pallasch, M.", "Heinzmann, B.", "Joswig, K."
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: "*Aqua Urbanica 2017*"
+publication: " *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Aqua Urbanica 2017. TU Graz. Graz, Austria [10.3217/978-3-85125-534-8](https://doi.org/10.3217/978-3-85125-534-8)"
 doi: "10.3217/978-3-85125-534-8"
 projects: ["kuras"]
 ---

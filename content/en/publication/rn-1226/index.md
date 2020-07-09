@@ -6,7 +6,7 @@ authors: [ "kraus" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*2. Karlsruher Flockungstage 2019: Siedlungswasserwirtschaft mit Weitblick – Von der Auslegung bis zur Rückgewinnung*"
+publication: " *In:* 2. Karlsruher Flockungstage 2019: Siedlungswasserwirtschaft mit Weitblick – Von der Auslegung bis zur Rückgewinnung. Karlsruhe, Germany. 26-27 November 2019"
 projects: ["phorwaerts"]
 ---
 

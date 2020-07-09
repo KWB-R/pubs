@@ -6,6 +6,6 @@ authors: [ "caradot", "riechel", "rouault", "Lengemann, N.", "Eckert, E.", "Ring
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*8th IWA Leading Edge Strategic Asset Management Conference*"
+publication: " *In:* 8th IWA Leading Edge Strategic Asset Management Conference. Vancouver, Canada. 23-27 September 2019"
 ---
 

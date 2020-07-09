@@ -6,7 +6,7 @@ authors: [ "Menz, C." ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Menz-2013-590.pdf"
 projects: ["riko"]
 ---

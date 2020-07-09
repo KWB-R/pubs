@@ -6,7 +6,7 @@ authors: [ "Knobel, K.", "Thronicker, O.", "Szewzyk, U." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*VAAM*"
+publication: " p 1 *In:* VAAM. Bochum. 08. - 11.03.2009"
 projects: ["wellma-dna"]
 ---
 

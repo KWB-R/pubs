@@ -6,7 +6,7 @@ authors: [ "matzinger", "rouault", "riechel", "Weyrauch, P.", "Heinzmann, B.", "
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*ASLO Aquatic Sciences Meeting 2009*"
+publication: " p 1 *In:* ASLO Aquatic Sciences Meeting 2009. Nice, France. 25. - 30.1.2009"
 projects: ["monitor"]
 ---
 

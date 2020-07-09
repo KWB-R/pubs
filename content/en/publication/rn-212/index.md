@@ -6,7 +6,7 @@ authors: [ "Schroeder, K." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*TerraTec - Ausstellerforum Zentrum Umwelttechnik*"
+publication: " p 19 *In:* TerraTec - Ausstellerforum Zentrum Umwelttechnik. Leipzig. 5. - 8.3.2007"
 projects: ["ism"]
 ---
 

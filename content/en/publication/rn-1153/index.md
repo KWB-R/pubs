@@ -6,7 +6,7 @@ authors: [ "matzinger", "Sautjeau, B.", "Guégain, C.", "Litz, N.", "Krause, B."
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Carrefour des Gestions Locales de l‘Eau, Rennes, France. 27 Januar 2010*"
+publication: " *In:* Carrefour des Gestions Locales de l‘Eau, Rennes, France. 27 Januar 2010. Rennes, France. 27. Januar 2010"
 projects: ["aquisafe-1"]
 ---
 

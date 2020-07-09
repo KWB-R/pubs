@@ -6,7 +6,7 @@ authors: [ "Grünheid, S.", "Jekel, M." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*4th International Conference on Pharmaceuticals and Endocrine Disrupting Chemicals in Water*"
+publication: " p 12 *In:* 4th International Conference on Pharmaceuticals and Endocrine Disrupting Chemicals in Water. Minneapolis, Minnesota. 13 -15.10.2004"
 projects: ["nasri"]
 ---
 

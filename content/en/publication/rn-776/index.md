@@ -6,7 +6,7 @@ authors: [ "schubert", "miehe" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Schubert-2014-776.pdf"
 projects: ["abluft"]
 ---

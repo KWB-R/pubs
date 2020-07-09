@@ -6,7 +6,7 @@ authors: [ "Hoppe, H.", "Einfalt, T.", "Schroeder, K.", "Blackwood, D." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*GWF Wasser/Abwasser*"
+publication: " *GWF Wasser/Abwasser* 149 (11): 2-6"
 projects: ["monitor"]
 ---
 

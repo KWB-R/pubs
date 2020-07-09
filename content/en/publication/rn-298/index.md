@@ -6,7 +6,7 @@ authors: [ "Stüber, J.", "Bost, M.", "Vocks, M.", "Lesjean, B.", "Gnirß, R.", 
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*IWA 2nd Specialized Conference*"
+publication: " p 8 *In:* IWA 2nd Specialized Conference. Krakau. 06. - 09.09.09"
 projects: ["enrem"]
 ---
 

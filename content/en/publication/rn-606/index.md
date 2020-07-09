@@ -6,7 +6,7 @@ authors: [ "remy", "Warneke, J.", "Lesjean, B.", "Chauzy, J.", "Sardet, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*34th KWB Waterworkshop*"
+publication: " p 22 *In:* 34th KWB Waterworkshop. Berlin, Germany. 2013-12-05"
 projects: ["htc-check"]
 ---
 

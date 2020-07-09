@@ -6,7 +6,7 @@ authors: [ "matzinger", "Pilger, M. L.", "Nebauer, M.", "rouault" ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Aqua Urbanica*"
+publication: " p 6 *In:* Aqua Urbanica. Rigi Kaltbad, Switzerland. 9-10 September 2018"
 projects: ["networks4"]
 ---
 

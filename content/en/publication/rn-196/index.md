@@ -6,7 +6,7 @@ authors: [ "matzinger", "Schroeder, K." ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*Umweltmagazin*"
+publication: " *Umweltmagazin* 3: 14-16"
 projects: ["aquisafe-1"]
 ---
 

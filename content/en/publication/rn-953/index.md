@@ -6,7 +6,7 @@ authors: [ "Adlakha, L. K.", "Boisson, A.", "Fischer, S.", "Ghosh, N. C.", "Gris
 publication_types: ["4"]
 abstract: "Chennai is the largest city in South India located in the eastern coastal plains. Water supply to the Chennai city is met by reservoirs and by groundwater. Most of the groundwater is pumped to the city from the well fields located in the Araniyar and Korttalaiyar River (A-K River) catchment north of Chennai."
 featured: false
-publication: ""
+publication: "Bureau de recherches géologiques et minières, Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Adlakha-2012-953.pdf"
 projects: ["saph-pani"]
 ---

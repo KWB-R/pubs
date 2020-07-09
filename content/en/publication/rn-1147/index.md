@@ -6,7 +6,7 @@ authors: [ "Schuster, P." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Diploma Thesis. Technischer Umweltschutz. Technische Universität Berlin"
 projects: ["rkm"]
 ---
 

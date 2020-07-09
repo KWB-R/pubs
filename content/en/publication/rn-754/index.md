@@ -6,7 +6,7 @@ authors: [ "Graß, F." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Bachelor Thesis. Fachbereich 8: Umweltingenieurwesen und Angewandte Informatik. Hochschule Ostwestfalen-Lippe"
 projects: ["demoware"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Reimer, E." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Tag der Hydrologie, München 2006*"
+publication: "NA *In:* Tag der Hydrologie, München 2006. München. 22. - 23.3.2006"
 projects: ["eva"]
 ---
 

@@ -6,7 +6,7 @@ authors: [ "Merkel, C." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: ""
+publication: " Master Thesis. Geo Sciences. Freie Universität Berlin"
 projects: ["t-mon"]
 ---
 

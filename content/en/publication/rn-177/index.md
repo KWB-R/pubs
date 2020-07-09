@@ -6,7 +6,7 @@ authors: [ "Schroeder, K.", "sonnenberg", "rouault" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
 url_pdf: "../../../pdf/Schroeder-2007-177.pdf"
 projects: ["spree2011"]
 ---

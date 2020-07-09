@@ -302,7 +302,7 @@ kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths,
 
 
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
-fs::dir_copy(path = "content/publication", "content/en/publication", overwrite = TRUE)
+fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
 fs::dir_delete(path = "content/publication")
 
 authors <- unique(unlist(tmp$AUTHOR))

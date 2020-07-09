@@ -6,7 +6,7 @@ authors: [ "Mutz, D.", "matzinger", "remy" ]
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Brandenburgische Technische Universität Cottbus - Senftenberg"
 url_pdf: "../../../pdf/Mutz-2013-638.pdf"
 projects: ["nitrolimit"]
 ---

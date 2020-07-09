@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Menz, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*Fachtagung Mikrobielle Verockerung in technischen Systemen*"
+publication: " p 22 *In:* Fachtagung Mikrobielle Verockerung in technischen Systemen. EUREF Campus Berlin. 2014-06-25"
 projects: ["antiocker"]
 ---
 

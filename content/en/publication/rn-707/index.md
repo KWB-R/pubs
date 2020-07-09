@@ -6,7 +6,7 @@ authors: [ "Lesjean, B.", "remy", "Chauzy, J.", "Sardet, C." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*IFAT Trade Fair for Water, Sewage, Waste and Raw Materials Management - Veranstaltung des Bundesverbands HTC*"
+publication: " p 11 *In:* IFAT Trade Fair for Water, Sewage, Waste and Raw Materials Management - Veranstaltung des Bundesverbands HTC. Munich, Germany. 5-9 May 2014"
 projects: ["htc-check"]
 ---
 

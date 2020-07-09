@@ -6,7 +6,7 @@ authors: [ "Anterola, J.", "Brüning, H.", "Frick-Trzebitzky, F.", "Gunkel, M.",
 publication_types: ["4"]
 abstract: ""
 featured: false
-publication: ""
+publication: "Deutsches Institut für Urbanistik gGmbH"
 url_pdf: "../../../pdf/Anterola-2020-1241.pdf"
 projects: ["networks4"]
 ---

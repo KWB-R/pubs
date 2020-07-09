@@ -6,7 +6,7 @@ authors: [ "Lesjean, B." ]
 publication_types: ["0"]
 abstract: ""
 featured: false
-publication: "*BMZ Workshop \"Water Energy Food Nexus*"
+publication: " p 4 *In:* BMZ Workshop "Water Energy Food Nexus". Bonn, Germany. 2014-11-18"
 projects: ["carismo"]
 ---
 

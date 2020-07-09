@@ -6,6 +6,6 @@ authors: [ "rouault" ]
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*Springer Professional, Online Article*"
+publication: " *Springer Professional, Online Article*"
 ---
 

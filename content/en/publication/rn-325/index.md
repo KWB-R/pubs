@@ -6,7 +6,7 @@ authors: [ "schwarzmueller", "Thronicker, O.", "Szewzyk, U.", "Maiwald, U.", "Me
 publication_types: ["2"]
 abstract: ""
 featured: false
-publication: "*bbr Fachmagazin für Brunnen- und Leitungsbau*"
+publication: " *bbr Fachmagazin für Brunnen- und Leitungsbau* 2009 (12): 62-67"
 projects: ["wellma-1"]
 ---
 
