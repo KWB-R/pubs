@@ -297,7 +297,10 @@ authors[order(authors)]
 
 "https://www.kompetenz-wasser.de/wp-content/uploads/2017/08/cropped-logo-kwb_klein-new.png" %>% 
 magick::image_read() %>% 
-magick::image_resize(geometry = magickx::geometry_size_pixels(width = 200))
+#magick::image_resize(geometry = magick::geometry_size_pixels(width = 200)) %>%  
+magick::image_write(path = "assets/images/logo.png", 
+                    quality = 100, 
+                    format = "png")
 
 
 
