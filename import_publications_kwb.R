@@ -1,37 +1,17 @@
 
-remotes::install_github("kwb-r/kwb.pubs@dev")
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "never")
 library(kwb.pubs)
 
 ### Update KWB authors 
 authors_config <- kwb.pubs::get_authors_config()
-authors_config$lastname <- gsub("tatis muvdi", "tatis-muvdi", authors_config$lastname)
 
 authors_metadata <- kwb.pubs::add_authors_metadata(authors_config)
-
-construct_authorname <- function (firstname, lastname) 
-{
-  author_firstname <- unlist(lapply(seq_along(firstname), function(idx) {
-    tmp <- firstname[idx] %>% stringr::str_trim() %>% stringr::str_split("-|\\s+") %>% 
-      unlist() %>% stringr::str_sub(1, 1) %>% stringr::str_to_upper() #%>% 
-      #replace_umlauts()
-    paste0(sprintf("%s.", tmp), collapse = " ")
-  }))
-  author_lastname <- lastname %>% stringr::str_trim() %>% stringr::str_replace_all("\\s+", 
-                                                                                   " ") %>% stringr::str_to_title() #%>% replace_umlauts()
-  sprintf("%s, %s", author_lastname, author_firstname)
-}
-
-authors_metadata$author_name <- construct_authorname(authors_metadata$firstname, 
-                                                     lastname = authors_metadata$lastname)
-
-
-authors_metadata$author_name <- gsub("Schubert.*", "Schubert, R.-L.", authors_metadata$author_name)
-
+ 
 authors_metadata$fullname <- authors_metadata$author_name
-
-working_at_kwb <- ! authors_metadata$lastname %in% c("ro\u00DFbach", "gnir\u00DF")
-
-authors_metadata <- authors_metadata[working_at_kwb,]
+ 
+researchers_at_kwb <- ! authors_metadata$lastname %in% c("evel")
+ 
+authors_metadata <- authors_metadata[researchers_at_kwb,]
 
 kwb.pubs::add_authors_index_md(authors_metadata, overwrite = TRUE)
 kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
@@ -48,6 +28,9 @@ kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "knoc
                              x_off = 100)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "conzelmann",],
                              x_off = 230, y_off = 40, height = 250)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "rabe",],
+                             width = 500, x_off = 150, y_off = 0, height = 500)
+
 
 fs::dir_delete(path = "content/en/authors")
 fs::dir_copy(path = "content/authors", "content/en/authors", overwrite = TRUE)
@@ -306,9 +289,15 @@ fs::dir_copy(path = "content/publication", "content/de/publication", overwrite =
 fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
 fs::dir_delete(path = "content/publication")
 
+if (FALSE) {
+
 authors <- unique(unlist(tmp$AUTHOR))
 authors[order(authors)]
 
+
+"https://www.kompetenz-wasser.de/wp-content/uploads/2017/08/cropped-logo-kwb_klein-new.png" %>% 
+magick::image_read() %>% 
+magick::image_resize(geometry = magickx::geometry_size_pixels(width = 200))
 
 
 
@@ -384,26 +373,7 @@ update_citations <- function(pub_dir = "content/publication") {
   
 }
 
-if (FALSE) {
  
-  check_technical_report <- function(bib_df,
-                                     default_institution = "Kompetenzzentrum Wasser Berlin gGmbH") { 
-    
-    
-    idx_TechReport <- which(bib_df$bibtype == "TechReport")
-    
-    if(length(idx_TechReport)>0) {
-      print(sprintf("Replacing  missing 'institution' %d entries for 'TechnicalReport'
-with %s", length(idx_TechReport), default_institution))
-      no_institution_idx <- is.na(bib_df$institution[idx_TechReport]) 
-      bib_df$institution[idx_TechReport] <- default_institution 
-      
-    } else {
-      "No missing entries for 'institution' for 'TechnicalReport'"  
-    }
-    
-    bib_df
-  }
-  
+
 
 }

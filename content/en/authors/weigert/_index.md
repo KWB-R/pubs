@@ -13,7 +13,7 @@ authors = ["weigert"]
 superuser = false
 
 # Role/position
-role = "Deputy Director, Head of Finances, Administration, Communication"
+role = "Deputy Director, Head of Department Finances, Administration, Communication"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
