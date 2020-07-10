@@ -239,7 +239,7 @@ plugins_js  = []
   [search.algolia]
     app_id = "FUZHRLXPF4"
     api_key = "7fb333226a19b1a7af131612dd428928"
-    index_name = "pubs_gitlab"
+    index_name = "netlify_kwb-pubs"
     show_logo = true
 
 ############################
