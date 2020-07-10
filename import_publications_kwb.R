@@ -253,6 +253,25 @@ fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
 fs::dir_delete(path = list.dirs("content/en/publication/")[-1])
 
 
+tmp$URL <- stringr::str_replace_all(tmp$URL, "../../../", "https://publications.kompetenz-wasser.de/")
+
+
+update_citations <- function(bib_df, 
+                             lang = "de",
+                             hugo_root_dir = ".") {
+  
+sapply(seq_len(nrow(bib_df)), function (i) {
+  
+  reference <- bib_df[i, ]
+  
+bib2df::df2bib(reference, file = sprintf("%s/content%spublication/%d/cite.bib", 
+                                    hugo_root_dir,
+                                    ifelse(lang == "", "" , sprintf("/%s/", lang)), 
+                                    reference$en_id) %>% fs::path_abs())
+})
+
+}
+
 ###############################################################################
 ### Step 2: Import .bibtex file to publications with Python 
 ###############################################################################
@@ -391,7 +410,7 @@ fs::dir_delete(path = sdir)
 
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
 fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
-fs::dir_delete(path = "content/publication")
+fs::dir_delete(path = "content/epublication")
 
 if (FALSE) {
 
