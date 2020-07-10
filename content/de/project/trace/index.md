@@ -27,6 +27,12 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
+links:
+- name: Zurück zur Projektseite
+  url: https://kompetenz-wasser.de/de/project/trace
+  icon_pack: fas
+  icon: home
+
 url_code: ""
 url_pdf: ""
 url_slides: ""
