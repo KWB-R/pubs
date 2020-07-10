@@ -1,0 +1,12 @@
+---
+title: "Einsatz einfacher und kostengünstiger Methoden zur Überwachung von Fließzeiten und Prozessen in der Grundwasseranreicherung"
+date: 2020-01-01
+publishDate: 2020-05-25T15:14:06Z
+authors: [ "schwarzmueller", "sprenger", "Schulz, M.", "Schimmelpfennig, S.", "Lorenzen, G." ]
+publication_types: ["0"]
+abstract: "In Berlin wird Trinkwasser ohne aufwändige technische Aufbereitung über naturnahe Verfahren gewonnen. Ca. 80% des geförderten Rohwassers stammen aus Uferfiltration oder künstlich angereichertem Grundwasser (Möller & Burgschweiger 2008). Nach der Entfernung von Eisen und Mangan über Belüftung und Filtration wird im Routinebetrieb grundsätzlich auf eine chemische Desinfektion verzichtet. Zur Gewährleistung der hygienischen Sicherheit haben die Wasserschutzgebiete und hier insbesondere die engere Schutzzone (Zone II) daher eine wichtige Bedeutung. Deren Ausdehnung reicht von der Fassungsanlage bis zu der Linie, von der aus das genutzte Grundwasser 50 Tage im Grundwasserleiter fließt, bevor es über Brunnen zum Wasserwerk gefördert wird (DVGW 2006). Durch die Einhaltung dieser 50-Tage-Richtlinie wird v.a. der Schutz vor mikrobiellen Verunreinigungen angestrebt. Die Aufenthaltszeit des Wassers in der Untergrundpassage kann direkt durch Markierungsversuche ermittelt werden. Da solche Tracer-Untersuchungen zeitlich und technisch aufwändig sind, wurde im Rahmen verschiedener gemeinsamer Forschungsprojekte der Berliner Wasserbetriebe und des Kompetenzzentrums Wasser Berlin geprüft, mit welchen einfachen, kostengünstigen Methoden die Fließzeiten und die Auswirkungen sich ändernder klimatischer Randbedingungen im Betrieb der Grundwasseranreicherung und der Trinkwasserbrunnen überwacht werden können (Sprenger et al. 2016). Dabei wurden unter anderem kontinuierlich messende Temperatur-Druck-Sonden eingesetzt, sowie Geräte zur Quasi-Echtzeitmessung mikrobiologischer Parameter. Parallel wurde für einen Wasserwerksstandort in Berlin ein vereinfachtes numerisches Modell erstellt, mit dem Anreicherungsszenarien in Abhängigkeit der Temperatur des angereicherten Wassers gerechnet und bewertet werden können. Außerdem wurde der Einfluss der Wassertemperatur auf betriebliche Parameter der Oberflächenwasseraufbereitung untersucht. Die Untersuchungen sind ebenfalls Grundlage für risikobasierte Bewertungsansätze für hydraulische und mikrobiologische Parameter und die Ableitung betrieblicher Maßnahmen gegen eine Unterschreitung der 50-Tage-Verweilzeit."
+featured: false
+publication: " *In:* FH-DGG. Leipzig"
+projects: ["t-mon"]
+---
+

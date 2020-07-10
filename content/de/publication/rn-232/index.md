@@ -1,11 +1,13 @@
-+++
-title = "Entwicklung eines Optimierungsmodells für die Abwasserverteilung in Berlin und Implementierung im algebraischen Modellierungssystem GAMS"
-date = 2008-01-01
-authors = ["Marc Steinbach", "Klaas Eggert", "Mathias Weege"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["eva"]
-+++
+---
+title: "Entwicklung eines Optimierungsmodells für die Abwasserverteilung in Berlin und Implementierung im algebraischen Modellierungssystem GAMS"
+date: 2008-01-01
+publishDate: 2020-05-25T15:14:05Z
+authors: [ "Steinbach, M.", "Eggert, K.", "Weege, M." ]
+publication_types: ["4"]
+abstract: "Zielstellung des im Rahmen des EVA Projekts durchgeführten Arbeitspaketes 3 war die Entwicklung eines Optimierungsmodells des Berliner Abwassersystems, bestehend aus Kanalnetzen, Abwasserdruckleitungsnetz und Kläranlagen, sowie die Implementierung des Modells im algebraischen Modellierungssystem GAMS (General Algebraic Modeling System). Auf dieser Basis sollten mittels mathematischer Optimierung Strategien zur Steuerung der Abwasserströme innerhalb des Abwasserdruckleitungsnetzes während Niederschlags ermittelt werden mit dem Ziel, eine flexible, variable Beschickung der Kläranlagen zu ermöglichen. Stellgrößen für die Optimierung sind die Volumenströme oder Druckdifferenzen in den Pumpwerken und an den Schiebern im Abwasserdruckleitungsnetz. Dieser Abschlussbericht beschreibt detailliert die am Konrad-Zuse-Zentrum Berlin und am Institut für Angewandte Mathematik der Leibniz Universität Hannover durchgeführten Arbeiten. Er lässt sich gliedern in folgende Abschnitte: (i) Gesamtüberblick des Berliner Abwassersystems, Aufgabenstellung und Beschreibung der abwassertechnischen Anlagen, Daten für das Optimierungsmodell. (ii) Mathematische Modellierung des Gesamtsystems und der Komponenten, ggf. alternative Modellierungsmöglichkeiten, Beurteilung der Modelleigenschaften. (iii) Mathematische Ansätze und Lösungsmethoden mit Beurteilung ihrer Vorteile, Nachteile und Schwierigkeiten, Zusammenfassung. Während der Datenerhebung stellte sich heraus, dass das Abwassersystem hinsichtlich der Modellierung und Lösung in GAMS wesentlich komplexer ist, als es zunächst absehbar war. Dies betrifft insbesondere die Kanalnetze: hier verursachen Sonderbauwerke, wie Drosseln, Wehre und Heber zustandsabhängige Unstetigkeiten, die sich in GAMS nur mittels ganzzahliger Optimierungsvariablen adäquat modellieren lassen. Dadurch entsteht ein gemischt-ganzzahliges nichtlineares Optimierungsmodell (MINLP für engl. mixed-integer non-linear program) sehr hoher Dimension, das mathematisch wie rechentechnisch extrem schwierig zu lösen ist. So konnte bisher keine optimale Bewirtschaftungsstrategie ermittelt werden. Auch die Größe des Modells stellt eine Herausforderung dar: in der aktuellen Formulierung existieren in etwa 3 Millionen Optimierungsvariablen (davon gut 200.000 ganzzahlige) und etwa eine Million Beschränkungen (plus einfache Schranken). Somit ist das Modell etwa um einen Faktor hundert größer als bisher erfolgreich gelöste MINLPModelle. Es wurde versucht, das Abwassermodell mit dem MINLP-Löser Bonmin in Kombination mit dem NLP-Löser Ipopt in GAMS zu lösen (NLP für engl. non-linear program), erwartungsgemäß allerdings bisher erfolglos. Als Fazit bleibt festzuhalten, dass das im Rahmen dieser Studie erstellte Abwassermodell mit Standard-Optimierungstools derzeit nicht lösbar ist. Die angestrebten Untersuchungen erfordern zunächst weitere Forschungsarbeit, um das Modell einer numerischen Behandlung zugänglich zu machen. Außerdem wird eine weitergehende Vereinfachung der Beschreibung der Kanalnetzbausteine im Modell diskutiert."
+featured: false
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+url_pdf: "../../../pdf/Steinbach-2008-232.pdf"
+projects: ["eva"]
+---
 

@@ -1,11 +1,13 @@
-+++
-title = "Instationäre, hydronumerische 1D-Berechnung von Wasserstand und Durchfluss in der Stauhaltung Charlottenburg (Spree und Kanäle) für die Abflussjahre 2002 bis 2007"
-date = 2008-01-01
-authors = ["Frank Schumacher"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["samcso"]
-+++
+---
+title: "Instationäre, hydronumerische 1D-Berechnung von Wasserstand und Durchfluss in der Stauhaltung Charlottenburg (Spree und Kanäle) für die Abflussjahre 2002 bis 2007"
+date: 2008-01-01
+publishDate: 2020-05-25T15:14:05Z
+authors: [ "Schumacher, F." ]
+publication_types: ["4"]
+abstract: "Dr. Schumacher Ingenieurbüro für Wasser und Umwelt wurde im Rahmen des Projektes SAM-CSO beauftragt, eine Langzeitsimulation der hydraulischen Verhältnisse in der Stauhaltung Charlottenburg (Spree und Kanäle) für die Abflussjahre 2002 bis 2007 durchzuführen. Diese Simulation erfolgt mit der Software HYDRAX und ist die Grundlage für die Simulation der Gewässergüteprozesse, die dann mit der Software QSIM durchgeführt wird. Da bisher im Rahmen des Projektes eine Gewässergütesimulation lediglich für den September 2005 erfolgte (Fokus auf 2 Starkregenereignisse mit Mischwasserüberlauf), konnten noch keine allgemeinen Aussagen zur Güte der Simulation des Gewässerbasiszustandes über längere Zeiträume getroffen werden. Die Simulation des Basiszustandes (unter Vernachlässigung der Mischwassereinleitungen) und die Anpassung des Modells an die Berliner Gewässerverhältnisse ist ein wichtiger Schritt, bevor die spezifische Situation während Mischwasserüberlauf betrachtet werden kann. Zusammenfassend ist festzuhalten, dass nach Korrektur der Zuflüsse über die Spree eine in Bezug auf den Referenzpegel Sophienwerder stimmige Durchflussbilanz erreicht werden konnte. Die aufgrund der instationären Berechnung verbleibende Bilanzdifferenz spiegelt gut das (im Vergleich zu den Stauhaltungen Mühlendamm/Kleinmachnow, Spandau oder Brandenburg mit ihren großen Seen) geringe Retentionsvermögen der Stauhaltung Charlottenburg wider. Unter Berücksichtigung der Messunsicherheit werden auch die Wasserstände für alle Durchflussverhältnisse in guter, für die anschließende Gütesimulation mit mehr als hinreichender Genauigkeit, berechnet. Hingewiesen sei darauf, dass bei einer Änderung der Zuflusssumme, z.B. durch die Berücksichtigung der bisher inaktiv gesetzten Mischwassereinleitungen, auch ein erneuter Bilanzausgleich vorgenommen werden sollte, da der Stauhaltung derzeit die vernachlässigten Größen indirekt über die Korrektur der Spreezuflüsse im Rahmen des Bilanzausgleichs zufließen. Folgerung für das Projekt: (i) Die Grundlage (Hydraulik) für die Gewässergütesimulation des Basiszustandes der Spree liegt nun vor. (ii) Die Gewässergütesimulation wird in Abstimmung mit Herrn Dr. Schumacher am KWB durchgeführt. Es erfolgt eine Identifikation, welche in QSIM simulierten Prozesse an die Berliner Situation angepasst werden müssen und in welcher Weise. (iii) Daraufhin erfolgt die Anpassung in Kooperation mit der BfG (Herrn Kirchesch)."
+featured: false
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+url_pdf: "../../../pdf/Schumacher-2008-221.pdf"
+projects: ["sam-cso"]
+---
 

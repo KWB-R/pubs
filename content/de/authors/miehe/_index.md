@@ -1,6 +1,6 @@
 +++
 # Display name
-name = "Ulf Miehe"
+name = "Miehe, U."
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
@@ -37,7 +37,7 @@ email = ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 
-user_groups = ["Directors", "Department Leaders"]
+user_groups = ["Department Leaders"]
 
 
 # List qualifications (such as academic degrees)

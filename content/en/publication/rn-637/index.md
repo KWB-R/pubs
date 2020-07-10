@@ -1,11 +1,13 @@
-+++
-title = "Development of a Catalogue on European MAR Sites - Documentation"
-date = 2012-01-01
-authors = ["F. Scheibler", "S. Hannappel", "C. Reger", "E. Rejman-Rasinska", "M. Hernandez Garcia", "E. Vilanova", "S. Kumar", "sprenger"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["demeau"]
-+++
+---
+title: "Development of a Catalogue on European MAR Sites - Documentation"
+date: 2012-01-01
+publishDate: 2020-05-25T15:14:06Z
+authors: [ "Scheibler, F.", "Hannappel, S.", "Reger, C.", "Rejman-Rasinska, E.", "Hernández-García, M.", "Vilanova, E.", "Kumar, S.", "sprenger" ]
+publication_types: ["4"]
+abstract: "The EU-funded R&D project DEMEAU addresses the fate of emerging pollutants in water and waste water treatment, e.g. Managed Aquifer Recharge (MAR). For MAR the objectives are to mobilize existing experience from different European study sites and to develop a systematic approach for the authorization of new recharge schemes in compliance with the European water and groundwater directives. The activities will cover the issue of infiltrating and injecting treated wastewater as well as developing guidance on optimum design and operation of infiltration facilities. In order to demonstrate the effects of typical existing European MAR systems onto groundwater availability and groundwater quality with specific focus on trace organics, a comprehensive relational database (catalogue) on European MAR systems was created to ensure efficient management of available data. By means of the built-in user forms, queries, and reports, database users are enabled to not only view and enter records but also to quickly process the data to extract needed information. In total, 59 different parameters were selected in order to describe about 270 documented MAR sites in 23 countries in Europe. These parameters were then divided up into four main groups (general information, technical data, hydrogeological parameters and monitoring activities) plus references. The database was created using standard software (MS ACCESS) and references were managed by open source software (JABREF). The compiled data on European MAR sites was taken from a variety of different source types, including scientific articles, books, PhD, diploma and master's theses, presentations, technical documents, reports from previous national and EU research projects, personal communication with specialists, operators and water authorities, community and operator websites, newspaper articles, and Google Earth (for geographic coordinates to create overview maps). On the basis of this database a classification system for the MAR sites found in Europe will be developed that can be used for deriving site-specific pre-requisites and design criteria as guidance for the authorization of for new sites."
+featured: false
+publication: "HYDOR Consult GmbH"
+url_pdf: "../../../pdf/Scheibler-2012-637.pdf"
+projects: ["demeau"]
+---
 

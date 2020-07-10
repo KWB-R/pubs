@@ -1,11 +1,13 @@
-+++
-title = "Erläuterungsbericht zur weiteren Gewässergütesimulation der Stauhaltung Charlottenburg (Spree und Kanäle) unter Berücksichtigung von Mischwasserentlastungen im September 2005"
-date = 2009-01-01
-authors = ["Frank Schumacher", "Katharina Helling"]
-publication_types = ["4"]
-abstract = ""
-selected = false
-publication = ""
-projects = ["samcso"]
-+++
+---
+title: "Erläuterungsbericht zur weiteren Gewässergütesimulation der Stauhaltung Charlottenburg (Spree und Kanäle) unter Berücksichtigung von Mischwasserentlastungen im September 2005"
+date: 2009-01-01
+publishDate: 2020-05-25T15:14:05Z
+authors: [ "Schumacher, F.", "Helling, K." ]
+publication_types: ["4"]
+abstract: "During the ISM study in the year 2007 first water quality simulations of the Berlin river Spree (stretch Charlottenburg) under consideration of combined sewer overflows (CSO) from the drainage system had been carried out. The period of September 2005 was simulated. A good correlation of simulation results with water quality measurements could only be observed for those days where the model boundary conditions were clearly defined (spot samples at the inflowing streams). However, these spot samples are carried out only once a month. Given the simulation period of one month and the temporal resolution of 15 minutes this data availability for the inflowing streams is not sufficient. Even more, some parameters had to be assessed entirely since no measurements were available. The data situation was especially critical for the inflow of the Landwehrkanal into the river Spree. No continuous measurement data was available for the following parameters: water temperature, oxygen content, pH and conductivity. For these parameters hydrographs had been assumed according to those at gauge Mühlendammschleuse with an offset calculated by the difference between the spot sampling at Landwehrkanal and the continuous values at Mühlendammschleuse. Furthermore, during the simulations within the ISM study a second storm event with overflows could not be considered since the simulation of the drainage system (software INFOWORKS CS) carried out by Berliner Wasserbetriebe was not yet available. The objective of the water quality simulations carried out within SAM-CSO was to take into account the full boundary conditions for the Landwehrkanal (continuous data now available). By comparison with the former simulation results the relevance of the inflow Landwehrkanal on the processes in the river Spree is shown. A second simulation was carried out with meteorological data of high temporal resolution. Former simulations were conducted with daily averages for e.g. air temperature, wind speed, etc. The influence of the temporal resolution of the input data on the diurnal hydrographs of different water quality parameters was analysed (focus on water temperature and dissolved oxygen). Finally, for the last simulation the data for the additional CSO event on 16-17 September 2005 was used (simulated by Berliner Wasserbetriebe with INFOWORKS CS). The results show that considering meteorological data of high temporal resolution and continuous data for the boundary condition Landwehrkanal have a significant influence on the quality of the water quality simulation results for river Spree, especially for the parameters oxygen content, pH and conductivity. Now, for September 2005 simulation results are available that are based on the best set of data that is currently available for the studied river stretch."
+featured: false
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+url_pdf: "../../../pdf/Schumacher-2009-220.pdf"
+projects: ["sam-cso"]
+---
 
