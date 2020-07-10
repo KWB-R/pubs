@@ -27,6 +27,12 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
+links:
+- name: Back to Project Website
+  url: https://kompetenz-wasser.de/en/project/bephor
+  icon_pack: fas
+  icon: home
+
 url_code: ""
 url_pdf: ""
 url_slides: ""

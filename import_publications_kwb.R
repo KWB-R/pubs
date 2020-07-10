@@ -46,10 +46,19 @@ library(reticulate)
   
 remotes::install_github("pixgarden/xsitemap")
 
-sites <- xsitemap::xsitemapGet("https://www.kompetenz-wasser.de")
-projects_site <- sites[sites$origin == "de/project-sitemap.xml",]
-project_ids_site <- stringr::str_split_fixed(projects_site$loc, "/", n = 7)[,6]
-project_ids_site <- project_ids_site[order(project_ids_site)]
+
+get_project_ids_site <- function() {
+  sites <- xsitemap::xsitemapGet("https://www.kompetenz-wasser.de")
+  
+  projects_site <- sites[sites$origin == "de/project-sitemap.xml",]
+
+  project_ids_site <- stringr::str_split_fixed(projects_site$loc, "/", n = 7)[,6]
+  project_ids_site <- project_ids_site[order(project_ids_site)]
+
+  project_ids_site  
+}
+
+project_ids_site <- get_project_ids_site()
 
 endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
@@ -73,6 +82,92 @@ project_ids_dms_public <- strsplit(x = endnote_df$label[!is.na(endnote_df$label)
 
 
 #project_ids_dms <- readLines("project-id.txt")
+
+
+get_project_md <- function(project_id, 
+                           lang = "",
+                           hugo_root_dir = ".") {
+  
+  link_name <- if(lang == "en") {
+    "Back to Project Website"
+  } else {
+    "Zur\u00FCck zur Projektseite"
+  }
+  md_path <- sprintf("%s/content%sproject/%s/index.md",
+        hugo_root_dir, 
+        ifelse(lang == "", "", sprintf("/%s/", lang)), 
+        project_id)
+  
+
+  if(!fs::file_exists(md_path)) {
+    message(sprintf("No '.md' file found at: %s", md_path))
+    md_path <-  NA_character_
+  } else {
+    md_path <- fs::path_abs(md_path)
+  }
+  
+  tibble::tibble(id = project_id, 
+                 lang = lang, 
+                 link_name = link_name, 
+                 md_path = md_path)
+}
+
+get_projects_md <- function(project_ids_site,
+                            hugo_root_dir = ".") {
+ 
+  dplyr::bind_rows(lapply(project_ids_site, 
+                                       get_project_md, 
+                                       lang = "de",
+                                       hugo_root_dir = hugo_root_dir)) %>% 
+  dplyr::bind_rows(dplyr::bind_rows(lapply(project_ids_site, 
+                                           get_project_md, 
+                                           lang = "en",
+                                           hugo_root_dir = hugo_root_dir)))
+}
+
+
+add_backlinks_to_projects(projects,
+                          encoding = "UTF-8",
+                          dbg = TRUE) {
+  sapply(seq_len(nrow(projects)), function(i) {
+    project <- projects[i,]
+    if (!is.na(project$md_path)) {
+      kwb.utils::catAndRun(
+        messageText = sprintf("Adding backlink to project: %s",
+                              project$md_path),
+        expr = {
+          proj_md <- readLines(project$md_path, encoding = encoding)
+          line_url_code <- grep("^url_code:", proj_md)
+          proj_md_new <- c(
+            proj_md[seq_len(line_url_code - 1)],
+                    "links:",
+            sprintf("- name: %s", project$link_name),
+            sprintf("  url: https://kompetenz-wasser.de/%s/project/%s",
+                    project$lang,
+                    project$id),
+                    "  icon_pack: fas",
+                    "  icon: home",
+                    "",
+            proj_md[line_url_code:length(proj_md)]
+          )
+          
+          kwb.pubs::write_lines(
+            text = proj_md_new,
+            file = project$md_path,
+            fileEncoding = encoding
+          )
+        }, dbg = dbg)} else {
+      message(sprintf("No project md file exists for '%s'", project$id))
+    } 
+    }
+    )
+}
+
+project_ids_site <- get_project_ids_site()
+projects <- get_projects_md(project_ids_site)
+add_backlinks_to_projects(projects)
+
+
 
 site <- tibble::tibble(project_ids = project_ids_site)
 site1 <- cbind(site, source_website = "yes")
@@ -352,13 +447,16 @@ delete_publications <- function(pub_ids) {
 # delete_publication(c(380,426))
 # blogdown::build_site()
 
-update_citations <- function(pub_dir = "content/publication") {
+add_url_root_to_citations <- function(url_root = "https://publications.kompetenz-wasser.de", 
+                                      pub_dir = "content/de") {
   
   stopifnot(fs::dir_exists(pub_dir))
   
   citations <- list.files(pub_dir, pattern = ".bib$", 
                           recursive = TRUE, 
                           full.names = TRUE)
+  
+  
   
   
   valid_pubs <- stringr::str_replace(kwb.file:::remove_common_root(dirname((citations))), "rn-", "RN")
