@@ -380,6 +380,15 @@ kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths,
                                                endnote_db_refs = en_refs)
 
 
+sdir <- dirname(kwb.pubs::get_publication_index_md_paths(lang = "de"))
+tdir <- gsub("/rn-", "/", sdir)
+
+for(i in seq_len(length(sdir))) {
+
+fs::dir_copy(sdir[i], tdir[i], overwrite = TRUE)
+}
+fs::dir_delete(path = sdir)
+
 fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
 fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
 fs::dir_delete(path = "content/publication")
