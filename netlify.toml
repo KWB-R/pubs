@@ -13,7 +13,6 @@
   command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  URL = "https://publications.kompetenz-wasser.de"
   HUGO_VERSION = "0.70.0"
 
 [context.branch-deploy]
