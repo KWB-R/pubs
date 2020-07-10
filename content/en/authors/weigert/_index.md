@@ -1,6 +1,6 @@
 +++
 # Display name
-name = "Bodo Weigert"
+name = "Weigert, B."
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
@@ -13,7 +13,7 @@ authors = ["weigert"]
 superuser = false
 
 # Role/position
-role = "Deputy Director, Head of Finances, Administration, Communication"
+role = "Deputy Director, Head of Department Finances, Administration, Communication"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -37,7 +37,7 @@ email = ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 
-user_groups = ["Directors"]
+user_groups = ["Department Leaders"]
 
 
 # List qualifications (such as academic degrees)

@@ -1,0 +1,12 @@
+---
+title: "Online monitoring for evaluation of CSO impact on surface water (presented by Hauke Sonnenberg)"
+date: 2010-01-01
+publishDate: 2020-05-25T15:14:06Z
+authors: [ "rouault", "sonnenberg", "Schroeder, K.", "Heinzmann, B." ]
+publication_types: ["0"]
+abstract: "The quality of the River Spree during its passage through the city of Berlin is mainly influenced by the discharge of treated effluent from waste water treatment plants and by combined sewer overflows (CSO). CSO are discharged diffusely and during short periods of time leading to acute impacts like oxygen depletion and locally increased ammonia concentration in the river. They are dominant stress factors to Berlin’s lowland River Spree and its biocenosis. In order to improve the water quality of the River Spree, measures limiting the emissions of CSO are envisaged such as utilization of in-pipe storage capacities, implementation of weirs for real-time control, construction of additional stormwater tanks. In order to build an efficient and immission oriented strategy with the different available solutions and to be able to cope with future challenges the Berlin Centre of Competence for Water (KWB), Berliner Wasserbetriebe, Veolia Water and the Berlin Senate of Environment are conducting two projects, the EU project PREPARED and the MIA-CSO project. An impact-based CSO management instrument is being developed with the aim to evaluate measures of CSO control. It consists in (i) a river water quality/ecosystem model that will be used to simulate water quality processes in the receiving water and (ii) a methodology to identify critical water quality situations occurring in the Spree River. For model adaptation, calibration and validation an integrated monitoring is conducted. The monitoring consists in (i) continuously measuring the quality and flow of CSO discharges at one representative network location and (ii) in parallel, continuously monitoring water quality parameters at 5 sites within the impacted stretch of the Spree River. The concept of the integrated monitoring, i.e. definition of monitoring sites as well as monitoring strategy and design will be presented during the M3 Workshop."
+featured: false
+publication: " p 1 *In:* M3 Workshop: Monitoring and data evaluation under the Water Framework Directive – Achievements, deficits and new horizons. Luxembourg/Kirchberg. 16-17 June 2010"
+projects: ["mia-cso"]
+---
+

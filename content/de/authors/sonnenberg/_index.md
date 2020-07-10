@@ -1,6 +1,6 @@
 +++
 # Display name
-name = "Hauke Sonnenberg"
+name = "Sonnenberg, H."
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722

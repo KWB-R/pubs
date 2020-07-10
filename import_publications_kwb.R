@@ -1,44 +1,68 @@
+
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "never")
+library(kwb.pubs)
+
 ### Update KWB authors 
-authors_metadata <- kwb.pubs::add_authors_metadata()
+authors_config <- kwb.pubs::get_authors_config()
 
-construct_authorname <- function (firstname, lastname) 
-{
-  author_firstname <- unlist(lapply(seq_along(firstname), function(idx) {
-    tmp <- firstname[idx] %>% stringr::str_trim() %>% stringr::str_split("-|\\s+") %>% 
-      unlist() %>% stringr::str_sub(1, 1) %>% stringr::str_to_upper() #%>% 
-      #replace_umlauts()
-    paste0(sprintf("%s.", tmp), collapse = " ")
-  }))
-  author_lastname <- lastname %>% stringr::str_trim() %>% stringr::str_replace_all("\\s+", 
-                                                                                   " ") %>% stringr::str_to_title() #%>% replace_umlauts()
-  sprintf("%s, %s", author_lastname, author_firstname)
-}
-
-authors_metadata$author_name <- construct_authorname(authors_metadata$firstname, 
-                                                     lastname = authors_metadata$lastname)
-
-authors_metadata$author_name <- gsub("Schubert.*", "Schubert, R.-L.", authors_metadata$author_name)
-
+authors_metadata <- kwb.pubs::add_authors_metadata(authors_config)
+ 
 authors_metadata$fullname <- authors_metadata$author_name
+ 
+researchers_at_kwb <- ! authors_metadata$lastname %in% c("evel")
+ 
+authors_metadata <- authors_metadata[researchers_at_kwb,]
 
 kwb.pubs::add_authors_index_md(authors_metadata, overwrite = TRUE)
 kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
 
-Sys.setlocale(category = "LC_ALL", locale = "German")
+## Fix avatars for "newcomers" (with own photos, where default values for 
+## cropping were not a good choice!)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "habibi",],
+                             x_off = 300, width = 380, height = 480)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "toutian",],
+                             x_off = 360, y_off = 40, width = 300, height = 400)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "rose",],
+                             x_off = 290, y_off = 10, width = 380, height = 400)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "knoche",],
+                             x_off = 100)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "conzelmann",],
+                             x_off = 230, y_off = 40, height = 250)
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "rabe",],
+                             width = 500, x_off = 150, y_off = 0, height = 500)
+
+
+fs::dir_delete(path = "content/en/authors")
+fs::dir_copy(path = "content/authors", "content/en/authors", overwrite = TRUE)
+## currently the same content as in "en" (should be changed to "de"
+## required to add a new "config" file)
+fs::dir_delete(path = "content/de/authors")
+fs::dir_copy(path = "content/authors", "content/de/authors", overwrite = TRUE)
+fs::dir_delete(path = "content/authors")
+
 
 library(dplyr)
 library(reticulate)
   
 remotes::install_github("pixgarden/xsitemap")
 
-sites <- xsitemap::xsitemapGet("https://www.kompetenz-wasser.de")
-projects_site <- sites[sites$origin == "de/project-sitemap.xml",]
-project_ids_site <- stringr::str_split_fixed(projects_site$loc, "/", n = 7)[,6]
-project_ids_site <- project_ids_site[order(project_ids_site)]
 
-endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200617.xml")
+get_project_ids_site <- function() {
+  sites <- xsitemap::xsitemapGet("https://www.kompetenz-wasser.de")
+  
+  projects_site <- sites[sites$origin == "de/project-sitemap.xml",]
+
+  project_ids_site <- stringr::str_split_fixed(projects_site$loc, "/", n = 7)[,6]
+  project_ids_site <- project_ids_site[order(project_ids_site)]
+
+  project_ids_site  
+}
+
+project_ids_site <- get_project_ids_site()
+
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
-
+#endnote_df <- endnote_df[endnote_df$rec_number %in% updated_ids,]
 confidential_pubs_idx <- endnote_df$rec_number[which(endnote_df$caption == "confidential")]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
@@ -59,6 +83,92 @@ project_ids_dms_public <- strsplit(x = endnote_df$label[!is.na(endnote_df$label)
 
 #project_ids_dms <- readLines("project-id.txt")
 
+
+get_project_md <- function(project_id, 
+                           lang = "",
+                           hugo_root_dir = ".") {
+  
+  link_name <- if(lang == "en") {
+    "Back to Project Website"
+  } else {
+    "Zur\u00FCck zur Projektseite"
+  }
+  md_path <- sprintf("%s/content%sproject/%s/index.md",
+        hugo_root_dir, 
+        ifelse(lang == "", "", sprintf("/%s/", lang)), 
+        project_id)
+  
+
+  if(!fs::file_exists(md_path)) {
+    message(sprintf("No '.md' file found at: %s", md_path))
+    md_path <-  NA_character_
+  } else {
+    md_path <- fs::path_abs(md_path)
+  }
+  
+  tibble::tibble(id = project_id, 
+                 lang = lang, 
+                 link_name = link_name, 
+                 md_path = md_path)
+}
+
+get_projects_md <- function(project_ids_site,
+                            hugo_root_dir = ".") {
+ 
+  dplyr::bind_rows(lapply(project_ids_site, 
+                                       get_project_md, 
+                                       lang = "de",
+                                       hugo_root_dir = hugo_root_dir)) %>% 
+  dplyr::bind_rows(dplyr::bind_rows(lapply(project_ids_site, 
+                                           get_project_md, 
+                                           lang = "en",
+                                           hugo_root_dir = hugo_root_dir)))
+}
+
+
+add_backlinks_to_projects(projects,
+                          encoding = "UTF-8",
+                          dbg = TRUE) {
+  sapply(seq_len(nrow(projects)), function(i) {
+    project <- projects[i,]
+    if (!is.na(project$md_path)) {
+      kwb.utils::catAndRun(
+        messageText = sprintf("Adding backlink to project: %s",
+                              project$md_path),
+        expr = {
+          proj_md <- readLines(project$md_path, encoding = encoding)
+          line_url_code <- grep("^url_code:", proj_md)
+          proj_md_new <- c(
+            proj_md[seq_len(line_url_code - 1)],
+                    "links:",
+            sprintf("- name: %s", project$link_name),
+            sprintf("  url: https://kompetenz-wasser.de/%s/project/%s",
+                    project$lang,
+                    project$id),
+                    "  icon_pack: fas",
+                    "  icon: home",
+                    "",
+            proj_md[line_url_code:length(proj_md)]
+          )
+          
+          kwb.pubs::write_lines(
+            text = proj_md_new,
+            file = project$md_path,
+            fileEncoding = encoding
+          )
+        }, dbg = dbg)} else {
+      message(sprintf("No project md file exists for '%s'", project$id))
+    } 
+    }
+    )
+}
+
+project_ids_site <- get_project_ids_site()
+projects <- get_projects_md(project_ids_site)
+add_backlinks_to_projects(projects)
+
+
+
 site <- tibble::tibble(project_ids = project_ids_site)
 site1 <- cbind(site, source_website = "yes")
 dms <- tibble::tibble(project_ids  = project_ids_dms) %>% 
@@ -77,7 +187,15 @@ ids_all <- dplyr::full_join(site, dms) %>%
 all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
 all_projects$project_ids
 
+fs::dir_delete(path = "content/de/project/")
+fs::dir_delete(path = "content/en/project/")
+### Relax and take a coffee (takes ~ 5 minutes)
 kwb.pubs::create_projects(all_projects$project_ids)
+fs::dir_copy(path = "content/de/project", "content/en/project", overwrite = TRUE)
+
+### to do: add "links" to KWB project factsheets (add in R package kwb.pubs)
+
+
 
 readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 
@@ -85,24 +203,33 @@ readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 ### "The name list field author cannot be parsed"
 #options(encoding="windows-1252")
 options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df("KWB-documents_2020617_with-abstracts.txt")
+tmp <- bib2df::bib2df("KWB-documents_2020708_with-abstracts_caption-label.txt")
 tmp$URL <- NA_character_
+#tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
+#tmp <- tmp[tmp$en_id %in% updated_ids,]
 tmp <- tmp[order(tmp$en_id),]
+is_public <- is.na(tmp$ACCESS) | tmp$ACCESS == "public"
+tmp$ACCESS[is_public] <- "public"
+tmp <- tmp[is_public,]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
-
 public_report_ids <- endnote_df$rec_number[is_public_report]
-
 public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
-dms_dir <- fs::path_abs("../../dms/2020-06-17/KWB-documents_20191205.Data/PDF")
+
+
+### path PDF files of exported Endnote DB (needs to be same as .XML and .txt files!)
+dms_dir <- fs::path_abs("../../dms/2020-07-08/KWB-documents_20191205.Data/PDF")
+
 public_reports$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
                                   replacement = dms_dir,
                                   public_reports$urls_pdf01)
 
+fs::dir_create("static/pdf")
+
 fs::file_copy(path = public_reports$urls_pdf01, 
-              new_path = file.path(fs::path_abs("../../RProjects/pubs_update/static/pdf"), 
-                                   basename(public_reports$urls_pdf01)))
+              new_path = file.path(fs::path_abs("static/pdf"), 
+                                   basename(public_reports$urls_pdf01)), overwrite = TRUE)
 
 tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%  
   dplyr::mutate(URL = ifelse(!is.na(.data$urls_pdf01), 
@@ -114,39 +241,37 @@ tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%
 
 tmp$MONTH <- format(as.Date(tmp$MONTH), format = "%m")
 dates <- as.Date(tmp$DATE, format = "%Y-%m-%d")
+tmp$DATE <- dates
 valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
 tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
 
 options(encoding="UTF-8")
 bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 
+fs::dir_delete(path = list.dirs("content/publication/"))
+fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
+fs::dir_delete(path = list.dirs("content/en/publication/")[-1])
 
-kwb_authors <- setNames(lapply(authors_metadata$dir_name, "["), 
-                        nm = authors_metadata$author_name)
 
-tmp$AUTHOR_KWB <- lapply(tmp$AUTHOR, FUN = function(authors) {
-  if(any(!is.na(authors))) {
-  kwb.utils::multiSubstitute(authors, replacements = kwb_authors)
-  } else {message("no author entry")}
+tmp$URL <- stringr::str_replace_all(tmp$URL, "../../../", "https://publications.kompetenz-wasser.de/")
+
+
+update_citations <- function(bib_df, 
+                             lang = "de",
+                             hugo_root_dir = ".") {
+  
+sapply(seq_len(nrow(bib_df)), function (i) {
+  
+  reference <- bib_df[i, ]
+  
+bib2df::df2bib(reference, file = sprintf("%s/content%spublication/%d/cite.bib", 
+                                    hugo_root_dir,
+                                    ifelse(lang == "", "" , sprintf("/%s/", lang)), 
+                                    reference$en_id) %>% fs::path_abs())
 })
 
-get_publication_index_md_paths <- function (hugo_root_dir = ".") 
-{
-  pub_dir <- fs::path_abs(hugo_root_dir, "content/de/publication")
-  fs::dir_ls(pub_dir, recurse = TRUE, regexp = "/index.md$")
 }
 
-
-replace_authors_with_kwb_in_pub_index_md <- function (hugo_root_dir = ".", encoding = "UTF-8") 
-{
-  paths <- get_publication_index_md_paths(hugo_root_dir)
-  sapply(paths, replace_author_umlauts_in_pub_index_md, encoding = encoding)
-}
-
-tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) sprintf("authors: [ %s ]", paste0('"', authors, '"', collapse = ", ")))
-      
-authors <- unique(unlist(tmp$AUTHOR))
-authors[order(authors)]
 ###############################################################################
 ### Step 2: Import .bibtex file to publications with Python 
 ###############################################################################
@@ -174,7 +299,9 @@ reticulate::use_condaenv(env,conda_path)
 #reticulate::py_install(packages = "academic", 
 #                       envname = env, 
 #                       pip = TRUE, pip_ignore_installed = TRUE) 
-
+# Manually replace with own modification: 
+# https://github.com/mrustl/academic-admin/commit/ea5c6a23d5b8cb482c2dd5afe15e71c1a049afbe
+# (re-mapping pub_id = "0" -> "proceedings" and "9" -> "misc")
 
 ## Should existing publications in content/publication folder be overwritten?
 overwrite <- TRUE
@@ -192,15 +319,111 @@ cmds <- sprintf('call "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"
 writeLines(cmds,con = "import_bibtex_kwb.bat")
 
 # repeat a few times due to errors:
-for (i in 1:10) {
+#for (i in 1:10) {
   shell("import_bibtex_kwb.bat")
-}
+#}
 ### Now check the folder "content/publication". Your publications should be added
 ### now!
 
 ### Add Project ids 
 kwb.pubs::add_projects_to_pub_index_md(endnote_df, col_project = "label")
 
+
+
+kwb_authors <- setNames(lapply(authors_metadata$dir_name, "["), 
+                        nm = authors_metadata$author_name)
+
+tmp$AUTHOR_KWB <- lapply(tmp$AUTHOR, FUN = function(authors) {
+  if(any(!is.na(authors))) {
+    kwb.utils::multiSubstitute(authors, replacements = kwb_authors)
+  } else {message("no author entry")}
+})
+
+tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) {
+  sprintf("authors: [ %s ]", paste0('"', authors, '"', collapse = ", "))
+  }
+  )
+
+tmp$id <- as.numeric(stringr::str_extract(tmp$BIBTEXKEY,
+                                          pattern = "[0-9]+"))
+saveRDS(tmp, "publications_kwb.Rds")
+
+
+pub_md_paths <- kwb.pubs::get_publication_index_md_paths(lang = "de")
+
+
+
+replace_kwb_authors_in_pub_index_md <- function (path, 
+                                                 file_encoding = "UTF-8",
+                                                 dbg = TRUE) {
+  
+  id <- as.numeric(stringr::str_extract(basename(dirname(path)), 
+                                        pattern = "[0-9]+"))
+  
+  
+  authors <- unlist(tmp$AUTHOR_KWB[tmp$id == id])
+  
+  if(!is.null(authors)) {
+  
+  pub_index_txt <- kwb.fakin::read_lines(path, 
+                                         fileEncoding = file_encoding)
+  idx <- which(stringr::str_detect(pub_index_txt, pattern = "^author"))
+  if (idx > 0) {
+    if(dbg) message(sprintf("Replacing KWB authors in '%s'", path))
+    pub_index_txt[idx] <- unlist(tmp$hugo_authors[tmp$id == id])
+    kwb.pubs::write_lines(pub_index_txt, path, file_encoding)
+  }
+  }
+}
+  
+
+
+sapply(pub_md_paths, function(path) replace_kwb_authors_in_pub_index_md(path))
+
+
+
+### Replace auto-generated publish date with "record_last_modified" (in "UTC")
+
+path_en_db <- "../../dms/2020-07-08/KWB-documents_20191205.Data/sdb/sdb.eni"
+contents <- kwb.pubs::read_endnote_db(path_en_db)
+
+en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)
+en_refs$publication <- stringr::str_replace_all(en_refs$publication, pattern = '"', '\\\\"')
+en_refs$publication <- sprintf("\"%s\"", en_refs$publication)
+
+kwb.pubs::replace_dates_in_pub_index_md(md_paths = pub_md_paths, 
+                                        endnote_db_refs = en_refs)
+kwb.pubs::replace_publishDates_in_pub_index_md(md_paths = pub_md_paths, 
+                                               endnote_db_refs = en_refs)
+kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths, 
+                                               endnote_db_refs = en_refs)
+
+
+sdir <- dirname(kwb.pubs::get_publication_index_md_paths(lang = "de"))
+tdir <- gsub("/rn-", "/", sdir)
+
+for(i in seq_len(length(sdir))) {
+
+fs::dir_copy(sdir[i], tdir[i], overwrite = TRUE)
+}
+fs::dir_delete(path = sdir)
+
+fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
+fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
+fs::dir_delete(path = "content/epublication")
+
+if (FALSE) {
+
+authors <- unique(unlist(tmp$AUTHOR))
+authors[order(authors)]
+
+
+"https://www.kompetenz-wasser.de/wp-content/uploads/2017/08/cropped-logo-kwb_klein-new.png" %>% 
+magick::image_read() %>% 
+#magick::image_resize(geometry = magick::geometry_size_pixels(width = 200)) %>%  
+magick::image_write(path = "assets/images/logo.png", 
+                    quality = 100, 
+                    format = "png")
 
 
 
@@ -252,13 +475,16 @@ delete_publications <- function(pub_ids) {
 # delete_publication(c(380,426))
 # blogdown::build_site()
 
-update_citations <- function(pub_dir = "content/publication") {
+add_url_root_to_citations <- function(url_root = "https://publications.kompetenz-wasser.de", 
+                                      pub_dir = "content/de") {
   
   stopifnot(fs::dir_exists(pub_dir))
   
   citations <- list.files(pub_dir, pattern = ".bib$", 
                           recursive = TRUE, 
                           full.names = TRUE)
+  
+  
   
   
   valid_pubs <- stringr::str_replace(kwb.file:::remove_common_root(dirname((citations))), "rn-", "RN")
@@ -276,156 +502,7 @@ update_citations <- function(pub_dir = "content/publication") {
   
 }
 
-if (FALSE) {
-  # project_ids_clean <- kwb.utils::multiSubstitute(ids_all$project_ids, 
-  #                                                 replacements = list("digitalwatercity" = "dwc", 
-  #                                                                     "networks$" = "networks4", 
-  #                                                                     "ufo-wwv" = "wwv")) %>% 
-  #   unique() 
-  
-  
-  
-  writeLines(project_ids_clean[order(project_ids_clean)], con = "project-ids.txt")
-  
-  ### Exported from KWB Endnote:
-  #bib_txt <- "KWB.txt"
-  #encoding <- "UTF-8"
-  #org <- readLines(bib_txt, encoding = "UTF-8")
-  
-  
-  kwb_bib_valid <-  RefManageR::ReadBib(bib_txt_utf8_path,
-                                        .Encoding = encoding)
-  
-  kwb_bib_valid_df <- as.data.frame(kwb_bib_valid)
-  
-  nrow(kwb_bib_valid_df)
-  
-  nrow(kwb_bib_valid_df)/nrow(kwb_bib_all_df)
-  
-  write_lines <- function (text, file, fileEncoding = "", ...)
-  {
-    if (is.character(file)) {
-      con <- if (nzchar(fileEncoding)) {
-        file(file, "wt", encoding = fileEncoding)
-      }
-      else {
-        file(file, "wt")
-      }
-      on.exit(close(con))
-    }
-    else {
-      con <- file
-    }
-    writeLines(text, con, ...)
-  }
-  
-  ### Saved original "KWB.txt" in Rstudio with
-  ### "Save with Encoding "Windows-1252" and define encoding "latin1" for import
-  ### now works
-  #bib_txt_path <- "KWB-documents_20191205_no-abstracts.txt"
-  bib_txt_path <- "KWB-documents_2020617_with-abstracts.txt"
-  readr::guess_encoding(bib_txt_path)
-  bib_txt_utf8 <- kwb.fakin::read_lines(bib_txt_path, encoding = "UTF-8", fileEncoding = "UTF-8-BOM")
-  
-  starts <- which(startsWith(bib_txt_utf8, "@"))
-  
-  bib_txt_utf8_path <- "KWB_documents_utf-8.txt"
-  
-  write_lines(bib_txt_utf8, bib_txt_utf8_path, fileEncoding = "UTF-8")  
-  
-  
-  encoding = "UTF-8"
-  
-  # contents <- lapply(starts[-1L], function(i) {
-  #   
-  #   print(i)
-  #   
-  #   write_lines(bib_txt_utf8[seq_len(i-1)], bib_txt_utf8_path, fileEncoding = "UTF-8")  
-  # 
-  #   try(RefManageR::ReadBib(bib_txt_utf8_path, .Encoding = encoding, check = FALSE))
-  # })
-  
-  
-  # for(i in starts[-1L]) {
-  #   
-  #   print(bib_txt_utf8[i])
-  #   
-  #   write_lines(bib_txt_utf8[seq_len(i-1)], bib_txt_utf8_path, fileEncoding = "UTF-8")  
-  #   
-  #   try(RefManageR::ReadBib(bib_txt_utf8_path, .Encoding = encoding, check = FALSE))
-  # }
-  
-  #readr::write_lines(bib_txt_utf8, bib_txt_utf8_path)
-  
-  bib_txt_latin1 <- kwb.fakin::read_lines(bib_txt_path, encoding = "latin1", fileEncoding = "UTF-8-BOM")
-  bib_txt_latin1_path <- "KWB_documents_20190709_latin1.txt"
-  write_lines(text = bib_txt_latin1, bib_txt_latin1_path, "latin1")
-  
-  ### Import all (same cannot due to parsing errors:
-  ### "The name list field author cannot be parsed"
-  encoding = "latin1"
-  kwb_bib_all <- RefManageR::ReadBib(bib_txt_latin1_path, 
-                                     .Encoding = encoding,
-                                     check = FALSE)
-  
-  ris("KWB-documents_2020617_RefMan-RIS_Export.txt")
-  
-  
-  tmp <- lapply(kwb_bib_all, function(x) try(capture.output(x))) 
-  
-  is_simple_error <- function(x) inherits(x, "simpleError")
-  
-  is_error <- sapply(lapply(tmp , function(x) attr(x,"condition")), 
-                     is_simple_error)
-  
-  bib_errors_txt <- gsub(pattern = ".*:\\s+\n\\s+", replacement = "", x = unlist(tmp[is_error]))
-  stringr::str_extract(bib_errors_txt, "^RN[0-9]{1,4}")
-  bib_errors_df <- tibble::tibble("endnote_record-number" = stringr::str_extract(bib_errors_txt, "^RN[0-9]{1,4}") %>%  
-                                    stringr::str_remove("RN") %>%  as.integer(),
-                                  error_text = stringr::str_extract(bib_errors_txt, pattern = "A bibentry.*")) %>% 
-    dplyr::arrange(.data$`endnote_record-number`)
-  
-  ## Not working as not all required data are provided for the references
-  # RefManageR::WriteBib(kwb_bib_all, file = "temp.bib", biblatex = TRUE)
-  
-  kwb_bib_all_df <- as.data.frame(kwb_bib_all)
-  
-  nrow(kwb_bib_all_df)
-  
-  
-  check_technical_report <- function(bib_df,
-                                     default_institution = "Kompetenzzentrum Wasser Berlin gGmbH") { 
-    
-    
-    idx_TechReport <- which(bib_df$bibtype == "TechReport")
-    
-    if(length(idx_TechReport)>0) {
-      print(sprintf("Replacing  missing 'institution' %d entries for 'TechnicalReport'
-with %s", length(idx_TechReport), default_institution))
-      no_institution_idx <- is.na(bib_df$institution[idx_TechReport]) 
-      bib_df$institution[idx_TechReport] <- default_institution 
-      
-    } else {
-      "No missing entries for 'institution' for 'TechnicalReport'"  
-    }
-    
-    bib_df
-  }
-  
-  ## filter out conference reports in "Misc" or "Unpublished" not exported correctply
-  # kwb_bib_valid_df_noMisc_unpublished <-  kwb_bib_valid_df[!kwb_bib_valid_df$bibtype %in% c("Misc", "Unpublished"),] 
-  # kwb_bib_valid_df_noMisc_unpublished[kwb_bib_valid_df_noMisc_unpublished$bibtype == "PhdThesis",]
-  # nrow(kwb_bib_valid_df_noMisc_unpublished)                       
-  # 
-  # 
-  # RefManageR::WriteBib(RefManageR::as.BibEntry(kwb_bib_valid_df_noMisc_unpublished),
-  #                      file = "publications_kwb.bib") 
-  
-  
-  selection <- stringr::str_detect(kwb_bib_valid_df$month, pattern = "[0-9]{4}-[0-1][0-9]-[0-3][0-9]") & !is.na(kwb_bib_valid_df$month)
-  
-  kwb_bib_valid_df$month[selection] <- format(as.Date(kwb_bib_valid_df$month[selection]), format = "%m")
-  
-  RefManageR::WriteBib(RefManageR::as.BibEntry(kwb_bib_valid_df),
-                       file = "publications_kwb.bib")
+ 
+
+
 }

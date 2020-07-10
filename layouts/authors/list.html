@@ -1,0 +1,75 @@
+{{- define "main" -}}
+
+{{/* Author profile page. */}}
+
+{{/* If an account has not been created for this user, just display their name as the title. */}}
+{{ if not .File }}
+<div class="universal-wrapper pt-3">
+  <h1>{{ .Title }}</h1>
+</div>
+{{ end }}
+
+<section id="profile-page" class="pt-5">
+  <div class="container">
+    {{/* Show the About widget if an account exists for this user. */}}
+	{{ $author := .Title}}
+	{{ if .File }}
+      {{ $widget := "widgets/about.html" }}
+	  {{ $author = (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
+	  {{ $params := dict "root" $ "page" . "author" $author}}
+      {{ partial $widget $params }}
+    {{end}}
+
+    <div class="article-widget content-widget-hr">
+	{{ $items := where (where site.RegularPages "Type" "post") ".Params.authors" "intersect" (slice $author) }}
+    {{ $pubs_len := len $items }}
+    {{ if ge $pubs_len 1 }}
+        <h2>{{ (i18n "posts") }}</h2>
+        {{ range $items }}
+          {{ if eq site.Params.projects.post_view 1 }}
+            {{ partial "li_list" . }}
+          {{ else if eq site.Params.projects.post_view 3 }}
+            {{ partial "li_card" . }}
+          {{ else }}
+            {{ partial "li_compact" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+	{{ $items := where (where site.RegularPages "Type" "publication") ".Params.authors" "intersect" (slice $author) }}
+    {{ $pubs_len := len $items }}
+    {{ if ge $pubs_len 1 }}
+        <h2>{{ (i18n "publications") }}</h2>
+        {{ range $items}}
+          {{ if eq site.Params.projects.publication_view 1 }}
+            {{ partial "li_list" . }}
+          {{ else if eq site.Params.projects.publication_view 3 }}
+            {{ partial "li_card" . }}
+          {{ else if eq site.Params.projects.publication_view 4 }}
+            {{ partial "li_citation" . }}
+          {{ else }}
+            {{ partial "li_compact" . }}
+          {{ end }}
+        {{ end }}
+    {{ end }}
+
+      {{ $items := where (where site.RegularPages "Type" "talk") ".Params.authors" "intersect" (slice $author) }}
+      {{ $talks_len := len $items }}
+      {{ if ge $talks_len 1 }}
+        <h2>{{ (i18n "talks") }}</h2>
+        {{ range $items }}
+          {{ if eq site.Params.projects.talk_view 1 }}
+            {{ partial "li_list" . }}
+          {{ else if eq site.Params.projects.talk_view 3 }}
+            {{ partial "li_card" . }}
+          {{ else }}
+            {{ partial "li_compact" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+	
+    </div>
+  </div>
+</section>
+
+{{- end -}}

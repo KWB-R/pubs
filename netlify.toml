@@ -2,11 +2,15 @@
   publish = "public"
   command = "hugo --gc --minify"
 
+[[plugins]]
+  package = "netlify-plugin-algolia-export"
+
 [context.production.environment]
   HUGO_VERSION = "0.70.0"
   HUGO_ENV = "production"
-  HUGO_BASEURL = "https://kwb.netlify.app/"
+  HUGO_BASEURL = "https://publications.kompetenz-wasser.de/"
   HUGO_ENABLEGITINFO = "true"
+  ALGOLIA_INDEX = "netlify_kwb-pubs"
 
 
 [context.deploy-preview]
