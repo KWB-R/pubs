@@ -1,5 +1,5 @@
 
-remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "never")
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -271,6 +271,10 @@ bib2df::df2bib(reference, file = sprintf("%s/content%spublication/%d/cite.bib",
 })
 
 }
+
+update_citations(bib_df = tmp, lang = "de")
+update_citations(bib_df = tmp, lang = "en")
+
 
 ###############################################################################
 ### Step 2: Import .bibtex file to publications with Python 
