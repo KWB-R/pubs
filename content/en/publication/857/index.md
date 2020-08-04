@@ -6,7 +6,7 @@ authors: [ "matzinger", "riechel", "Petersen, S. O.", "Heinzmann, B.", "Pawlowsk
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: " *In:* Lozán J. L., Grassl H., Jendritzky G., Karbe L. & Reise K. [eds.], Climate Change, Water Supply and Sanitation. Risk assessment, management, mitigation and reduction. IWA Publishing. London"
+publication: " *In:* Hulsmann A., Grützmacher G., van den Berg G., Rauch W., Jensen A. L., Popovych V., Mazzola M. R., Vamvakeridou-Lyroudia L. S. & Savic D. A. [eds.], Climate Change, Water Supply and Sanitation. Risk assessment, management, mitigation and reduction. IWA Publishing. London"
 projects: ["prepared"]
 ---
 
