@@ -31,6 +31,7 @@
       {{- $pub_types := partial "functions/get_pub_types" $ -}}
       {{- range $index, $pubtype := .Params.publication_types -}}
       {{- $pub_type_name := index $pub_types (int .) -}}
+      {{- end -}}
     {{- end -}}
    
     {{/* Correct the title and URL for author profile pages. */}}
