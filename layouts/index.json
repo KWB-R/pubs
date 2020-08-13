@@ -31,7 +31,7 @@
     {{- $pub_type_name := "" -}}
     {{- if .Params.publication_types -}}
       {{- $pub_type_id := int (delimit .Params.publication_types  " ") -}}
-      {{- $pub_type_name := $pub_types ( $pub_type_id) -}}
+      {{- $pub_type_name := index $pub_types ( $pub_type_id) -}}
     {{- end -}}
     
     {{/* Correct the title and URL for author profile pages. */}}
