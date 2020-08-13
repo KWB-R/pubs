@@ -25,7 +25,7 @@
     {{- $rel_permalink := .RelPermalink -}}
     {{- $permalink := .Permalink -}}
     {{- $pub_types := partial "functions/get_pub_types" $ }}
-    {{- $pub_type index $pub_types (int .) }}
+    {{- $pub_type := index $pub_types (int .) }}
 
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
