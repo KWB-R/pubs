@@ -27,12 +27,12 @@
     
     {{- /* Generate pub types. */ -}}
     {{- if .Params.publication_types -}}
-      {{- $pub_types := partial "functions/get_pub_types" $ }}
+      {{- $pub_types := partial "functions/get_pub_types" $ -}}
       {{- $pub_type_id := int .Params.publication_types -}}
-      {{- $pub_type_name := index $pub_types ($pub_type_id) }}
+      {{- $pub_type_name := index $pub_types ($pub_type_id) -}}
     {{- else -}}
       {{- $pub_type_id := "" -}}
-      {{- $pub_type_name := "" }}
+      {{- $pub_type_name := "" -}}
     {{- end -}}
     
     {{/* Correct the title and URL for author profile pages. */}}
