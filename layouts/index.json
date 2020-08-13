@@ -24,9 +24,17 @@
     {{- $title := .Title}}
     {{- $rel_permalink := .RelPermalink -}}
     {{- $permalink := .Permalink -}}
-    {{- $pub_types := partial "functions/get_pub_types" $ }}
-    {{- $pub_type := index $pub_types (int .) }}
-
+    
+    {{- /* Generate pub types. */ -}}
+    {{- if .Params.publication_types -}}
+      {{- $pub_types := partial "functions/get_pub_types" $ }}
+      {{- $pub_type_id = int .Params.publication_types -}}
+      {{- $pub_type_name := index $pub_types ($pub_type_id) }}
+    {{- else -}}
+      {{- $pub_type_id = "" -}}
+      {{- $pub_type_name := "" }}
+    {{- end -}}
+    
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
       {{- $title = .Params.name -}}
@@ -56,7 +64,7 @@
     {{- end -}}
 
     {{- /* Add page to index. */ -}}
-    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "authors" $authors "kind" .Kind "type" .Type "section" .Section "tags" .Params.Tags "categories" .Params.Categories "projects" .Params.projects "publication" (.Params.publication | markdownify) "pub_type" $pub_type ) -}}
+    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "authors" $authors "kind" .Kind "type" .Type "section" .Section "tags" .Params.Tags "categories" .Params.Categories "projects" .Params.projects "publication" (.Params.publication | markdownify) "pub_type_id" $pub_type_id "pub_type_name" $pub_type_name ) -}}
 
   {{- end -}}
 {{- end -}}
