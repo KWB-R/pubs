@@ -26,10 +26,11 @@
     {{- $permalink := .Permalink -}}
     
     {{- /* Generate pub types. */ -}}
-    {{ if (.Params.publication_types) and (ne (index .Params.publication_types 0) "0") }}
-      {{ $pub_types := partial "functions/get_pub_types" $ }}
-      {{ range $index, $pubtype := .Params.publication_types }}
-      {{ $pub_type_name := index $pub_types (int .) }}
+    {{-  $pub_type_name := "" -}}   
+    {{- if (.Params.publication_types) and (ne (index .Params.publication_types 0) "0") -}}
+      {{- $pub_types := partial "functions/get_pub_types" $ -}}
+      {{- range $index, $pubtype := .Params.publication_types -}}
+      {{- $pub_type_name := index $pub_types (int .) -}}
     {{- end -}}
    
     {{/* Correct the title and URL for author profile pages. */}}
