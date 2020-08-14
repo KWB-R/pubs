@@ -29,7 +29,7 @@
     {{- $pub_type_id := "" -}}
     {{- $pub_type_name := "" -}}   
     {{- $pub_types := partial "functions/get_pub_types" $ -}}
-    {{- if .Params.publication_types "!=" nil -}}
+    {{- if .Params.publication_types -}}
       {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
       {{- $pub_type_name :=  $pub_types (int $pub_type_id) -}}
     {{- end -}}
