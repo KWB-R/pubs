@@ -1,6 +1,6 @@
 {{- /* Generate the search index. */ -}}
 {{- $index := slice -}}
-{{- $pages := (where site.Pages "Type" "publication") -}}
+{{- $pages := (where (where site.Pages "Type" "publication") ".Params.publication_types" "!=" nil) -}}
 {{- range $pages -}}
   {{- /* Do not index drafts or private pages. */ -}}
   {{- if and (not .Draft) (not .Params.private) -}}
