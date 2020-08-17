@@ -22,9 +22,13 @@
     
     {{- /* Generate pub types. */ -}} 
     {{- $pub_types := partial "functions/get_pub_types" $ -}}
-    {{- $pub_type_id := .Params.publication_types -}}
+    {{- $pub_type_id := "" -}}
     {{- $pub_type_name :=  "" -}}
-   
+    {{- if length($shadow) == 1 -}}
+      {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
+      {{- $pub_type_name :=  "" -}}
+   {{- end -}}
+
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
       {{- $title = .Params.name -}}
