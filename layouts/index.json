@@ -25,7 +25,7 @@
     {{- $pub_type_id := "" -}}
     {{- $pub_type_name :=  "" -}}
     {{- $n_pubs := len .Params.publication_types -}}
-    {{- if $n_pubs == 1 -}}
+    {{- if gt $n_pubs 1 -}}
       {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
       {{- $pub_type_name :=  "" -}}
    {{- end -}}
