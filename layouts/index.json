@@ -22,13 +22,8 @@
     
     {{- /* Generate pub types. */ -}} 
     {{- $pub_types := partial "functions/get_pub_types" $ -}}
-    {{- $pub_type_id := "" -}}
-    {{- $pub_type_name :=  "" -}}
-    {{- $n_pubs := len .Params.publication_types -}}
-    {{- if gt $n_pubs 1 -}}
-      {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
-      {{- $pub_type_name :=  "" -}}
-   {{- end -}}
+    {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
+    {{- $pub_type_name :=  .Params.publication_types -}}
 
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
