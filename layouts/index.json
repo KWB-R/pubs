@@ -22,7 +22,7 @@
     
     {{- /* Generate pub types. */ -}} 
     {{- $pub_types := partial "functions/get_pub_types" $ -}}
-    {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
+    {{- $pub_type_id := .Params.publication_types -}}
     {{- $pub_type_name :=  "" -}}
    
     {{/* Correct the title and URL for author profile pages. */}}
