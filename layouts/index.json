@@ -20,14 +20,10 @@
     {{- $rel_permalink := .RelPermalink -}}
     {{- $permalink := .Permalink -}}
     
-    {{- /* Generate pub types. */ -}}
-    {{- $pub_type_id := "" -}}
-    {{- $pub_type_name := "" -}}   
+    {{- /* Generate pub types. */ -}} 
     {{- $pub_types := partial "functions/get_pub_types" $ -}}
-    {{- if .Params.publication_types -}}
-      {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
-      {{- $pub_type_name :=  index $pub_types (int $pub_type_id) -}}
-    {{- end -}}
+    {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
+    {{- $pub_type_name :=  index $pub_types (int $pub_type_id) -}}
    
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
