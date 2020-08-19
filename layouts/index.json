@@ -26,8 +26,8 @@
     {{- $pub_type_name :=  index $pub_types (int $pub_type_id) -}}
     
     {{- $doi := "" -}}
-    {{- with .Params.doi -}}
-      {{- $doi := . -}}
+    {{- if .Params.doi -}}
+      {{- $doi := .Params.doi -}}
     {{- end -}}
     
     {{- $cite_link := "" -}}
