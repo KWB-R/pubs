@@ -24,6 +24,31 @@
     {{- $pub_types := partial "functions/get_pub_types" $ -}}
     {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
     {{- $pub_type_name :=  index $pub_types (int $pub_type_id) -}}
+    
+    {{- $is_list := .is_list -}}
+    
+    {{- $doi := "" -}}
+    {{ with .Params.doi }}
+      {{- $doi := . -}}
+    {{- end -}}
+    
+    {{- $cite_link := "" -}}
+    {{- $cite_name := "" -}}
+    {{- $resource := .Resources.GetMatch "cite.bib" -}}
+    {{- with $resource -}}
+      {{- $cite_link := .RelPermalink -}}
+      {{- $cite_name := i18n "btn_cite" -}}
+    {{- end -}}
+    
+    {{- $pdf := "" -}}
+    {{- $resource := .Resources.GetMatch (printf "%s.pdf" $page.File.ContentBaseName) -}}
+    {{- with $resource -}}
+      {{- $pdf = .RelPermalink -}}
+    {{- else -}}
+      {{- if .Params.url_pdf -}}
+        {{- $pdf = .Params.url_pdf | relURL -}}
+      {{- end -}}
+    {{- end -}}
 
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
@@ -54,7 +79,7 @@
     {{- end -}}
 
     {{- /* Add page to index. */ -}}
-    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "page_type" .Type "page_section" .Section "tags" .Params.Tags "categories" .Params.Categories "project" .Params.projects "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name ) -}}
+    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "page_type" .Type "page_section" .Section "tags" .Params.Tags "categories" .Params.Categories "project" .Params.projects "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "is_list" $is_list "doi" #doi "cite_link" $cite_link "cite_name" #cite_name "pdf" #pdf ) -}}
 
   {{- end -}}
 {{- end -}}
