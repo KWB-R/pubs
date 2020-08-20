@@ -25,8 +25,20 @@
     {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
     {{- $pub_type_name :=  index $pub_types (int $pub_type_id) -}}
     
+    {{ $page := . }}
+    {{ $slug := $page.File.ContentBaseName }}
+    {{ $resource := $page.Resources.GetMatch (printf "%s.pdf" $slug) }}
+
+    {{- $cite_link := "" -}}
+    {{- $cite_name := "" -}}
+    {{ $resource := $page.Resources.GetMatch "cite.bib" }}
+    {{ with $resource }}
+      {{- $cite_link := .RelPermalink -}}
+      {{- $cite_name := i18n "btn_cite" -}}
+    {{ end }}
+
     {{- $doi := "" -}}
-    {{- with .Params.doi -}}
+    {{- with $page.Params.doi -}}
       {{- $doi := . -}}
     {{- end -}}
     
@@ -39,12 +51,12 @@
     {{- end -}}
     
     {{- $pdf := "" -}}
-    {{- $resource := .Resources.GetMatch (printf "%s.pdf" .File.ContentBaseName) -}}
+    {{- $resource := $page.Resources.GetMatch (printf "%s.pdf" .$slug) -}}
     {{- with $resource -}}
       {{- $pdf = .RelPermalink -}}
     {{- else -}}
-      {{- if .Params.url_pdf -}}
-        {{- $pdf = .Params.url_pdf | relURL -}}
+      {{- if $page.Params.url_pdf -}}
+        {{- $pdf = . | relURL -}}
       {{- end -}}
     {{- end -}}
 
