@@ -51,7 +51,7 @@
     {{- end -}}
     
     {{- $pdf := "" -}}
-    {{- $resource := $page.Resources.GetMatch (printf "%s.pdf" .$slug) -}}
+    {{- $resource := $page.Resources.GetMatch (printf "%s.pdf" $slug) -}}
     {{- with $resource -}}
       {{- $pdf = .RelPermalink -}}
     {{- else -}}
