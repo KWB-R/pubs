@@ -25,14 +25,10 @@
     {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
     {{- $pub_type_name :=  index $pub_types (int $pub_type_id) -}}
     
-    {{- $doi := "" -}}
-    {{- if .Params.doi -}}
-      {{- $doi := .Params.doi -}}
-    {{- end -}}
-    
+
     {{- $cite_link := "" -}}
     {{- $cite_name := "" -}}
-    {{- $cite_resource := .Resources.GetMatch "cite.bib" -}}
+    {{- $cite_resource := .Page.Resources.GetMatch "cite.bib" -}}
     {{- with $cite_resource -}}
       {{- $cite_link := .RelPermalink -}}
       {{- $cite_name := i18n "btn_cite" -}}
@@ -77,7 +73,7 @@
     {{- end -}}
 
     {{- /* Add page to index. */ -}}
-    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "page_type" .Type "page_section" .Section "tags" .Params.Tags "categories" .Params.Categories "project" .Params.projects "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "doi" $doi "cite_resource" $cite_resource "cite_link" $cite_link "cite_name" $cite_name "pdf" $pdf ) -}}
+    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "page_type" .Type "page_section" .Section "tags" .Params.Tags "categories" .Params.Categories "project" .Params.projects "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "doi" .Params.doi "cite_resource" $cite_resource "cite_link" $cite_link "cite_name" $cite_name "pdf" $pdf ) -}}
 
   {{- end -}}
 {{- end -}}
