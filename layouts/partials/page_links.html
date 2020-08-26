@@ -61,7 +61,7 @@
 {{ if $page.Params.projects }}
 {{ range $page.Params.projects }}
   {{ with (site.GetPage (printf "project/%s" .)) }}
-  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ .RelPermalink }}">
+  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://ehjih.csb.app/search/?projects={{.}}">
     {{ i18n "btn_project" }}
   </a>
   {{ else }}
@@ -71,7 +71,7 @@
 {{ else }}
 {{ with $page.Params.url_project }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ . }}" target="_blank" rel="noopener">
-  {{ i18n "btn_project" }}
+  {{ i18n "btn_project" }}: {{.}}
 </a>
 {{ end }}
 {{ end }}
