@@ -9,7 +9,7 @@
     {{- if gt $index 0 }}, {{ end -}}
     <span>
       {{- if and $profile_page $link_authors -}}
-        <a href="https://ehjih.csb.app/search/?authors={{.Params.name}}">{{$name}}</a>
+        <a href="https://ehjih.csb.app/search/?authors={{$name}}">{{$name}}</a>
       {{- else -}}
         {{$name}}
       {{- end -}}
