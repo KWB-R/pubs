@@ -61,7 +61,7 @@
 {{ if $page.Params.projects }}
 {{ range $page.Params.projects }}
   {{ with . }}
-  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://ehjih.csb.app/search/?projects={{.}}">
+  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://ehjih.csb.app/search/?project={{.}}">
     {{ i18n "btn_project" }}: {{.}}
   </a>
   {{ else }}
