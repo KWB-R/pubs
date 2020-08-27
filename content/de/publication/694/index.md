@@ -7,6 +7,6 @@ publication_types: ["0"]
 abstract: "Energy and resource recovery from raw municipal wastewater is a pre-requisite for an efficient and sustainable wastewater treatment in the future. This paper evaluates several processes for upgrading existing wastewater treatment plants or new concepts towards energy positive and resource efficient wastewater treatment in their life-cyle impacts on the energy balance. In addition, future challenges for integrating both energy and resource recovery in wastewater treatment schemes are identified and discussed."
 featured: false
 publication: " p 4 *In:* 2nd IWA Specialized International Conference ecoSTP2014: EcoTechnologies for Wastewater Treatment. Verona, Italy. 23-25 June 2014"
-projects: ["carismo,  codigreen,  htc-berlin"]
+projects: ["carismo", "codigreen", "htc-berlin"]
 ---
 

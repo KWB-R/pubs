@@ -7,6 +7,6 @@ publication_types: ["0"]
 abstract: ""
 featured: false
 publication: " p 15 *In:* Wallingford Software International User Conference. Howbery Park, Oxfordshire, England. 14. -15.9.2005"
-projects: ["ism,  eva"]
+projects: ["ism", "eva"]
 ---
 
