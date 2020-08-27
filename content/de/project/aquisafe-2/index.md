@@ -6,7 +6,7 @@ summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:07:50+02:00
+date: 2020-08-27T14:59:58+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Zurück zur Projektseite
+- name: Projektseite
   url: https://kompetenz-wasser.de/de/project/aquisafe-2
   icon_pack: fas
   icon: home

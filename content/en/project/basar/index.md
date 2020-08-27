@@ -6,7 +6,7 @@ summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:08:06+02:00
+date: 2020-08-27T14:59:58+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Back to Project Website
+- name: Project Website
   url: https://kompetenz-wasser.de/en/project/basar
   icon_pack: fas
   icon: home

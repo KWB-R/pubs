@@ -6,7 +6,7 @@ summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:14:24+02:00
+date: 2020-08-27T15:00:27+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Zurück zur Projektseite
+- name: Projektseite
   url: https://kompetenz-wasser.de/de/project/smart-plant
   icon_pack: fas
   icon: home

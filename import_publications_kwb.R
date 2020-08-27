@@ -89,9 +89,9 @@ get_project_md <- function(project_id,
                            hugo_root_dir = ".") {
   
   link_name <- if(lang == "en") {
-    "Back to Project Website"
+    "Project Website"
   } else {
-    "Zur\u00FCck zur Projektseite"
+    "Projektseite"
   }
   md_path <- sprintf("%s/content%sproject/%s/index.md",
         hugo_root_dir, 
@@ -126,14 +126,14 @@ get_projects_md <- function(project_ids_site,
 }
 
 
-add_backlinks_to_projects(projects,
+add_backlinks_to_projects <- function(projects,
                           encoding = "UTF-8",
                           dbg = TRUE) {
   sapply(seq_len(nrow(projects)), function(i) {
     project <- projects[i,]
     if (!is.na(project$md_path)) {
       kwb.utils::catAndRun(
-        messageText = sprintf("Adding backlink to project: %s",
+        messageText = sprintf("Project: %s",
                               project$md_path),
         expr = {
           proj_md <- readLines(project$md_path, encoding = encoding)
@@ -151,7 +151,7 @@ add_backlinks_to_projects(projects,
             proj_md[line_url_code:length(proj_md)]
           )
           
-          kwb.pubs::write_lines(
+          kwb.pubs:::write_lines(
             text = proj_md_new,
             file = project$md_path,
             fileEncoding = encoding
@@ -162,11 +162,6 @@ add_backlinks_to_projects(projects,
     }
     )
 }
-
-project_ids_site <- get_project_ids_site()
-projects <- get_projects_md(project_ids_site)
-add_backlinks_to_projects(projects)
-
 
 
 site <- tibble::tibble(project_ids = project_ids_site)
@@ -184,7 +179,7 @@ ids_all <- dplyr::full_join(site, dms) %>%
   dplyr::left_join(site1) %>%  
   dplyr::left_join(dms1) 
 
-all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
+all_projects <- ids_all[!ids_all$project_ids %in% c("ism\reva", "carismo\rcodigreen\rhtc-berlin", "ogre\rflusshygiene", "prepared\rwsstp", "reef2w-2"),]
 all_projects$project_ids
 
 fs::dir_delete(path = "content/de/project/")
@@ -194,6 +189,9 @@ kwb.pubs::create_projects(all_projects$project_ids)
 fs::dir_copy(path = "content/de/project", "content/en/project", overwrite = TRUE)
 
 ### to do: add "links" to KWB project factsheets (add in R package kwb.pubs)
+project_ids_site <- get_project_ids_site()
+projects <- get_projects_md(project_ids_site)
+add_backlinks_to_projects(projects)
 
 
 
