@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Seis-2016-1200.pdf"
+url_pdf: "/pdf/Seis-2016-1200.pdf"
 projects: ["wwv"]
 ---
 

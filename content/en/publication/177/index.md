@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Schroeder-2007-177.pdf"
+url_pdf: "/pdf/Schroeder-2007-177.pdf"
 projects: ["spree2011"]
 ---
 

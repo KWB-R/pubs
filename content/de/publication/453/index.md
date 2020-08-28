@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Umweltbundesamt"
-url_pdf: "../../../pdf/López-Pila-2006-453.pdf"
+url_pdf: "/pdf/López-Pila-2006-453.pdf"
 projects: ["nasri"]
 ---
 

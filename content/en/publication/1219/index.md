@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Technische Universität Berlin, Technische Universität Kaiserslautern, Kompetenzzentrum Wasser Berlin gGmbH, Berliner Wasserbetriebe, Institut fu¨r Automation und Kommunikation e. V. Magdeburg"
-url_pdf: "../../../pdf/Rouault-2016-1219.pdf"
+url_pdf: "/pdf/Rouault-2016-1219.pdf"
 projects: ["kuras"]
 ---
 

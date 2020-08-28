@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "KWR Water Research Institute"
-url_pdf: "../../../pdf/Remy-2015-826.pdf"
+url_pdf: "/pdf/Remy-2015-826.pdf"
 projects: ["demeau"]
 ---
 

@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Schwarzmüller-2012-1240.pdf"
+url_pdf: "/pdf/Schwarzmüller-2012-1240.pdf"
 projects: ["wellma-1"]
 ---
 

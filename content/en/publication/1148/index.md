@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Schuster-2006-1148.pdf"
+url_pdf: "/pdf/Schuster-2006-1148.pdf"
 projects: ["rkm"]
 ---
 

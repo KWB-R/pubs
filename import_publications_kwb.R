@@ -233,7 +233,7 @@ fs::file_copy(path = public_reports$urls_pdf01,
 
 tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%  
   dplyr::mutate(URL = ifelse(!is.na(.data$urls_pdf01), 
-                             sprintf("../../../pdf/%s", basename(.data$urls_pdf01)),
+                             sprintf("/pdf/%s", basename(.data$urls_pdf01)),
                              NA_character_)) %>%  
   dplyr::select(- .data$en_id, - .data$urls_pdf01)
 
@@ -253,7 +253,7 @@ fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
 fs::dir_delete(path = list.dirs("content/en/publication/")[-1])
 
 
-tmp$URL <- stringr::str_replace_all(tmp$URL, "../../../", "https://publications.kompetenz-wasser.de/")
+tmp$URL <- sprintf("https://publications.kompetenz-wasser.de%s", tmp$URL)
 
 
 update_citations <- function(bib_df, 

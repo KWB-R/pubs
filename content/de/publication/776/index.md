@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Schubert-2014-776.pdf"
+url_pdf: "/pdf/Schubert-2014-776.pdf"
 projects: ["abluft"]
 ---
 

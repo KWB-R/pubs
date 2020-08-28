@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Riechel-2017-1029.pdf"
+url_pdf: "/pdf/Riechel-2017-1029.pdf"
 projects: ["sema-berlin-1"]
 ---
 

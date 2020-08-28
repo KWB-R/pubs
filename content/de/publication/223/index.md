@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "DR. SCHUMACHER Ingenieurbüro für Wasser und Umwelt"
-url_pdf: "../../../pdf/Leszinski-2009-223.pdf"
+url_pdf: "/pdf/Leszinski-2009-223.pdf"
 projects: ["sam-cso"]
 ---
 
