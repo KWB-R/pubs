@@ -43,6 +43,8 @@
         {{- $pdf = .Params.url_pdf | relURL -}}
       {{- end -}}
     {{- end -}}
+    
+   {{- $project_btn := i18n "btn_project" }}
 
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
@@ -73,7 +75,7 @@
     {{- end -}}
 
     {{- /* Add page to index. */ -}}
-    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "page_type" .Type "page_section" .Section "tags" .Params.Tags "categories" .Params.Categories "project" .Params.projects "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "doi" .Params.doi "cite_link" $cite_link "cite_name" $cite_name "pdf" $pdf ) -}}
+    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "page_type" .Type "page_section" .Section "tags" .Params.Tags "categories" .Params.Categories "project" .Params.projects "project_btn" #project_btn "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "doi" .Params.doi "cite_link" $cite_link "cite_name" $cite_name "pdf" $pdf ) -}}
 
   {{- end -}}
 {{- end -}}
