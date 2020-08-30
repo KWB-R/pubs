@@ -147,6 +147,15 @@
 - id: date
   translation: Date
 
+- id: year
+  translation: Year
+
+- id: author
+  translation: Author
+
+- id: project
+  translation: Project
+
 - id: last_updated
   translation: Last updated on
 
