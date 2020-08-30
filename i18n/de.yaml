@@ -78,6 +78,12 @@
   translation: Typ
 - id: date
   translation: Datum
+- id: year
+  translation: Jahr
+- id: author
+  translation: Autor
+- id: project
+  translation: Projekt
 - id: last_updated
   translation: Zuletzt aktualisiert am
 - id: event
