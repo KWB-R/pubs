@@ -229,6 +229,15 @@
 - id: search_no_results
   translation: No results found
 
+- id: search_hits_per_page
+  translation: hits per page
+
+- id: search_show_less
+  translation: Show less
+
+- id: search_show_more
+  translation: Show more
+
 # Error 404
 
 - id: page_not_found
