@@ -271,7 +271,7 @@ search.addWidgets([
             abstract_id +
             '">' + 
             i18n.abstract +
-            '</a><div id="' +
+            '</button><div id="' +
             abstract_id +
             '" class="collapse show multi-collapse pubs-abstract">' +
             data._highlightResult.summary.value +
