@@ -209,7 +209,7 @@ search.addWidgets([
             '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
             base_url +
             data.pdf +
-            '">' +
+            '" target="_blank" rel="noopener">' +
 			'PDF' + 
 			'</a>';
         }
