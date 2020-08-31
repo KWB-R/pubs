@@ -169,6 +169,10 @@ add_backlinks_to_projects <- function(projects,
     )
 }
 
+projects_metadata <- kwb.site::clean_projects("https://kwb-r.github.io/kwb.site/projects_de.json")
+
+prj <- tibble::tibble(project_ids = stringr::str_remove(projects_metadata$url, "https://www.kompetenz-wasser.de/de/project/") %>%  stringr::str_remove("/"), 
+              shortname = projects_metadata$id)
 
 site <- tibble::tibble(project_ids = project_ids_site)
 site1 <- cbind(site, source_website = "yes")
@@ -183,7 +187,8 @@ dms1 <- cbind(dms, source_dms = "yes")
 ids_all <- dplyr::full_join(site, dms) %>%
   dplyr::arrange(project_ids) %>%  
   dplyr::left_join(site1) %>%  
-  dplyr::left_join(dms1) 
+  dplyr::left_join(dms1) %>% 
+  dplyr::left_join(prj)
 
 all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
 all_projects$project_ids
