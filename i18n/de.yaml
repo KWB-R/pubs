@@ -128,6 +128,12 @@
   translation: Suchergebnisse
 - id: search_no_results
   translation: Nichts gefunden
+- id: search_hits_per_page
+  translation: Treffer pro Seite
+- id: search_show_less
+  translation: Zeige weniger
+- id: search_show_more
+  translation: Zeige mehr
 - id: page_not_found
   translation: Seite nicht gefunden
 - id: 404_recommendations

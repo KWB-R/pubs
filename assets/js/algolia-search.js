@@ -1,8 +1,17 @@
+const showMoreText = 
+        '{{#isShowingMore}}' +
+        i18n.show_less +
+        '{{/isShowingMore}}' +
+        '{{^isShowingMore}}' +
+        i18n.show_more +
+        '{{/isShowingMore}}';
+
 const router = instantsearch.routers.history({
   createURL({ qsModule, routeState, location }) {
-    const urlParts = location.href.match(/^(.*?)\/search/);
-    const baseUrl = `${urlParts ? urlParts[1] : ''}/`;
-
+    /*const urlParts = location.href.match(/^(.*?)\/search/);*/
+    /*const urlParts = location.href.match(/^(.*\/de\/publication\/)/search/);*/
+    /*const baseUrl = `${urlParts ? urlParts[1] : ''}/`;*/
+    const baseUrl = url_publication;
     const queryParameters = {};
 
     if (routeState.query) {
@@ -29,7 +38,7 @@ const router = instantsearch.routers.history({
       arrayFormat: 'repeat',
     });
 
-    return `${baseUrl}search${queryString}`;
+    return `${baseUrl}${queryString}`;
   },
 
   parseURL({ qsModule, location }) {
@@ -127,9 +136,13 @@ search.addWidgets([
   }),
   instantsearch.widgets.searchBox({
     container: '#searchbox',
+    placeholder: i18n.placeholder,
   }),
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
+    templates: {
+    resetLabel: 'Filter zurücksetzen',
+  },
   }),
   instantsearch.widgets.refinementList({
     container: '#pubs-list',
@@ -142,6 +155,9 @@ search.addWidgets([
     sortBy: ['name:desc'],
     showMore: true,
     limit: 5,
+    templates: {
+    showMoreText: showMoreText,
+    }
   }),
   instantsearch.widgets.refinementList({
     container: '#author-list',
@@ -151,6 +167,10 @@ search.addWidgets([
     showMore: true,
     limit: 5,
     searchable: true,
+    searchablePlaceholder: i18n.placeholder,
+    templates: {
+    showMoreText: showMoreText,
+    }
   }),
   instantsearch.widgets.refinementList({
     container: '#project-list',
@@ -159,22 +179,26 @@ search.addWidgets([
     showMore: true,
     limit: 5,
     searchable: true,
+    searchablePlaceholder: i18n.placeholder,
+    templates: {
+    showMoreText: showMoreText,
+    },
   }),
   instantsearch.widgets.hitsPerPage({
     container: '#hits-per-page',
     items: [
-      { label: '5 hits per page', value: 5, default: true },
-      { label: '10 hits per page', value: 10 },
-      { label: '20 hits per page', value: 20 },
+      { label: '5 ' + i18n.hits_per_page, value: 5, default: true },
+      { label: '10 ' + i18n.hits_per_page, value: 10 },
+      { label: '20 ' + i18n.hits_per_page, value: 20 },
     ],
   }),
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
       empty: `<div>
-      <p>No results have been found for {{ query }}</p>
-      <a role="button" href=".">Clear all filters</a>
-    </div>`,
+      <p>Keine Suchergebnisse für: {{ query }}</p>
+      <a role="button" href="/de/publication/">Filter zurücksetzen</a>
+      </div>`,
       item: function (data) {
         const base_url = '';
         const abstract_id = 'abstract-' + data.__hitIndex + 1;
@@ -201,7 +225,7 @@ search.addWidgets([
           base_url +
           data.cite_link +
           '">' +
-          data.cite_name +
+          i18n.btn_cite +
           '</button>';
         let pdf = '';
         if (data.pdf !== '') {
@@ -209,8 +233,8 @@ search.addWidgets([
             '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
             base_url +
             data.pdf +
-            '">' +
-			'PDF' + 
+            '" target="_blank" rel="noopener">' +
+			i18n.btn_pdf + 
 			'</a>';
         }
         let doi = '';
@@ -245,11 +269,13 @@ search.addWidgets([
             publication +
             '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#' +
             abstract_id +
-            '">Abstract</a><div id="' +
+            '">' + 
+            i18n.abstract +
+            '</a><div id="' +
             abstract_id +
-            '" class="collapse show multi-collapse">' +
+            '" class="collapse show multi-collapse pubs-abstract">' +
             data._highlightResult.summary.value +
-            '</div'
+            '</div>'
           );
         }
       },
