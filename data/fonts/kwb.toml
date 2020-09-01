@@ -2,10 +2,10 @@
 name = "kwb"
 
 # Optional Google font URL
-google_fonts = "Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono"
+google_fonts = "Open+Sans:400|Roboto+Slab:400|Source+Sans+Pro:400|Roboto+Mono"
 
 # Font families
-heading_font = "Montserrat"
-body_font = "Roboto"
-nav_font = "Roboto"
+heading_font = "Roboto Slab"
+body_font = "Source Sans Pro"
+nav_font = "Open Sans"
 mono_font = "Roboto Mono"
