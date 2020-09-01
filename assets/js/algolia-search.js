@@ -276,9 +276,9 @@ search.addWidgets([
             i18n.abstract +
             '</button>'
 		}
-        const links = '<p>' + cite + doi + pdf + project + '</p>';
+        const links = '<p style="margin-bottom: 5px;">' + cite + doi + pdf + project + '</p>';
         const publication =
-          '<div class="pub-list-item" style="margin-bottom: 1rem">' +
+          '<div class="pub-list-item" style="margin-bottom: 5px;">' +
           '<i class="far fa-file-alt pub-icon" aria-hidden="true"></i>' +
           '<span class="article-metadata li-cite-author">' +
           authors +
