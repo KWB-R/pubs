@@ -4,8 +4,11 @@
 }
 
 .ais-SearchBox {
+  float: "left";
+  width: 98%;
+  margin-left: 0em; 
   margin-top: 0.5em;
-  padding: 0.3
+  padding: 0.3em;
 }
 
 
@@ -20,15 +23,13 @@
 
 .left-panel {
   float: left;
-  width: 250px;
+  margin-left: 1rem;
+  width: 240px;
 }
 
-.middle-panel {
-  margin-left: 260px;
-}
 
 .right-panel {
-  margin-left: 260px;
+  margin-left: 270px;
 }
 
 .hits-panel {
@@ -37,7 +38,9 @@
 }
 
 .ais-InstantSearch {
-  max-width: 1200px;
+  float: "left";
+  margin-left: 1rem;
+  width: calc(100% - 1rem);
   overflow: hidden;
   margin: 0 auto;
 }
@@ -75,10 +78,11 @@
 }
 
 .ais-Hits-item, .ais-InfiniteHits-item, .ais-InfiniteResults-item, .ais-Results-item {
-    margin-bottom: 0em;
+    margin-bottom: 0rem;
     margin-top: 0rem;
     margin-left: 1rem;
-    padding: 1rem;
+    padding: 0.6rem;
+    padding-bottom: 0.3rem;
     width: calc(100% - 1rem);
     border: 1px solid #c4c8d8;
     box-shadow: 0 2px 5px 0 #e3e5ec;
