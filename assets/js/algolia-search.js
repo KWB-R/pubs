@@ -6,6 +6,8 @@ const showMoreText =
         i18n.show_more +
         '{{/isShowingMore}}';
 
+const css_showmore = 'btn btn-outline-primary';
+
 const router = instantsearch.routers.history({
   createURL({ qsModule, routeState, location }) {
     /*const urlParts = location.href.match(/^(.*?)\/search/);*/
@@ -138,6 +140,17 @@ search.addWidgets([
     container: '#searchbox',
     placeholder: i18n.placeholder,
   }),
+  instantsearch.widgets.stats({
+  container: '#stats',
+  templates: {
+      text: `
+      {{#hasNoResults}}Keine Ergebnisse{{/hasNoResults}}
+      {{#hasOneResult}}1 Ergebnis{{/hasOneResult}}
+      {{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} Ergebnisse{{/hasManyResults}}
+      gefunden in {{processingTimeMS}}ms
+    `,
+	},
+  }),
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
     templates: {
@@ -157,7 +170,10 @@ search.addWidgets([
     limit: 5,
     templates: {
     showMoreText: showMoreText,
-    }
+    },
+	cssClasses: {
+        showMore: css_showmore
+      },
   }),
   instantsearch.widgets.refinementList({
     container: '#author-list',
@@ -170,7 +186,10 @@ search.addWidgets([
     searchablePlaceholder: i18n.placeholder,
     templates: {
     showMoreText: showMoreText,
-    }
+    },
+	cssClasses: {
+        showMore: css_showmore
+      },
   }),
   instantsearch.widgets.refinementList({
     container: '#project-list',
@@ -182,6 +201,9 @@ search.addWidgets([
     searchablePlaceholder: i18n.placeholder,
     templates: {
     showMoreText: showMoreText,
+    },
+    cssClasses: {
+     showMore: css_showmore
     },
   }),
   instantsearch.widgets.hitsPerPage({
@@ -245,6 +267,15 @@ search.addWidgets([
             data.doi +
             '">DOI</a>';
         }
+		let abstract = '';
+		if (data.summary !== '') {
+		  abstract += 
+		  '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#' +
+            abstract_id +
+            '">' + 
+            i18n.abstract +
+            '</button>'
+		}
         const links = '<p>' + cite + doi + pdf + project + '</p>';
         const publication =
           '<div class="pub-list-item" style="margin-bottom: 1rem">' +
@@ -267,13 +298,10 @@ search.addWidgets([
         } else {
           return (
             publication +
-            '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#' +
+			abstract +
+            '<div id="' +
             abstract_id +
-            '">' + 
-            i18n.abstract +
-            '</a><div id="' +
-            abstract_id +
-            '" class="collapse show multi-collapse pubs-abstract">' +
+            '" class="collapse show multi-collapse">' +
             data._highlightResult.summary.value +
             '</div>'
           );
