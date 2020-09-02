@@ -41,10 +41,10 @@ local_business_type = ""
 
 # Organization name (optional)
 # Enter an organization or project name. Defaults to the site title from `config.toml`.
-org_name = ""
+org_name = "Kompetenzzentrum Wasser Berlin gGmbH"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = ""
+description = "Publications Published by Researchers Working at Kompetenzzentrum Wasser Berlin gGmbH."
 
 ############################
 ## Site Features
