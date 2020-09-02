@@ -60,9 +60,9 @@
 {{ end }}
 {{ if $page.Params.projects }}
 {{ range $page.Params.projects }}
-  {{ with (site.GetPage (printf "project/%s" .)) }}
-  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ .RelPermalink }}">
-    {{ i18n "btn_project" }}
+  {{ with . }}
+  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href='{{"publication/"| relLangURL }}?project={{.}}'>
+    {{ i18n "btn_project" }}: {{.}}
   </a>
   {{ else }}
     {{/* errorf "The `projects` parameter in `content/%s` references a project file, `content/project/%s`, which cannot be found. Please either set `projects = []` or fix the reference." $page.File.Path . */}}
@@ -71,7 +71,7 @@
 {{ else }}
 {{ with $page.Params.url_project }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ . }}" target="_blank" rel="noopener">
-  {{ i18n "btn_project" }}
+  {{ i18n "btn_project" }}: {{.}}
 </a>
 {{ end }}
 {{ end }}

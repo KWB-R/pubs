@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: "Soil aquifer treatment (SAT) is one of the most promising water reclamation and storage techniques in water reuse. This document summarizes the experiences gained in two full scale sites (Shafdan and El Port de la Selva) focused on overcoming the barriers associated with this low-cost technology."
 featured: false
 publication: "Mekorot"
-url_pdf: "../../../pdf/Zietzschmann-2017-1014.pdf"
+url_pdf: "/pdf/Zietzschmann-2017-1014.pdf"
 projects: ["demoware"]
 ---
 

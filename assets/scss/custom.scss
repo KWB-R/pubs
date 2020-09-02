@@ -1,0 +1,116 @@
+// Override this file to add your own SCSS styling.
+.ais-ClearRefinements {
+  margin: 0.5em 0;
+}
+
+.ais-SearchBox {
+  float: "left";
+  width: 98%;
+  margin-left: 0em; 
+  margin-top: 0.5em;
+  padding: 0.3em;
+}
+
+
+.ais-Stats{
+  margin-top: 0em;
+  margin-bottom: 0em;
+
+}
+.ais-Pagination {
+  margin-top: 1em;
+}
+
+.left-panel {
+  float: left;
+  margin-left: 1rem;
+  width: 240px;
+}
+
+
+.right-panel {
+  margin-left: 270px;
+}
+
+.hits-panel {
+  float: right;
+  width: 100px;
+}
+
+.ais-InstantSearch {
+  float: "left";
+  margin-left: 1rem;
+  width: calc(100% - 1rem);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.ais-Pagination-link {
+    color: #fff;
+    background-color: #007CA0;
+    border-color: #007CA0;
+}
+
+.search-top {
+ width: 100%;
+ height: 80px;
+ margin-right: 0%;
+ margin-top: 0.5em;
+ padding: 0px;
+}
+
+
+.full-width {
+ width: 100%;
+}
+.box1 {
+ float: left;
+}
+.box2 {
+ float: left;
+}
+.box3 {
+ float: right;
+}
+
+.ais-PoweredBy {
+ float: "left";
+}
+
+.ais-PoweredBy-logo {
+ width: 70%;
+ margin-top: 0.3rem;
+ margin-left: 0.5rem;
+}
+
+
+.ais-HitsPerPage {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  float: right;
+}
+
+.ais-Hits-item, .ais-InfiniteHits-item, .ais-InfiniteResults-item, .ais-Results-item {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    margin-left: 1rem;
+    padding: 0.6rem;
+    padding-bottom: 0.3rem;
+    width: calc(100% - 1rem);
+    border: 1px solid #c4c8d8;
+    box-shadow: 0 2px 5px 0 #e3e5ec;
+}
+
+.ais-Hits-item img {
+  margin-right: 1em;
+}
+
+.hit-name {
+  margin-bottom: 0.5em;
+}
+
+.hit-description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}

@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Miehe-2011-454.pdf"
+url_pdf: "/pdf/Miehe-2011-454.pdf"
 projects: ["oxired-2"]
 ---
 

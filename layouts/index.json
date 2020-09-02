@@ -1,0 +1,83 @@
+{{- /* Generate the search index. */ -}}
+{{- $index := slice -}}
+{{- $pages := (where (where site.Pages "Type" "publication") ".Params.publication_types" "!=" nil) -}}
+{{- range $pages -}}
+  {{- /* Do not index drafts or private pages. */ -}}
+  {{- if and (not .Draft) (not .Params.private) -}}
+
+    {{- /* Generate page description. */ -}}
+    {{- $desc := "" -}}
+    {{- if .Params.summary -}}
+      {{- $desc = .Params.summary -}}
+    {{- else if .Params.abstract -}}
+      {{- $desc = .Params.abstract -}}
+    {{- else -}}
+      {{- $desc = .Summary -}}
+    {{- end -}}
+
+    {{- $authors := .Params.authors -}}
+    {{- $title := .Title}}
+    {{- $rel_permalink := .RelPermalink -}}
+    {{- $permalink := .Permalink -}}
+    
+    {{- /* Generate pub types. */ -}} 
+    {{- $pub_types := partial "functions/get_pub_types" $ -}}
+    {{- $pub_type_id := (delimit .Params.publication_types ", " ) -}}
+    {{- $pub_type_name :=  index $pub_types (int $pub_type_id) -}}
+    
+
+    {{- $cite_link := "" -}}
+    {{- $cite_name := "" -}}
+    {{- $cite_resource := .Resources.GetMatch "cite.bib" -}}
+    {{- with $cite_resource -}}
+      {{- $cite_link = .RelPermalink -}}
+      {{- $cite_name = i18n "btn_cite" -}}
+    {{- end -}}
+    
+    {{- $pdf := "" -}}
+    {{- $resource := .Resources.GetMatch (printf "%s.pdf" .File.ContentBaseName) -}}
+    {{- with $resource -}}
+      {{- $pdf = .RelPermalink -}}
+    {{- else -}}
+      {{- if .Params.url_pdf -}}
+        {{- $pdf = .Params.url_pdf | relURL -}}
+      {{- end -}}
+    {{- end -}}
+    
+   {{- $project_btn := i18n "btn_project" }}
+
+    {{/* Correct the title and URL for author profile pages. */}}
+    {{- if eq .Section "authors" -}}
+      {{- $title = .Params.name -}}
+      {{- $username := path.Base (path.Split .Path).Dir -}}
+      {{- with site.GetPage (printf "/authors/%s" $username) -}}
+        {{- $permalink = .Permalink -}}
+        {{- $rel_permalink = .RelPermalink -}}
+      {{- end -}}
+    {{- else -}}
+      {{/* Include a user's display name rather than username where possible. */}}
+      {{- if .Params.authors -}}
+        {{- $authorLen := len .Params.authors -}}
+        {{- if gt $authorLen 0 -}}
+          {{- $authors = slice -}}
+            {{- range $k, $v := .Params.authors -}}
+              {{- $person_page_path := (printf "/authors/%s" (urlize $v)) -}}
+              {{- $person_page := site.GetPage $person_page_path -}}
+              {{- if and $person_page $person_page.File -}}
+                {{- $person := $person_page.Params -}}
+                {{- $authors = $authors | append $person.name -}}
+              {{- else -}}
+                {{- $authors = $authors | append ($v | plainify) -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- /* Add page to index. */ -}}
+    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "tags" .Params.Tags  "project" .Params.projects "project_btn" $project_btn "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "doi" .Params.doi "cite_link" $cite_link "cite_name" $cite_name "pdf" $pdf ) -}}
+
+  {{- end -}}
+{{- end -}}
+
+{{- $index | jsonify -}}

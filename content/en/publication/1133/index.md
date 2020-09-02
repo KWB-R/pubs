@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH, UBATH, EURECAT"
-url_pdf: "../../../pdf/Kleyböcker-2019-1133.pdf"
+url_pdf: "/pdf/Kleyböcker-2019-1133.pdf"
 projects: ["nextgen"]
 ---
 

@@ -1,5 +1,5 @@
 
-remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.pubs@clean", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -19,17 +19,23 @@ kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
 ## Fix avatars for "newcomers" (with own photos, where default values for 
 ## cropping were not a good choice!)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "habibi",],
-                             x_off = 300, width = 380, height = 480)
+                             x_off = 300, width = 380, height = 480,
+                             overwrite = TRUE)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "toutian",],
-                             x_off = 360, y_off = 40, width = 300, height = 400)
+                             x_off = 360, y_off = 40, width = 300, height = 400, 
+                             overwrite = TRUE)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "rose",],
-                             x_off = 290, y_off = 10, width = 380, height = 400)
+                             x_off = 290, y_off = 10, width = 380, height = 400,
+                             overwrite = TRUE)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "knoche",],
-                             x_off = 100)
+                             x_off = 100,
+                             overwrite = TRUE)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "conzelmann",],
-                             x_off = 230, y_off = 40, height = 250)
+                             x_off = 230, y_off = 40, height = 250,
+                             overwrite = TRUE)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "rabe",],
-                             width = 500, x_off = 150, y_off = 0, height = 500)
+                             width = 500, x_off = 150, y_off = 0, height = 500,
+                             overwrite = TRUE)
 
 
 fs::dir_delete(path = "content/en/authors")
@@ -89,9 +95,9 @@ get_project_md <- function(project_id,
                            hugo_root_dir = ".") {
   
   link_name <- if(lang == "en") {
-    "Back to Project Website"
+    "Project Website"
   } else {
-    "Zur\u00FCck zur Projektseite"
+    "Projektseite"
   }
   md_path <- sprintf("%s/content%sproject/%s/index.md",
         hugo_root_dir, 
@@ -126,7 +132,7 @@ get_projects_md <- function(project_ids_site,
 }
 
 
-add_backlinks_to_projects(projects,
+add_backlinks_to_projects <- function(projects,
                           encoding = "UTF-8",
                           dbg = TRUE) {
   sapply(seq_len(nrow(projects)), function(i) {
@@ -163,11 +169,10 @@ add_backlinks_to_projects(projects,
     )
 }
 
-project_ids_site <- get_project_ids_site()
-projects <- get_projects_md(project_ids_site)
-add_backlinks_to_projects(projects)
+projects_metadata <- kwb.site::clean_projects("https://kwb-r.github.io/kwb.site/projects_de.json")
 
-
+prj <- tibble::tibble(project_ids = stringr::str_remove(projects_metadata$url, "https://www.kompetenz-wasser.de/de/project/") %>%  stringr::str_remove("/"), 
+              shortname = projects_metadata$id)
 
 site <- tibble::tibble(project_ids = project_ids_site)
 site1 <- cbind(site, source_website = "yes")
@@ -182,7 +187,8 @@ dms1 <- cbind(dms, source_dms = "yes")
 ids_all <- dplyr::full_join(site, dms) %>%
   dplyr::arrange(project_ids) %>%  
   dplyr::left_join(site1) %>%  
-  dplyr::left_join(dms1) 
+  dplyr::left_join(dms1) %>% 
+  dplyr::left_join(prj)
 
 all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
 all_projects$project_ids
@@ -194,7 +200,9 @@ kwb.pubs::create_projects(all_projects$project_ids)
 fs::dir_copy(path = "content/de/project", "content/en/project", overwrite = TRUE)
 
 ### to do: add "links" to KWB project factsheets (add in R package kwb.pubs)
-
+project_ids_site <- get_project_ids_site()
+projects <- get_projects_md(project_ids_site)
+add_backlinks_to_projects(projects)
 
 
 readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
@@ -233,7 +241,7 @@ fs::file_copy(path = public_reports$urls_pdf01,
 
 tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%  
   dplyr::mutate(URL = ifelse(!is.na(.data$urls_pdf01), 
-                             sprintf("../../../pdf/%s", basename(.data$urls_pdf01)),
+                             sprintf("/pdf/%s", basename(.data$urls_pdf01)),
                              NA_character_)) %>%  
   dplyr::select(- .data$en_id, - .data$urls_pdf01)
 
@@ -253,7 +261,7 @@ fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
 fs::dir_delete(path = list.dirs("content/en/publication/")[-1])
 
 
-tmp$URL <- stringr::str_replace_all(tmp$URL, "../../../", "https://publications.kompetenz-wasser.de/")
+tmp$URL <- sprintf("https://publications.kompetenz-wasser.de%s", tmp$URL)
 
 
 update_citations <- function(bib_df, 
@@ -294,15 +302,15 @@ reticulate::use_python(python_path)
 env <- "academic"
 
 #reticulate::conda_create(envname = env)#,conda = conda_path)
-reticulate::use_condaenv(env,conda_path)
+reticulate::use_condaenv(env, conda_path)
 
 ### Install required Python library "academic" 
 ### for details see:
 # browseURL("https://github.com/sourcethemes/academic-admin")
 
-#reticulate::py_install(packages = "academic", 
-#                       envname = env, 
-#                       pip = TRUE, pip_ignore_installed = TRUE) 
+# reticulate::py_install(packages = "academic", 
+#                        envname = env, 
+#                        pip = TRUE, pip_ignore_installed = TRUE) 
 # Manually replace with own modification: 
 # https://github.com/mrustl/academic-admin/commit/ea5c6a23d5b8cb482c2dd5afe15e71c1a049afbe
 # (re-mapping pub_id = "0" -> "proceedings" and "9" -> "misc")
@@ -350,9 +358,10 @@ tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) {
 
 tmp$id <- as.numeric(stringr::str_extract(tmp$BIBTEXKEY,
                                           pattern = "[0-9]+"))
-saveRDS(tmp, "publications_kwb.Rds")
 
 
+
+fs::dir_copy("content/publication", "content/de/publication")
 pub_md_paths <- kwb.pubs::get_publication_index_md_paths(lang = "de")
 
 
@@ -397,7 +406,7 @@ en_refs$publication <- sprintf("\"%s\"", en_refs$publication)
 
 kwb.pubs::replace_dates_in_pub_index_md(md_paths = pub_md_paths, 
                                         endnote_db_refs = en_refs)
-kwb.pubs::replace_publishDates_in_pub_index_md(md_paths = pub_md_paths, 
+kwb.pubs::replace_publishdates_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
 kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
@@ -412,9 +421,9 @@ fs::dir_copy(sdir[i], tdir[i], overwrite = TRUE)
 }
 fs::dir_delete(path = sdir)
 
-fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
+#fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
 fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
-fs::dir_delete(path = "content/epublication")
+fs::dir_delete(path = "content/publication")
 
 if (FALSE) {
 

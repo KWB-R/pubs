@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Umwelt- und Ingenieurtechnik GmbH Dresden"
-url_pdf: "../../../pdf/Kalka-2011-452.pdf"
+url_pdf: "/pdf/Kalka-2011-452.pdf"
 projects: ["oxired-2"]
 ---
 

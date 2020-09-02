@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "ENEA"
-url_pdf: "../../../pdf/Müller-2018-1088.pdf"
+url_pdf: "/pdf/Müller-2018-1088.pdf"
 projects: ["reef2w"]
 ---
 

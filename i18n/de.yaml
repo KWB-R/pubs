@@ -33,7 +33,7 @@
 - id: btn_dataset
   translation: Datensatz
 - id: btn_project
-  translation: Projekt
+  translation: Projektpublikationen
 - id: btn_poster
   translation: Poster
 - id: btn_source
@@ -72,12 +72,20 @@
   translation: Termin vereinbaren
 - id: abstract
   translation: Zusammenfassung
+- id: abstracts
+  translation: Zusammenfassungen
 - id: publication
   translation: Publikation
 - id: publication_type
   translation: Typ
 - id: date
   translation: Datum
+- id: year
+  translation: Jahr
+- id: author
+  translation: Autor
+- id: project
+  translation: Projekt
 - id: last_updated
   translation: Zuletzt aktualisiert am
 - id: event
@@ -119,9 +127,23 @@
 - id: search_placeholder
   translation: Suche...
 - id: search_results
-  translation: Suchergebnisse
+  translation: Publikationen
+- id: search_found_in
+  translation: gefunden in
 - id: search_no_results
-  translation: Nichts gefunden
+  translation: Keine Publikationen
+- id: search_for
+  translation: für
+- id: search_one_result
+  translation: Eine Publikation
+- id: search_hits_per_page
+  translation: Treffer pro Seite
+- id: search_show_less
+  translation: Zeige weniger
+- id: search_show_more
+  translation: Zeige mehr
+- id: search_reset_filters
+  translation: Filter zurücksetzen
 - id: page_not_found
   translation: Seite nicht gefunden
 - id: 404_recommendations

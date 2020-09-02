@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Technische Universität Berlin"
-url_pdf: "../../../pdf/Jekel-2006-439.pdf"
+url_pdf: "/pdf/Jekel-2006-439.pdf"
 projects: ["nasri"]
 ---
 

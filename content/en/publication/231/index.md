@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Rouault-2008-231.pdf"
+url_pdf: "/pdf/Rouault-2008-231.pdf"
 projects: ["eva"]
 ---
 

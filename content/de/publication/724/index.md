@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Thomas-2013-724.pdf"
+url_pdf: "/pdf/Thomas-2013-724.pdf"
 projects: ["cosma"]
 ---
 

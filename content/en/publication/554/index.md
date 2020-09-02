@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Technische Universität Braunschweig"
-url_pdf: "../../../pdf/Klein-2012-554.pdf"
+url_pdf: "/pdf/Klein-2012-554.pdf"
 projects: ["codigreen"]
 ---
 

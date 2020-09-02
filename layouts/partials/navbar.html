@@ -1,12 +1,9 @@
 {{ $current_page := . }}
 
 {{/* Get site logo. */}}
-{{ $show_logo := site.Params.main_menu.show_logo | default true }}
-{{ $has_logo := fileExists "assets/images/logo.png" | or (fileExists "assets/images/logo.svg") }}
-{{ $logo := "" }}
-{{ if $has_logo }}
-  {{ $logo = (partial "functions/get_logo" (dict "constraint" "max_height" "size" 25)) }}
-{{ end }}
+{{ $logo := "/img/logo.png" }}
+{{ $show_logo := true}}
+{{ $has_logo := true}}
 
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
@@ -15,7 +12,7 @@
     <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="https://kompetenz-wasser.de{{ "/" | relLangURL }}">
         {{- if $has_logo -}}
-          <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}">
+          <img src="{{ $logo }}" alt="{{ site.Title }}" style="max-width:62.5%;">
         {{- else -}}
           {{- site.Title -}}
         {{- end -}}
@@ -34,7 +31,7 @@
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
       <a class="navbar-brand" href="https://kompetenz-wasser.de{{ "/" | relLangURL }}">
       {{- if $has_logo -}}
-        <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}">
+        <img src="{{ $logo }}" alt="{{ site.Title }}" style="max-width:62.5%;">
       {{- else -}}
         {{- site.Title -}}
       {{- end -}}
@@ -124,12 +121,6 @@
     </div><!-- /.navbar-collapse -->
 
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-      {{ if site.Params.search.engine }}
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
-      {{ end }}
-
       {{ if site.Params.day_night }}
       <li class="nav-item dropdown theme-dropdown">
         <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">

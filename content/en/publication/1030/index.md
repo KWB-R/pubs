@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Wicke-2017-1030.pdf"
+url_pdf: "/pdf/Wicke-2017-1030.pdf"
 projects: ["sema-berlin-1"]
 ---
 

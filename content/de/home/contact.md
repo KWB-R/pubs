@@ -4,7 +4,7 @@ headless = true
 widget = "contact"  # Do not modify this line!
 active = true  # Activate this widget? true/false
 
-title = "Contact"
+title = "Kontakt"
 subtitle = ""
 
 # Order that this section will appear in.
