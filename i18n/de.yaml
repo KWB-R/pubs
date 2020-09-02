@@ -127,15 +127,15 @@
 - id: search_placeholder
   translation: Suche...
 - id: search_results
-  translation: Suchergebnisse
+  translation: Publikationen
 - id: search_found_in
   translation: gefunden in
 - id: search_no_results
-  translation: Nichts gefunden
+  translation: Keine Publikationen
 - id: search_for
   translation: für
 - id: search_one_result
-  translation: Ein Suchergebnis gefunden
+  translation: Eine Publikation
 - id: search_hits_per_page
   translation: Treffer pro Seite
 - id: search_show_less
