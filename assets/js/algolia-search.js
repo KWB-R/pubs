@@ -6,6 +6,7 @@ const showMoreText =
         i18n.show_more +
         '{{/isShowingMore}}';
 
+
 const css_showmore = 'btn btn-outline-primary';
 
 const router = instantsearch.routers.history({
@@ -144,12 +145,12 @@ search.addWidgets([
   container: '#stats',
   templates: {
       text: `
-      {{#hasNoResults}} {{i18n.no_results}} {{/hasNoResults}}
-      {{#hasOneResult}} {{i18n.one_result}} {{/hasOneResult}}
-  {{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} {{i18n.results}} {{/hasManyResults}}
-		  {{i18n.found_in}} {{processingTimeMS}}ms
+      {{#hasNoResults}}No results{{/hasNoResults}}
+      {{#hasOneResult}}1 result{{/hasOneResult}}
+      {{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} results{{/hasManyResults}}
+      found in {{processingTimeMS}}ms
     `,
-	},
+    },
   }),
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
@@ -223,10 +224,7 @@ search.addWidgets([
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
-      empty: `<div>
-      <p>{{i18n.no_results}} {i18n.for}: {{ query }}</p>
-      <a role="button" href={{url_publication}}>{{i18n.reset_filters}}</a>
-      </div>`,
+      empty: '<div><p>' + i18n.no_results + ' ' + i18n.for + ':' + '</p><a role="button" href="' + url_publication + '">' + i18n.reset_filters + '</a></div>',
       item: function (data) {
         const base_url = '';
         const abstract_id = 'abstract-' + data.__hitIndex + 1;
