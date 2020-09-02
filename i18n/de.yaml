@@ -72,6 +72,8 @@
   translation: Termin vereinbaren
 - id: abstract
   translation: Zusammenfassung
+- id: abstracts
+  translation: Zusammenfassungen
 - id: publication
   translation: Publikation
 - id: publication_type
@@ -126,14 +128,22 @@
   translation: Suche...
 - id: search_results
   translation: Suchergebnisse
+- id: search_found_in
+  translation: gefunden in
 - id: search_no_results
   translation: Nichts gefunden
+- id: search_for
+  translation: für
+- id: search_one_result
+  translation: Ein Suchergebnis gefunden
 - id: search_hits_per_page
   translation: Treffer pro Seite
 - id: search_show_less
   translation: Zeige weniger
 - id: search_show_more
   translation: Zeige mehr
+- id: search_reset_filters
+  translation: Filter zurücksetzen
 - id: page_not_found
   translation: Seite nicht gefunden
 - id: 404_recommendations
