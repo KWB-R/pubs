@@ -52,7 +52,7 @@
     {{/* Configure search engine. */}}
     {{ $min_length := site.Params.search.academic.min_length | default 1 }}
     {{ $threshold := site.Params.search.academic.threshold | default 0.3 }}
-    {{ $search_i18n := dict "placeholder" (i18n "search_placeholder") "results" (i18n "search_results") "no_results" (i18n "search_no_results") "for" (i18n "search_for") "one_result" (i18n "search_one_result") "found_in" (i18n "search_found_in") "hits_per_page" (i18n "search_hits_per_page") "show_more" (i18n "search_show_more") "show_less" (i18n "search_show_less") "hits_per_page" (i18n "search_hits_per_page") "show_more" (i18n "search_show_more") "reset_filters" (i18n "search_reset_filters")"btn_cite" (i18n "btn_cite") "btn_pdf" (i18n "btn_pdf") "abstract" (i18n "abstract") "year" (i18n "year") "author" (i18n "author") "project" (i18n "project") }}
+    {{ $search_i18n := dict "placeholder" (i18n "search_placeholder") "results" (i18n "search_results") "no_results" (i18n "search_no_results") "for" (i18n "search_for") "one_result" (i18n "search_one_result") "found_in" (i18n "search_found_in") "hits_per_page" (i18n "search_hits_per_page") "show_more" (i18n "search_show_more") "show_less" (i18n "search_show_less") "hits_per_page" (i18n "search_hits_per_page") "show_more" (i18n "search_show_more") "reset_filters" (i18n "search_reset_filters") "btn_cite" (i18n "btn_cite") "btn_pdf" (i18n "btn_pdf") "abstract" (i18n "abstract") "year" (i18n "year") "author" (i18n "author") "project" (i18n "project") }}
     {{ $search_config := dict "indexURI" ("/index.json" | relLangURL) "threshold" $threshold "minLength" $min_length }}
     <script>
       const search_config = {{ $search_config | jsonify | safeJS }};
