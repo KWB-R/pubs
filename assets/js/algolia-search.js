@@ -134,6 +134,9 @@ search.addWidgets([
       /*  help needed: add code for Matomo  (https://developer.matomo.org/guides/tracking-javascript-guide)*/
     },
   }),
+  instantsearch.widgets.poweredBy({
+  container: '#powered-by',
+  }),
   instantsearch.widgets.currentRefinements({
     container: '#current-refinements',
   }),
@@ -147,7 +150,7 @@ search.addWidgets([
       text: '{{#hasNoResults}}' + i18n.no_results + '{{/hasNoResults}}' +
       '{{#hasOneResult}}' + i18n.one_result + '{{/hasOneResult}}' +
       '{{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}}' + ' ' + i18n.results + 
-      '{{/hasManyResults}}' + ' ' + i18n.found_in + ' ' + '{{processingTimeMS}}ms',
+      '{{/hasManyResults}}' + ' ' + i18n.found_in + ' ' + '{{processingTimeMS}}ms. ',
     },
   }),
   instantsearch.widgets.clearRefinements({
