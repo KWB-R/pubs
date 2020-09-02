@@ -7,7 +7,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 10  # Order that this section will appear.
 
-title = "Recent Publications"
+title = "Aktuelle Publikationen"
 subtitle = ""
 
 [content]
@@ -67,6 +67,6 @@ subtitle = ""
 +++
 
 {{% alert note %}}
-Quickly discover relevant content by [filtering publications]({{< ref "/publication/_index.md" >}}).
+Finden Sie schnell relevante Inhalte durch das [Filtern aller Publikationen]({{< ref "/publication/_index.md" >}}).
 {{% /alert %}}
 

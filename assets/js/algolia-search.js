@@ -144,17 +144,17 @@ search.addWidgets([
   container: '#stats',
   templates: {
       text: `
-      {{#hasNoResults}}Keine Ergebnisse{{/hasNoResults}}
-      {{#hasOneResult}}1 Ergebnis{{/hasOneResult}}
-      {{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} Ergebnisse{{/hasManyResults}}
-      gefunden in {{processingTimeMS}}ms
+      {{#hasNoResults}} {{i18n.no_results}} {{/hasNoResults}}
+      {{#hasOneResult}} {{i18n.one_result}} {{/hasOneResult}}
+  {{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} {{i18n.results}} {{/hasManyResults}}
+		  {{i18n.found_in}} {{processingTimeMS}}ms
     `,
 	},
   }),
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
     templates: {
-    resetLabel: 'Filter zurücksetzen',
+    resetLabel: i18n.reset_filters,
   },
   }),
   instantsearch.widgets.refinementList({
@@ -209,17 +209,23 @@ search.addWidgets([
   instantsearch.widgets.hitsPerPage({
     container: '#hits-per-page',
     items: [
-      { label: '5 ' + i18n.hits_per_page, value: 5, default: true },
-      { label: '10 ' + i18n.hits_per_page, value: 10 },
-      { label: '20 ' + i18n.hits_per_page, value: 20 },
+      { label: '   5 ' + i18n.hits_per_page, value: 5},
+      { label: '  10 ' + i18n.hits_per_page, value: 10, default: true  },
+      { label: '  25 ' + i18n.hits_per_page, value: 25 },
+      { label: '  50 ' + i18n.hits_per_page, value: 50 },
+      { label: ' 100 ' + i18n.hits_per_page, value: 100 },
+      { label: ' 250 ' + i18n.hits_per_page, value: 250 },
+      { label: ' 500 ' + i18n.hits_per_page, value: 500 },
+      { label: '1000 ' + i18n.hits_per_page, value: 1000 },
+
     ],
   }),
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
       empty: `<div>
-      <p>Keine Suchergebnisse für: {{ query }}</p>
-      <a role="button" href="/de/publication/">Filter zurücksetzen</a>
+      <p>{{i18n.no_results}} {i18n.for}: {{ query }}</p>
+      <a role="button" href={{url_publication}}>{{i18n.reset_filters}}</a>
       </div>`,
       item: function (data) {
         const base_url = '';
@@ -276,9 +282,9 @@ search.addWidgets([
             i18n.abstract +
             '</button>'
 		}
-        const links = '<p>' + cite + doi + pdf + project + '</p>';
+        const links = '<p style="margin-bottom: 5px;">' + cite + doi + pdf + project + '</p>';
         const publication =
-          '<div class="pub-list-item" style="margin-bottom: 1rem">' +
+          '<div class="pub-list-item" style="margin-bottom: 5px;">' +
           '<i class="far fa-file-alt pub-icon" aria-hidden="true"></i>' +
           '<span class="article-metadata li-cite-author">' +
           authors +
@@ -301,7 +307,7 @@ search.addWidgets([
 			abstract +
             '<div id="' +
             abstract_id +
-            '" class="collapse show multi-collapse">' +
+            '" class="collapse show multi-collapse" style="font-size:70%;">' +
             data._highlightResult.summary.value +
             '</div>'
           );
