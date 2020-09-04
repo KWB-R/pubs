@@ -1,5 +1,5 @@
 
-remotes::install_github("kwb-r/kwb.pubs@clean", upgrade = "always")
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -401,6 +401,8 @@ path_en_db <- "../../dms/2020-07-08/KWB-documents_20191205.Data/sdb/sdb.eni"
 contents <- kwb.pubs::read_endnote_db(path_en_db)
 
 en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)
+
+### added "publication" replacement due to https://github.com/KWB-R/kwb.pubs/issues/8
 en_refs$publication <- stringr::str_replace_all(en_refs$publication, pattern = '"', '\\\\"')
 en_refs$publication <- sprintf("\"%s\"", en_refs$publication)
 
@@ -408,6 +410,7 @@ kwb.pubs::replace_dates_in_pub_index_md(md_paths = pub_md_paths,
                                         endnote_db_refs = en_refs)
 kwb.pubs::replace_publishdates_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
+
 kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
 
