@@ -92,10 +92,10 @@
   translation: Veranstaltung
 - id: location
   translation: Ort
-- id: pub_proceedings
-  translation: Konferenzbericht
+- id: pub_code
+  translation: Code
 - id: pub_conf
-  translation: Konferenzpapier
+  translation: Konferenzbeitrag
 - id: pub_journal
   translation: Journalartikel
 - id: pub_preprint

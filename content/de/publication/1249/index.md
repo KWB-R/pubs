@@ -8,7 +8,7 @@ abstract: "Zum Forschungsdatenmanagement zählen alle Aktivitäten, die mit der 
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH [10.2314/KXP:1695269098](https://doi.org/10.2314/KXP:1695269098)"
 url_pdf: "/pdf/Rustler-2019-1249.pdf"
-doi: "10.5281/zenodo.4003441"
+doi: "10.2314/KXP:1695269098"
 projects: ["fakin"]
 ---
 

@@ -168,9 +168,8 @@
 - id: location
   translation: Location
 
-- id: pub_proceedings
-  translation: Conference proceedings
-  
+- id: pub_code
+  translation: Code
 
 - id: pub_conf
   translation: Conference paper

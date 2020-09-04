@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Berlinbeach"
+title: "berlinbeach"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-08-27T14:59:59+02:00
+date: 2020-09-04T12:56:19+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Newfert"
+title: "NEWFERT"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-08-27T15:00:14+02:00
+date: 2020-09-04T12:57:39+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

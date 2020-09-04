@@ -1,5 +1,5 @@
 
-remotes::install_github("kwb-r/kwb.pubs@clean", upgrade = "always")
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -13,9 +13,23 @@ researchers_at_kwb <- ! authors_metadata$lastname %in% c("evel")
  
 authors_metadata <- authors_metadata[researchers_at_kwb,]
 
-kwb.pubs::add_authors_index_md(authors_metadata, overwrite = TRUE)
-kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
+## to do: add argument "lang" to kwb.pubs:::create_author_dir() to specify 
+## "de" / "en" subfolder
+kwb.pubs::add_authors_index_md(authors_metadata[authors_metadata$lastname=="jährig",], 
+                               overwrite = TRUE)
 
+## add "transparent" avatar for jette (to improve "ui")
+avatar_path <- kwb.pubs::add_authors_avatar(authors_metadata[authors_metadata$lastname=="jährig",], 
+                                            overwrite = TRUE)
+
+magick::image_blank(300,300, color = "none") %>%  
+  magick::image_transparent(color="white") %>% 
+  magick::image_write(path = "content/en/authors/jaehrig/avatar.jpg")
+
+fs::file_copy(avatar_path, "./content/de/authors/jaehrig/avatar.jpg")
+fs::file_copy(avatar_path, "./content/en/authors/jaehrig/avatar.jpg")
+fs::dir_delete("./content/authors")
+              
 ## Fix avatars for "newcomers" (with own photos, where default values for 
 ## cropping were not a good choice!)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "habibi",],
@@ -68,8 +82,8 @@ project_ids_site <- get_project_ids_site()
 
 endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
-#endnote_df <- endnote_df[endnote_df$rec_number %in% updated_ids,]
-confidential_pubs_idx <- endnote_df$rec_number[which(endnote_df$caption == "confidential")]
+condition_indices <- which(endnote_df$caption == "confidential" & endnote_df$ref_type_name == "Report")
+confidential_pubs_idx <- endnote_df$rec_number[condition_indices]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
 
@@ -169,6 +183,36 @@ add_backlinks_to_projects <- function(projects,
     )
 }
 
+add_title_to_projects <- add_title_to_projects <- function(projects,
+                                                           encoding = "UTF-8",
+                                                           dbg = TRUE) {
+  sapply(seq_len(nrow(projects)), function(i) {
+    project <- projects[i,]
+    if (!is.na(project$md_path)) {
+      kwb.utils::catAndRun(
+        messageText = sprintf("Adding title to project: %s",
+                              project$md_path),
+        expr = {
+          proj_md <- readLines(project$md_path, encoding = encoding)
+          idx <- grep("^title:", proj_md)
+          proj_md_new <- c(
+            proj_md[seq_len(idx)-1],
+            sprintf('title: "%s"', project$title),
+            proj_md[(idx+1):length(proj_md)]
+          )
+          
+          kwb.pubs::write_lines(
+            text = proj_md_new,
+            file = project$md_path,
+            fileEncoding = encoding
+          )
+        }, dbg = dbg)} else {
+          message(sprintf("No project md file exists for '%s'", project$id))
+        } 
+  }
+  )
+}
+
 projects_metadata <- kwb.site::clean_projects("https://kwb-r.github.io/kwb.site/projects_de.json")
 
 prj <- tibble::tibble(project_ids = stringr::str_remove(projects_metadata$url, "https://www.kompetenz-wasser.de/de/project/") %>%  stringr::str_remove("/"), 
@@ -191,7 +235,8 @@ ids_all <- dplyr::full_join(site, dms) %>%
   dplyr::left_join(prj)
 
 all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
-all_projects$project_ids
+all_projects <- ids_all[!ids_all$project_ids %in% c("ism\reva", "carismo\rcodigreen\rhtc-berlin", "ogre\rflusshygiene", "prepared\rwsstp", "reef2w-2"),]
+readr::write_csv2(all_projects, "project-ids_website_dms.csv",na = "")
 
 fs::dir_delete(path = "content/de/project/")
 fs::dir_delete(path = "content/en/project/")
@@ -200,12 +245,27 @@ kwb.pubs::create_projects(all_projects$project_ids)
 fs::dir_copy(path = "content/de/project", "content/en/project", overwrite = TRUE)
 
 ### to do: add "links" to KWB project factsheets (add in R package kwb.pubs)
-project_ids_site <- get_project_ids_site()
-projects <- get_projects_md(project_ids_site)
+
+## projects on "website"
+project_ids_site <- get_project_ids_site() 
+projects <- get_projects_md(project_ids_site) %>% 
+  dplyr::left_join(all_projects %>%  
+                     dplyr::select(project_ids, shortname) %>%  
+                     dplyr::rename(id = project_ids, title = shortname))
 add_backlinks_to_projects(projects)
+add_title_to_projects(projects)
 
+## projects only in "DMS"
+terms_projects <- kwb.nextcloud::download_files(paths = "/projects/dms/term-lists/TermsListLabelsWebsite.xlsx")
+prj_only_dms <- readxl::read_xlsx(terms_projects) %>% 
+  dplyr::filter(is.na(source_website) & !is.na(source_dms) ) %>% 
+  dplyr::rename(id = project_ids, 
+                title = shortname)
 
-readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
+projects <- get_projects_md(prj_only_dms$id) %>%
+  dplyr::left_join(prj_only_dms)
+add_title_to_projects(projects)
+
 
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
@@ -213,13 +273,13 @@ readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
 options(encoding="UTF-8-BOM")
 tmp <- bib2df::bib2df("KWB-documents_2020708_with-abstracts_caption-label.txt")
 tmp$URL <- NA_character_
-#tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
+tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
 #tmp <- tmp[tmp$en_id %in% updated_ids,]
 tmp <- tmp[order(tmp$en_id),]
-is_public <- is.na(tmp$ACCESS) | tmp$ACCESS == "public"
+is_public <- is.na(tmp$ACCESS) | tmp$ACCESS == "public" 
 tmp$ACCESS[is_public] <- "public"
-tmp <- tmp[is_public,]
+tmp <- tmp[is_public | (tmp$ACCESS == "confidential" & tmp$CATEGORY != "TECHREPORT"),]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
 public_report_ids <- endnote_df$rec_number[is_public_report]
@@ -259,29 +319,6 @@ bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 fs::dir_delete(path = list.dirs("content/publication/"))
 fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
 fs::dir_delete(path = list.dirs("content/en/publication/")[-1])
-
-
-tmp$URL <- sprintf("https://publications.kompetenz-wasser.de%s", tmp$URL)
-
-
-update_citations <- function(bib_df, 
-                             lang = "de",
-                             hugo_root_dir = ".") {
-  
-sapply(seq_len(nrow(bib_df)), function (i) {
-  
-  reference <- bib_df[i, ]
-  
-bib2df::df2bib(reference, file = sprintf("%s/content%spublication/%d/cite.bib", 
-                                    hugo_root_dir,
-                                    ifelse(lang == "", "" , sprintf("/%s/", lang)), 
-                                    reference$en_id) %>% fs::path_abs())
-})
-
-}
-
-update_citations(bib_df = tmp, lang = "de")
-update_citations(bib_df = tmp, lang = "en")
 
 
 ###############################################################################
@@ -361,7 +398,7 @@ tmp$id <- as.numeric(stringr::str_extract(tmp$BIBTEXKEY,
 
 
 
-fs::dir_copy("content/publication", "content/de/publication")
+fs::dir_copy("content/publication", "content/de/")
 pub_md_paths <- kwb.pubs::get_publication_index_md_paths(lang = "de")
 
 
@@ -401,6 +438,8 @@ path_en_db <- "../../dms/2020-07-08/KWB-documents_20191205.Data/sdb/sdb.eni"
 contents <- kwb.pubs::read_endnote_db(path_en_db)
 
 en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)
+
+### added "publication" replacement due to https://github.com/KWB-R/kwb.pubs/issues/8
 en_refs$publication <- stringr::str_replace_all(en_refs$publication, pattern = '"', '\\\\"')
 en_refs$publication <- sprintf("\"%s\"", en_refs$publication)
 
@@ -408,35 +447,43 @@ kwb.pubs::replace_dates_in_pub_index_md(md_paths = pub_md_paths,
                                         endnote_db_refs = en_refs)
 kwb.pubs::replace_publishdates_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
+
 kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
 
-
-sdir <- dirname(kwb.pubs::get_publication_index_md_paths(lang = "de"))
-tdir <- gsub("/rn-", "/", sdir)
-
-for(i in seq_len(length(sdir))) {
-
-fs::dir_copy(sdir[i], tdir[i], overwrite = TRUE)
-}
-fs::dir_delete(path = sdir)
-
-#fs::dir_copy(path = "content/publication", "content/de/publication", overwrite = TRUE)
 fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
 fs::dir_delete(path = "content/publication")
 
+update_citations <- function(bib_df, 
+                             lang = "de",
+                             hugo_root_dir = ".") {
+  
+  sapply(seq_len(nrow(bib_df)), function (i) {
+     
+    reference <- bib_df[i, ]
+    
+    #refs <- reference %>%  dplyr::select(- .data$id)
+    
+    bib2df::df2bib(reference, file = sprintf("%s/content%spublication/%d/cite.bib", 
+                                             hugo_root_dir,
+                                             ifelse(lang == "", "" , sprintf("/%s/", lang)), 
+                                             reference$en_id) %>% fs::path_abs())
+  })
+  
+}
+
+tmp <- bib2df::bib2df("publications_kwb.bib")
+tmp$en_id <- as.integer(tmp$BIBTEXKEY)
+tmp$BIBTEXKEY <- paste0("RN", tmp$BIBTEXKEY)
+tmp$URL <- ifelse(!is.na(tmp$URL),
+                  sprintf("https://publications.kompetenz-wasser.de%s", tmp$URL), 
+                  NA_character_)
+                          
+update_citations(bib_df = tmp, lang = "de")
+update_citations(bib_df = tmp, lang = "en")
+
+
 if (FALSE) {
-
-authors <- unique(unlist(tmp$AUTHOR))
-authors[order(authors)]
-
-
-"https://www.kompetenz-wasser.de/wp-content/uploads/2017/08/cropped-logo-kwb_klein-new.png" %>% 
-magick::image_read() %>% 
-#magick::image_resize(geometry = magick::geometry_size_pixels(width = 200)) %>%  
-magick::image_write(path = "assets/images/logo.png", 
-                    quality = 100, 
-                    format = "png")
 
 
 
