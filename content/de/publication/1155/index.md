@@ -3,7 +3,7 @@ title: "Reduction of non-point source pollution in surface waters – presentati
 date: 2009-01-01
 publishDate: 2020-03-26T10:12:34Z
 authors: [ "matzinger", "Schroeder, K." ]
-publication_types: ["0"]
+publication_types: ["1"]
 abstract: ""
 featured: false
 publication: " *In:* Wasser Berlin, Trinkwassergewinnung und Ressourcenschutz – Aktuelle Forschungsvorhaben des Kompetenzzentrums Wasser Berlin. Berlin. 02. April 2009"

@@ -3,7 +3,7 @@ title: "Räumlich und zeitlich hochaufgelöste Niederschlagsanalyse in Berlin al
 date: 2007-06-14
 publishDate: 2020-03-12T15:13:31Z
 authors: [ "Reimer, E." ]
-publication_types: ["0"]
+publication_types: ["1"]
 abstract: ""
 featured: false
 publication: "NA *In:* Kolloquium der Fachgebiete Wasserwirtschaft und Hydroinformatik, Wasserbau sowie Siedlungswasserwirtschaft der TU Berlin. Berlin. 2007-06-14"

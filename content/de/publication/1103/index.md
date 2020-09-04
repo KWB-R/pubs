@@ -3,7 +3,7 @@ title: "Potenzial von Bilddaten aus sozialen Medien für die urbane Überflutung
 date: 2019-01-01
 publishDate: 2020-05-25T15:14:06Z
 authors: [ "matzinger", "Pilger, M. L.", "Nebauer, M.", "rouault" ]
-publication_types: ["0"]
+publication_types: ["1"]
 abstract: ""
 featured: false
 publication: " p 6 *In:* Aqua Urbanica. Rigi Kaltbad, Switzerland. 9-10 September 2018"

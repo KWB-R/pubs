@@ -3,7 +3,7 @@ title: "EU project DEMEAU (2012-2015) Demonstration of promising technologies to
 date: 2014-02-06
 publishDate: 2020-05-25T12:56:43Z
 authors: [ "Mutz, D.", "remy" ]
-publication_types: ["0"]
+publication_types: ["1"]
 abstract: ""
 featured: false
 publication: " *In:* Life Cycle Assessment Workshop. Montanuniversita¨t Leoben, Austria. 2014-02-06"
