@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Wellma 1"
+title: "WELLMA 1"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-08-27T15:00:30+02:00
+date: 2020-09-04T12:58:58+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

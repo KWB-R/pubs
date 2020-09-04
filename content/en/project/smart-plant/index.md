@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Smart Plant"
+title: "SMART-Plant"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-08-27T15:00:27+02:00
+date: 2020-09-04T12:58:40+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

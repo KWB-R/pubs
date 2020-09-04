@@ -27,7 +27,8 @@ magick::image_blank(300,300, color = "none") %>%
 
 fs::file_copy(avatar_path, "./content/de/authors/jaehrig/avatar.jpg")
 fs::file_copy(avatar_path, "./content/en/authors/jaehrig/avatar.jpg")
-
+fs::dir_delete("./content/authors")
+              
 ## Fix avatars for "newcomers" (with own photos, where default values for 
 ## cropping were not a good choice!)
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "habibi",],
@@ -80,8 +81,8 @@ project_ids_site <- get_project_ids_site()
 
 endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
-#endnote_df <- endnote_df[endnote_df$rec_number %in% updated_ids,]
-confidential_pubs_idx <- endnote_df$rec_number[which(endnote_df$caption == "confidential")]
+condition_indices <- which(endnote_df$caption == "confidential" & endnote_df$ref_type_name == "Report")
+confidential_pubs_idx <- endnote_df$rec_number[condition_indices]
 
 is_public_report <- endnote_df$ref_type_name == "Report" & (endnote_df$caption != "confidential" | is.na(endnote_df$caption))
 
@@ -181,6 +182,36 @@ add_backlinks_to_projects <- function(projects,
     )
 }
 
+add_title_to_projects <- add_title_to_projects <- function(projects,
+                                                           encoding = "UTF-8",
+                                                           dbg = TRUE) {
+  sapply(seq_len(nrow(projects)), function(i) {
+    project <- projects[i,]
+    if (!is.na(project$md_path)) {
+      kwb.utils::catAndRun(
+        messageText = sprintf("Adding title to project: %s",
+                              project$md_path),
+        expr = {
+          proj_md <- readLines(project$md_path, encoding = encoding)
+          idx <- grep("^title:", proj_md)
+          proj_md_new <- c(
+            proj_md[seq_len(idx)-1],
+            sprintf('title: "%s"', project$title),
+            proj_md[(idx+1):length(proj_md)]
+          )
+          
+          kwb.pubs::write_lines(
+            text = proj_md_new,
+            file = project$md_path,
+            fileEncoding = encoding
+          )
+        }, dbg = dbg)} else {
+          message(sprintf("No project md file exists for '%s'", project$id))
+        } 
+  }
+  )
+}
+
 projects_metadata <- kwb.site::clean_projects("https://kwb-r.github.io/kwb.site/projects_de.json")
 
 prj <- tibble::tibble(project_ids = stringr::str_remove(projects_metadata$url, "https://www.kompetenz-wasser.de/de/project/") %>%  stringr::str_remove("/"), 
@@ -203,7 +234,8 @@ ids_all <- dplyr::full_join(site, dms) %>%
   dplyr::left_join(prj)
 
 all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
-all_projects$project_ids
+all_projects <- ids_all[!ids_all$project_ids %in% c("ism\reva", "carismo\rcodigreen\rhtc-berlin", "ogre\rflusshygiene", "prepared\rwsstp", "reef2w-2"),]
+readr::write_csv2(all_projects, "project-ids_website_dms.csv",na = "")
 
 fs::dir_delete(path = "content/de/project/")
 fs::dir_delete(path = "content/en/project/")
@@ -212,12 +244,30 @@ kwb.pubs::create_projects(all_projects$project_ids)
 fs::dir_copy(path = "content/de/project", "content/en/project", overwrite = TRUE)
 
 ### to do: add "links" to KWB project factsheets (add in R package kwb.pubs)
-project_ids_site <- get_project_ids_site()
-projects <- get_projects_md(project_ids_site)
+
+## projects on "website"
+project_ids_site <- get_project_ids_site() 
+projects <- get_projects_md(project_ids_site) %>% 
+  dplyr::left_join(all_projects %>%  
+                     dplyr::select(project_ids, shortname) %>%  
+                     dplyr::rename(id = project_ids, title = shortname))
 add_backlinks_to_projects(projects)
 
+## projects only in "DMS"
+terms_projects <- kwb.nextcloud::download_files(paths = "/projects/dms/term-lists/TermsListLabelsWebsite_3.9.2020.csv.xlsx")
+prj_only_dms <- readxl::read_xlsx(terms_projects) %>% 
+  dplyr::filter(is.na(source_website) & !is.na(source_dms) ) %>% 
+  dplyr::rename(id = project_ids, 
+                title = shortname)
 
-readr::write_csv2(ids_all, "project-ids_website_dms.csv",na = "")
+projects <- projects %>% 
+  dplyr::left_join(prj_only_dms)
+
+
+add_title_to_projects(projects)
+
+
+
 
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"

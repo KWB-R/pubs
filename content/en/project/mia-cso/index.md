@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Mia Cso"
+title: "MIA-CSO"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-08-27T15:00:13+02:00
+date: 2020-09-04T12:57:32+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
