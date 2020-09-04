@@ -13,8 +13,20 @@ researchers_at_kwb <- ! authors_metadata$lastname %in% c("evel")
  
 authors_metadata <- authors_metadata[researchers_at_kwb,]
 
-kwb.pubs::add_authors_index_md(authors_metadata, overwrite = TRUE)
-kwb.pubs::add_authors_avatar(authors_metadata, overwrite = TRUE)
+## to do: add argument "lang" to kwb.pubs:::create_author_dir() to specify 
+## "de" / "en" subfolder
+kwb.pubs::add_authors_index_md(authors_metadata[authors_metadata$lastname=="jährig",], 
+                               overwrite = TRUE)
+
+## add "transparent" avatar for jette (to improve "ui")
+avatar_path <- kwb.pubs::add_authors_avatar(authors_metadata[authors_metadata$lastname=="jährig",], 
+                                            overwrite = TRUE)
+
+magick::image_blank(300,300, color = "none") %>%  
+  magick::image_write(path = avatar_path)
+
+fs::file_copy(avatar_path, "./content/de/authors/jaehrig/avatar.jpg")
+fs::file_copy(avatar_path, "./content/en/authors/jaehrig/avatar.jpg")
 
 ## Fix avatars for "newcomers" (with own photos, where default values for 
 ## cropping were not a good choice!)
