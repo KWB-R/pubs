@@ -229,23 +229,33 @@ search.addWidgets([
       item: function (data) {
         const base_url = '';
         const abstract_id = 'abstract-' + data.__hitIndex + 1;
-        const authors = data._highlightResult.author
-          .map((a) => '<a href="?author=' + a.value + '">' + a.value + '</a>')
-          .join(', ');
+        const authors_link = data.author.map(
+          (a) => '<a href="?author=' + a + '">'
+        );
+        const authors_name = data._highlightResult.author.map(
+          (a) => a.value + '</a>'
+        );
+        const authors = authors_link.map(function (x, i) {
+          return [x, authors_name[i]].join(' ');
+        });
         let project = '';
         if (data.project !== null) {
-          project += data._highlightResult.project
-            .map(
-              (p) =>
-                '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="?project=' +
-                p.value +
-                '">' +
-                data.project_btn +
-                ': ' +
-                p.value +
-                '</a>'
-            )
-            .join('');
+          const project_link = data.project.map(
+            (p) =>
+              '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="?project=' +
+              p +
+              '">' +
+              data.project_btn +
+              ': '
+          );
+          const project_name = data._highlightResult.project.map(
+            (p) => p.value + '</a>'
+          );
+          project += project_link
+            .map(function (x, i) {
+              return [x, project_name[i]].join('');
+            })
+            .join(' ');
         }
         const cite =
           '<button class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal" type="button" data-filename="' +
