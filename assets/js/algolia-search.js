@@ -101,7 +101,7 @@ const stateMapping = {
     // refer to uiState docs for details: https://www.algolia.com/doc/api-reference/widgets/ui-state/js/
     return {
       // eslint-disable-next-line camelcase
-      algolia.index_name: {
+      [algolia.index_name]: {
         query: routeState.query,
         page: routeState.page,
         refinementList: {
