@@ -112,7 +112,7 @@
         index_name: {{ site.Params.search.algolia.de.index_name }},
        };
     </script>
-    {{ if eq site.LanguageCode "en" }}
+    {{ else if eq site.LanguageCode "en" }}
     <script>
       const algolia = {
         app_id: {{ site.Params.search.algolia.en.app_id }},
