@@ -104,7 +104,7 @@
     {{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.algoliasearch.url $js.algoliasearch.version) $js.algoliasearch.sri | safeHTML }}
     {{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.instantsearch.url $js.instantsearch.version) $js.instantsearch.sri | safeHTML }}
     {{ end }}
-    {{ if site.LanguageCode "de" }}
+    {{ if eq site.LanguageCode "de" }}
     <script>
       const algolia = {
         app_id: {{ site.Params.search.algolia.de.app_id }},
@@ -112,8 +112,7 @@
         index_name: {{ site.Params.search.algolia.de.index_name }},
        };
     </script>
-    {{ end }}
-    {{ if site.LanguageCode "en" }}
+    {{ if eq site.LanguageCode "en" }}
     <script>
       const algolia = {
         app_id: {{ site.Params.search.algolia.en.app_id }},
