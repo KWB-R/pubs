@@ -131,7 +131,11 @@ const search = instantsearch({
 search.addWidgets([
   instantsearch.widgets.analytics({
     pushFunction(formattedParameters, state, results) {
-      /*  help needed: add code for Matomo  (https://developer.matomo.org/guides/tracking-javascript-guide)*/
+      window._paq.push([
+        'setDocumentTitle',
+        window.location.pathname + window.location.search,
+      ]);
+      window._paq.push(['trackPageView']);
     },
   }),
   instantsearch.widgets.poweredBy({
