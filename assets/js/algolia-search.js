@@ -284,9 +284,9 @@ search.addWidgets([
         if (data.doi !== null) {
           doi +=
             '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-            base_url +
+            'https://doi.org/' +
             data.doi +
-            '">DOI</a>';
+            '" target="_blank" rel="noopener">DOI</a>';
         }
 		let abstract = '';
 		if (data.summary !== '') {
