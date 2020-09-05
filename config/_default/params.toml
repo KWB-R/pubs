@@ -236,11 +236,15 @@ plugins_js  = []
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
-  [search.algolia]
+  [search.algolia.de]
     app_id = "FUZHRLXPF4"
     api_key = "7fb333226a19b1a7af131612dd428928"
-    index_name = "netlify_kwb-pubs"
-    show_logo = true
+    index_name = "kwb_de_pubs"
+
+  [search.algolia.en]
+    app_id = "FUZHRLXPF4"
+    api_key = "7fb333226a19b1a7af131612dd428928"
+    index_name = "kwb_en_pubs"
 
 ############################
 ## Maps

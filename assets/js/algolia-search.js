@@ -77,21 +77,23 @@ const router = instantsearch.routers.history({
 const stateMapping = {
   stateToRoute(uiState) {
     // refer to uiState docs for details: https://www.algolia.com/doc/api-reference/widgets/ui-state/js/
-    return {
-      query: uiState.pubs_test.query,
-      page: uiState.pubs_test.page,
+    const indexUiState = uiState[algolia.index_name] || {};
+	  
+	return {
+      query: indexUiState.query,
+      page: indexUiState.page,
       type:
-        uiState.pubs_test.refinementList &&
-        uiState.pubs_test.refinementList.type,
+        indexUiState.refinementList &&
+        indexUiState.refinementList.type,
       year:
-        uiState.pubs_test.refinementList &&
-        uiState.pubs_test.refinementList.year,
+        indexUiState.refinementList &&
+        indexUiState.refinementList.year,
       author:
-        uiState.pubs_test.refinementList &&
-        uiState.pubs_test.refinementList.author,
+        indexUiState.refinementList &&
+        indexUiState.refinementList.author,
       project:
-        uiState.pubs_test.refinementList &&
-        uiState.pubs_test.refinementList.project,
+        indexUiState.refinementList &&
+        indexUiState.refinementList.project,
     };
   },
 
@@ -99,7 +101,7 @@ const stateMapping = {
     // refer to uiState docs for details: https://www.algolia.com/doc/api-reference/widgets/ui-state/js/
     return {
       // eslint-disable-next-line camelcase
-      pubs_test: {
+      [algolia.index_name]: {
         query: routeState.query,
         page: routeState.page,
         refinementList: {
@@ -122,8 +124,8 @@ const searchRouting = {
 /* global instantsearch algoliasearch */
 
 const search = instantsearch({
-  indexName: 'pubs_test',
-  searchClient: algoliasearch('FUZHRLXPF4', '7fb333226a19b1a7af131612dd428928'),
+  indexName: algolia.index_name,
+  searchClient: algoliasearch(algolia.app_id, algolia.api_key),
   routing: searchRouting,
   /* https://discourse.algolia.com/t/limit-searches-to-3-characters-or-more-with-instantsearch/8067/2 */
 });
@@ -131,8 +133,14 @@ const search = instantsearch({
 search.addWidgets([
   instantsearch.widgets.analytics({
     pushFunction(formattedParameters, state, results) {
-      /*  help needed: add code for Matomo  (https://developer.matomo.org/guides/tracking-javascript-guide)*/
+      window._paq.push([
+        'setDocumentTitle',
+        window.location.pathname + window.location.search,
+      ]);
+      window._paq.push(['trackPageView']);
     },
+    triggerOnUIInteraction: true,
+    pushPagination: true,
   }),
   instantsearch.widgets.poweredBy({
   container: '#powered-by',
@@ -278,9 +286,9 @@ search.addWidgets([
         if (data.doi !== null) {
           doi +=
             '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-            base_url +
+            'https://doi.org/' +
             data.doi +
-            '">DOI</a>';
+            '" target="_blank" rel="noopener">DOI</a>';
         }
 		let abstract = '';
 		if (data.summary !== '') {
