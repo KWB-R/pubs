@@ -122,8 +122,8 @@ const searchRouting = {
 /* global instantsearch algoliasearch */
 
 const search = instantsearch({
-  indexName: 'pubs_test',
-  searchClient: algoliasearch('FUZHRLXPF4', '7fb333226a19b1a7af131612dd428928'),
+  indexName: algolia.index_name,
+  searchClient: algoliasearch(algolia.app_id, algolia.api_key),
   routing: searchRouting,
   /* https://discourse.algolia.com/t/limit-searches-to-3-characters-or-more-with-instantsearch/8067/2 */
 });
