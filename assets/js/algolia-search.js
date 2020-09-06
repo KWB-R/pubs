@@ -134,8 +134,8 @@ search.addWidgets([
   instantsearch.widgets.analytics({
     pushFunction(formattedParameters, state, results) {
       window._paq.push([
-        'setDocumentTitle',
-        window.location.search,
+        'setPageUrl',
+        url_publication + window.location.search,
       ]);
       window._paq.push(['trackPageView']);
     },
