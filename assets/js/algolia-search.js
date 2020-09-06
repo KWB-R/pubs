@@ -135,7 +135,7 @@ search.addWidgets([
     pushFunction(formattedParameters, state, results) {
       window._paq.push([
         'setDocumentTitle',
-        window.location.pathname + window.location.search,
+        window.location.search,
       ]);
       window._paq.push(['trackPageView']);
     },
