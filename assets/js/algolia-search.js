@@ -137,6 +137,10 @@ search.addWidgets([
         'setCustomUrl',
         url_publication + window.location.search,
       ]);
+      window._paq.push([
+      'setDocumentTitle',
+      url_publication + window.location.search,
+      ]);
       window._paq.push(['trackPageView']);
     },
     triggerOnUIInteraction: true,
