@@ -8,10 +8,12 @@ while getopts "pf:a:k:n:u:" opt; do
     # Environment variables below (except PWD) should be configured
     # in the section 'Build & deploy/Environment variables' of your site in Netlify;
     # Alternatively, the ALGOLIA_INDEX_NAME variable can be defined in the netlify.toml file.
-    index_file="$PWD/$HUGO_INDEX_FILE"
+    de_pubs_index_file="$PWD/$HUGO_DE_PUBS_INDEX_FILE"
+    en_pubs_index_file="$PWD/$HUGO_EN_PUBS_INDEX_FILE"
     app_id="$ALGOLIA_APP_ID"
     admin_api_key="$ALGOLIA_ADMIN_API_KEY"
-    index_name="$ALGOLIA_INDEX_NAME"
+    de_pubs_index_name="$ALGOLIA_DE_PUBS_INDEX_NAME"
+    en_pubs_index_name="$ALGOLIA_EN_PUBS_INDEX_NAME"
     ;;
   # local dev
   f)
@@ -36,8 +38,15 @@ while getopts "pf:a:k:n:u:" opt; do
 done
 
 python algolia/index-upload.py \
-    -f "$index_file" \
+    -f "$de_pubs_index_file" \
     -a "$app_id" \
     -k "$admin_api_key" \
-    -n "$index_name" \
+    -n "$de_pubs_index_name" \
+    -u "$base_url"
+    
+python algolia/index-upload.py \
+    -f "$en_pubs_index_file" \
+    -a "$app_id" \
+    -k "$admin_api_key" \
+    -n "$en_pubs_index_name" \
     -u "$base_url"
