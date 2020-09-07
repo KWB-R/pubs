@@ -17,6 +17,7 @@
 [context.dev.environment]
   HUGO_VERSION = "0.70.0"
   HUGO_ENV = "dev"
+  HUGO_ENABLEGITINFO = "false"
   # Algolia index name needed to run algolia/run-index-upload.sh
   ALGOLIA_INDEX_NAME = "dev_kwb_pubs_de"
 
