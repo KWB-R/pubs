@@ -1,5 +1,6 @@
 
 remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -80,7 +81,7 @@ get_project_ids_site <- function() {
 
 project_ids_site <- get_project_ids_site()
 
-endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200907.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
 condition_indices <- which(endnote_df$caption == "confidential" & endnote_df$ref_type_name == "Report")
 confidential_pubs_idx <- endnote_df$rec_number[condition_indices]
@@ -212,6 +213,8 @@ add_title_to_projects <- add_title_to_projects <- function(projects,
   }
   )
 }
+
+
 
 projects_metadata <- kwb.site::clean_projects("https://kwb-r.github.io/kwb.site/projects_de.json")
 
