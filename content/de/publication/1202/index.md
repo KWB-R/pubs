@@ -7,5 +7,6 @@ publication_types: ["7"]
 abstract: ""
 featured: false
 publication: " Master Thesis. Technischer Umweltschutz. Technische Universität Berlin"
+projects: ["aquanes"]
 ---
 

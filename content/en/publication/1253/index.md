@@ -8,5 +8,6 @@ abstract: "Sustainable urban drainage systems (SUDS) can significantly reduce ru
 featured: false
 publication: " *Journal of Environmental Management* 274 [10.1016/j.jenvman.2020.111207](https://doi.org/10.1016/j.jenvman.2020.111207)"
 doi: "10.1016/j.jenvman.2020.111207"
+projects: ["kuras"]
 ---
 

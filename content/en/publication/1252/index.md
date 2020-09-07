@@ -8,5 +8,6 @@ abstract: "Probabilistic quantitative microbial risk assessment (QMRA) studies d
 featured: false
 publication: " *Water Research* 185: 1-12 [10.1016/j.watres.2020.116202](https://doi.org/10.1016/j.watres.2020.116202)"
 doi: "10.1016/j.watres.2020.116202"
+projects: ["flusshygiene", "demoware"]
 ---
 

@@ -7,5 +7,6 @@ publication_types: ["7"]
 abstract: ""
 featured: false
 publication: " Master Thesis. Humboldt-Universität zu Berlin"
+projects: ["e-vent"]
 ---
 

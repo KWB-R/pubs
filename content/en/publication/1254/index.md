@@ -8,5 +8,6 @@ abstract: "Appropriate collection and disposal of medicine-related waste has bee
 featured: false
 publication: "Finnish Environment Institute (SYKE)"
 url_pdf: "/pdf/Mehtonen_2020_1254.pdf"
+projects: ["cwpharma"]
 ---
 

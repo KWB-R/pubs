@@ -8,5 +8,6 @@ abstract: "Cities worldwide are facing several challenges connected to urbanizat
 featured: false
 publication: " *Sustainability* 12: 1-14 [10.3390/su12155967](https://doi.org/10.3390/su12155967)"
 doi: "10.3390/su12155967"
+projects: ["networks4"]
 ---
 

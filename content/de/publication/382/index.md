@@ -8,5 +8,6 @@ abstract: "Neurotoxic paralytic shellfish poisoning (PSP) toxins, anatoxin-a (AT
 featured: false
 publication: " *Applied and Environmental Microbiology* 76 (4): 1173-1180 [10.1128/AEM.02285-09](https://doi.org/10.1128/AEM.02285-09)"
 doi: "10.1128/AEM.02285-09"
+projects: ["nostotox"]
 ---
 

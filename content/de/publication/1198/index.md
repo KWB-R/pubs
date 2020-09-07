@@ -7,5 +7,6 @@ publication_types: ["7"]
 abstract: ""
 featured: false
 publication: " Bachelor Thesis. Technischer Umweltschutz. Technische Universität Berlin"
+projects: ["e-vent"]
 ---
 

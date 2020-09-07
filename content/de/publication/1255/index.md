@@ -9,5 +9,6 @@ featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH [10.5281/zenodo.4003460](https://doi.org/10.5281/zenodo.4003460)"
 url_pdf: "/pdf/Stapf-2020-1255.pdf"
 doi: "10.5281/zenodo.4003460"
+projects: ["cwpharma"]
 ---
 
