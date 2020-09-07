@@ -1,5 +1,6 @@
 
 remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -80,7 +81,7 @@ get_project_ids_site <- function() {
 
 project_ids_site <- get_project_ids_site()
 
-endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200708.xml")
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200907.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
 condition_indices <- which(endnote_df$caption == "confidential" & endnote_df$ref_type_name == "Report")
 confidential_pubs_idx <- endnote_df$rec_number[condition_indices]
@@ -213,6 +214,8 @@ add_title_to_projects <- add_title_to_projects <- function(projects,
   )
 }
 
+
+
 projects_metadata <- kwb.site::clean_projects("https://kwb-r.github.io/kwb.site/projects_de.json")
 
 prj <- tibble::tibble(project_ids = stringr::str_remove(projects_metadata$url, "https://www.kompetenz-wasser.de/de/project/") %>%  stringr::str_remove("/"), 
@@ -271,7 +274,7 @@ add_title_to_projects(projects)
 ### "The name list field author cannot be parsed"
 #options(encoding="windows-1252")
 options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df("KWB-documents_2020708_with-abstracts_caption-label.txt")
+tmp <- bib2df::bib2df("KWB-documents_2020907_with-abstracts_caption-label_changed-only.txt")
 tmp$URL <- NA_character_
 tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
@@ -287,7 +290,7 @@ public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
 
 
 ### path PDF files of exported Endnote DB (needs to be same as .XML and .txt files!)
-dms_dir <- fs::path_abs("../../dms/2020-07-08/KWB-documents_20191205.Data/PDF")
+dms_dir <- fs::path_abs("../../dms/2020-09-07/KWB-documents_20191205.Data/PDF")
 
 public_reports$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
                                   replacement = dms_dir,
@@ -396,13 +399,13 @@ tmp$hugo_authors <- lapply(tmp$AUTHOR_KWB, function(authors) {
 tmp$id <- as.numeric(stringr::str_extract(tmp$BIBTEXKEY,
                                           pattern = "[0-9]+"))
 
+tmp$id
 
-
-fs::dir_copy("content/publication", "content/de/")
+fs::dir_copy("content/publication", "content/de/publication", overwrite = TRUE)
 pub_md_paths <- kwb.pubs::get_publication_index_md_paths(lang = "de")
 
-
-
+pub_md_paths <- stringr::str_subset(pub_md_paths, pattern = paste(tmp$id, collapse = "|"))
+                     
 replace_kwb_authors_in_pub_index_md <- function (path, 
                                                  file_encoding = "UTF-8",
                                                  dbg = TRUE) {
@@ -434,7 +437,7 @@ sapply(pub_md_paths, function(path) replace_kwb_authors_in_pub_index_md(path))
 
 ### Replace auto-generated publish date with "record_last_modified" (in "UTC")
 
-path_en_db <- "../../dms/2020-07-08/KWB-documents_20191205.Data/sdb/sdb.eni"
+path_en_db <- "../../dms/2020-09-07/KWB-documents_20191205.Data/sdb/sdb.eni"
 contents <- kwb.pubs::read_endnote_db(path_en_db)
 
 en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)

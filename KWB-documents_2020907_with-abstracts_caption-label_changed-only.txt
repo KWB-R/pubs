@@ -1,0 +1,228 @@
+﻿@article{RN382,
+   author = {Ballot, A. and Fastner, J. and Wiedner, C.},
+   title = {Paralytic Shellfish Poisoning Toxin-Producing Cyanobacterium Aphanizomenon gracile in Northeast Germany},
+   journal = {Applied and Environmental Microbiology},
+   volume = {76},
+   number = {4},
+   pages = {1173-1180},
+   DOI = {10.1128/AEM.02285-09},
+   year = {2010},
+   abstract = {Neurotoxic paralytic shellfish poisoning (PSP) toxins, anatoxin-a (ATX), and hepatotoxic cylindrospermopsin (CYN) have been detected in several lakes in northeast Germany during the last 2 decades. They are produced worldwide by members of the nostocalean genera Anabaena, Cylindrospermopsis, and Aphanizomenon. Although no additional sources of PSP toxins and ATX have been identified in German water bodies to date, the observed CYN concentrations cannot be produced solely by Aphanizomenon flos-aquae, the only known CYN producer in Germany. Therefore, we attempted to identify PSP toxin, ATX, and CYN producers by isolating and characterizing 92 Anabaena, Aphanizomenon, and Anabaenopsis strains from five lakes in northeast Germany. In a polyphasic approach, all strains were morphologically and phylogenetically classified and then tested for PSP toxins, ATX, and CYN by liquid chromatography-tandem mass spectrometry (LC-MS/MS) and enzyme-linked immunosorbent assay (ELISA) and screened for the presence of PSP toxin- and CYN-encoding gene fragments. As demonstrated by ELISA and LC-MS, 14 Aphanizomenon gracile strains from Lakes Melang and Scharmützel produced four PSP toxin variants (gonyautoxin 5 [GTX5], decarbamoylsaxitoxin [dcSTX], saxitoxin [STX], and neosaxitoxin [NEO]). GTX5 was the most prevalent PSP toxin variant among the seven strains from Lake Scharmützel, and NEO was the most prevalent among the seven strains from Lake Melang. The sxtA gene, which is part of the saxitoxin gene cluster, was found in the 14 PSP toxin-producing A. gracile strains and in 11 non-PSP toxin-producing Aphanizomenon issatschenkoi, A. flos-aquae, Anabaena planktonica, and Anabaenopsis elenkinii strains. ATX and CYN were not detected in any of the isolated strains. This study is the first confirming the role of A. gracile as a PSP toxin producer in German water bodies.},
+   project = {nostotox},
+   en_type = {Journal Article}
+}
+
+@phdthesis{RN1196,
+   author = {Bethke, M. K. L.},
+   title = {Einsatz von Bodenfiltern zur biologischen Nachbehandlung ozonierten Abwassers},
+   university = {Technische Universität Berlin},
+   school = {Technischer Umweltschutz},
+   type = {Bachelor Thesis},
+   year = {2019},
+   project = {aquanes},
+   en_type = {Thesis}
+}
+
+@phdthesis{RN1197,
+   author = {Blümm, M.},
+   title = {Bio-acidification and phosphorus-recovery potential from mixed excess and primary sludge in sewage treatment plants with biological and chemical phosphours removal.},
+   university = {Technische Universität Berlin},
+   type = {Master Thesis},
+   year = {2019},
+   project = {bephor},
+   en_type = {Thesis}
+}
+
+@conference{RN1186,
+   author = {Caradot, N.},
+   title = {Wie zuverlässig sind Kanalalterungsmodelle},
+   booktitle = {DWA Inspektions- und Sanierungstage},
+   year = {2014},
+   en_type = {Conference Paper}
+}
+
+@phdthesis{RN1198,
+   author = {Fischbacher, A. F.},
+   title = {Inbetriebnahme und Bewertung einer SBR-Pilotanlage zur Behandlung von kommunalem Abwasser mittels granuliertem Belebtschlamm-Verfahren},
+   university = {Technische Universität Berlin},
+   school = {Technischer Umweltschutz},
+   type = {Bachelor Thesis},
+   year = {2019},
+   project = {e-vent},
+   en_type = {Thesis}
+}
+
+@phdthesis{RN1202,
+   author = {Flöter, C.},
+   title = {Kapillare Nanofiltration im Pilotmaßstab zur Aufbereitung von Wasser unterschiedlicher Qualitäten – Untersuchungen hinsichtlich Rückhalt, Reinigungsstrategien, Energieverbrauch und Reinigungskosten},
+   university = {Technische Universität Berlin},
+   school = {Technischer Umweltschutz},
+   type = {Master Thesis},
+   year = {2019},
+   project = {aquanes},
+   en_type = {Thesis}
+}
+
+@techreport{RN1254,
+   author = {Mehtonen, J. and Äystö, L. and Junttila, V. and Perkola, N. and Lehtinen, T. and Bregendahl, J. and Leisk, Ü. and Kõrgmaa, V. and Aarma, P. and Schütz, J. and Stapf, M. and Kublina, A. and Karkovska, I. and Szumska, M. and Bogusz, A. and Kalinowski, R. and Spjuth, S. and Nyhlén, K. and Jakobsson, T. and Suzdalev, S. and Kaskelainen, E.},
+   title = {Good practices for take-back and disposal of unused pharmaceuticals in the Baltic Sea region. Clear Waters from Pharmaceuticals (CWPharma) Activity 4.1 Report},
+   institution = {Finnish Environment Institute (SYKE)},
+   year = {2020},
+   abstract = {Appropriate collection and disposal of medicine-related waste has been identified as one of the main ways to decrease the emission of active pharmaceutical ingredients (APIs) into the environment. Improvement to the take-back and treatment of collected pharmaceutical waste may be considered lowhanging fruit when one is considering measures to reduce API emissions. However, comparable information that would enable estimating the potential impact of these efforts has not been available. Directive 2004/27/EC, related to medicinal products for human use, mandates that EU member states implement appropriate collection schemes for unused or expired human-use medicinal products. However, it does not provide any guidelines on practical implementation of these schemes. Several studies have pointed out significant differences among Member States in this regard. In March 2019, the European Commission published the European Union Strategic Approach to Pharmaceuticals in the Environment. The actions specified therein cover all stages of the pharmaceutical life cycle, from design and production to disposal and waste management. It emphasizes such elements as sharing good practices, co-operating at international level, and improving understanding of the risks. This report is aimed at filling knowledge gaps and proposing good practices for take-back and disposal of unused human and veterinary medicines and other pharmaceutical waste. The report is targeted to e.g. ministries, environment and medicines agencies, supervisory authorities, municipalities, hospitals, NGOs, pharmacists, doctors, and veterinarians. For the report, current national practices for take-back and disposal of unused medicines and other pharmaceutical waste in Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Poland, Russia, and Sweden were evaluated. The pharmaceutical waste originating from households, hospitals and other health care institutions, the pharmaceutical industry, and veterinary use was considered. The proportion of citizens who return unused pharmaceuticals via designated collection points varies greatly between Baltic Sea countries, from about 10% to 70%, with 16–80% disposing of them of as mixed household waste and 3–30% flushing them down the drain. The most commonly cited reason for improper disposal of medicines on households’ part is lack of information about their environmental impacts and how to get rid of them in an environmentally sound manner. Separate collection of unused household pharmaceuticals does not exist in Russia, and the collection mechanism functions poorly in Latvia, Lithuania and Poland. Information on the take-back schemes for unused human medicines is more readily available than is corresponding information on veterinary medicines. We identified, all told, 21 good practices and recommendations for take-back and disposal of unused pharmaceuticals and other pharmaceutical waste and for promoting the rational use of pharmaceuticals in the Baltic Sea region. Nevertheless, implementing them at national level requires particular consideration due to differences in national legislation and other characteristics of the EU Baltic Sea countries and Russia. The good practices identified in this report answer the call issued in the EU strategic approach for an efficient risk-reduction strategy.},
+   project = {cwpharma},
+   access = {public},
+   en_type = {Report}
+}
+
+@phdthesis{RN1205,
+   author = {Oppermann, S.},
+   title = {Beurteilung von Managementmaßnahmen am Berliner Halensee},
+   university = {Technische Universität Berlin},
+   school = {Fakultät III Prozesswissenschaften, Institut für Technischen Umweltschutz, FG Wasserreinhaltung},
+   type = {Diploma Thesis},
+   year = {2011},
+   en_type = {Thesis}
+}
+
+@article{RN1253,
+   author = {Riechel, M. and Matzinger, A. and Pallasch, M. and Joswig, K. and Pawlowsky-Reusing, E. and Hinkelmann, R. and Rouault, P.},
+   title = {Sustainable urban drainage systems in established city developments:
+Modelling the potential for CSO reduction and river impact mitigation},
+   journal = {Journal of Environmental Management},
+   volume = {274},
+   DOI = {10.1016/j.jenvman.2020.111207},
+   year = {2020},
+   abstract = {Sustainable urban drainage systems (SUDS) can significantly reduce runoff from urban areas. However, their
+potential to mitigate acute river impacts of combined sewer overflows (CSO) is largely unknown. To close this
+gap, a novel coupled model approach was deployed that simulates the effect of realistic SUDS strategies,
+developed for an established city quarter, on acute oxygen depressions in the receiving river. Results show that
+for an average rainfall year the SUDS strategies reduce total runoff by 28%–39% and peak runoff by 31%–48%.
+Resulting relative reduction in total CSO volume ranges from 45%–58%, exceeding annual runoff reduction from
+SUDS by a factor of 1.5. Negative impacts in the form of fish-critical dissolved oxygen (DO) conditions in the
+receiving river (<2 mg DO L? 1) can be completely prevented with the SUDS strategies for an average rainfall
+year. The realistic SUDS strategies were compared with a simpler simulation approach which consists in globally
+downscaling runoff from all impervious areas. It indicates that such a simple approach does not completely
+account for the positive effect of SUDS, underestimating CSO volumes for specific rain events by up to 13%.
+Accordingly, global downscaling is only recommended for preliminary planning purposes.},
+   project = {kuras},
+   access = {public},
+   en_type = {Journal Article}
+}
+
+@inbook{RN1163,
+   author = {Rouault, P. and Matzinger, A. and Caradot, N. and Wicke, D. and Welker, A.},
+   title = {Verschmutzung von Regenwasser und Mischwasser},
+   booktitle = {Verschmutzung von Regenwasser und Mischwasser. Wasserwirtschafts-Kurse, 4. Bis 6. März 2015, Kassel. Entwässerungskonzepte / Sanierungsplanung.},
+   publisher = {DWA Deutsche Vereinigung für Wasserwirtschaft, Abwasser und Abfall e.V.},
+   ISBN = {ISBN: 978-3-88721-232-2},
+   year = {2015},
+   en_type = {Book Section}
+}
+
+@techreport{RN1249,
+   author = {Rustler, M. and Schwarzmüller, H.},
+   title = {Einzelvorhaben FAKIN - Forschungsdatenmanagement an kleinen Instituten: Schlussbericht},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   month = {2019-07-31},
+   DOI = {10.5281/zenodo.4003441},
+   year = {2019},
+   abstract = {Zum Forschungsdatenmanagement zählen alle Aktivitäten, die mit der Aufbereitung, Speicherung, Archivierung und Veröffentlichung von Forschungsdaten verbunden sind. Die Bedeutung des Forschungsdatenmanagements ist in den vergangenen Jahren immens gestiegen. Grund dafür sind die großen Datenmengen, die im Zuge der Digitalisierung und Automatisierung von Prozessen anfallen und neue Herausforderungen an deren Verwaltung und Verarbeitung stellen, die mit den bisherigen Werkzeugen schwer bewältigt werden können. Dies gilt auch für Daten in der Wasserforschung. Der nachhaltige Zugang zu Forschungsdaten und die Erstellung von Datenmanagementplänen werden zunehmend von Forschungsförderern verlangt. Am Kompetenzzentrum Wasser Berlin gGmbH (KWB) werden im Rahmen von Forschungsprojekten eine Vielzahl von Daten verarbeitet, die entweder selbst erhoben oder von Projektpartnern zur Verfügung gestellt werden. Dazu zählen Messdaten, Metadaten, Fotos/Videos, Bestands- und Zustandsdaten und verarbeitete Daten (z.B. Zeitreihen, aggregierte Werte, Ergebnisse aus Computersimulationen). Um solche Daten nachhaltig nutzbar zu machen, zu verwalten und zu verarbeiten, sind standardisierte Prozesse, Werkzeuge und Methoden zu entwickeln, die eine projektübergreifende Reproduzierbarkeit der Ergebnisse gewährleisten. Ziel des Projektes FAKIN (Forschungsdatenmanagement an kleinen Instituten) war es, ein solches Forschungsdatenmanagement (FDM) für das KWB in Zusammenarbeit mit den Projektwissenschaftlern zu erarbeiten und unternehmensweit zu etablieren. Damit sollte das Vorhaben als übertragbares Fallbeispiel für das FDM an kleinen, aber stark vernetzten außeruniversitären Forschungsinstituten dienen.},
+   project = {fakin},
+   access = {public},
+   en_type = {Report}
+}
+
+@article{RN1252,
+   author = {Seis, W. and Rouault, P. and Medema, G.},
+   title = {Addressing and reducing parameter uncertainty in quantitative microbial risk assessment by incorporating external information via Bayesian hierarchical modeling},
+   journal = {Water Research},
+   volume = {185},
+   pages = {1-12},
+   DOI = {10.1016/j.watres.2020.116202},
+   year = {2020},
+   abstract = {Probabilistic quantitative microbial risk assessment (QMRA) studies define model inputs as random variables and use Monte-Carlo simulation to generate distributions of potential risk outcomes. If local information on important QMRA model inputs is missing, it is widely accepted to justify assumptions about these model inputs by using external literature information. A question, which remains unexplored, is the extent to which previously published external information should influence local estimates in cases of nonexistent, scarce, and moderate local data. This question can be addressed by employing Bayesian hierarchical modeling (BHM). Thus, we study the effects and potential benefits of BHM on risk and performance target calculations at three wastewater treatment plants (WWTP) in comparison to alternative statistical modeling approaches (separate modeling, no-pooling, complete pooling). The treated wastewater from the WWTPs is used for restricted irrigation, potable reuse, or influences recreational waters, respectively. We quantify the extent to which external data affects local risk estimations in each case depending on the statistical modeling approach applied. Modeling approaches are compared by calculating the pointwise expected log-predictive density for each model. As reference pathogens and example data, we use locally collected Norovirus genogroup II data with varying sample sizes (n = 4, n = 7, n = 27), and complement local information with external information from 44 other WWTPs (n = 307). Results indicate that BHM shows the highest predictive accuracy and improves estimates by reducing parameter uncertainty when data are scarce. In such situations, it may affect risk and performance target calculations by orders of magnitude in comparison to using local data alone. Furthermore, it allows making generalizable inferences about new WWTPs, while providing the necessary flexibility to adjust for different levels of information contained in the local data. Applying this flexible technique more widely may contribute to improving methods and the evidence base for decision-making in future QMRA studies.},
+   project = {flusshygiene
+demoware},
+   access = {public},
+   en_type = {Journal Article}
+}
+
+@article{RN1250,
+   author = {Simperler, L. and Ertl, T. and Matzinger, A.},
+   title = {Spatial Compatibility of Implementing Nature-Based Solutions for Reducing Urban Heat Islands and Stormwater Pollution},
+   journal = {Sustainability},
+   volume = {12},
+   pages = {1-14},
+   DOI = {10.3390/su12155967},
+   year = {2020},
+   abstract = {Cities worldwide are facing several challenges connected to urbanization and climate change. Several cities have identified the implementation of nature-based solutions (NBS) as an option to mitigate several challenges at once. However, can two different aims be reached with NBS in the same location? This question has not yet been addressed. This paper discusses the spatial compatibility of NBS implementation strategies to tackle (1) urban heat island (UHI) effects and (2) water pollution at the same location. The evaluation is based on a spatial analysis of Berlin. We found a positive correlation of high UHI and median high stormwater pollution loads for zinc, total suspended solids, Polycyclic Aromatic Hydrocarbons and Terbutryn. Out of more than 14,000 building/street sections analyzed, 2270 showed spatial matching of high UHI and high stormwater pollution loads. In the majority of building/street sections, stormwater pollution was high for three out of the four parameters. We conclude that the compatibility of NBS implementation for both challenges depends both on the implementation strategies for NBS and on the specific NBS measures. Our spatial analysis can be used for further planning processes for NBS implementation.},
+   project = {networks4},
+   access = {public},
+   en_type = {Journal Article}
+}
+
+@phdthesis{RN1206,
+   author = {Stapf, M.},
+   title = {Kalibrierung eines Schmutzfrachtmodells mit InfoWorks CS - Sensitivitätsanalyse und Kalibrierung},
+   university = {Universität Stuttgart},
+   school = {Institut für Siedlungswasserbau, Wassergüte- und Abfallwirtschaft},
+   type = {Diploma Thesis},
+   year = {2011},
+   en_type = {Thesis}
+}
+
+@techreport{RN1255,
+   author = {Stapf, M. and Miehe, U. and Knoche, F. and Lukas, M. and Bartz, J. and Brauer, F. and Gutsche, M. and Kullwatz, J. and Petkow, C. and Schneider, M. and Winckelmann, D. and Bogusz, A. and Tomczyk, B. and Trzcińska, M. and Dworak, A. and Chojniak-Gronek, J. and Szumska, M. and Zieliński, M. and Walkowiak, R. and Putna-Nimane, I. and Liepina-Leimane, I. and Dzintare, L. and Barda, I. and Bester, K. and Kharel, S. and Sehlén, R. and Nilsson, J. and Larsen, S. B.},
+   title = {Impact of ozonation and post-treatment on ecotoxicological endpoints, water quality, APIs and transformation products. CWPharma project report for GoA3.3: Comparison of post-treatment options.},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.4003460},
+   year = {2020},
+   project = {cwpharma},
+   access = {public},
+   en_type = {Report}
+}
+
+@article{RN1245,
+   author = {Vermaat, J. E. and Matzinger, A. and Trajanovska, S. and Talevska, M. and Schneider, S. C.},
+   title = {Nutrient retention by the littoral vegetation of a large lake: Can Lake Ohrid cope with current and future loading? },
+   journal = {Limnology and Oceanography},
+   pages = {1-13},
+   DOI = {10.1002/Lno.11460},
+   year = {2020},
+   abstract = {Nitrogen and phosphorus budgets were compiled for the littoral (29 km2) and pelagic (329 km2) of ancient, deep, clear, and hard water Lake Ohrid (Albania and North Macedonia), to assess the importance of the littoral in nutrient retention. P originates mainly from domestic point sources (73%), for N this is karst seepage (50%). Total littoral loads are estimated at 1700 kg P and 23,200 kg N km-2 (area of littoral) yr-1; net littoral retention is 31% ± 13% for P and 40% ± 16% for N, largely in the dense charophyte belt. P retention is mainly due to detritus burial, but also due to coprecipitation; N retention is due to both detritus burial and denitrification. A Monte Carlo plausibility analysis balanced the budget by increasing nonconnected domestic household inputs (from 20% to 27% of external load), and decreasing pelagic sediment P burial by 27% and littoral denitrification by 25%. Scenario projections for 2100 corresponding to SRES A2 and B1 were linked to an AQUASIM lake ecosystem model. Under B1, the changes were small compared to the present. A2, however, led to a major reduction in precipitation, an increase in evapotranspiration, a reduction in river outflow (to ~20%), a doubling in P-loading, a drop in lake level of ~1.5 m, and a decline in the extent of the charophyte belt. Areal loading of the littoral would increase accordingly, but water transparency would not decline much. Also, the littoral vegetation will witness a shift in species composition, and an increase in filamentous Cladophora cover.},
+   access = {public},
+   en_type = {Journal Article}
+}
+
+@phdthesis{RN1203,
+   author = {Vosse, J.},
+   title = {Performance evaluation of constructed wetlands combined with engineered systems for water reuse},
+   university = {Technische Hochschule Köln},
+   type = {Master Thesis},
+   year = {2019},
+   project = {aquanes},
+   en_type = {Thesis}
+}
+
+@phdthesis{RN1204,
+   author = {Wenzel, C.},
+   title = {Assessment of direct greenhouse gas emissions from a pilot-scale aerobic granular sludge reactor treating domestic wastewater},
+   university = {Humboldt-Universität zu Berlin},
+   type = {Master Thesis},
+   year = {2019},
+   project = {e-vent},
+   access = {confidential},
+   en_type = {Thesis}
+}
+
+@article{RN1251,
+   author = {Winker, M. and Matzinger, A. and Anterola, J.},
+   title = {Partizipatives Planungstool zur klimaangepassten Infrastruktur- und Stadtplanung},
+   journal = {Ernst & Sohn Special 2020 - Regenwasser-Management},
+   pages = {30-34},
+   year = {2020},
+   project = {networks4},
+   access = {public},
+   en_type = {Journal Article}
+}
+

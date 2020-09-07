@@ -1,0 +1,11 @@
+  # Configuration of Algolia search engine.
+  # Paste the values from your Algolia dashboard.
+  [search.algolia.de]
+    app_id = "QX11QSLZ03"
+    api_key = "37359fae126eefbab1d9a39a13baaa95"
+    index_name = "dev_kwb_de_pubs"
+
+  [search.algolia.en]
+    app_id = "QX11QSLZ03"
+    api_key = "37359fae126eefbab1d9a39a13baaa95"
+    index_name = "dev_kwb_en_pubs"
