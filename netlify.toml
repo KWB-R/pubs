@@ -22,7 +22,7 @@
   ALGOLIA_INDEX_NAME = "dev_kwb_pubs_de"
 
 [context.dev]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && algolia/run-index-upload.sh -p -u $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && algolia/run-index-upload.sh -p
 
 [context.deploy-preview]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
