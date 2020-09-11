@@ -4,7 +4,7 @@
 
 # URL: https://publications.kompetenz-wasser.de/ 
 [context.production.environment]
-  HUGO_VERSION = "0.70.0"
+  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "production"
   HUGO_BASEURL = "https://publications.kompetenz-wasser.de/"
   HUGO_ENABLEGITINFO = "false"
@@ -16,7 +16,7 @@
 
 # URL: https://dev--kwb.netlify.app/  
 [context.dev.environment]
-  HUGO_VERSION = "0.70.0"
+  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "dev"
   HUGO_ENABLEGITINFO = "false"
   ALGOLIA_DE_PUBS_INDEX_NAME = "dev_kwb_de_pubs"
@@ -28,14 +28,14 @@
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.70.0"
+  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "dev"
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.70.0"
+  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "dev"
 
 [[headers]]
@@ -47,4 +47,3 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
-
