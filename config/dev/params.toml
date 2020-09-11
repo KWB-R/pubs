@@ -9,3 +9,13 @@
     app_id = "QX11QSLZ03"
     api_key = "37359fae126eefbab1d9a39a13baaa95"
     index_name = "dev_kwb_en_pubs"
+    
+    
+  [matomo]
+    use = true
+    url = "https://matomo.datenhelden.com/"
+    php = "matomo.php"
+    js = "matomo.js"
+    site_id = 8
+    cookie_domain =  "*.kwb.netlify.app"
+    domains = '["*.kwb.netlify.app"]'
