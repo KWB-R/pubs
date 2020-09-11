@@ -11,7 +11,7 @@
     index_name = "prod_kwb_en_pubs"
     
   [matomo]
-    use = true
+    use = 1
     url = "//piwik.kompetenzwasser.de/"
     php = "piwik.php"
     js = "piwik.js"
