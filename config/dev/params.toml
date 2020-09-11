@@ -10,9 +10,8 @@
     api_key = "37359fae126eefbab1d9a39a13baaa95"
     index_name = "dev_kwb_en_pubs"
     
-    
   [matomo]
-    use = 1
+    use = 1 # 1: to enable tracking 0: no tracking
     url = "https://matomo.datenhelden.com/"
     php = "matomo.php"
     js = "matomo.js"
