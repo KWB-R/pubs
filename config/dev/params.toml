@@ -17,5 +17,5 @@
     php = "matomo.php"
     js = "matomo.js"
     site_id = 8
-    cookie_domain =  '"*.kwb.netlify.app"'
-    domains = '"*.kwb.netlify.app"'
+    cookie_domain =  "*.kwb.netlify.app"
+    domains = "*.kwb.netlify.app"

@@ -6,9 +6,8 @@
   {{ if site.Params.matomo.cookie_domain }}
   _paq.push(["setCookieDomain", {{site.Params.matomo.cookie_domain}});
   {{ end }} 
-  {{ if .Params.matomo.domains }}
+  {{ if site.Params.matomo.domains }}
   _paq.push(["setDomains",  {{site.Params.matomo.domains}}]);
-  
   {{ end }}
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
