@@ -10,7 +10,6 @@
     api_key = "37359fae126eefbab1d9a39a13baaa95"
     index_name = "dev_kwb_en_pubs"
     
-    
   [matomo]
     use = 1
     url = "https://matomo.datenhelden.com/"

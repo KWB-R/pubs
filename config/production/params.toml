@@ -16,5 +16,5 @@
     php = "piwik.php"
     js = "piwik.js"
     site_id = 1
-    cookie_domain =  '["*.publications.kompetenz-wasser.de", "*.www.kompetenz-wasser.de"]'
-    domains = '["*.publications.kompetenz-wasser.de", "*.www.kompetenz-wasser.de","*.www.kompetenz-wasser.berlin","*.www.kompetenz-wasser.eu","*.www.kompetenz-wasser.net","*.www.kompetenz-wasser.org","*.www.kompetenzwasser.eu","*.www.kompetenzwasser.net","*.www.kompetenzwasser.org","*.www.kompetenzzentrum-wasser.de","*.www.kompetenzzentrum-wasser.eu","*.www.kwb.berlin"]'
+    cookie_domain =  "*.kompetenz-wasser.de"
+    domains = "*.kompetenz-wasser.de"
