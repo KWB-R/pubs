@@ -4,10 +4,10 @@
   var _paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   {{ if site.Params.matomo.cookie_domain }}
-  _paq.push(["setCookieDomain", {{site.Params.matomo.cookie_domain}});
+  _paq.push(['setCookieDomain', {{site.Params.matomo.cookie_domain}});
   {{ end }} 
   {{ if site.Params.matomo.domains }}
-  _paq.push(["setDomains",  {{site.Params.matomo.domains}}]);
+  _paq.push(['setDomains',  {{site.Params.matomo.domains}}]);
   {{ end }}
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
@@ -15,9 +15,16 @@
     var u="{{site.Params.matomo.url}}";
     _paq.push(['setTrackerUrl', u+'{{site.Params.matomo.php}}']);
     _paq.push(['setSiteId', '{{site.Params.matomo.site_id}}']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'{{site.Params.matomo.js}}'; s.parentNode.insertBefore(g,s);
-  })();
+    var d = document
+      , g = d.createElement('script')
+      , s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.defer = true;
+      g.src = u + '{{site.Params.matomo.js}}';
+      s.parentNode.insertBefore(g, s);
+    }
+   )();
 </script>
 <!-- End Matomo Code -->
 {{ end }}
