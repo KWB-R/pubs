@@ -266,12 +266,12 @@ search.addWidgets([
             .join(' ');
         }
         const cite =
-          '<button class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal piwik_link" type="button" data-filename="' +
+          '<a class="btn btn-outline-primary my-1 mr-1 btn-sm matomo_download" href="' +
           base_url +
           data.cite_link +
           '">' +
           i18n.btn_cite +
-          '</button>';
+          '</a>';
         let pdf = '';
         if (data.pdf !== '') {
           pdf +=
