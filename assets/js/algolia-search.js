@@ -135,7 +135,7 @@ search.addWidgets([
     pushFunction(formattedParameters, state, results) {
       window._paq.push([
         'setCustomUrl',
-        url_publication + window.location.search + '&search_count=' + results.nbHits,
+        url_publication + window.location.search,
       ]);
       window._paq.push(['trackPageView']);
     },
