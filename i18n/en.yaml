@@ -67,7 +67,7 @@
   translation: Dataset
 
 - id: btn_project
-  translation: Project
+  translation: Project publications
 
 - id: btn_poster
   translation: Poster
@@ -138,6 +138,9 @@
 - id: abstract
   translation: Abstract
 
+- id: abstracts
+  translation: Abstracts
+  
 - id: publication
   translation: Publication
 
@@ -146,6 +149,15 @@
 
 - id: date
   translation: Date
+
+- id: year
+  translation: Year
+
+- id: author
+  translation: Author
+
+- id: project
+  translation: Project
 
 - id: last_updated
   translation: Last updated on
@@ -156,9 +168,8 @@
 - id: location
   translation: Location
 
-- id: pub_proceedings
-  translation: Conference proceedings
-  
+- id: pub_code
+  translation: Code
 
 - id: pub_conf
   translation: Conference paper
@@ -215,10 +226,31 @@
   translation: Search...
 
 - id: search_results
-  translation: results found
+  translation: publications
 
+- id: search_found_in
+  translation: found in
+  
 - id: search_no_results
-  translation: No results found
+  translation: No publication found
+
+- id: search_for
+  translation: for
+
+- id: search_one_result
+  translation: One publication found
+
+- id: search_hits_per_page
+  translation: hits per page
+
+- id: search_show_less
+  translation: Show less
+
+- id: search_show_more
+  translation: Show more
+
+- id: search_reset_filters
+  translation: Reset filters
 
 # Error 404
 

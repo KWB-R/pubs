@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Riechel-2016-1048.pdf"
+url_pdf: "/pdf/Riechel-2016-1048.pdf"
 projects: ["nitrolimit"]
 ---
 

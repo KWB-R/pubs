@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Ogre"
+title: "OgRe"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:12:23+02:00
+date: 2020-09-04T12:57:51+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Zurück zur Projektseite
+- name: Projektseite
   url: https://kompetenz-wasser.de/de/project/ogre
   icon_pack: fas
   icon: home

@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Lesjean-2010-334.pdf"
+url_pdf: "/pdf/Lesjean-2010-334.pdf"
 projects: ["amedeus"]
 ---
 

@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Wicke-2019-1130.pdf"
+url_pdf: "/pdf/Wicke-2019-1130.pdf"
 projects: ["aquanes"]
 ---
 

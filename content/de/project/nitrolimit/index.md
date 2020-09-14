@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Nitrolimit"
+title: "NITROLIMIT"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:11:59+02:00
+date: 2020-09-04T12:57:41+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Zurück zur Projektseite
+- name: Projektseite
   url: https://kompetenz-wasser.de/de/project/nitrolimit
   icon_pack: fas
   icon: home

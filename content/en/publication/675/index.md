@@ -6,7 +6,7 @@ authors: [ "Stemann, J.", "Kabbe, C.", "Adam, C." ]
 publication_types: ["6"]
 abstract: ""
 featured: false
-publication: " p 749 *In:* [ed.], Energie aus Abfall. Thomé-Kozmiensky Verlag, Neuruppin"
+publication: " p 749, Energie aus Abfall. Thomé-Kozmiensky Verlag, Neuruppin"
 projects: ["p-rex"]
 ---
 

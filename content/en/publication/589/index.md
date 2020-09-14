@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Blue Biolabs"
-url_pdf: "../../../pdf/Thronicker-2013-589.pdf"
+url_pdf: "/pdf/Thronicker-2013-589.pdf"
 projects: ["riko"]
 ---
 

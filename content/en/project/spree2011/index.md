@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Spree2011"
+title: "SPREE2011"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:14:26+02:00
+date: 2020-09-04T12:58:41+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

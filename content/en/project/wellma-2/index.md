@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Wellma 2"
+title: "WELLMA 2"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:15:24+02:00
+date: 2020-09-04T12:59:00+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Back to Project Website
+- name: Project Website
   url: https://kompetenz-wasser.de/en/project/wellma-2
   icon_pack: fas
   icon: home

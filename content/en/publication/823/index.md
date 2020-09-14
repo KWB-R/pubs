@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Technische Universität Berlin"
-url_pdf: "../../../pdf/Barjenbruch-2016-823.pdf"
+url_pdf: "/pdf/Barjenbruch-2016-823.pdf"
 projects: ["dswt"]
 ---
 

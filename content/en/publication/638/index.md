@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Brandenburgische Technische Universität Cottbus - Senftenberg"
-url_pdf: "../../../pdf/Mutz-2013-638.pdf"
+url_pdf: "/pdf/Mutz-2013-638.pdf"
 projects: ["nitrolimit"]
 ---
 

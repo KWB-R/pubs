@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Vidon-2009-1214.pdf"
+url_pdf: "/pdf/Vidon-2009-1214.pdf"
 projects: ["aquisafe-1"]
 ---
 

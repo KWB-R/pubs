@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Deutsches Institut für Urbanistik gGmbH"
-url_pdf: "../../../pdf/Anterola-2020-1241.pdf"
+url_pdf: "/pdf/Anterola-2020-1241.pdf"
 projects: ["networks4"]
 ---
 

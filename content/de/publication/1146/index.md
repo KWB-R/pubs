@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Umweltbundesamt"
-url_pdf: "../../../pdf/Krause-2009-1146.pdf"
+url_pdf: "/pdf/Krause-2009-1146.pdf"
 projects: ["trace"]
 ---
 

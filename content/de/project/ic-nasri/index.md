@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Ic Nasri"
+title: "IC-NASRI"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:10:47+02:00
+date: 2020-09-04T12:57:09+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

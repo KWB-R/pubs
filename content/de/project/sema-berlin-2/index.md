@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Sema Berlin 2"
+title: "SEMA-Berlin 2"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:14:13+02:00
+date: 2020-09-04T12:58:35+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Zurück zur Projektseite
+- name: Projektseite
   url: https://kompetenz-wasser.de/de/project/sema-berlin-2
   icon_pack: fas
   icon: home

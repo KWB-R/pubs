@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "E Vent"
+title: "E-VENT"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:09:42+02:00
+date: 2020-09-04T12:56:46+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Back to Project Website
+- name: Project Website
   url: https://kompetenz-wasser.de/en/project/e-vent
   icon_pack: fas
   icon: home

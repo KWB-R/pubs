@@ -1,11 +1,11 @@
 ---
 title: "Beurteilung von Managementmaßnahmen am Berliner Halensee"
 date: 2011-01-01
-publishDate: 2020-05-25T12:27:37Z
+publishDate: 2020-09-07T11:42:20Z
 authors: [ "Oppermann, S." ]
 publication_types: ["7"]
 abstract: ""
 featured: false
-publication: " Diploma Thesis. Fakulta¨t III Prozesswissenschaften, Institut fu¨r Technischen Umweltschutz, FG Wasserreinhaltung. Technische Universita¨t Berlin"
+publication: " Diploma Thesis. Fakultät III Prozesswissenschaften, Institut für Technischen Umweltschutz, FG Wasserreinhaltung. Technische Universität Berlin"
 ---
 

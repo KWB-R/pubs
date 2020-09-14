@@ -2,28 +2,41 @@
   publish = "public"
   command = "hugo --gc --minify"
 
-[[plugins]]
-  package = "netlify-plugin-algolia-export"
-
+# URL: https://publications.kompetenz-wasser.de/ 
 [context.production.environment]
-  HUGO_VERSION = "0.70.0"
+  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "production"
   HUGO_BASEURL = "https://publications.kompetenz-wasser.de/"
-  HUGO_ENABLEGITINFO = "true"
-  ALGOLIA_INDEX = "netlify_kwb-pubs"
+  HUGO_ENABLEGITINFO = "false"
+  ALGOLIA_DE_PUBS_INDEX_NAME = "prod_kwb_de_pubs"
+  ALGOLIA_EN_PUBS_INDEX_NAME = "prod_kwb_en_pubs"
+  
+[context.production]
+  command = "hugo --gc --minify && algolia/run-index-upload.sh -p"
 
+# URL: https://dev--kwb.netlify.app/  
+[context.dev.environment]
+  HUGO_VERSION = "0.74.3"
+  HUGO_ENV = "dev"
+  HUGO_ENABLEGITINFO = "false"
+  ALGOLIA_DE_PUBS_INDEX_NAME = "dev_kwb_de_pubs"
+  ALGOLIA_EN_PUBS_INDEX_NAME = "dev_kwb_en_pubs"
 
+[context.dev]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && algolia/run-index-upload.sh -p"
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.70.0"
+  HUGO_VERSION = "0.74.3"
+  HUGO_ENV = "dev"
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.70.0"
+  HUGO_VERSION = "0.74.3"
+  HUGO_ENV = "dev"
 
 [[headers]]
   for = "*.webmanifest"
@@ -34,4 +47,3 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
-

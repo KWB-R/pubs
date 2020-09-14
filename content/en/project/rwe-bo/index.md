@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Rwe Bo"
+title: "RWE-BO"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:13:51+02:00
+date: 2020-09-04T12:58:26+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

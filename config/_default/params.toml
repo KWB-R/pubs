@@ -44,7 +44,7 @@ local_business_type = ""
 org_name = ""
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = ""
+description = "Publications Published by Researchers Working at Kompetenzzentrum Wasser Berlin gGmbH."
 
 ############################
 ## Site Features
@@ -234,13 +234,6 @@ plugins_js  = []
   #   2: Algolia (https://www.algolia.com)
   engine = 2
 
-  # Configuration of Algolia search engine.
-  # Paste the values from your Algolia dashboard.
-  [search.algolia]
-    app_id = "FUZHRLXPF4"
-    api_key = "7fb333226a19b1a7af131612dd428928"
-    index_name = "netlify_kwb-pubs"
-    show_logo = true
 
 ############################
 ## Maps

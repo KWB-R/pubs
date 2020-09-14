@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Wellma Dna"
+title: "WELLMA-DNA"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:15:32+02:00
+date: 2020-09-04T12:59:01+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

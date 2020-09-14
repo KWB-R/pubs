@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Intercommunale Waterleidingsmaatschappij van Veurne-Ambacht (IWVA)"
-url_pdf: "../../../pdf/Van Houtte-2016-1034.pdf"
+url_pdf: "/pdf/Van Houtte-2016-1034.pdf"
 projects: ["demoware"]
 ---
 

@@ -3,7 +3,7 @@ title: "Comparative cost estimations of full-scale phosphorus recovery processes
 date: 2019-01-01
 publishDate: 2020-05-20T09:31:28Z
 authors: [ "conzelmann", "kraus", "remy" ]
-publication_types: ["0"]
+publication_types: ["1"]
 abstract: ""
 featured: false
 publication: " *In:* 3rd IWA Resource Recovery Conference. Venice, Italy. 8-12 September 2019"

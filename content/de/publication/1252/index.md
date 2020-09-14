@@ -1,0 +1,13 @@
+---
+title: "Addressing and reducing parameter uncertainty in quantitative microbial risk assessment by incorporating external information via Bayesian hierarchical modeling"
+date: 2020-01-01
+publishDate: 2020-08-25T08:31:08Z
+authors: [ "seis", "rouault", "Medema, G." ]
+publication_types: ["2"]
+abstract: "Probabilistic quantitative microbial risk assessment (QMRA) studies define model inputs as random variables and use Monte-Carlo simulation to generate distributions of potential risk outcomes. If local information on important QMRA model inputs is missing, it is widely accepted to justify assumptions about these model inputs by using external literature information. A question, which remains unexplored, is the extent to which previously published external information should influence local estimates in cases of nonexistent, scarce, and moderate local data. This question can be addressed by employing Bayesian hierarchical modeling (BHM). Thus, we study the effects and potential benefits of BHM on risk and performance target calculations at three wastewater treatment plants (WWTP) in comparison to alternative statistical modeling approaches (separate modeling, no-pooling, complete pooling). The treated wastewater from the WWTPs is used for restricted irrigation, potable reuse, or influences recreational waters, respectively. We quantify the extent to which external data affects local risk estimations in each case depending on the statistical modeling approach applied. Modeling approaches are compared by calculating the pointwise expected log-predictive density for each model. As reference pathogens and example data, we use locally collected Norovirus genogroup II data with varying sample sizes (n = 4, n = 7, n = 27), and complement local information with external information from 44 other WWTPs (n = 307). Results indicate that BHM shows the highest predictive accuracy and improves estimates by reducing parameter uncertainty when data are scarce. In such situations, it may affect risk and performance target calculations by orders of magnitude in comparison to using local data alone. Furthermore, it allows making generalizable inferences about new WWTPs, while providing the necessary flexibility to adjust for different levels of information contained in the local data. Applying this flexible technique more widely may contribute to improving methods and the evidence base for decision-making in future QMRA studies."
+featured: false
+publication: " *Water Research* 185: 1-12 [10.1016/j.watres.2020.116202](https://doi.org/10.1016/j.watres.2020.116202)"
+doi: "10.1016/j.watres.2020.116202"
+projects: ["flusshygiene", "demoware"]
+---
+

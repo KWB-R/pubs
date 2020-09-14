@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Schroeder-2008-229.pdf"
+url_pdf: "/pdf/Schroeder-2008-229.pdf"
 projects: ["eva"]
 ---
 

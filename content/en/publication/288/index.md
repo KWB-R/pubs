@@ -7,7 +7,7 @@ publication_types: ["4"]
 abstract: ""
 featured: false
 publication: "Kompetenzzentrum Wasser Berlin gGmbH"
-url_pdf: "../../../pdf/Fritz-2006-288.pdf"
+url_pdf: "/pdf/Fritz-2006-288.pdf"
 projects: ["nasri"]
 ---
 

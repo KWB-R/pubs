@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Subkans"
+title: "SubKanS"
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-07-03T17:14:40+02:00
+date: 2020-09-04T12:58:45+02:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -28,7 +28,7 @@ image:
 #   icon: twitter
 
 links:
-- name: Back to Project Website
+- name: Project Website
   url: https://kompetenz-wasser.de/en/project/subkans
   icon_pack: fas
   icon: home
