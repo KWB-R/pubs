@@ -137,6 +137,7 @@ search.addWidgets([
         'setCustomUrl',
         url_publication + window.location.search + '&search_count=' + results.nbHits,
       ]);
+      window._paq.push(['trackPageView']);
     },
     delay: 5000,
     triggerOnUIInteraction: true,
