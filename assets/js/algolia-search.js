@@ -139,6 +139,7 @@ search.addWidgets([
       ]);
       window._paq.push(['trackPageView']);
     },
+    delay: 5000,
     triggerOnUIInteraction: true,
     pushPagination: true,
   }),
@@ -238,7 +239,7 @@ search.addWidgets([
         const base_url = '';
         const abstract_id = 'abstract-' + data.__hitIndex + 1;
         const authors_link = data.author.map(
-          (a) => '<a href="?author=' + a + '">'
+          (a) => '<a class="piwik_link" href="?author=' + a + '">'
         );
         const authors_name = data._highlightResult.author.map(
           (a) => a.value + '</a>'
@@ -250,7 +251,7 @@ search.addWidgets([
         if (data.project !== null) {
           const project_link = data.project.map(
             (p) =>
-              '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="?project=' +
+              '<a class="btn btn-outline-primary my-1 mr-1 btn-sm piwik_link" href="?project=' +
               p +
               '">' +
               data.project_btn +
@@ -266,16 +267,16 @@ search.addWidgets([
             .join(' ');
         }
         const cite =
-          '<button class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal" type="button" data-filename="' +
+          '<a class="btn btn-outline-primary my-1 mr-1 btn-sm matomo_download" href="' +
           base_url +
           data.cite_link +
           '">' +
           i18n.btn_cite +
-          '</button>';
+          '</a>';
         let pdf = '';
         if (data.pdf !== '') {
           pdf +=
-            '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
+            '<a class="btn btn-outline-primary my-1 mr-1 btn-sm matomo_download" href="' +
             base_url +
             data.pdf +
             '" target="_blank" rel="noopener">' +
@@ -285,7 +286,7 @@ search.addWidgets([
         let doi = '';
         if (data.doi !== null) {
           doi +=
-            '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
+            '<a class="btn btn-outline-primary my-1 mr-1 btn-sm piwik_link" href="' +
             'https://doi.org/' +
             data.doi +
             '" target="_blank" rel="noopener">DOI</a>';

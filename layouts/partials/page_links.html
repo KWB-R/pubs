@@ -25,13 +25,13 @@
 {{ end }}
 
 {{ with $pdf }}
-<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ . }}" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} matomo_download" href="{{ . }}" target="_blank" rel="noopener">
   {{ i18n "btn_pdf" }}
 </a>
 {{ end }}
 {{ $resource := $page.Resources.GetMatch "cite.bib" }}
 {{ with $resource }}
-<button type="button" class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} js-cite-modal"
+<button type="button" class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} js-cite-modal piwik_link"
         data-filename="{{ .RelPermalink }}">
   {{ i18n "btn_cite" }}
 </button>
@@ -61,7 +61,7 @@
 {{ if $page.Params.projects }}
 {{ range $page.Params.projects }}
   {{ with . }}
-  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href='{{"publication/"| relLangURL }}?project={{.}}'>
+  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} piwik_link" href='{{"publication/"| relLangURL }}?project={{.}}'>
     {{ i18n "btn_project" }}: {{.}}
   </a>
   {{ else }}
@@ -128,7 +128,7 @@
 </a>
 {{ end }}
 {{ with $page.Params.doi }}
-<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} piwik_link" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
   DOI
 </a>
 {{ end }}

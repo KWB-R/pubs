@@ -9,3 +9,12 @@
     app_id = "QX11QSLZ03"
     api_key = "37359fae126eefbab1d9a39a13baaa95"
     index_name = "prod_kwb_en_pubs"
+    
+  [matomo]
+    use = 1 # 1: to enable tracking 0: no tracking
+    url = "//piwik.kompetenzwasser.de/"
+    php = "piwik.php"
+    js = "piwik.js"
+    site_id = 1
+    cookie_domain =  "*.kompetenz-wasser.de"
+    domains = "*.kompetenz-wasser.de"
