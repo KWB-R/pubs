@@ -1,4 +1,42 @@
-﻿@phdthesis{RN1256,
+﻿@techreport{RN1261,
+   author = {Amorsi, N. and Anzaldua, G. and Banias, G. and Brékine, A. and Caradot, N. and Englund, A. and Hallgren, F. and Karakostas, A. and Le Gall, F. and Moumtzidou, A. and Siauve, S. and Vamvakeridou-Lyroudia , L. S.},
+   title = {D7.5: Synergies inside the portfolio of SC05-11-2018 projects},
+   DOI = {10.5281/zenodo.3985112},
+   url = {https://zenodo.org/record/3985112},
+   year = {2020},
+   abstract = {This document contains the synergies and common activities of five H2020 projects that started in the summer of 2019: The five projects are digital-water.city, Score Water, Fiware4Water, Naiades and aqua3S. The first four were funded by the SC5-11-2018 call and the latter by the H2020-SU-SEC-2018-DRS-03. All these five projects have a common theme: Digital Water, with a variety of case studies and approaches, but also with several similarities in challenges, scope and goals. Following a suggestion by EASME that supervises the SC5-11-2018 projects, the synergies and clustering activities were included in the Grant Agreement of each project, resulting in the contractual obligation to report about them in a common deliverable (this document). Thus a Synergy group was born: DigitalWater2020 (DW2020). DW2020 is organised along four thematic areas/task forces: Task Force 1: Ontologies, Task Force 2: Sensors demonstration, Task Force 3: Business models and Task Force 4: Communication, each with its own task force leader. Additionally a fifth task force (Task Force 0: Management) has been created, to coordinate the efforts and activities overall. This document is the first DW2020 report, in common for all the projects, describing their synergies and cooperation, which started early in 2020 and is scheduled to continue until the end of the projects (and hopefully beyond). It contains a brief presentation of each project, details about the structure and activities of each Task Force, as well the planned events for 2020-21 and the next steps. So far the synergies and cooperation among these five projects has been very successful. It gave to all the chance to interact, to exchange knowledge, to cooperate for specific challenges and to help each other. We are already discussing future steps that will lead to DW2020 being “alive” after the end of the five projects. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1262,
+   author = {Caradot, N.},
+   title = {D7.4: IPR and innovation management},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985130},
+   url = {https://zenodo.org/record/3985130},
+   year = {2020},
+   abstract = {Aim of this document is to describe the innovation and Intellectual Property Rights (IPR) management procedures within DWC. It introduces the concepts of Intellectual Property (IP), the types of protection rights as well as the IPR rules in the project. It summarizes the key procedures introduced in the Grant Agreement and Consortium Agreement documents. Finally, it explains the role of the innovation and IPR manager and the detailed activities that will be carried out to foster innovation and secure the protection of our key results. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1263,
+   author = {Greenhill, B. and Thornberg, D. and Thirsing, C. and Gunkel, M. and Sperlich, A. and Bernardi, M. and Pizza, A. and Lindberg, S. and Gutierrez, O. and Busquets, S. and Amela, N. and Margreiter, G. and Baibich, R. G. and Schwarzmüller, H. and Caradot, N. and Riechel, M. and Schilperoort, R. and Dimova, V. and Todorova, S. and Bischetti, G. B. and Gandolfi, C. and Mancini, A. and Fatone, F. and Gensch, S.},
+   title = {D2.1: Implementation Plan of Each Digital Solution and Methodology for Quantification of the Benefits Provided by Digitization (DWC-WP2)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3983060},
+   url = {https://zenodo.org/record/3983060},
+   year = {2020},
+   abstract = {The Implementation Plan (D2.1) is a document, which outlines how and where different digital solutions for water infrastructures will be demonstrated and assessed in the scope of WP2 of the DWC project. It is the first of three deliverables and followed by demonstration and assessment of performance and return of investment by means of key performance indicators (KPI) also defined in this deliverable. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {public},
+   en_type = {Report}
+}
+
+@phdthesis{RN1256,
    author = {Kaminiczny, J.},
    title = {Vergleich der Praxistauglichkeit von UV- und Fluoreszenzonlinesonden im Betrieb einer Ozonanlage zur Spurenstoffelimination auf einer kommunalen Kläranlage},
    university = {Beuth Hochschule für Technik Berlin},
@@ -7,17 +45,6 @@
    year = {2020},
    abstract = {Der Einfluss organischer Spurenstoffe (z.B. Arzneimittel, Hormone, Kosmetikprodukte und Pestizide) in Oberflächengewässer sorgt für eine starke Belastung der Gewässerqualität und deren Lebewesen. Ebenso werden Spurenstoffe in der Trinkwasseraufbereitung gefunden. Kläranlagen sind der Haupteintragspfad der organischen Spurenstoffe in die Oberflächengewässer. Die Elimination von Spurenstoffen kann durch Adsorption an Pulveraktivkohle (PAK) oder granulierter Aktivkohle (GAK) erfolgen. Das andere Verfahren ist die Ozonung, bei der Ozon (O3) mit der Organik reagiert und die Spurenstoffe eliminiert oder reduziert. Die Spurenstoffelimination kann online nicht gemessen werden. Weil sich die Spurenstoffe in der organischen Wassermatrix befinden, bedient man sich an Ersatzparametern (Surrogatparameter), welche diese messen. Ein bewährter Surrogatparameter ist der spektrale Absorptionskoeffizient bei 254nm (SAK254). Eine andere Onlineüberwachung ist die Messung der Fluoreszenz der organischen Wassermatrix. Es wurde gezeigt, dass es eine Korrelation zwischen UV und der Fluoreszenz in Bezug auf die Spurenstoffelimination gibt. In dieser Arbeit wird die Praxistauglichkeit der Fluoreszenzmessung untersucht und mit der bewährten UV-Messung verglichen. Die praktische Durchführung dieser Arbeit wurde an einer Ozon-Pilotanlage in der Kläranlage Schönerlinde durchgeführt. Für die SAK254-Messung werden I::SCAN- Sonden der Firma S::SCAN genutzt. Diese nutzen eine photometrische Einzelwellenlängenmessung bei 254nm. Die genutzte Fluoreszenzsonde ist die YSI-EXO2 der Firma Xylem. Sie misst die Fluoreszenz über einen fDOM-Sensor (fDOM = fluorescent Dissolved Organic Matter). Die Extinktion dieser Sonde beträgt 365 ± 5 nm und die Emission erfolgt bei 480 ± 40 nm. Für den praktischen Vergleich zwischen SAK254 und fDOM dienen Onlinedaten die in einem Zeitraum von einem Jahr aufgenommen wurden. Die Onlinedaten wurden unter verschiedenen Randbedingungen, gleichbleibende Wasserqualität-variierender Ozoneintrag und variierende Wasserqualitätkonstanter Ozoneintrag, verglichen und ausgewertet. Es konnte gezeigt werden, dass die Fluoreszenzsonde alle Werte unter den Randbedingungen analog zur SAK254-Sonde abbilden konnte. Die gebildete relative Abnahme ∆fDOM war nahezu gleich des ∆SAK254. Dies bestätigte die Korrelation von Fluoreszenz und UV auch im praktischen Betrieb. Zudem wurden die Auswirkungen des Foulings auf die Fluoreszenzsonde betrachtet. Fouling sind organische und mineralische Ablagerungen auf den Sensoroberflächen. Das Fouling wurde bei den SAK254-Sonden und der Fluoreszenzsonde festgestellt. Bei der SAK254-Sonde hat das Fouling Einfluss auf die Zu- und Ablaufwerte. Dadurch ändert sich die gebildete Abnahme und es kommt zu Überdosierungen. Auch bei der Fluoreszenzsonde sind Veränderungen der Zuund Ablaufdaten zu erkennen. Dennoch wird die gebildete Abnahme von fDOM durch das Fouling nicht beeinflusst und es kommt nicht zu Überdosierungen. In allen Abschnitten wurde die Elimination der Spurenstoff Benzotriazol, Diclofenac, Metoprolol und Iopromid gegenüber ∆SAK254 und ∆fDOM gestellt. In allen Auswertungspunkten war die Elimination über die Fluoreszenz tendenziell höher als die der UV-Messung. Weil die Spurenstoffabnahme mit der spezifischen Ozondosis (EDOC,korr) korreliert und diese konstant ist, kann die minimale höhere Elimination nur mit der „Unschärfe“ der Korrelation zwischen SAK254 und fDOM begründet werden. Anhand der Ergebnisse dieser Arbeit konnte die Korrelation zwischen Fluoreszenz und UV im praktischen Betrieb bestätigt werden. Die Fluoreszenz könnte als Monitoring-Parameter genutzt werden. Auch zur Regelung könnte die Fluoreszenz eine Alternative sein. Dennoch besteht dort noch Forschungsbedarf, weil der Surrogatparameter fDOM in diesem Forschungsprojekt nicht als Regelparameter eingesetzt wurde.},
    en_type = {Thesis}
-}
-
-@techreport{RN1254,
-   author = {Mehtonen, J. and Äystö, L. and Junttila, V. and Perkola, N. and Lehtinen, T. and Bregendahl, J. and Leisk, Ü. and Kõrgmaa, V. and Aarma, P. and Schütz, J. and Stapf, M. and Kublina, A. and Karkovska, I. and Szumska, M. and Bogusz, A. and Kalinowski, R. and Spjuth, S. and Nyhlén, K. and Jakobsson, T. and Suzdalev, S. and Kaskelainen, E.},
-   title = {Good practices for take-back and disposal of unused pharmaceuticals in the Baltic Sea region. Clear Waters from Pharmaceuticals (CWPharma) Activity 4.1 Report},
-   institution = {Finnish Environment Institute (SYKE)},
-   year = {2020},
-   abstract = {Appropriate collection and disposal of medicine-related waste has been identified as one of the main ways to decrease the emission of active pharmaceutical ingredients (APIs) into the environment. Improvement to the take-back and treatment of collected pharmaceutical waste may be considered lowhanging fruit when one is considering measures to reduce API emissions. However, comparable information that would enable estimating the potential impact of these efforts has not been available. Directive 2004/27/EC, related to medicinal products for human use, mandates that EU member states implement appropriate collection schemes for unused or expired human-use medicinal products. However, it does not provide any guidelines on practical implementation of these schemes. Several studies have pointed out significant differences among Member States in this regard. In March 2019, the European Commission published the European Union Strategic Approach to Pharmaceuticals in the Environment. The actions specified therein cover all stages of the pharmaceutical life cycle, from design and production to disposal and waste management. It emphasizes such elements as sharing good practices, co-operating at international level, and improving understanding of the risks. This report is aimed at filling knowledge gaps and proposing good practices for take-back and disposal of unused human and veterinary medicines and other pharmaceutical waste. The report is targeted to e.g. ministries, environment and medicines agencies, supervisory authorities, municipalities, hospitals, NGOs, pharmacists, doctors, and veterinarians. For the report, current national practices for take-back and disposal of unused medicines and other pharmaceutical waste in Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Poland, Russia, and Sweden were evaluated. The pharmaceutical waste originating from households, hospitals and other health care institutions, the pharmaceutical industry, and veterinary use was considered. The proportion of citizens who return unused pharmaceuticals via designated collection points varies greatly between Baltic Sea countries, from about 10% to 70%, with 16–80% disposing of them of as mixed household waste and 3–30% flushing them down the drain. The most commonly cited reason for improper disposal of medicines on households’ part is lack of information about their environmental impacts and how to get rid of them in an environmentally sound manner. Separate collection of unused household pharmaceuticals does not exist in Russia, and the collection mechanism functions poorly in Latvia, Lithuania and Poland. Information on the take-back schemes for unused human medicines is more readily available than is corresponding information on veterinary medicines. We identified, all told, 21 good practices and recommendations for take-back and disposal of unused pharmaceuticals and other pharmaceutical waste and for promoting the rational use of pharmaceuticals in the Baltic Sea region. Nevertheless, implementing them at national level requires particular consideration due to differences in national legislation and other characteristics of the EU Baltic Sea countries and Russia. The good practices identified in this report answer the call issued in the EU strategic approach for an efficient risk-reduction strategy.},
-   project = {cwpharma},
-   access = {public},
-   en_type = {Report}
 }
 
 @techreport{RN1257,
@@ -30,6 +57,84 @@
    abstract = {As part of their communication activities, multi-actor approach projects are required to produce short “practice abstracts” (PAs) which outline their plans and main findings. The information should be easy understandable and provided throughout the project’s life-cycle. This information must therefore be shared in a specific format (the “EIP Common format”) which is specially made so that project info and results can be shared with those who can apply the findings. The format includes: a short and understandable title, a succinct summary of the issue tackled and the main outcomes and recommendations produced, and contact details to find further information. The content of the submitted practice abstracts can be updated at any moment according to new findings.},
    project = {circularagro},
    access = {public},
+   en_type = {Report}
+}
+
+@techreport{RN1264,
+   author = {Rustler, M. and Caradot, N.},
+   title = {D7.2: DWC - Data Management Plan - Initial Phase},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3982896},
+   url = {https://zenodo.org/record/3982896},
+   year = {2019},
+   abstract = {The Data Management Plan (DMP) is a guidance document which introduces a series of clear rules and procedures to improve data management during the project and foster the reuse of publications and data in open access. ; Version submitted to EU (v0.1.0)},
+   project = {dwc},
+   access = {public},
+   en_type = {Report}
+}
+
+@techreport{RN1265,
+   author = {Schwarzmüller, H. and Angelescu, D. and Bernardi, M. and Bertollini, L. and Dimova, V. and Gensch, S. and Gunkel, M. and Jahier, A. and Hansen, J.-O. and Murtas, S. and Pizza, A. and Radini, S. and Tabuchi, J.-P. and Thiersing, C. and Bischetti, G.-B.},
+   title = {D8.4: EPQ – Requirement No. 4 (Health & safety procedures)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985170},
+   url = {https://zenodo.org/record/3985170},
+   year = {2019},
+   abstract = {D8.4 is part of the ethics requirements of DWC and describes the health and safety procedures and related laws to protect research staff and the environment. DWC activities comprise a range of technical activities such as e.g. the development of sensors, sampling and field testing, which might induce a risk to humans or the environment. Thus, potential added risks from DWC are assessed and mitigation measures are identified, and the DWC partners confirm that appropriate European and national legislation is followed. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1267,
+   author = {Schwarzmüller, H. and Bouleau, G. and Bueb, B. and Cholakova, N. and Dinis, A. and Felicetti, L. and Jahier, A. and Stein, U.},
+   title = {D8.1: H – Requirement No. 1 (Procedures and criteria to recruit research participants)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985146},
+   url = {https://zenodo.org/record/3985146},
+   year = {2019},
+   abstract = {D8.1 is part of the ethics requirements and describes the procedures and criteria that will be used to identify and recruit research participants and obtain their informed consent on the use and protection of their personal data in compliance with the EU General Data Protection Regulation (GDPR, 2016/679). Interviews and workshops are part of work packages 3 and 5 and of the dissemination and communication strategy involving human participants from outside the DWC consortium. Personal data may further be collected on the project website. Both procedures are detailed and informed consent form templates are included. D8.1 is linked to the other ethics deliverables, namely D8.2 on the protection of personal data and D8.3 on the informed consent, and to the project management deliverables, namely D7.1 Project management handbook and D7.2 Data management plan. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1266,
+   author = {Schwarzmüller, H. and Bouleau, G. and Bueb, B. and Cholakova, N. and Dinis, A. and Felicetti, L. and Jahier, A. and Stein, U.},
+   title = {D8.3: POPD - H – Requirement No. 3 (Informed consent)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985166},
+   url = {https://zenodo.org/record/3985166},
+   year = {2019},
+   abstract = {D8.3 is part of the ethics requirements and confirms that informed consent/assent of research participants in compliance with the EU General Data Protection Regulation (GDPR, 2016/679) will be kept on file. Interviews and workshops are part of work packages 3 and 5 and of the dissemination and communication strategy involving human participants from outside the DWC consortium. Personal data may further be collected through the project website. D8.3 is linked to the other ethics deliverables, namely D8.1 on the procedures to identify and recruit research participants and obtain their informed consent and D8.2 on the protection of personal data, and on the project management deliverables, namely D7.1 Project management handbook and D7.2 Data management plan. The templates for information sheets and informed consent are part of D8.1. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1268,
+   author = {Schwarzmüller, H. and Jahier, A. and Bouleau, G. and Bueb, B. and Felicetti, L.},
+   title = {D8.2: POPD – Requirement No. 2 (Data protection policy)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985155},
+   url = {https://zenodo.org/record/3985155},
+   year = {2019},
+   abstract = {D8.2 is part of the ethics requirements and describes organizational and technical measures to ensure the protection of personal data in line with the EU General Data Protection Regulation (GDPR, 2016/679). The data protection policy relates to any personal data of natural persons. For DWC, this relates to the data of human research participants in workshops and interviews and to a minor extent potentially of customers of the participating utilities. The measures to protect their rights and contact details of the data protection officers are given. D8.2 is closely linked to the other ethics deliverables, namely D8.1 on the procedures to identify and recruit research participants and obtain their informed consent and D8.3 on informed consent, and on the project management deliverables, namely D7.1 Project management handbook and D7.2 Data management plan. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1269,
+   author = {Schwarzmüller, H. and Vennesland, A. and Haro, P. H. and Bour, G.},
+   title = {D4.1: Interoperable and Secure Flow of Information - Cyber-physical Sphere and Interoperability Aspects in the Utilities Regarding the DWC Solutions},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3983068},
+   url = {https://zenodo.org/record/3983068},
+   year = {2020},
+   abstract = {D4.1 contains the documentation of the baseline situation in utilities regarding the implementation of sensors, models and systems in the frame of developing the DWC digital solutions. Structured fact sheets summarize a questionnaire sent to the utility partners and the technology providers to evaluate the existing framework, foreseen or used data architectures, and to provide the basis for the strategic and tactical risk analysis to be performed within T4.2 and for developing a semantic middleware within T4.3. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
    en_type = {Report}
 }
 

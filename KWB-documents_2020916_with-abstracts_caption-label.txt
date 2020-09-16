@@ -103,6 +103,18 @@ Kompetenzzentrum Wasser Berlin gGmbH},
    en_type = {Journal Article}
 }
 
+@techreport{RN1261,
+   author = {Amorsi, N. and Anzaldua, G. and Banias, G. and Brékine, A. and Caradot, N. and Englund, A. and Hallgren, F. and Karakostas, A. and Le Gall, F. and Moumtzidou, A. and Siauve, S. and Vamvakeridou-Lyroudia , L. S.},
+   title = {D7.5: Synergies inside the portfolio of SC05-11-2018 projects},
+   DOI = {10.5281/zenodo.3985112},
+   url = {https://zenodo.org/record/3985112},
+   year = {2020},
+   abstract = {This document contains the synergies and common activities of five H2020 projects that started in the summer of 2019: The five projects are digital-water.city, Score Water, Fiware4Water, Naiades and aqua3S. The first four were funded by the SC5-11-2018 call and the latter by the H2020-SU-SEC-2018-DRS-03. All these five projects have a common theme: Digital Water, with a variety of case studies and approaches, but also with several similarities in challenges, scope and goals. Following a suggestion by EASME that supervises the SC5-11-2018 projects, the synergies and clustering activities were included in the Grant Agreement of each project, resulting in the contractual obligation to report about them in a common deliverable (this document). Thus a Synergy group was born: DigitalWater2020 (DW2020). DW2020 is organised along four thematic areas/task forces: Task Force 1: Ontologies, Task Force 2: Sensors demonstration, Task Force 3: Business models and Task Force 4: Communication, each with its own task force leader. Additionally a fifth task force (Task Force 0: Management) has been created, to coordinate the efforts and activities overall. This document is the first DW2020 report, in common for all the projects, describing their synergies and cooperation, which started early in 2020 and is scheduled to continue until the end of the projects (and hopefully beyond). It contains a brief presentation of each project, details about the structure and activities of each Task Force, as well the planned events for 2020-21 and the next steps. So far the synergies and cooperation among these five projects has been very successful. It gave to all the chance to interact, to exchange knowledge, to cooperate for specific challenges and to help each other. We are already discussing future steps that will lead to DW2020 being “alive” after the end of the five projects. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
 @techreport{RN1241,
    author = {Anterola, J. and Brüning, H. and Frick-Trzebitzky, F. and Gunkel, M. and Libbe, J. and Liehr, S. and Matzinger, A. and Nenz, D. and Reichmann, B. and Rouault, P. and Schramm, E. and Stieß, I. and Trapp, J. H. and Winker, M.},
    title = {Blau-grün-graue Infrastrukturen vernetzt planen und umsetzen. Ein Beitrag zur Klimaanpassung in Kommunen},
@@ -662,6 +674,19 @@ Since in-vivo NMR studies require special equipment and experience, five NMR stu
    year = {2019},
    abstract = {Insufficient public and municipal investment represent a major challenge for the long term management of urban drainage systems. Utilities are challenged to develop efficient rehabilitation strategies in order to maintain the level of service. Closed-circuit television (CCTV) inspection is used since the 1980’s as industry standard for sewer investigation system and structural performance evaluation. Due to budget restrictions, inspection rates are generally low and municipalities tend to inspect only a small part of their network (e.g. in France, less than 5% according to Ahmadi et al., 2014c). Since the definition of rehabilitation strategies is limited by the lack of information about sewer condition and remaining life, deterioration models have been developed to forecast the evolution of the system according to its current and past condition. One of the main factors hampering the uptake of deterioration modelling by utilities is the lack of real scale evidence of the tangible benefits provided. In particular, most utilities are concerned by the minimum amount of CCTV data required and the relevance of using such models on their networks with limited data availability. Finally, most utilities acknowledge the uncertainties in the procedure of sewer condition assessment, mainly due to the subjectivity of the coding operator. There is a strong need to quantify precisely the uncertainty of the sewer condition assessment procedure and its influence on the outcomes of deterioration modelling. The thesis aims at addressing these gaps by assessing the performance of sewer deterioration modelling using a case study with high CCTV data availability and by identifying the influence of CCTV data quality and availability on modelling performance. The study has been performed with a statistical (GompitZ) and a machine learning (Random Forest) deterioration models using the extensive CCTV database of the cities of Braunschweig and Berlin in Germany. Our results show, that at network level, both machine learning and statistical models can simulate with sufficient accuracy the condition distribution of the network, even in case of low data availability. At the pipe level, the machine learning model outperforms the statistical model. Regarding CCTV data uncertainty, our results highlight that the probability to inspect correctly a pipe in poor condition is close to 80-85% and thus the probability to overestimate the (good) condition of the pipe is close to 15-20% (False Negative). The impact of the uncertainties on the prediction of a deterioration model is not negligible. The analysis shows that the required replacement rate to maintain a constant proportion of segments in poor condition is underestimated if the uncertainties are not included in the analysis.},
    en_type = {Thesis}
+}
+
+@techreport{RN1262,
+   author = {Caradot, N.},
+   title = {D7.4: IPR and innovation management},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985130},
+   url = {https://zenodo.org/record/3985130},
+   year = {2020},
+   abstract = {Aim of this document is to describe the innovation and Intellectual Property Rights (IPR) management procedures within DWC. It introduces the concepts of Intellectual Property (IP), the types of protection rights as well as the IPR rules in the project. It summarizes the key procedures introduced in the Grant Agreement and Consortium Agreement documents. Finally, it explains the role of the innovation and IPR manager and the detailed activities that will be carried out to foster innovation and secure the protection of our key results. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
 }
 
 @conference{RN1193,
@@ -1616,6 +1641,19 @@ Kompetenzzentrum Wasser Berlin gGmbH},
    year = {2015},
    project = {demoware},
    en_type = {Thesis}
+}
+
+@techreport{RN1263,
+   author = {Greenhill, B. and Thornberg, D. and Thirsing, C. and Gunkel, M. and Sperlich, A. and Bernardi, M. and Pizza, A. and Lindberg, S. and Gutierrez, O. and Busquets, S. and Amela, N. and Margreiter, G. and Baibich, R. G. and Schwarzmüller, H. and Caradot, N. and Riechel, M. and Schilperoort, R. and Dimova, V. and Todorova, S. and Bischetti, G. B. and Gandolfi, C. and Mancini, A. and Fatone, F. and Gensch, S.},
+   title = {D2.1: Implementation Plan of Each Digital Solution and Methodology for Quantification of the Benefits Provided by Digitization (DWC-WP2)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3983060},
+   url = {https://zenodo.org/record/3983060},
+   year = {2020},
+   abstract = {The Implementation Plan (D2.1) is a document, which outlines how and where different digital solutions for water infrastructures will be demonstrated and assessed in the scope of WP2 of the DWC project. It is the first of three deliverables and followed by demonstration and assessment of performance and return of investment by means of key performance indicators (KPI) also defined in this deliverable. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {public},
+   en_type = {Report}
 }
 
 @article{RN397,
@@ -7360,6 +7398,19 @@ Institut für Automation und Kommunikation e. V. Magdeburg},
    en_type = {Conference Paper}
 }
 
+@techreport{RN1264,
+   author = {Rustler, M. and Caradot, N.},
+   title = {D7.2: DWC - Data Management Plan - Initial Phase},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3982896},
+   url = {https://zenodo.org/record/3982896},
+   year = {2019},
+   abstract = {The Data Management Plan (DMP) is a guidance document which introduces a series of clear rules and procedures to improve data management during the project and foster the reuse of publications and data in open access. ; Version submitted to EU (v0.1.0)},
+   project = {dwc},
+   access = {public},
+   en_type = {Report}
+}
+
 @conference{RN417,
    author = {Rustler, M. and Grützmacher, G. and Holzbecher, E.},
    title = {Decision support system for the multi-objective optimization of bank filtration systems},
@@ -8299,6 +8350,45 @@ Berliner Wasserbetriebe},
    en_type = {Report}
 }
 
+@techreport{RN1265,
+   author = {Schwarzmüller, H. and Angelescu, D. and Bernardi, M. and Bertollini, L. and Dimova, V. and Gensch, S. and Gunkel, M. and Jahier, A. and Hansen, J.-O. and Murtas, S. and Pizza, A. and Radini, S. and Tabuchi, J.-P. and Thiersing, C. and Bischetti, G.-B.},
+   title = {D8.4: EPQ – Requirement No. 4 (Health & safety procedures)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985170},
+   url = {https://zenodo.org/record/3985170},
+   year = {2019},
+   abstract = {D8.4 is part of the ethics requirements of DWC and describes the health and safety procedures and related laws to protect research staff and the environment. DWC activities comprise a range of technical activities such as e.g. the development of sensors, sampling and field testing, which might induce a risk to humans or the environment. Thus, potential added risks from DWC are assessed and mitigation measures are identified, and the DWC partners confirm that appropriate European and national legislation is followed. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1267,
+   author = {Schwarzmüller, H. and Bouleau, G. and Bueb, B. and Cholakova, N. and Dinis, A. and Felicetti, L. and Jahier, A. and Stein, U.},
+   title = {D8.1: H – Requirement No. 1 (Procedures and criteria to recruit research participants)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985146},
+   url = {https://zenodo.org/record/3985146},
+   year = {2019},
+   abstract = {D8.1 is part of the ethics requirements and describes the procedures and criteria that will be used to identify and recruit research participants and obtain their informed consent on the use and protection of their personal data in compliance with the EU General Data Protection Regulation (GDPR, 2016/679). Interviews and workshops are part of work packages 3 and 5 and of the dissemination and communication strategy involving human participants from outside the DWC consortium. Personal data may further be collected on the project website. Both procedures are detailed and informed consent form templates are included. D8.1 is linked to the other ethics deliverables, namely D8.2 on the protection of personal data and D8.3 on the informed consent, and to the project management deliverables, namely D7.1 Project management handbook and D7.2 Data management plan. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1266,
+   author = {Schwarzmüller, H. and Bouleau, G. and Bueb, B. and Cholakova, N. and Dinis, A. and Felicetti, L. and Jahier, A. and Stein, U.},
+   title = {D8.3: POPD - H – Requirement No. 3 (Informed consent)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985166},
+   url = {https://zenodo.org/record/3985166},
+   year = {2019},
+   abstract = {D8.3 is part of the ethics requirements and confirms that informed consent/assent of research participants in compliance with the EU General Data Protection Regulation (GDPR, 2016/679) will be kept on file. Interviews and workshops are part of work packages 3 and 5 and of the dissemination and communication strategy involving human participants from outside the DWC consortium. Personal data may further be collected through the project website. D8.3 is linked to the other ethics deliverables, namely D8.1 on the procedures to identify and recruit research participants and obtain their informed consent and D8.2 on the protection of personal data, and on the project management deliverables, namely D7.1 Project management handbook and D7.2 Data management plan. The templates for information sheets and informed consent are part of D8.1. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
+}
+
 @conference{RN533,
    author = {Schwarzmüller, H. and Grützmacher, G. and Orlikowski, D. and Alary, M. and David, B. and Besnard, K.},
    title = {Evaluation of the ageing potential of drinking water wells to optimize well operation and maintenance.},
@@ -8319,6 +8409,19 @@ Berliner Wasserbetriebe},
    abstract = {Approximately 70% of the drinking water in Germany  (BGR) and about 50% worldwide (IGREC 2011) are abstracted 2 from groundwater using filter wells. Their implementation and operation are major factors contributing to the costs of drinking water production. Within the joint research project ANTIOCKER , funded by the German Ministry of Research and Education, and coordinated at the Dept. of Applied Microbiology of the Technical University Berlin, the partners Berliner Wasserbetriebe (BWB) and the Berlin Centre of Competence for Water (KWB) focus on the efficient operation of drinking water abstraction wells. One major reason for inefficient wells is so-called well ageing, i.e. the increase in drawdown at constant discharge rate due to biological, chemical and / or physical processes in and around the well. In Berlin, approximately 80% of clogging deposits are described to be of biochemical nature involving iron-related bacteria. Previous studies, i.e. in the scope of the KWB research project WELLMA have revealed that such well ageing phenomena are determined by multiple correlated biological and chemical processes. For this reason, it is the sound understanding of the main processes and key parameters that will provide the basis for the systematic control of iron bacteria occurrence by an optimized well operation. A new approach to a large variety of data from well construction and maintenance of the Berlin drinking water wells focused on the determination of key parameters for monitoring and the identification of hidden variables for ageing by means of probabilistic statistics. Cumulative distribution plots are used to visualize large data amounts and frequency distribution plots filter correlations between e.g. maintenance events in the lifetime of a well and monitoring data.  First results indicate that small changes in the discharge rate Q on a daily basis could be used to monitor the well performance on a much higher frequency than the currently used evaluation of the specific capacity. In addition, the electric conductivity proved to be a key variable for clogging. Both parameters are now being verified in field investigations and further data analyses within the research project ANTIOCKER and about 50% worldwide are abstracted 2 from groundwater using filter wells. Their implementation and operation are major factors contributing to the costs of drinking water production.},
    project = {antiocker},
    en_type = {Conference Paper}
+}
+
+@techreport{RN1268,
+   author = {Schwarzmüller, H. and Jahier, A. and Bouleau, G. and Bueb, B. and Felicetti, L.},
+   title = {D8.2: POPD – Requirement No. 2 (Data protection policy)},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3985155},
+   url = {https://zenodo.org/record/3985155},
+   year = {2019},
+   abstract = {D8.2 is part of the ethics requirements and describes organizational and technical measures to ensure the protection of personal data in line with the EU General Data Protection Regulation (GDPR, 2016/679). The data protection policy relates to any personal data of natural persons. For DWC, this relates to the data of human research participants in workshops and interviews and to a minor extent potentially of customers of the participating utilities. The measures to protect their rights and contact details of the data protection officers are given. D8.2 is closely linked to the other ethics deliverables, namely D8.1 on the procedures to identify and recruit research participants and obtain their informed consent and D8.3 on informed consent, and on the project management deliverables, namely D7.1 Project management handbook and D7.2 Data management plan. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
+   access = {confidential},
+   en_type = {Report}
 }
 
 @techreport{RN661,
@@ -8595,6 +8698,19 @@ Berliner Wasserbetriebe},
    institution = {Kompetenzzentrum Wasser Berlin gGmbH},
    year = {2012},
    project = {wellma-2},
+   access = {confidential},
+   en_type = {Report}
+}
+
+@techreport{RN1269,
+   author = {Schwarzmüller, H. and Vennesland, A. and Haro, P. H. and Bour, G.},
+   title = {D4.1: Interoperable and Secure Flow of Information - Cyber-physical Sphere and Interoperability Aspects in the Utilities Regarding the DWC Solutions},
+   institution = {Kompetenzzentrum Wasser Berlin gGmbH},
+   DOI = {10.5281/zenodo.3983068},
+   url = {https://zenodo.org/record/3983068},
+   year = {2020},
+   abstract = {D4.1 contains the documentation of the baseline situation in utilities regarding the implementation of sensors, models and systems in the frame of developing the DWC digital solutions. Structured fact sheets summarize a questionnaire sent to the utility partners and the technology providers to evaluate the existing framework, foreseen or used data architectures, and to provide the basis for the strategic and tactical risk analysis to be performed within T4.2 and for developing a semantic middleware within T4.3. ; Version (v0.1.0) submitted to EC.},
+   project = {dwc},
    access = {confidential},
    en_type = {Report}
 }
