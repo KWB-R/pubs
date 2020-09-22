@@ -364,7 +364,7 @@ overwrite <- TRUE
 
 option_overwrite <- ifelse(overwrite, "--overwrite", "")
 
-"/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3
+
 ### Create and run "import_bibtex.bat" batch file
 cmds <- sprintf('conda info --envs\ncall "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"  %s', 
                 normalizePath(file.path(python_path, "Scripts/activate.bat")), 
@@ -457,6 +457,9 @@ kwb.pubs::replace_publishdates_in_pub_index_md(md_paths = pub_md_paths,
                                                endnote_db_refs = en_refs)
 
 kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths, 
+                                               endnote_db_refs = en_refs)
+
+kwb.pubs:::replace_abstracts_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
 
 fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
