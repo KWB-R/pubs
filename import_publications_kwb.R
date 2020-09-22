@@ -272,7 +272,7 @@ add_title_to_projects(projects)
 
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
-#options(encoding="windows-1252")
+options(encoding="windows-1252")
 #options(encoding="UTF-8-BOM")
 tmp <- bib2df::bib2df("KWB-documents_2020916_with-abstracts_caption-label_changed-only.txt")
 tmp$URL <- NA_character_
@@ -297,6 +297,8 @@ public_reports_selected <- public_reports[public_reports$rec_number %in% tmp$en_
 public_reports_selected$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
                                   replacement = dms_dir,
                                   public_reports_selected$urls_pdf01)
+
+public_reports_selected <- public_reports_selected[!is.na(public_reports_selected$urls_pdf01),]
 
 fs::dir_create("static/pdf")
 
@@ -362,8 +364,9 @@ overwrite <- TRUE
 
 option_overwrite <- ifelse(overwrite, "--overwrite", "")
 
+"/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3
 ### Create and run "import_bibtex.bat" batch file
-cmds <- sprintf('call "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"  %s', 
+cmds <- sprintf('conda info --envs\ncall "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"  %s', 
                 normalizePath(file.path(python_path, "Scripts/activate.bat")), 
                 env,
                 normalizePath(getwd()),
@@ -374,7 +377,7 @@ writeLines(cmds,con = "import_bibtex_kwb.bat")
 
 # repeat a few times due to errors:
 #for (i in 1:10) {
-  shell("import_bibtex_kwb.bat")
+  shell(cmd = "import_bibtex_kwb.bat")
 #}
 ### Now check the folder "content/publication". Your publications should be added
 ### now!
