@@ -273,7 +273,7 @@ add_title_to_projects(projects)
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
 #options(encoding="windows-1252")
-options(encoding="UTF-8-BOM")
+#options(encoding="UTF-8-BOM")
 tmp <- bib2df::bib2df("KWB-documents_2020916_with-abstracts_caption-label_changed-only.txt")
 tmp$URL <- NA_character_
 tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
