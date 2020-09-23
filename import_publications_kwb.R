@@ -81,7 +81,7 @@ get_project_ids_site <- function() {
 
 project_ids_site <- get_project_ids_site()
 
-endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200907.xml")
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200923.xml")
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
 condition_indices <- which(endnote_df$caption == "confidential" & endnote_df$ref_type_name == "Report")
 confidential_pubs_idx <- endnote_df$rec_number[condition_indices]
@@ -238,7 +238,7 @@ ids_all <- dplyr::full_join(site, dms) %>%
   dplyr::left_join(prj)
 
 all_projects <- ids_all[ids_all$project_ids != "reef2w-2",]
-all_projects <- ids_all[!ids_all$project_ids %in% c("ism\reva", "carismo\rcodigreen\rhtc-berlin", "ogre\rflusshygiene", "prepared\rwsstp", "reef2w-2"),]
+all_projects <- ids_all[!ids_all$project_ids %in% c("flusshygiene\rdemoware", "ism\reva", "carismo\rcodigreen\rhtc-berlin", "ogre\rflusshygiene", "prepared\rwsstp", "reef2w-2"),]
 readr::write_csv2(all_projects, "project-ids_website_dms.csv",na = "")
 
 fs::dir_delete(path = "content/de/project/")
@@ -274,7 +274,7 @@ add_title_to_projects(projects)
 ### "The name list field author cannot be parsed"
 #options(encoding="windows-1252")
 options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df("KWB-documents_2020907_with-abstracts_caption-label_changed-only.txt")
+tmp <- bib2df::bib2df("KWB-documents_2020923_with-abstracts_caption-label_changed-only.txt")
 tmp$URL <- NA_character_
 tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
@@ -290,19 +290,23 @@ public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
 
 
 ### path PDF files of exported Endnote DB (needs to be same as .XML and .txt files!)
-dms_dir <- fs::path_abs("../../dms/2020-09-07/KWB-documents_20191205.Data/PDF")
+dms_dir <- fs::path_abs("../../dms/2020-09-23/KWB-documents_20191205.Data/PDF")
 
-public_reports$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
+public_reports_selected <- public_reports[public_reports$rec_number %in% tmp$en_id,]
+
+public_reports_selected$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
                                   replacement = dms_dir,
-                                  public_reports$urls_pdf01)
+                                  public_reports_selected$urls_pdf01)
+
+public_reports_selected <- public_reports_selected[!is.na(public_reports_selected$urls_pdf01),]
 
 fs::dir_create("static/pdf")
 
-fs::file_copy(path = public_reports$urls_pdf01, 
+fs::file_copy(path = public_reports_selected$urls_pdf01, 
               new_path = file.path(fs::path_abs("static/pdf"), 
-                                   basename(public_reports$urls_pdf01)), overwrite = TRUE)
+                                   basename(public_reports_selected$urls_pdf01)), overwrite = TRUE)
 
-tmp <- dplyr::left_join(tmp,public_reports, by = c(en_id = "rec_number")) %>%  
+tmp <- dplyr::left_join(tmp,public_reports_selected, by = c(en_id = "rec_number")) %>%  
   dplyr::mutate(URL = ifelse(!is.na(.data$urls_pdf01), 
                              sprintf("/pdf/%s", basename(.data$urls_pdf01)),
                              NA_character_)) %>%  
@@ -360,6 +364,7 @@ overwrite <- TRUE
 
 option_overwrite <- ifelse(overwrite, "--overwrite", "")
 
+
 ### Create and run "import_bibtex.bat" batch file
 cmds <- sprintf('call "%s" activate "%s"\ncd "%s"\nacademic import --bibtex "%s"  %s', 
                 normalizePath(file.path(python_path, "Scripts/activate.bat")), 
@@ -372,7 +377,7 @@ writeLines(cmds,con = "import_bibtex_kwb.bat")
 
 # repeat a few times due to errors:
 #for (i in 1:10) {
-  shell("import_bibtex_kwb.bat")
+  shell(cmd = "import_bibtex_kwb.bat")
 #}
 ### Now check the folder "content/publication". Your publications should be added
 ### now!
@@ -437,7 +442,7 @@ sapply(pub_md_paths, function(path) replace_kwb_authors_in_pub_index_md(path))
 
 ### Replace auto-generated publish date with "record_last_modified" (in "UTC")
 
-path_en_db <- "../../dms/2020-09-07/KWB-documents_20191205.Data/sdb/sdb.eni"
+path_en_db <- "../../dms/2020-09-23/KWB-documents_20191205.Data/sdb/sdb.eni"
 contents <- kwb.pubs::read_endnote_db(path_en_db)
 
 en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)
@@ -454,8 +459,9 @@ kwb.pubs::replace_publishdates_in_pub_index_md(md_paths = pub_md_paths,
 kwb.pubs::replace_publications_in_pub_index_md(md_paths = pub_md_paths, 
                                                endnote_db_refs = en_refs)
 
-fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
-fs::dir_delete(path = "content/publication")
+# kwb.pubs:::replace_abstracts_in_pub_index_md(md_paths = pub_md_paths, 
+#                                                endnote_db_refs = en_refs)
+
 
 update_citations <- function(bib_df, 
                              lang = "de",
@@ -483,7 +489,10 @@ tmp$URL <- ifelse(!is.na(tmp$URL),
                   NA_character_)
                           
 update_citations(bib_df = tmp, lang = "de")
-update_citations(bib_df = tmp, lang = "en")
+
+fs::dir_copy(path = "content/de/publication", "content/en/publication", overwrite = TRUE)
+fs::dir_delete(path = "content/publication")
+
 
 
 if (FALSE) {

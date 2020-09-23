@@ -1,7 +1,7 @@
 ---
-title: "Inbetriebnahme und Bewertung einer SBR-Pilotanlage zur Behandlung von kommunalem Abwasser mittels granuliertem Belebtschlamm-Verfahren"
+title: "Inbetriebnahme und Bewertung einer SBR-Pilotanlage zur Behandlung von kommunalem Abwasser mittels granuliertem Belebtschlammverfahren"
 date: 2019-01-01
-publishDate: 2020-09-07T11:40:03Z
+publishDate: 2020-09-23T14:08:11Z
 authors: [ "Fischbacher, A. F." ]
 publication_types: ["7"]
 abstract: ""
