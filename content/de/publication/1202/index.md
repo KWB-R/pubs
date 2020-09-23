@@ -1,10 +1,10 @@
 ---
 title: "Kapillare Nanofiltration im Pilotmaßstab zur Aufbereitung von Wasser unterschiedlicher Qualitäten – Untersuchungen hinsichtlich Rückhalt, Reinigungsstrategien, Energieverbrauch und Reinigungskosten"
 date: 2019-01-01
-publishDate: 2020-09-07T11:40:29Z
+publishDate: 2020-09-23T15:14:11Z
 authors: [ "Flöter, C." ]
 publication_types: ["7"]
-abstract: ""
+abstract: "The present work deals with the possibility of using capillary nanofiltration (NF) in combination with bank filtration as a pretreatment step for drinking water production. Main goal is to show the removal of selected compounds including sulphate and organic micropollutants (OMP) during the NF. Also demonstrating the benefits of bank filtration as a pretreatment step in comparison to the direct treatment of surface water using capillary NF. For that purpose, a demonstration site in pilot scale was operated as a part of the European project AquaNES at the waterworks Tiefwerder in Berlin. Since 2017 several studies (Hoff, 2017; Rohde, 2018; Jährig et al., 2018) were conducted with drinking water and anoxic well water as feed sources for the NF pilot plant. Building on these the main objective of the present thesis is to optimize the NF pilot plant operation using suboxic well water and surface water as a feed source. Operating data was analyzed and sampling campaigns were carried out to determine the retention capacity of the capillary NF membranes for selected compounds. High retention was achieved for sulphate (45 - 67 %), hardness (55 %), iron (80 %) and selected OMPs further with removal of DOC (56 – 88 %). Microbiological sampling showed a higher impact of microbial growth during the operation of the pilot plant with surface water compared to well water. Furthermore different cleaning agents were tested concerning their ability to restore the membrane performance and their costs. Regarding the specific energy consumption, different measures showed a reduction of plant energy need can be achieved. In conclusion the experiments show a higher impact of biofouling during the direct surface water treatment in comparison to the pretreatment with bank filtration. Long term operation of the tested capillary NF is possible. Under the influence of oxygen and microbial growth there is a high demand of chemical cleaning."
 featured: false
 publication: " Master Thesis. Technischer Umweltschutz. Technische Universität Berlin"
 projects: ["aquanes"]
