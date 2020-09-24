@@ -442,7 +442,7 @@ sapply(pub_md_paths, function(path) replace_kwb_authors_in_pub_index_md(path))
 
 ### Replace auto-generated publish date with "record_last_modified" (in "UTC")
 
-path_en_db <- "../../dms/2020-09-23/KWB-documents_20191205.Data/sdb/sdb.eni"
+path_en_db <- "../../dms/2020-09-24/KWB-documents_20191205.Data/sdb/sdb.eni"
 contents <- kwb.pubs::read_endnote_db(path_en_db)
 
 en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)
