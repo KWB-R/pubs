@@ -11,14 +11,19 @@ path_list <- list(en_root_dir = "//medusa/kwb$/Dokument-Managementsystem",
 )
 
 
+
 ### at KWB
 paths <- kwb.utils::resolveAll(path_list)
 
+at_kwb <- file.exists(paths$en_sdb_ini) 
+if(! at_kwb) {
 ### off KWB
-# paths <- kwb.utils::resolveAll(path_list, 
-#                                en_root_dir = "xxx",
-#                                en_export_root_dir = "xxx")
-
+local_root <- fs::path_abs(file.path(kwb.utils::get_homedir(), "dms"))
+paths <- kwb.utils::resolveAll(path_list, 
+    en_root_dir = fs::path_join(parts = c(local_root, "kwb-documents/latest")),
+    en_export_root_dir = fs::path_join(parts = c(local_root, "endnote_export/latest"))
+    )
+}
 
 
 remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
