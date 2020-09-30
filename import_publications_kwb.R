@@ -1,3 +1,25 @@
+path_list <- list(en_root_dir = "//medusa/kwb$/Dokument-Managementsystem",
+                  en_export_root_dir = "//medusa/processing/dms/endnote_export/latest", 
+                  en_name = "KWB-documents",
+                  en_file = "<en_name>.enl",
+                  en_data_dir = "<en_root_dir>/<en_name>.Data",
+                  en_pdf = "<en_data_dir>/PDF",
+                  en_sdb_ini = "<en_data_dir>/sdb/sdb.eni",
+                  en_export_xml = "<en_export_root_dir>/<en_name>.xml",
+                  en_export_bibtex = "<en_export_root_dir>/<en_name>_with-abstracts_caption-label.txt",
+                  en_export_bibtex_changed_only = "<en_export_root_dir>/<en_name>_with-abstracts_caption-label_changed-only.txt"
+)
+
+
+### at KWB
+paths <- kwb.utils::resolveAll(path_list)
+
+### off KWB
+# paths <- kwb.utils::resolveAll(path_list, 
+#                                en_root_dir = "xxx",
+#                                en_export_root_dir = "xxx")
+
+
 
 remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
 remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
@@ -81,7 +103,7 @@ get_project_ids_site <- function() {
 
 project_ids_site <- get_project_ids_site()
 
-endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = "KWB-documents_20200924.xml")
+endnote_list <- kwb.endnote::create_endnote_list(endnote_xml = paths$en_export_xml)
 endnote_df <- kwb.endnote::create_references_df(endnote_list)
 condition_indices <- which(endnote_df$caption == "confidential" & endnote_df$ref_type_name == "Report")
 confidential_pubs_idx <- endnote_df$rec_number[condition_indices]
@@ -274,7 +296,7 @@ add_title_to_projects(projects)
 ### "The name list field author cannot be parsed"
 #options(encoding="windows-1252")
 options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df("KWB-documents_2020924_with-abstracts_caption-label_changed-only.txt")
+tmp <- bib2df::bib2df(paths$en_export_bibtex_changed_only)
 tmp$URL <- NA_character_
 tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
@@ -289,13 +311,14 @@ public_report_ids <- endnote_df$rec_number[is_public_report]
 public_reports <- endnote_df[is_public_report,c("rec_number", "urls_pdf01")]
 
 
+
+
 ### path PDF files of exported Endnote DB (needs to be same as .XML and .txt files!)
-dms_dir <- fs::path_abs("../../dms/2020-09-24/KWB-documents_20191205.Data/PDF")
 
 public_reports_selected <- public_reports[public_reports$rec_number %in% tmp$en_id,]
 
 public_reports_selected$urls_pdf01 <- gsub(pattern = "internal-pdf:/",
-                                  replacement = dms_dir,
+                                  replacement = paths$en_pdf,
                                   public_reports_selected$urls_pdf01)
 
 public_reports_selected <- public_reports_selected[!is.na(public_reports_selected$urls_pdf01),]
@@ -442,8 +465,7 @@ sapply(pub_md_paths, function(path) replace_kwb_authors_in_pub_index_md(path))
 
 ### Replace auto-generated publish date with "record_last_modified" (in "UTC")
 
-path_en_db <- "../../dms/2020-09-24/KWB-documents_20191205.Data/sdb/sdb.eni"
-contents <- kwb.pubs::read_endnote_db(path_en_db)
+contents <- kwb.pubs::read_endnote_db(paths$en_sdb_ini)
 
 en_refs <- kwb.pubs::add_columns_to_endnote_db(contents$refs)
 
