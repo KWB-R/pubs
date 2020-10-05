@@ -1,3 +1,11 @@
+cran_deps <- c("bib2df", "blogdown", "dplyr", "fs", "readxl", "remotes", "reticulate", "tibble")
+install.packages(cran_deps, repo = "https://cran.rstudio.com")
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.endnote@dev", upgrade = "always")
+remotes::install_github("pixgarden/xsitemap")
+
+
 path_list <- list(en_root_dir = "//medusa/kwb$/Dokument-Managementsystem",
                   en_export_root_dir = "//medusa/processing/dms/endnote_export/latest", 
                   en_name = "KWB-documents",
@@ -13,7 +21,7 @@ path_list <- list(en_root_dir = "//medusa/kwb$/Dokument-Managementsystem",
 
 
 ### at KWB
-paths <- kwb.utils::resolveAll(path_list)
+paths <- kwb.utils::resolve(path_list)
 
 at_kwb <- file.exists(paths$en_sdb_ini) 
 if(! at_kwb) {
@@ -26,8 +34,6 @@ paths <- kwb.utils::resolveAll(path_list,
 }
 
 
-remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
-remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -92,8 +98,6 @@ fs::dir_delete(path = "content/authors")
 library(dplyr)
 library(reticulate)
   
-remotes::install_github("pixgarden/xsitemap")
-
 
 get_project_ids_site <- function() {
   sites <- xsitemap::xsitemapGet("https://www.kompetenz-wasser.de")
@@ -299,9 +303,18 @@ add_title_to_projects(projects)
 
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
-#options(encoding="windows-1252")
-options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df(paths$en_export_bibtex_changed_only)
+
+bib2df <- function (file, separate_names = FALSE) {
+bib <- bib2df:::bib2df_read(file)
+bib <- bib2df:::bib2df_gather(bib)
+bib <- bib2df:::bib2df_tidy(bib, separate_names)
+return(bib)
+}
+
+con <- file(paths$en_export_bibtex_changed_only, encoding = "UTF-8-BOM")
+tmp <- bib2df(file = con)
+close(con)
+
 tmp$URL <- NA_character_
 tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
