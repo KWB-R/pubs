@@ -1,3 +1,8 @@
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.endnote@dev", upgrade = "always")
+
+
 path_list <- list(en_root_dir = "//medusa/kwb$/Dokument-Managementsystem",
                   en_export_root_dir = "//medusa/processing/dms/endnote_export/latest", 
                   en_name = "KWB-documents",
@@ -26,8 +31,6 @@ paths <- kwb.utils::resolveAll(path_list,
 }
 
 
-remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
-remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
