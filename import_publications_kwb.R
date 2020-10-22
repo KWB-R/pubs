@@ -361,8 +361,67 @@ tmp$DATE <- dates
 valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
 tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
 
-options(encoding="UTF-8")
-bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
+### copied from bib2df::df2bib() 
+df2bib <- function (x, file = "", file_encoding, 
+                    append = FALSE) {
+
+  if (!is.character(file)) {
+    stop("Invalid file path: Non-character supplied.",
+         call. = FALSE)
+  }
+  if (as.numeric(file.access(dirname(file), mode = 2)) != 0 && 
+      file != "") {
+    stop("Invalid file path: File is not writeable.", 
+         call. = FALSE)
+  }
+  if (any({
+    df_elements <- sapply(x$AUTHOR, inherits, "data.frame")
+  })) {
+    x$AUTHOR[df_elements] <- lapply(x$AUTHOR[df_elements], 
+                                    na_replace)
+    x$AUTHOR[df_elements] <- lapply(x$AUTHOR[df_elements], 
+                                    function(x) {
+                                      paste(x$last_name, ", ", x$first_name, 
+                                            " ", x$middle_name, sep = "")
+                                    })
+    x$AUTHOR[df_elements] <- lapply(x$AUTHOR[df_elements], 
+                                    trimws)
+  }
+  names(x) <- capitalize(names(x))
+  fields <- lapply(seq_len(nrow(x)), function(r) {
+    rowfields <- rep(list(character(0)), ncol(x))
+    names(rowfields) <- names(x)
+    for (i in seq_along(rowfields)) {
+      f <- x[[i]][r]
+      if (is.list(f)) {
+        f <- unlist(f)
+      }
+      rowfields[[i]] <- if (!length(f) || is.na(f)) {
+        character(0L)
+      }
+      else if (names(x)[i] %in% c("Author", "Editor")) {
+        paste(f, collapse = " and ")
+      }
+      else {
+        paste0(f, collapse = ", ")
+      }
+    }
+    rowfields <- rowfields[lengths(rowfields) > 0]
+    rowfields <- rowfields[!names(rowfields) %in% c("Category", 
+                                                    "Bibtexkey")]
+    paste0("  ", names(rowfields), " = {", unname(unlist(rowfields)), 
+           "}", collapse = ",\n")
+  })
+  
+  con <- file(file, open = "wt", encoding = file_encoding)
+  on.exit(close(con))
+  cat(paste0("@", capitalize(x$Category), "{", 
+             x$Bibtexkey, ",\n", unlist(fields), "\n}\n", 
+             collapse = "\n\n"), file = con, append = append)
+  invisible(file)
+}
+
+df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 
 fs::dir_delete(path = list.dirs("content/publication/"))
 fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
@@ -521,7 +580,7 @@ update_citations <- function(bib_df,
   
 }
 
-tmp <- bib2df::bib2df("publications_kwb.bib")
+
 tmp$en_id <- as.integer(tmp$BIBTEXKEY)
 tmp$BIBTEXKEY <- paste0("RN", tmp$BIBTEXKEY)
 tmp$URL <- ifelse(!is.na(tmp$URL),
