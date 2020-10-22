@@ -387,7 +387,7 @@ df2bib <- function (x, file = "", file_encoding,
     x$AUTHOR[df_elements] <- lapply(x$AUTHOR[df_elements], 
                                     trimws)
   }
-  names(x) <- capitalize(names(x))
+  names(x) <- bib2df:::capitalize(names(x))
   fields <- lapply(seq_len(nrow(x)), function(r) {
     rowfields <- rep(list(character(0)), ncol(x))
     names(rowfields) <- names(x)
@@ -415,13 +415,13 @@ df2bib <- function (x, file = "", file_encoding,
   
   con <- file(file, open = "wt", encoding = file_encoding)
   on.exit(close(con))
-  cat(paste0("@", capitalize(x$Category), "{", 
+  cat(paste0("@", bib2df:::capitalize(x$Category), "{", 
              x$Bibtexkey, ",\n", unlist(fields), "\n}\n", 
              collapse = "\n\n"), file = con, append = append)
   invisible(file)
 }
 
-df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
+df2bib(tmp, file = "publications_kwb.bib", file_encoding = "UTF-8", append = FALSE)
 
 fs::dir_delete(path = list.dirs("content/publication/"))
 fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
@@ -572,10 +572,12 @@ update_citations <- function(bib_df,
     
     #refs <- reference %>%  dplyr::select(- .data$id)
     
-    bib2df::df2bib(reference, file = sprintf("%s/content%spublication/%d/cite.bib", 
-                                             hugo_root_dir,
-                                             ifelse(lang == "", "" , sprintf("/%s/", lang)), 
-                                             reference$en_id) %>% fs::path_abs())
+    df2bib(reference, 
+           file = sprintf("%s/content%spublication/%d/cite.bib",
+                          hugo_root_dir,
+                          ifelse(lang == "", "" , sprintf("/%s/", lang)), 
+                          reference$en_id) %>% fs::path_abs(),
+           file_encoding = "UTF-8")
   })
   
 }
