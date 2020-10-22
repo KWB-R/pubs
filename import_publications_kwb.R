@@ -1,3 +1,11 @@
+cran_deps <- c("bib2df", "blogdown", "dplyr", "fs", "readxl", "remotes", "reticulate", "tibble")
+install.packages(cran_deps, repo = "https://cran.rstudio.com")
+remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.endnote@dev", upgrade = "always")
+remotes::install_github("pixgarden/xsitemap")
+
+
 path_list <- list(en_root_dir = "//medusa/kwb$/Dokument-Managementsystem",
                   en_export_root_dir = "//medusa/processing/dms/endnote_export/latest", 
                   en_name = "KWB-documents",
@@ -13,7 +21,7 @@ path_list <- list(en_root_dir = "//medusa/kwb$/Dokument-Managementsystem",
 
 
 ### at KWB
-paths <- kwb.utils::resolveAll(path_list)
+paths <- kwb.utils::resolve(path_list)
 
 at_kwb <- file.exists(paths$en_sdb_ini) 
 if(! at_kwb) {
@@ -26,8 +34,6 @@ paths <- kwb.utils::resolveAll(path_list,
 }
 
 
-remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
-remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
 library(kwb.pubs)
 
 ### Update KWB authors 
@@ -92,8 +98,6 @@ fs::dir_delete(path = "content/authors")
 library(dplyr)
 library(reticulate)
   
-remotes::install_github("pixgarden/xsitemap")
-
 
 get_project_ids_site <- function() {
   sites <- xsitemap::xsitemapGet("https://www.kompetenz-wasser.de")
@@ -299,9 +303,18 @@ add_title_to_projects(projects)
 
 ### Import all (same cannot due to parsing errors:
 ### "The name list field author cannot be parsed"
-#options(encoding="windows-1252")
-options(encoding="UTF-8-BOM")
-tmp <- bib2df::bib2df(paths$en_export_bibtex_changed_only)
+
+bib2df <- function (file, separate_names = FALSE) {
+bib <- bib2df:::bib2df_read(file)
+bib <- bib2df:::bib2df_gather(bib)
+bib <- bib2df:::bib2df_tidy(bib, separate_names)
+return(bib)
+}
+
+con <- file(paths$en_export_bibtex_changed_only, encoding = "UTF-8-BOM")
+tmp <- bib2df(file = con)
+close(con)
+
 tmp$URL <- NA_character_
 tmp$BIBTEXKEY <- gsub("RN", "", tmp$BIBTEXKEY)
 tmp$en_id <- as.numeric(gsub("RN", "", tmp$BIBTEXKEY))
@@ -348,8 +361,67 @@ tmp$DATE <- dates
 valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
 tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
 
-options(encoding="UTF-8")
-bib2df::df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
+### copied from bib2df::df2bib() 
+df2bib <- function (x, file = "", file_encoding, 
+                    append = FALSE) {
+
+  if (!is.character(file)) {
+    stop("Invalid file path: Non-character supplied.",
+         call. = FALSE)
+  }
+  if (as.numeric(file.access(dirname(file), mode = 2)) != 0 && 
+      file != "") {
+    stop("Invalid file path: File is not writeable.", 
+         call. = FALSE)
+  }
+  if (any({
+    df_elements <- sapply(x$AUTHOR, inherits, "data.frame")
+  })) {
+    x$AUTHOR[df_elements] <- lapply(x$AUTHOR[df_elements], 
+                                    na_replace)
+    x$AUTHOR[df_elements] <- lapply(x$AUTHOR[df_elements], 
+                                    function(x) {
+                                      paste(x$last_name, ", ", x$first_name, 
+                                            " ", x$middle_name, sep = "")
+                                    })
+    x$AUTHOR[df_elements] <- lapply(x$AUTHOR[df_elements], 
+                                    trimws)
+  }
+  names(x) <- capitalize(names(x))
+  fields <- lapply(seq_len(nrow(x)), function(r) {
+    rowfields <- rep(list(character(0)), ncol(x))
+    names(rowfields) <- names(x)
+    for (i in seq_along(rowfields)) {
+      f <- x[[i]][r]
+      if (is.list(f)) {
+        f <- unlist(f)
+      }
+      rowfields[[i]] <- if (!length(f) || is.na(f)) {
+        character(0L)
+      }
+      else if (names(x)[i] %in% c("Author", "Editor")) {
+        paste(f, collapse = " and ")
+      }
+      else {
+        paste0(f, collapse = ", ")
+      }
+    }
+    rowfields <- rowfields[lengths(rowfields) > 0]
+    rowfields <- rowfields[!names(rowfields) %in% c("Category", 
+                                                    "Bibtexkey")]
+    paste0("  ", names(rowfields), " = {", unname(unlist(rowfields)), 
+           "}", collapse = ",\n")
+  })
+  
+  con <- file(file, open = "wt", encoding = file_encoding)
+  on.exit(close(con))
+  cat(paste0("@", capitalize(x$Category), "{", 
+             x$Bibtexkey, ",\n", unlist(fields), "\n}\n", 
+             collapse = "\n\n"), file = con, append = append)
+  invisible(file)
+}
+
+df2bib(tmp, file = "publications_kwb.bib", append = FALSE)
 
 fs::dir_delete(path = list.dirs("content/publication/"))
 fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
@@ -508,7 +580,7 @@ update_citations <- function(bib_df,
   
 }
 
-tmp <- bib2df::bib2df("publications_kwb.bib")
+
 tmp$en_id <- as.integer(tmp$BIBTEXKEY)
 tmp$BIBTEXKEY <- paste0("RN", tmp$BIBTEXKEY)
 tmp$URL <- ifelse(!is.na(tmp$URL),

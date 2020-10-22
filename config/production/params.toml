@@ -12,9 +12,9 @@
     
   [matomo]
     use = 1 # 1: to enable tracking 0: no tracking
-    url = "//piwik.kompetenzwasser.de/"
-    php = "piwik.php"
-    js = "piwik.js"
+    url = "https://piwik.kompetenzwasser.de/"
+    php = "matomo.php"
+    js = "matomo.js"
     site_id = 2
     cookie_domain =  "*.kompetenz-wasser.de"
     domains = "*.kompetenz-wasser.de"
