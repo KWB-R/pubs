@@ -355,11 +355,13 @@ tmp <- dplyr::left_join(tmp,public_reports_selected, by = c(en_id = "rec_number"
 
 #endnote_df$urls_pdf01[tmp$en_id %in% public_report_ids]
 
-tmp$MONTH <- format(as.Date(tmp$MONTH), format = "%m")
+if(any(!is.na(tmp$MONTH))) tmp$MONTH <- format(as.Date(tmp$MONTH), format = "%m")
+if(!is.null(tmp$DATE)) { 
 dates <- as.Date(tmp$DATE, format = "%Y-%m-%d")
 tmp$DATE <- dates
 valid_dates_idx <- which(is.na(tmp$MONTH) & !is.na(dates))
 tmp$MONTH[valid_dates_idx] <- format(dates[valid_dates_idx], format = "%m")
+}
 
 ### copied from bib2df::df2bib() 
 df2bib <- function (x, file = "", file_encoding, 
@@ -588,6 +590,11 @@ tmp$BIBTEXKEY <- paste0("RN", tmp$BIBTEXKEY)
 tmp$URL <- ifelse(!is.na(tmp$URL),
                   sprintf("https://publications.kompetenz-wasser.de%s", tmp$URL), 
                   NA_character_)
+
+tmp <- tmp %>% 
+  dplyr::select(- .data$AUTHOR_KWB, 
+                - .data$hugo_authors, 
+                - .data$id)
                           
 update_citations(bib_df = tmp, lang = "de")
 
