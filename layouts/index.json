@@ -75,7 +75,7 @@
     {{- end -}}
 
     {{- /* Add page to index. */ -}}
-    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "author" $authors "kind" .Kind "tags" .Params.Tags  "project" .Params.projects "project_btn" $project_btn "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "doi" .Params.doi "cite_link" $cite_link "cite_name" $cite_name "pdf" $pdf ) -}}
+    {{- $index = $index | append (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "year" (.Date.Format "2006") "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "expirydate" .ExpiryDate.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" $desc "author" $authors "kind" .Kind "tags" .Params.Tags  "project" .Params.projects "project_btn" $project_btn "publication" (.Params.publication | markdownify) "type_id" $pub_type_id "type" $pub_type_name "doi" .Params.doi "cite_link" $cite_link "cite_name" $cite_name "pdf" $pdf ) -}}
 
   {{- end -}}
 {{- end -}}
