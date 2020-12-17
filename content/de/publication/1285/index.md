@@ -1,0 +1,13 @@
+---
+title: "Schnelle und zuverlässige Messtechnik und Steuer-/Regelkonzepte für eine weitergehende Abwasserreinigung (MeReZon). Schlussbericht Teilprojekt 2 Kompetenzzentrum Wasser Berlin gGmbH"
+date: 2020-01-01
+publishDate: 2020-12-16T14:36:31Z
+authors: [ "stapf", "schuetz", "miehe" ]
+publication_types: ["4"]
+abstract: "Zur Verminderung von Spurenstoffeinträgen in Oberflächengewässer wurden bereits einige Kläranlagen in Deutschland und der Schweiz um eine weitergehende Reinigungsstufe (Ozon oder Aktivkohle) erweitert. Zur Erzielung einer gleichbleibenden Spurenstoffelimination und einer gleichzeitigen Vermeidung von Fehldosierungen (Kosten, Rohstoffeinsatz) werden verlässliche Messverfahren und robuste MSR-Konzepte (Mess-, Regel- und Steuerung) benötigt. Im Rahmen des Projekts „MeReZon\" (Schnelle und zuverlässige Messtechnik und Steuer-/Regelkonzepte für eine weitergehende Abwasserreinigung) wurde an einer Pilot-Ozonanlage zur Behandlung von gereinigtem Abwasser untersucht, unter welchen Randbedingungen eine verlässliche Onlinemessung möglich ist. Dabei wurde u.a. die Leistungsfähigkeit eines neu entwickelten Ultraschallreinigungsmoduls zur Vermeidung einer Messwertdrift durch Fouling untersucht und mit den Sonden bzw. Reinigungsmodulen anderer Hersteller in verschiedenen Konfigurationen verglichen. Dabei wurden deutliche Unterschiede festgestellt. Darauf aufbauend wurde das bestehende MSR-Konzept der Ozonanlage optimiert und ein alternierender Messbetrieb, d.h. abwechselnde Beschickung einer Messsonde mit Zu- bzw. Ablauf der Ozonung, implementiert. Die Ergebnisse zeigen, dass mit dem optimierten MSR-Konzept eine stabile Abnahme des SAK254 (<U+0394>SAK254) erzielt werden kann, welche mit der Spurenstoffelimination korreliert. Die erfolgreiche Umsetzung des alternierenden Messbetriebs ermöglicht die Ermittlung der SAK254 Abnahme mit nur einer Messsonde, was prinzipiell Vorteile bei einer Regelung der Ozondosis auf ein stabiles <U+0394>SAK254 mit sich bringt. Zudem konnte gezeigt werden, dass die Onlinemessung der Fluoreszenz eine praktikable Alternative zum <U+0394>SAK254 darstellt, da diese ebenfalls eine Änderung des Ozonbedarfs integral erfassen kann und mit der Spurenstoffelimination korreliert. Die gewonnenen Ergebnisse bieten Messgeräteherstellern wertvolle Anhaltspunkte wie sie ihre Onlinesonden und Reinigungsmodule weiter optimieren können. Das entwickelte MSR-Konzept bzw. der alternierende Messbetrieb kann von Betreibern von Ozonanlagen auf kommunalen Kläranlagen zur Optimierung bestehender oder zukünftiger Anlagen genutzt werden."
+featured: false
+publication: "Kompetenzzentrum Wasser Berlin gGmbH"
+url_pdf: "/pdf/Stapf-2020-1285.pdf"
+projects: ["merezon"]
+---
+
