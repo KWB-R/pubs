@@ -87,7 +87,9 @@ kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "conz
 kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "rabe",],
                              width = 500, x_off = 150, y_off = 0, height = 500,
                              overwrite = TRUE)
-
+kwb.pubs:::add_author_avatar(authors_metadata[authors_metadata$lastname == "zhiteneva",],
+                             width = 500, x_off = 230, y_off = 50, height = 500,
+                             overwrite = TRUE)
 
 fs::dir_delete(path = "content/en/authors")
 fs::dir_copy(path = "content/authors", "content/en/authors", overwrite = TRUE)
