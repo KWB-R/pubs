@@ -314,7 +314,7 @@ bib <- bib2df:::bib2df_tidy(bib, separate_names)
 return(bib)
 }
 
-con <- file(paths$en_export_bibtex_changed_only, encoding = "UTF-8-BOM")
+con <- file(paths$en_export_bibtex, encoding = "UTF-8-BOM")
 tmp <- bib2df(file = con)
 close(con)
 
