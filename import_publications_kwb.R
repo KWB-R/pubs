@@ -49,8 +49,11 @@ authors_metadata <- authors_metadata[researchers_at_kwb,]
 
 ## to do: add argument "lang" to kwb.pubs:::create_author_dir() to specify 
 ## "de" / "en" subfolder
-kwb.pubs::add_authors_index_md(authors_metadata[authors_metadata$lastname=="jährig",], 
+kwb.pubs::add_authors_index_md(authors_metadata, 
                                overwrite = TRUE)
+
+
+kwb.pubs::add_authors_avatar(authors_metadata)
 
 ## add "transparent" avatar for jette (to improve "ui")
 avatar_path <- kwb.pubs::add_authors_avatar(authors_metadata[authors_metadata$lastname=="jährig",], 

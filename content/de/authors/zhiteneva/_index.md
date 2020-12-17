@@ -1,12 +1,12 @@
 +++
 # Display name
-name = "Tatis-Muvdi, R."
+name = "Zhiteneva, V."
 
 # Author name (required for "people" without content) 
 # for details see: https://github.com/gcushen/hugo-academic/issues/274#issuecomment-460926722
 # Username (this should match the folder name)
 
-authors = ["tatis-muvdi"]
+authors = ["zhiteneva"]
 
 
 # Is this the primary user of the site?
@@ -78,15 +78,9 @@ user_groups = ["Researchers"]
 
 
 [[social]]
-  icon = "phone"
-  icon_pack = "fas"
-  link = "tel:+493053653813"
-
-
-[[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:roberto.tatis-muvdi@kompetenz-wasser.de"
+  link = "mailto:veronika.zhiteneva@kompetenz-wasser.de"
 
 
 
