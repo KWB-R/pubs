@@ -430,9 +430,9 @@ df2bib <- function (x, file = "", file_encoding,
 
 df2bib(tmp, file = "publications_kwb.bib", file_encoding = "UTF-8", append = FALSE)
 
-fs::dir_delete(path = list.dirs("content/publication/"))
-fs::dir_delete(path = list.dirs("content/de/publication/")[-1])
-fs::dir_delete(path = list.dirs("content/en/publication/")[-1])
+fs::dir_delete(path = list.dirs("content/publication"))
+fs::dir_delete(path = list.dirs("content/de/publication")[-1])
+fs::dir_delete(path = list.dirs("content/en/publication")[-1])
 
 
 ###############################################################################
