@@ -3,6 +3,7 @@ install.packages(cran_deps, repo = "https://cran.rstudio.com")
 remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
 remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
 remotes::install_github("kwb-r/kwb.endnote@dev", upgrade = "always")
+remotes::install_github("kwb-r/kwb.nextcloud")
 remotes::install_github("pixgarden/xsitemap")
 
 
