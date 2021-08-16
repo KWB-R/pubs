@@ -1,9 +1,16 @@
-cran_deps <- c("bib2df", "blogdown", "dplyr", "fs", "readxl", "remotes", "reticulate", "tibble")
-install.packages(cran_deps, repo = "https://cran.rstudio.com")
-remotes::install_github("kwb-r/kwb.pubs@dev", upgrade = "always")
-remotes::install_github("kwb-r/kwb.site@dev", upgrade = "always")
-remotes::install_github("kwb-r/kwb.endnote@dev", upgrade = "always")
-remotes::install_github("kwb-r/kwb.nextcloud")
+# Enable the KWB R-universe
+options(repos = c(
+  kwbr = 'https://kwb-r.r-universe.dev',
+  CRAN = 'https://cloud.r-project.org'))
+
+pkgs_cran <- c("bib2df", "blogdown", "dplyr", "fs", "readxl", "remotes", "reticulate", "tibble")
+pkgs_kwb <- c("kwb.endnote", "kwb.nextcloud", "kwb.pubs", "kwb.site")
+pkgs <- c(pkgs_cran, pkgs_kwb)
+
+# Install CRAN/KWB Package Dependencies
+install.packages(pkgs)
+
+# Install GitHub Package Dependencies
 remotes::install_github("pixgarden/xsitemap")
 
 
