@@ -1,0 +1,530 @@
+/// TYPOGRAPHY
+
+$fnt: "Pangea", Helvetica, Arial, sans-serif;
+
+/* Helvetica */
+
+$fnt-xl: 50px;
+$lnh-xl: 55px;
+$lsp-xl: 0em;
+
+$fmt-xl: $fnt-xl, $lnh-xl, $lsp-xl;
+
+$fnt-xl-m: 35px;
+$lnh-xl-m: 40px;
+$lsp-xl-m: 0em;
+
+$fmt-xl-m: $fnt-xl-m, $lnh-xl-m, $lsp-xl-m;
+
+$fnt-l: 35px;
+$lnh-l: 40px;
+$lsp-l: 0em;
+
+$fmt-l: $fnt-l, $lnh-l, $lsp-l;
+
+$fnt-l-m: 22px;
+$lnh-l-m: 25px;
+$lsp-l-m: 0em;
+
+$fmt-l-m: $fnt-l-m, $lnh-l-m, $lsp-l-m;
+
+$fnt-m: 24px;
+$lnh-m: 34px;
+$lsp-m: 0em;
+
+$fmt-m: $fnt-m, $lnh-m, $lsp-m;
+
+$fnt-m-m: 18px;
+$lnh-m-m: 24px;
+$lsp-m-m: 0em;
+
+$fmt-m-m: $fnt-m-m, $lnh-m-m, $lsp-m-m;
+
+$fnt-s: 20px;
+$lnh-s: 28px;
+$lsp-s: 0em;
+
+$fmt-s: $fnt-s, $lnh-s, $lsp-s;
+
+$fnt-s-m: 15px;
+$lnh-s-m: 19px;
+$lsp-s-m: 0em;
+
+$fmt-s-m: $fnt-s-m, $lnh-s-m, $lsp-s-m;
+
+$fnt-xs: 18px;
+$lnh-xs: 30px;
+$lsp-xs: 0.02em;
+
+$fmt-xs: $fnt-xs, $lnh-xs, $lsp-xs;
+
+$fnt-xs-m: 15px;
+$lnh-xs-m: 19px;
+$lsp-xs-m: 0.01em;
+
+$fmt-xs-m: $fnt-xs-m, $lnh-xs-m, $lsp-xs-m;
+
+/// COLORS
+
+$black: rgb(0, 0, 0);
+$blue: #0003E2;
+
+/// GRID
+
+$gutter: 20px;
+
+$colcount: 8;
+$colwidth: 100% / $colcount;
+
+/// SPACES
+
+$spc-v-l: 56px;
+$spc-v-m: 29px;
+$spc-v-s: 20px;
+
+$spc-v-s-m: 14px;
+$spc-v-m-m: 1.7vw;
+$spc-v-l-m: 3.2vw;
+
+$logoWrapperHeight: 90px;
+$logoWrapperHeight-m: 70px;
+$navHeight: 40px;
+$footer: 429px;
+$footer-m: 337px;
+
+/// BREAKS
+
+$navBreak: 1290px;
+$screen-xs-max: 562;
+$screen-sm-max: 720px;
+$screen-md-max: 1200px;
+$screen-lg-min: 1440px;
+
+// based on
+//https://medium.com/developing-with-sass/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740#.721a545lo
+
+@mixin breakpoint($min: 0, $max: 0) {
+  $type: type-of($min);
+
+  @if $type == string {
+    $class: $min;
+
+    @if $class == xs {
+      @media (max-width: $screen-xs-max) {
+        @content;
+      }
+    }
+    @else if $class == sm {
+      @media (max-width: $screen-sm-max) {
+        @content;
+      }
+    }
+    @else if $class == md {
+      @media (max-width: $screen-md-max) and (orientation: portrait) {
+        @content;
+      }
+    }
+    @else if $class == tmd {
+      @media (max-width: $screen-md-max) and (orientation: landscape) {
+        @content;
+      }
+    }
+    @else if $class == lg {
+      @media (min-width: $screen-lg-min) {
+        @content;
+      }
+    }
+    @else if $class == dsk {
+      @media (min-width: $screen-sm-max) {
+        @content;
+      }
+    }
+    @else if $class == 'nav' {
+      @media (max-width: $navBreak) {
+        @content;
+      }
+    }
+    @else {
+      @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+  }
+  @else if $type == number {
+    $query: "all" !default;
+
+    @if $min != 0 and $max != 0 {
+      $query: "(min-width: #{$min}) and (max-width: #{$max})";
+    }
+    @else if $min != 0 and $max == 0 {
+      $query: "(min-width: #{$min})";
+    }
+    @else if $min == 0 and $max != 0 {
+      $query: "(max-width: #{$max})";
+    }
+
+    @media #{$query} {
+      @content;
+    }
+  }
+}
+
+/// Font Format
+
+@mixin fontformat($list) {
+  font-size: nth($list, 1);
+  line-height: nth($list, 2);
+  letter-spacing: nth($list, 3);
+}
+
+/// Absolute Default
+
+@mixin absolute($position: absolute, $top: 0, $right: auto, $bottom: auto, $left: 0, $width: 100%, $height: 100%) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.woff') format('woff'); // IE9 compat
+		src: //url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+			// url('#{$src}.woff') format('woff'), // standards
+      url('#{$src}.woff2') format('woff2'); // standards
+			// url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+			// url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+/// Center Element
+
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if $horizontal and $vertical {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if $horizontal {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  @else if $vertical {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+/// Create Animations
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($animate) {
+  $max: length($animate);
+  $animations: "";
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+/* Helvetica */
+body {
+  font-family: "Pangea", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 34px;
+  letter-spacing: 0em;
+  color: black; }
+  @media (max-width: 720px) {
+    body {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0em; } }
+p,
+ul {
+  margin-bottom: 34px; }
+  @media (max-width: 720px) {
+    p,
+    ul {
+      margin-bottom: 24px; } }
+h1, h2, h3, h4 {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit; }
+
+.fnt,
+[class^="fnt"] {
+  font-family: "Pangea", Helvetica, Arial, sans-serif; }
+
+.fnt-s {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0em; }
+  .fnt-s p {
+    margin-bottom: 28px; }
+  @media (max-width: 720px) {
+    .fnt-s {
+      font-size: 15px;
+      line-height: 19px;
+      letter-spacing: 0em; }
+      .fnt-s p {
+        margin-bottom: 19px; } }
+.fnt-xs {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em; }
+  .fnt-xs p {
+    margin-bottom: 30px; }
+  @media (max-width: 720px) {
+    .fnt-xs {
+      font-size: 15px;
+      line-height: 19px;
+      letter-spacing: 0.01em; }
+      .fnt-xs p {
+        margin-bottom: 19px; } }
+.fnt-m {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0em; }
+  .fnt-m p {
+    margin-bottom: 34px; }
+  @media (max-width: 720px) {
+    .fnt-m {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0em; }
+      .fnt-m p {
+        margin-bottom: 24px; } }
+.fnt-l {
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: 0em; }
+  .fnt-l p {
+    margin-bottom: 40px; }
+  @media (max-width: 720px) {
+    .fnt-l {
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: 0em; }
+      .fnt-l p {
+        margin-bottom: 25px; } }
+.fnt-xl {
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: 0em;
+  font-weight: 700; }
+  .fnt-xl p {
+    margin-bottom: 55px; }
+  @media (max-width: 720px) {
+    .fnt-xl {
+      font-size: 35px;
+      line-height: 40px;
+      letter-spacing: 0em; }
+      .fnt-xl p {
+        margin-bottom: 40px; } }
+.bold {
+  font-weight: bold; }
+
+.center {
+  text-align: center; }
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.08em; }
+
+.color-blue {
+  color: #0003E2; }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -10px;
+  margin-right: -10px; }
+  @media (max-width: 720px) {
+    .row {
+      margin-left: 0;
+      margin-right: 0; } }
+.col-1 {
+  flex: 0 0 12.5%;
+  max-width: 12.5%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-1 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.col-2 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-2 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.col-3 {
+  flex: 0 0 37.5%;
+  max-width: 37.5%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-3 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.col-4 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-4 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.col-5 {
+  flex: 0 0 62.5%;
+  max-width: 62.5%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-5 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.col-6 {
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-6 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.col-7 {
+  flex: 0 0 87.5%;
+  max-width: 87.5%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-7 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.col-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 10px; }
+  @media (max-width: 720px) {
+    .col-8 {
+      flex: 0 0 100%;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 auto; } }
+.grid {
+  padding: 0 20px; }
+  @media (max-width: 720px) {
+    .grid {
+      padding: 0 14px; } }
+aside:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: #0003E2;
+  position: absolute;
+  top: 0;
+  right: 10px; }
+  @media (max-width: 720px) {
+    aside:after {
+      background-color: transparent; } }
+aside h1,
+aside .h1 {
+  margin-bottom: 28px; }
+  @media (max-width: 720px) {
+    aside h1,
+    aside .h1 {
+      margin-bottom: 19px; } }
+@media (max-width: 720px) {
+  aside .aside-head {
+    height: 40px; } }
+
+.mobile {
+  display: none; }
+  @media (max-width: 720px) {
+    .mobile {
+      display: block; } }
+.nav-break {
+  display: none; }
+  @media (max-width: 1290px) {
+    .nav-break {
+      display: inline-flex; } }
+.desktop {
+  display: block; }
+  @media (max-width: 720px) {
+    .desktop {
+      display: none; } }
+.desktop-flex {
+  display: flex; }
+  @media (max-width: 720px) {
+    .desktop-flex {
+      display: none; } }
+@media (max-width: 720px) {
+  .aside-collapse {
+    display: none;
+    height: 0;
+    visibility: hidden; }
+    .aside-collapse.show {
+      display: block;
+      height: calc(var(--height) - 110px);
+      visibility: visible;
+      overflow-y: auto; } }
+
+.noselect {
+  user-select: none; }
+
+.hidden {
+  display: none; }

@@ -60,6 +60,8 @@
   translation: Weitere Vorträge
 - id: more_publications
   translation: Weitere Publikationen
+- id: contact
+  translation: Kontakt
 - id: contact_name
   translation: Name
 - id: contact_email
@@ -154,3 +156,7 @@
   translation: Verstanden!
 - id: cookie_learn
   translation: Mehr erfahren
+- id: abstracts_show
+  translation: Zusammenfassungen zeigen
+- id: abstracts_hide
+  translation: Zusammenfassungen verstecken

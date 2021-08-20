@@ -1,0 +1,36 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    margin-top: 0;
+
+    &.disable-scroll {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+h1,
+h2,
+h3, 
+h4 {
+  margin-top: 0;
+  // margin-bottom: 0;
+}
+
+h1,
+.h1 {
+  margin-bottom: $lnh-m;
+
+  @include breakpoint(sm) {
+    margin-bottom: $lnh-m-m;
+  }
+}
+
+button.toggleCollapse {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

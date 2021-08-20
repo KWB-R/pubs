@@ -1,30 +1,43 @@
 {{- define "main" -}}
 
-<div class="ais-InstantSearch">
-   <div class="left-panel">
-      <div id="clear-refinements"></div>
-      <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" >Show abstracts</button>-->
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target=".multi-collapse">Abstracts (show/hide)</button>
-      <br></br>
-      <h4>{{i18n "publication_type"}}</h4>
-      <div id="pubs-list"></div>
-      <h4>{{i18n "year"}}</h4>
-      <p id="year-list"></p>
-      <h4>{{i18n "author"}}</h4>
-      <p id="author-list"></p>
-      <h4>{{i18n "project"}}</h4>
-      <p id="project-list"></p>
-   </div>
-   <div class="right-panel">
-      <div id="current-refinements"></div>
-      <div id="searchbox" class="ais-SearchBox"></div>
-      <div id="search-container-top" class="search-top">
-         <span id="stats" class="box1"></span>
-         <span id="powered-by" class="box2"></span>
-         <span id="hits-per-page" class="box3"></span>
+<div class="ais-InstantSearch grid">
+   <div class="row">
+      <aside class="left-panel col-2">
+
+         <div class="aside-head">
+            <h1 class="color-blue fnt-l bold">{{i18n "search_results"}}</h1>
+            <button class="d-md-block d-lg-none fnt-xs btn btn-info toggleCollapse" type="button" data-toggle="collapse" data-target=".aside-collapse">Filter</button>
+         </div>
+         
+         <div class="filter-panel aside-collapse dont-collapse-sm">
+            <div class="filter-controls">
+               <div id="clear-refinements" class="fnt-xs"></div>
+               <button type="button" class="btn btn-underline fnt-xs d-none d-sm-block" id="abstracts-toggle" data-toggle="collapse" data-target=".multi-collapse" data-show='{{ i18n "abstracts_hide" }}' data-hide='{{ i18n "abstracts_show" }}'></button>
+            </div>
+
+            <h2 class="color-blue fnt-m">{{i18n "publication_type"}}</h4>
+            <div class="filter-list fnt-s" id="pubs-list"></div>
+            <h2 class="color-blue fnt-m">{{i18n "year"}}</h2>
+            <div class="filter-list fnt-s" id="year-list"></div>
+            <h2 class="color-blue fnt-m">{{i18n "author"}}</h2>
+            <div class="filter-list fnt-s" id="author-list"></div>
+            <h2 class="color-blue fnt-m">{{i18n "project"}}</h2>
+            <div class="filter-list fnt-s" id="project-list"></div>
+         </div>
+      </aside>
+      <div class="right-panel col-6">
+         <div>
+            <div id="searchbox" class="ais-SearchBox"></div>
+            <div id="powered-by" class="box2"></div>
+            <div id="search-container-top" class="search-top">
+               <!--<span id="stats" class="box1"></span>-->
+               <div id="current-refinements" class="fnt-xs"></div>
+               <div id="hits-per-page" class="ml-auto d-none d-sm-block fnt-xs"></div>
+            </div>
+            <div id="hits" class="full-width"></div>
+            <div id="pagination"></div>
+         </div>
       </div>
-      <div id="hits" class="full-width"></div>
-      <div id="pagination"></div>
    </div>
 </div>
 

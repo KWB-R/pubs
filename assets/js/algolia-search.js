@@ -1,3 +1,59 @@
+// Show/Hide Abstract
+
+let abstractCollapsed = sessionStorage.getItem('abstractCollapsed') === 'true' || false
+const collapseAll = function() {
+  setTimeout(function() {
+    if (abstractCollapsed === true) {
+      $('.multi-collapse').collapse()
+    }
+    setButtonText(abstractCollapsed)
+  },200)
+}
+const setButtonText = function(hide) {
+  const btn = $('#abstracts-toggle')
+  if (hide) {
+    btn.html(btn.data('hide'))
+  } else {
+    btn.html(btn.data('show'))
+  }
+}
+$(document).ready(collapseAll)
+
+$('#abstracts-toggle').click(function() {
+  abstractCollapsed = !abstractCollapsed
+  setButtonText(abstractCollapsed)
+  sessionStorage.setItem('abstractCollapsed',abstractCollapsed)
+})
+
+// Aside Toggle
+
+$('body').css('--height', window.innerHeight + "px")
+
+let htmlBody = $('body');
+let scrollPos = 0;
+const disableScroll = function() {
+  scrollPos = document.documentElement.scrollTop
+  htmlBody.css('top', -scrollPos + 'px').addClass('disable-scroll')
+}
+
+const enableScroll = function() {
+  htmlBody.removeClass('disable-scroll')
+  $(window).scrollTop(this.scrollPos)
+}
+
+$('.aside-collapse').on('show.bs.collapse', function () {
+  console.log("show", this)
+  // $(this).css('top',scrollPos)
+  disableScroll()
+})
+$('.aside-collapse').on('hide.bs.collapse', function () {
+  console.log("hide")
+  // $(this).css('top',scrollPos)
+  enableScroll()
+})
+
+// Algolia
+
 const showMoreText = 
         '{{#isShowingMore}}' +
         i18n.show_less +
@@ -7,9 +63,12 @@ const showMoreText =
         '{{/isShowingMore}}';
 
 
-const css_showmore = 'btn btn-outline-primary';
+const css_showmore = 'btn btn-underline';
 
 const router = instantsearch.routers.history({
+  windowTitle() {
+    collapseAll()
+  }, 
   createURL({ qsModule, routeState, location }) {
     /*const urlParts = location.href.match(/^(.*?)\/search/);*/
     /*const urlParts = location.href.match(/^(.*\/de\/publication\/)/search/);*/
@@ -144,7 +203,7 @@ search.addWidgets([
     pushPagination: true,
   }),
   instantsearch.widgets.poweredBy({
-  container: '#powered-by',
+    container: '#powered-by',
   }),
   instantsearch.widgets.currentRefinements({
     container: '#current-refinements',
@@ -153,15 +212,15 @@ search.addWidgets([
     container: '#searchbox',
     placeholder: i18n.placeholder,
   }),
-  instantsearch.widgets.stats({
-  container: '#stats',
-  templates: {
-      text: '{{#hasNoResults}}' + i18n.no_results + '{{/hasNoResults}}' +
-      '{{#hasOneResult}}' + i18n.one_result + '{{/hasOneResult}}' +
-      '{{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}}' + ' ' + i18n.results + 
-      '{{/hasManyResults}}' + ' ' + i18n.found_in + ' ' + '{{processingTimeMS}}ms. ',
-    },
-  }),
+  // instantsearch.widgets.stats({
+  // container: '#stats',
+  // templates: {
+  //     text: '{{#hasNoResults}}' + i18n.no_results + '{{/hasNoResults}}' +
+  //     '{{#hasOneResult}}' + i18n.one_result + '{{/hasOneResult}}' +
+  //     '{{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}}' + ' ' + i18n.results + 
+  //     '{{/hasManyResults}}' + ' ' + i18n.found_in + ' ' + '{{processingTimeMS}}ms. ',
+  //   },
+  // }),
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
     templates: {
@@ -248,15 +307,17 @@ search.addWidgets([
           return [x, authors_name[i]].join(' ');
         });
         let project = '';
+
         if (data.project !== null) {
           const project_link = data.project.map(
             (p) =>
-              '<a class="btn btn-outline-primary my-1 mr-1 btn-sm piwik_link" href="?project=' +
+              '<a class="btn btn-primary my-1 mr-1 fnt-xs piwik_link" href="?project=' +
               p +
               '">' +
               data.project_btn +
               ': '
           );
+
           const project_name = data._highlightResult.project.map(
             (p) => p.value + '</a>'
           );
@@ -267,7 +328,10 @@ search.addWidgets([
             .join(' ');
         }
         const cite =
-          '<a class="btn btn-outline-primary my-1 mr-1 btn-sm matomo_download" href="' +
+          '<a class="btn btn-primary my-1 mr-1 fnt-xs matomo_download piwik-link js-cite-modal" data-filename="'+
+          base_url +
+          data.cite_link +
+          '" href="' +
           base_url +
           data.cite_link +
           '">' +
@@ -276,7 +340,7 @@ search.addWidgets([
         let pdf = '';
         if (data.pdf !== '') {
           pdf +=
-            '<a class="btn btn-outline-primary my-1 mr-1 btn-sm matomo_download" href="' +
+            '<a class="btn btn-primary my-1 mr-1 fnt-xs matomo_download" href="' +
             base_url +
             data.pdf +
             '" target="_blank" rel="noopener">' +
@@ -286,7 +350,7 @@ search.addWidgets([
         let doi = '';
         if (data.doi !== null) {
           doi +=
-            '<a class="btn btn-outline-primary my-1 mr-1 btn-sm piwik_link" href="' +
+            '<a class="btn btn-primary my-1 mr-1 fnt-xs piwik_link" href="' +
             'https://doi.org/' +
             data.doi +
             '" target="_blank" rel="noopener">DOI</a>';
@@ -294,29 +358,29 @@ search.addWidgets([
 		let abstract = '';
 		if (data.summary !== '') {
 		  abstract += 
-		  '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#' +
+		  '<button type="button" class="btn btn-abstract btn-underline fnt-xs d-none d-sm-block" data-toggle="collapse" data-target="#' +
             abstract_id +
             '">' + 
             i18n.abstract +
             '</button>'
 		}
-        const links = '<p style="margin-bottom: 5px;">' + cite + doi + pdf + project + '</p>';
+        const links = '<div class="pub-item-links">' + cite + doi + pdf + project + '</div>';
         const publication =
-          '<div class="pub-list-item" style="margin-bottom: 5px;">' +
-          '<i class="far fa-file-alt pub-icon" aria-hidden="true"></i>' +
+          '<div class="pub-list-item fnt-m">' +
+          // '<i class="far fa-file-alt pub-icon" aria-hidden="true"></i>' +
           '<span class="article-metadata li-cite-author">' +
           authors +
           '</span>' +
           ' (' +
           data._highlightResult.year.value +
-          '): <a href= ' +
+          '): <a class="pub-title" href= ' +
           data.relpermalink +
           '> ' +
           data._highlightResult.title.value +
           '</a>. ' +
           data.publication +
-          links +
-          '</div>';
+          '</div>' + 
+          links;
         if (data.summary === '') {
           return publication;
         } else {
@@ -325,7 +389,7 @@ search.addWidgets([
 			abstract +
             '<div id="' +
             abstract_id +
-            '" class="collapse show multi-collapse" style="font-size:70%;">' +
+            '" class="collapse show multi-collapse d-none d-sm-block fnt-xs pub-item-abstract ">' +
             data._highlightResult.summary.value +
             '</div>'
           );
@@ -336,6 +400,7 @@ search.addWidgets([
 
   instantsearch.widgets.pagination({
     container: '#pagination',
+    padding: 2
   }),
 ]);
 

@@ -2,7 +2,6 @@
 {{ $page := .page }}
 {{ $link := "" }}
 
-{{/* ***** TODO: Deprecate `url_preprint` in favour of `url_pdf` given there's now a dedicated "Preprint" pub. type. ***** */}}
 {{ with $page.Params.url_preprint }}
   {{ $resource := $page.Resources.GetMatch . }}
   {{ if $resource }}
@@ -25,13 +24,13 @@
 {{ end }}
 
 {{ with $pdf }}
-<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} matomo_download" href="{{ . }}" target="_blank" rel="noopener">
+<a class="btn btn-primary fnt-s my-1 mr-1{{ if $is_list }} btn-sm{{end}} matomo_download" href="{{ . }}" target="_blank" rel="noopener">
   {{ i18n "btn_pdf" }}
 </a>
 {{ end }}
 {{ $resource := $page.Resources.GetMatch "cite.bib" }}
 {{ with $resource }}
-<button type="button" class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} js-cite-modal piwik_link"
+<button type="button" class="btn btn-primary fnt-s my-1 mr-1{{ if $is_list }} btn-sm{{end}} js-cite-modal piwik_link"
         data-filename="{{ .RelPermalink }}">
   {{ i18n "btn_cite" }}
 </button>
@@ -43,7 +42,7 @@
   {{ else }}
     {{ $link = . | relURL }}
   {{ end }}
-<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
+<a class="btn btn-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
   {{ i18n "btn_code" }}
 </a>
 {{ end }}
@@ -54,11 +53,11 @@
   {{ else }}
     {{ $link = . | relURL }}
   {{ end }}
-<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
+<a class="btn btn-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
   {{ i18n "btn_dataset" }}
 </a>
 {{ end }}
-{{ if $page.Params.projects }}
+<!--{{ if $page.Params.projects }}
 {{ range $page.Params.projects }}
   {{ with . }}
   <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} piwik_link" href='{{"publication/"| relLangURL }}?project={{.}}'>
@@ -74,7 +73,7 @@
   {{ i18n "btn_project" }}: {{.}}
 </a>
 {{ end }}
-{{ end }}
+{{ end }}-->
 {{ with $page.Params.url_poster }}
   {{ $resource := $page.Resources.GetMatch . }}
   {{ if $resource }}
@@ -151,7 +150,7 @@
   {{ else if in (slice "http" "https") $scheme }}
     {{ $target = "target=\"\"" }}
   {{ end }}
-  <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
+  <a class="btn btn-prj btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
     {{ if .icon }}<i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} {{if .name}}mr-1{{end}}"></i>{{end}}
     {{ with .name }}{{ . | safeHTML }}{{end}}
   </a>
