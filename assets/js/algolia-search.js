@@ -38,7 +38,7 @@ const disableScroll = function() {
 
 const enableScroll = function() {
   htmlBody.removeClass('disable-scroll')
-  $(window).scrollTop(this.scrollPos)
+  $(window).scrollTop(scrollPos)
 }
 
 $('.aside-collapse').on('show.bs.collapse', function () {
@@ -358,7 +358,7 @@ search.addWidgets([
 		let abstract = '';
 		if (data.summary !== '') {
 		  abstract += 
-		  '<button type="button" class="btn btn-abstract btn-underline fnt-xs d-none d-sm-block" data-toggle="collapse" data-target="#' +
+		  '<button type="button" class="btn btn-abstract btn-underline fnt-xs" data-toggle="collapse" data-target="#' +
             abstract_id +
             '">' + 
             i18n.abstract +
@@ -386,11 +386,13 @@ search.addWidgets([
         } else {
           return (
             publication +
-			abstract +
+            '<div class="abstract-area d-none d-sm-block">' +
+			      abstract +
             '<div id="' +
             abstract_id +
-            '" class="collapse show multi-collapse d-none d-sm-block fnt-xs pub-item-abstract ">' +
+            '" class="collapse show multi-collapse fnt-xs pub-item-abstract ">' +
             data._highlightResult.summary.value +
+            '</div>' +
             '</div>'
           );
         }

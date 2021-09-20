@@ -14,15 +14,14 @@
   {{end}}
 {{end}}
 
-<div class="pub grid">
+<main class="pub">
 
   <h1 class="hidden" >{{ $title }}</h1>
 
-  <div class="row">
-
-    <aside class="col-2 fnt-s">
+    <aside class="fnt-s">
+      <div class="wrapper">
       <div class="aside-head">
-        <h1 class="color-blue fnt-m">{{i18n "publication"}}</h1>
+        <h1 class="color-blue fnt-s bold">{{i18n "publication"}}</h1>
         <button class="d-md-block d-lg-none btn btn-info toggleCollapse" type="button" data-toggle="collapse" data-target=".aside-collapse">Info</button>
       </div>
 
@@ -93,30 +92,36 @@
 
         {{ partial "share" . }}
       </div>
+      </div>
     </aside>
 
-    <div class="spacer col-1"></div>
+    <div class="content">
+      <div class="grid">
+      <div class="row">
+        <div class="spacer col-1"></div>
 
-    <div class="article-container col-4">
+        <div class="article-container col-4">
 
-      <div class="h1 fnt-xl bold" >{{ $title }}</div>
+          <div class="h1 fnt-xl bold" >{{ $title }}</div>
 
-      {{ with $page.Params.subtitle }}
-          <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
-      {{end}}
+          {{ with $page.Params.subtitle }}
+              <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
+          {{end}}
 
-      {{ if .Params.abstract }}
-        <!--<h2>{{ i18n "abstract" }}</h2>-->
-        <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
-      {{ end }}
+          {{ if .Params.abstract }}
+            <!--<h2>{{ i18n "abstract" }}</h2>-->
+            <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
+          {{ end }}
 
-      <div class="article-style">{{ .Content }}</div>
+          <div class="article-style">{{ .Content }}</div>
 
-      {{ partial "page_footer" . }}
+          {{ partial "page_footer" . }}
 
+        </div>
+
+        <div class="spacer col-1"></div>
+      </div>
+      </div>
     </div>
-
-    <div class="spacer col-1"></div>
-  </div>
-</div>
+</main>
 {{- end -}}

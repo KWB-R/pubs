@@ -1,15 +1,22 @@
-// @import "./../../../kwb/src/scss/modules/variables";
-// @import "./../../../kwb/src/scss/vendors/mixins";
+@import "./../../../kwb/src/scss/modules/variables";
+@import "./../../../kwb/src/scss/vendors/mixins";
 
-// @import "./../../../kwb/src/scss/modules/typography";
-// @import "./../../../kwb/src/scss/modules/flexgrid";
-// @import "./../../../kwb/src/scss/modules/layout";
+@import "./../../../kwb/src/scss/modules/typography";
+@import "./../../../kwb/src/scss/modules/flexgrid";
 
-// @import "./../../../kwb/src/scss/modules/classes";
+@import "./../../../kwb/src/scss/modules/reset";
+@import "./../../../kwb/src/scss/modules/layout";
+
+@import "./../../../kwb/src/scss/modules/header";
+@import "./../../../kwb/src/scss/modules/nav";
+@import "./../../../kwb/src/scss/modules/aside";
+
+@import "./../../../kwb/src/scss/modules/classes";
 
 // END EXTERNAL PART
 
-@import 'kwb-root';
+// @import 'kwb-root';
+@import 'basics';
 @import 'font';
 @import 'root';
 @import 'algolia';

@@ -1,9 +1,10 @@
 {{- define "main" -}}
 
-<div class="ais-InstantSearch grid">
-   <div class="row">
-      <aside class="left-panel col-2">
-
+<main>
+<div class="ais-InstantSearch">
+   <!--<div class="row">-->
+      <aside class="left-panel">
+         <div class="wrapper">
          <div class="aside-head">
             <h1 class="color-blue fnt-l bold">{{i18n "search_results"}}</h1>
             <button class="d-md-block d-lg-none fnt-xs btn btn-info toggleCollapse" type="button" data-toggle="collapse" data-target=".aside-collapse">Filter</button>
@@ -24,21 +25,28 @@
             <h2 class="color-blue fnt-m">{{i18n "project"}}</h2>
             <div class="filter-list fnt-s" id="project-list"></div>
          </div>
+         </div>
       </aside>
-      <div class="right-panel col-6">
-         <div>
-            <div id="searchbox" class="ais-SearchBox"></div>
-            <div id="powered-by" class="box2"></div>
-            <div id="search-container-top" class="search-top">
-               <!--<span id="stats" class="box1"></span>-->
-               <div id="current-refinements" class="fnt-xs"></div>
-               <div id="hits-per-page" class="ml-auto d-none d-sm-block fnt-xs"></div>
+
+      <div class="right-panel content">
+         <div class="grid">
+            <div class="row">
+               <div class="col-5">
+               <div id="searchbox" class="ais-SearchBox"></div>
+               <div id="powered-by" class="box2"></div>
+               <div id="search-container-top" class="search-top">
+                  <!--<span id="stats" class="box1"></span>-->
+                  <div id="current-refinements" class="fnt-xs"></div>
+                  <div id="hits-per-page" class="ml-auto d-none d-sm-block fnt-xs"></div>
+               </div>
+               <div id="hits" class="full-width"></div>
+               <div id="pagination"></div>
+               </div>
             </div>
-            <div id="hits" class="full-width"></div>
-            <div id="pagination"></div>
          </div>
       </div>
-   </div>
+   <!--</div>-->
 </div>
+</main>
 
 {{- end -}}

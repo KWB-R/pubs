@@ -1,0 +1,47 @@
+body {
+    
+  &::-webkit-scrollbar {
+    width: $spc-v-s;
+    background-color: $blue;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    border: 3px solid $blue;
+    border-radius: 2em;
+  }
+
+  &.firefox {
+    padding-right: $spc-v-s;
+    
+    &:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: $spc-v-s;
+      height: 100%;
+      background-color: $blue;
+      z-index: 22;
+    }
+
+    header .header-sticky{
+      width: calc(100% - #{$spc-v-s});
+    }
+  }
+
+  @include breakpoint(por) {
+    padding-right: $mobileBar;
+    
+    &:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: $mobileBar;
+      height: 100%;
+      background-color: $blue;
+      z-index: 22;
+    }
+  }
+}

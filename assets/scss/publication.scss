@@ -1,5 +1,8 @@
 .pub {
     aside {
+        // top: 0;
+        padding: 0;
+        
         .aside-collapse > div {
             margin-bottom: $lnh-s;
             padding-right: $lnh-s / 2;

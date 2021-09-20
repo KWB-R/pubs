@@ -34,7 +34,7 @@
   border-bottom: 1px solid black;
   padding-bottom: $lnh-s / 2;
   margin-bottom: $lnh-s / 2;
-  margin-right: $lnh-s / 2;
+  // margin-right: $lnh-s / 2;
 
   @include breakpoint(sm) {
     padding-bottom: $lnh-s-m / 2;
@@ -141,6 +141,8 @@ button.btn-underline {
     border-color: $primary;
     color: black;
 
+    box-sizing: border-box;
+
     @include fontformat($fmt-xs);
 
     padding: 2px 31px;
@@ -198,7 +200,7 @@ button.btn-underline {
 
 .ais-InstantSearch {
   position: relative;
-  padding: 0 $spc-v-s;
+  width: 100%;
 
   overflow-x: hidden;
 
@@ -210,7 +212,9 @@ button.btn-underline {
   }
 
   .left-panel {
-    position: relative;
+    // position: relative;
+    // top: 0;
+    height: 100%;
   
     @include breakpoint(sm) {
       width: 100%;

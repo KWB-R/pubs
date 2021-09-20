@@ -4,34 +4,67 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-  name = "Home"
-  url = "https://www.kompetenz-wasser.de/de/"
+  name = "Newsroom"
   weight = 1
 
 [[main]]
-  name = "Über uns"
-  url = "https://www.kompetenz-wasser.de/de/ueber-uns/"
+  name = "News"
+  url = "http://dev.kompetenzwasser.de/de/newsroom/news"
   weight = 2
 
 [[main]]
-  name = "Forschung"
-  url = "https://www.kompetenz-wasser.de/de/forschung/"
+  name = "Veranstaltungen"
+  url = "http://dev.kompetenzwasser.de/de/newsroom/veranstaltungen"
   weight = 3
 
 [[main]]
-  name = "Veranstaltungen"
-  url = "https://www.kompetenz-wasser.de/de/veranstaltungen/"
+  name = "Jahresberichte"
+  url = "http://dev.kompetenzwasser.de/de/newsroom/jahresberichte"
   weight = 4
 
 [[main]]
-  name = "Partner"
-  url = "https://www.kompetenz-wasser.de/de/partner/"
+  name = "Presse"
+  url = "http://dev.kompetenzwasser.de/de/newsroom/presse"
   weight = 5
+
+
+[[main]]
+  name = "Forschung"
+  weight = 6
+
+[[main]]
+  name = "Projekte"
+  url = "http://dev.kompetenzwasser.de/de/forschung/projekte"
+  weight = 7
+
+[[main]]
+  name = "Produkte"
+  url = "http://dev.kompetenzwasser.de/de/forschung/produkte"
+  weight = 8
   
 [[main]]
   name = "Publikationen"
-  url = "publication"
-  weight = 6
+  url = "/publication"
+  weight = 9
+
+[[main]]
+  name = "Über uns"
+  weight = 10
+
+[[main]]
+  name = "Unternehmen"
+  url = "http://dev.kompetenzwasser.de/de/ueber-uns/unternehmen"
+  weight = 11
+
+[[main]]
+  name = "Team"
+  url = "http://dev.kompetenzwasser.de/de/ueber-uns/team"
+  weight = 12
+
+[[main]]
+  name = "Netzwerk"
+  url = "http://dev.kompetenzwasser.de/de/ueber-uns/netzwerk"
+  weight = 13
 
 #[[main]]
 #  name = "Tutorials"

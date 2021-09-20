@@ -7,8 +7,8 @@
 
 <!-- Collect the nav links, forms, and other content for toggling -->
 {{ $align_menu := site.Params.main_menu.align | default "l" }}
-<div class="main-menu-item {{ if eq $align_menu "c" }}justify-content-center{{ else if eq $align_menu "r" }}justify-content-end{{else}}justify-content-start{{ end }}" id="navbar-content">
-
+<nav class="main-menu-item {{ if eq $align_menu "c" }}justify-content-center{{ else if eq $align_menu "r" }}justify-content-end{{else}}justify-content-start{{ end }}" id="main-menu">
+    <div class="nav-menu">
     <!-- Left Nav Bar -->
     <ul class="navbar-nav d-md-inline-flex">
     {{ range site.Menus.main }}
@@ -52,11 +52,21 @@
         {{ $is_same_page = eq (path.Dir $current_page.RelPermalink) (path.Dir ($hash_removed|relLangURL)) }}
     {{ end }}
 
-    <li class="nav-item fnt-xl">
-        <a class="nav-link {{if $is_link_in_current_path }} active{{end}}" href="{{.URL | relLangURL}}"{{ if and $is_widget_page $is_same_page }} data-target="{{$hash}}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
-        {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
-        </a>
-    </li>
+    {{ if gt (len .URL) 0 }}
+
+        <li class="nav-item fnt-xl bold">
+            <a class="nav-link {{if $is_link_in_current_path }} active{{end}}" href="{{.URL | relLangURL}}"{{ if and $is_widget_page $is_same_page }} data-target="{{$hash}}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
+            {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+            </a>
+        </li>
+
+    {{ else }}
+
+        <li class="nav-item fnt-m cluster-title">
+            {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+        </li>
+
+    {{ end }}
 
     {{ end }}
     {{ end }}
@@ -86,7 +96,8 @@
     </ul>
 
     <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" id="menu-close"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
+            data-target="#main-menu" aria-controls="navbar" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
         {{ readFile "static/img/close.svg" | safeHTML }}
     </button>
-</div><!-- /.navbar-collapse -->
+    </div>
+</nav><!-- /.navbar-collapse -->

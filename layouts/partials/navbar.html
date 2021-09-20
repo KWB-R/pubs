@@ -5,12 +5,12 @@
 {{ $show_logo := true}}
 {{ $has_logo := true}}
 
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
+<header class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="header-sticky">
 
     {{if $show_logo}}
     <div class="d-lg-inline-flex">
-      <a class="navbar-brand" href="https://kompetenz-wasser.de{{ "/" | relLangURL }}">
+      <a class="navbar-brand" href="https://dev.kompetenzwasser.de{{ "/" | relLangURL }}">
         {{- if $has_logo -}}
           <img src="{{ $logo }}" alt="{{ site.Title }}" >
         {{- else -}}
@@ -20,7 +20,7 @@
     </div>
     {{end}}
 
-    <div class="nav-controls">
+    <div class="header-controls">
       <ul class="nav-icons navbar-nav flex-row fnt-xs ml-auto d-flex pl-md-2" id="language">
         {{ if .IsTranslated }}
         <li class="nav-item">
@@ -35,7 +35,7 @@
 
       {{ if site.Menus.main }}
       <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
+              data-target="#main-menu" aria-controls="navbar" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
               <!-- <span><i class="fas fa-bars"></i></span> -->
               {{ readFile "static/img/hamburger.svg" | safeHTML }}
       </button>
@@ -45,4 +45,4 @@
   </div><!-- /.container -->
 
   {{ partial "menu.html" . }}
-</nav>
+</header>
