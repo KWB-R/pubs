@@ -9,22 +9,22 @@
 
 [[main]]
   name = "News"
-  url = "http://dev.kompetenzwasser.de/de/newsroom/news"
+  url = "https://dev.kompetenzwasser.de/de/newsroom/news"
   weight = 2
 
 [[main]]
   name = "Veranstaltungen"
-  url = "http://dev.kompetenzwasser.de/de/newsroom/veranstaltungen"
+  url = "https://dev.kompetenzwasser.de/de/newsroom/veranstaltungen"
   weight = 3
 
 [[main]]
   name = "Jahresberichte"
-  url = "http://dev.kompetenzwasser.de/de/newsroom/jahresberichte"
+  url = "https://dev.kompetenzwasser.de/de/newsroom/jahresberichte"
   weight = 4
 
 [[main]]
   name = "Presse"
-  url = "http://dev.kompetenzwasser.de/de/newsroom/presse"
+  url = "https://dev.kompetenzwasser.de/de/newsroom/presse"
   weight = 5
 
 
@@ -34,12 +34,12 @@
 
 [[main]]
   name = "Projekte"
-  url = "http://dev.kompetenzwasser.de/de/forschung/projekte"
+  url = "https://dev.kompetenzwasser.de/de/forschung/projekte"
   weight = 7
 
 [[main]]
   name = "Produkte"
-  url = "http://dev.kompetenzwasser.de/de/forschung/produkte"
+  url = "https://dev.kompetenzwasser.de/de/forschung/produkte"
   weight = 8
   
 [[main]]
@@ -53,17 +53,17 @@
 
 [[main]]
   name = "Unternehmen"
-  url = "http://dev.kompetenzwasser.de/de/ueber-uns/unternehmen"
+  url = "https://dev.kompetenzwasser.de/de/ueber-uns/unternehmen"
   weight = 11
 
 [[main]]
   name = "Team"
-  url = "http://dev.kompetenzwasser.de/de/ueber-uns/team"
+  url = "https://dev.kompetenzwasser.de/de/ueber-uns/team"
   weight = 12
 
 [[main]]
   name = "Netzwerk"
-  url = "http://dev.kompetenzwasser.de/de/ueber-uns/netzwerk"
+  url = "https://dev.kompetenzwasser.de/de/ueber-uns/netzwerk"
   weight = 13
 
 #[[main]]
