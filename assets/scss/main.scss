@@ -1,5 +1,5 @@
 {{- $scr := .Scratch -}}
-{{- $site := $scr.Get "site" -}}
+{{- $site := $scr.Get "kwb" -}}
 {{/* Don't use partialCached as can error when admin changes theme config whilst `hugo server` is running. */}}
 {{- partial "functions/parse_theme" . -}}
 
@@ -34,6 +34,8 @@ $sta-home-section-even: {{ $scr.Get "home_section_even" }};
 
 $sta-dark-home-section-odd: {{ $scr.Get "dark_home_section_odd" }};
 $sta-dark-home-section-even: {{ $scr.Get "dark_home_section_even" }};
+
+@import "custom-variables";
 
 @import "bootstrap_variables";
 @import "vendor/bootstrap/bootstrap";

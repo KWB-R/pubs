@@ -13,7 +13,7 @@
     color: white;
 
     @include breakpoint(sm) {
-        height: 70px;
+        // height: 70px;
         padding: $spc-v-s-m;
         padding-bottom: 0;
     }
@@ -35,6 +35,11 @@
 
     ul.nav-icons {
         padding: 0;
+        line-height: 24px;
+
+        @include breakpoint(por) {
+            line-height: 17px;
+        }
 
         a:hover {
             text-decoration: none;
@@ -106,8 +111,8 @@
 
         button#menu-close {
             position: absolute;
-            top: $spc-v-s;
-            right: $spc-v-s;
+            // top: $spc-v-s;
+            // right: $spc-v-s;
             color: white;
         }
     }

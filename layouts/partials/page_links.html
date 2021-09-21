@@ -2,6 +2,7 @@
 {{ $page := .page }}
 {{ $link := "" }}
 
+{{/* ***** TODO: Deprecate url_preprint in favour of url_pdf given theres now a dedicated Preprint pub. type. ***** */}}
 {{ with $page.Params.url_preprint }}
   {{ $resource := $page.Resources.GetMatch . }}
   {{ if $resource }}
@@ -26,14 +27,14 @@
 {{ with $pdf }}
 <a class="btn btn-primary fnt-s my-1 mr-1{{ if $is_list }} btn-sm{{end}} matomo_download" href="{{ . }}" target="_blank" rel="noopener">
   {{ i18n "btn_pdf" }}
-</a>
+</a><br/>
 {{ end }}
 {{ $resource := $page.Resources.GetMatch "cite.bib" }}
 {{ with $resource }}
 <button type="button" class="btn btn-primary fnt-s my-1 mr-1{{ if $is_list }} btn-sm{{end}} js-cite-modal piwik_link"
         data-filename="{{ .RelPermalink }}">
   {{ i18n "btn_cite" }}
-</button>
+</button><br/>
 {{ end }}
 {{ with $page.Params.url_code }}
   {{ $resource := $page.Resources.GetMatch . }}
@@ -44,7 +45,7 @@
   {{ end }}
 <a class="btn btn-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
   {{ i18n "btn_code" }}
-</a>
+</a><br/>
 {{ end }}
 {{ with $page.Params.url_dataset }}
   {{ $resource := $page.Resources.GetMatch . }}
@@ -55,7 +56,7 @@
   {{ end }}
 <a class="btn btn-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
   {{ i18n "btn_dataset" }}
-</a>
+</a><br/>
 {{ end }}
 <!--{{ if $page.Params.projects }}
 {{ range $page.Params.projects }}
@@ -83,13 +84,13 @@
   {{ end }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
   {{ i18n "btn_poster" }}
-</a>
+</a><br/>
 {{ end }}
 {{ if $page.Params.slides }}
   {{ with (site.GetPage (printf "slides/%s" $page.Params.slides)) }}
   <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ .RelPermalink }}" target="_blank">
     {{ i18n "btn_slides" }}
-  </a>
+  </a><br/>
   {{ end }}
 {{ else }}
 {{ with $page.Params.url_slides }}
@@ -101,7 +102,7 @@
   {{ end }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
   {{ i18n "btn_slides" }}
-</a>
+</a><br/>
 {{ end }}
 {{ end }}
 {{ with $page.Params.url_video }}
@@ -127,7 +128,7 @@
 </a>
 {{ end }}
 {{ with $page.Params.doi }}
-<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} piwik_link" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
+<a class="btn btn-primary fnt-s my-1 mr-1{{ if $is_list }} btn-sm{{end}} piwik_link" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
   DOI
 </a>
 {{ end }}

@@ -160,3 +160,5 @@
   translation: Zusammenfassungen zeigen
 - id: abstracts_hide
   translation: Zusammenfassungen verstecken
+- id: share_article
+  translation: Seite teilen

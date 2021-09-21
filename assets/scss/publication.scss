@@ -35,6 +35,20 @@
                 }
             }
         }
+
+        .network-icon li {
+            margin-right: 5px;
+
+            &:hover {
+                transform: scale(1);
+            }
+        }
+
+        // .share-box {
+        //     ul.share {
+        //         justify-content: flex-start;
+        //     }
+        // }
     }
 
     .pub-authors {
@@ -52,6 +66,22 @@
 
         .card-text {
             margin-bottom: $lnh-xs / 3;
+        }
+    }
+
+    .social-sharing {
+        #share-options {
+            line-height: 0;
+
+            a {
+                opacity: 1;
+                transform: translate(0,0);
+                margin-top: 0;
+
+                img {
+                    transform: translateY(0);
+                }
+            }
         }
     }
 }

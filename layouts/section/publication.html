@@ -3,26 +3,26 @@
 <main>
 <div class="ais-InstantSearch">
    <!--<div class="row">-->
-      <aside class="left-panel">
+      <aside class="mobile-aside left-panel">
          <div class="wrapper">
          <div class="aside-head">
             <h1 class="color-blue fnt-l bold">{{i18n "search_results"}}</h1>
             <button class="d-md-block d-lg-none fnt-xs btn btn-info toggleCollapse" type="button" data-toggle="collapse" data-target=".aside-collapse">Filter</button>
          </div>
          
-         <div class="filter-panel aside-collapse dont-collapse-sm">
+         <div class="filter-panel aside-collapse dont-collapse-sm fnt-s">
             <div class="filter-controls">
                <div id="clear-refinements" class="fnt-xs"></div>
                <button type="button" class="btn btn-underline fnt-xs d-none d-sm-block" id="abstracts-toggle" data-toggle="collapse" data-target=".multi-collapse" data-show='{{ i18n "abstracts_hide" }}' data-hide='{{ i18n "abstracts_show" }}'></button>
             </div>
 
-            <h2 class="color-blue fnt-m">{{i18n "publication_type"}}</h4>
+            <h2 class="color-blue bold">{{i18n "publication_type"}}</h4>
             <div class="filter-list fnt-s" id="pubs-list"></div>
-            <h2 class="color-blue fnt-m">{{i18n "year"}}</h2>
+            <h2 class="color-blue bold">{{i18n "year"}}</h2>
             <div class="filter-list fnt-s" id="year-list"></div>
-            <h2 class="color-blue fnt-m">{{i18n "author"}}</h2>
+            <h2 class="color-blue bold">{{i18n "author"}}</h2>
             <div class="filter-list fnt-s" id="author-list"></div>
-            <h2 class="color-blue fnt-m">{{i18n "project"}}</h2>
+            <h2 class="color-blue bold">{{i18n "project"}}</h2>
             <div class="filter-list fnt-s" id="project-list"></div>
          </div>
          </div>

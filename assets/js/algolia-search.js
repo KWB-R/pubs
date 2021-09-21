@@ -1,3 +1,48 @@
+// Mobile CSS Variables
+
+$('main aside').css({"--doc-h": window.innerHeight + "px",})
+$('body').css({"--aside-h": $('main aside .aside-head').outerHeight() + "px"})
+
+// Aside Height
+
+function calculateVisibilityForDiv(div$) {
+	var windowHeight = $(window).height(),
+		docScroll = document.documentElement.scrollTop || document.scrollingElement.scrollTop,
+		divPosition = div$.offset().top,
+		divHeight = div$.height(),
+		hiddenBefore = docScroll - divPosition,
+		hiddenAfter = (divPosition + divHeight) - (docScroll + windowHeight);
+
+	// console.log(docScroll, divPosition, divHeight)
+
+	if ((docScroll > divPosition + divHeight) || (divPosition > docScroll + windowHeight)) {
+		return 0;
+	} else {
+		var result = 1;
+
+		if (hiddenBefore > 0) {
+			result -= (hiddenBefore) / divHeight;
+		}
+
+		if (hiddenAfter > 0) {
+			result -= (hiddenAfter) / divHeight;
+		}
+
+		return result * divHeight;
+	}
+}
+
+window.setAsideDiff = function() {
+    let footerVisible = calculateVisibilityForDiv($('footer')) 
+    if (footerVisible > 0) footerVisible += 24
+	// console.log(footerVisible)
+    $('aside').css('--diff',footerVisible + "px")
+}
+
+$(document).on('scroll', setAsideDiff);
+$(window).on('load', setAsideDiff);
+
+
 // Show/Hide Abstract
 
 let abstractCollapsed = sessionStorage.getItem('abstractCollapsed') === 'true' || false
@@ -211,6 +256,7 @@ search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
     placeholder: i18n.placeholder,
+    showSubmit: true
   }),
   // instantsearch.widgets.stats({
   // container: '#stats',

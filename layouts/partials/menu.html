@@ -9,95 +9,97 @@
 {{ $align_menu := site.Params.main_menu.align | default "l" }}
 <nav class="main-menu-item {{ if eq $align_menu "c" }}justify-content-center{{ else if eq $align_menu "r" }}justify-content-end{{else}}justify-content-start{{ end }}" id="main-menu">
     <div class="nav-menu">
-    <!-- Left Nav Bar -->
-    <ul class="navbar-nav d-md-inline-flex">
-    {{ range site.Menus.main }}
+        <!-- Left Nav Bar -->
+        <ul class="navbar-nav d-md-inline-flex">
+        {{ range site.Menus.main }}
 
-    {{ if .HasChildren }}
-    <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
-        {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
-        <span class="caret"></span>
-        </a>
-        <div class="dropdown-menu">
-        {{ range .Children }}
-            <a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+        {{ if .HasChildren }}
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
             {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+            <span class="caret"></span>
             </a>
+            <div class="dropdown-menu">
+            {{ range .Children }}
+                <a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+                {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+                </a>
+            {{ end }}
+            </div>
+        </li>
+
+        {{ else }}
+
+        {{/* Set target for link. */}}
+        {{ $.Scratch.Set "target" "" }}
+        {{ if gt (len .URL) 4 }}
+            {{ if eq "http" (slicestr .URL 0 4) }}
+            {{ $.Scratch.Set "target" "" }}
+            {{ end }}
         {{ end }}
-        </div>
-    </li>
 
-    {{ else }}
+        {{/* Get active page. */}}
+        {{ $is_link_in_current_path := in $current_page.RelPermalink .URL }}
+        {{ $is_widget_page := or $current_page.IsHome (eq $current_page.Type "widget_page") }}
+        {{ $hash := findRE "#(.+)" .URL }}
+        {{ $is_same_page := $is_link_in_current_path }}
+        {{ if gt (len $hash) 0 }}
+            {{ $hash = index $hash 0 }}
+            {{ $hash_removed := replace .URL $hash "" }}
+            {{ if eq (len $hash_removed) 0 }}
+            {{ $hash_removed = "/" }}{{/* Add robustness for `/#SECTION` or `#SECTION` in `menus.toml`. */}}
+            {{ end }}
+            {{ $is_same_page = eq (path.Dir $current_page.RelPermalink) (path.Dir ($hash_removed|relLangURL)) }}
+        {{ end }}
 
-    {{/* Set target for link. */}}
-    {{ $.Scratch.Set "target" "" }}
-    {{ if gt (len .URL) 4 }}
+        {{ if gt (len .URL) 0 }}
+
+            <li class="nav-item fnt-xl bold">
+                <a class="nav-link {{if $is_link_in_current_path }} active{{end}}" href="{{.URL | relLangURL}}"{{ if and $is_widget_page $is_same_page }} data-target="{{$hash}}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
+                {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+                </a>
+            </li>
+
+        {{ else }}
+
+            <li class="nav-item fnt-m cluster-title">
+                {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+            </li>
+
+        {{ end }}
+
+        {{ end }}
+        {{ end }}
+
+        {{ if site.Menus.main_right | and (eq $align_menu "l") }}
+        </ul>
+        <ul class="navbar-nav ml-md-auto">
+        {{ end }}
+
+        {{ range site.Menus.main_right }}
+
+        {{/* Set target for link. */}}
+        {{ $.Scratch.Set "target" "" }}
+        {{ if gt (len .URL) 4 }}
         {{ if eq "http" (slicestr .URL 0 4) }}
         {{ $.Scratch.Set "target" "" }}
         {{ end }}
-    {{ end }}
-
-    {{/* Get active page. */}}
-    {{ $is_link_in_current_path := in $current_page.RelPermalink .URL }}
-    {{ $is_widget_page := or $current_page.IsHome (eq $current_page.Type "widget_page") }}
-    {{ $hash := findRE "#(.+)" .URL }}
-    {{ $is_same_page := $is_link_in_current_path }}
-    {{ if gt (len $hash) 0 }}
-        {{ $hash = index $hash 0 }}
-        {{ $hash_removed := replace .URL $hash "" }}
-        {{ if eq (len $hash_removed) 0 }}
-        {{ $hash_removed = "/" }}{{/* Add robustness for `/#SECTION` or `#SECTION` in `menus.toml`. */}}
         {{ end }}
-        {{ $is_same_page = eq (path.Dir $current_page.RelPermalink) (path.Dir ($hash_removed|relLangURL)) }}
-    {{ end }}
 
-    {{ if gt (len .URL) 0 }}
-
-        <li class="nav-item fnt-xl bold">
-            <a class="nav-link {{if $is_link_in_current_path }} active{{end}}" href="{{.URL | relLangURL}}"{{ if and $is_widget_page $is_same_page }} data-target="{{$hash}}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
             {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
             </a>
         </li>
 
-    {{ else }}
+        {{ end }}
+        </ul>
 
-        <li class="nav-item fnt-m cluster-title">
-            {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
-        </li>
-
-    {{ end }}
-
-    {{ end }}
-    {{ end }}
-
-    {{ if site.Menus.main_right | and (eq $align_menu "l") }}
-    </ul>
-    <ul class="navbar-nav ml-md-auto">
-    {{ end }}
-
-    {{ range site.Menus.main_right }}
-
-    {{/* Set target for link. */}}
-    {{ $.Scratch.Set "target" "" }}
-    {{ if gt (len .URL) 4 }}
-    {{ if eq "http" (slicestr .URL 0 4) }}
-    {{ $.Scratch.Set "target" "" }}
-    {{ end }}
-    {{ end }}
-
-    <li class="nav-item">
-        <a class="nav-link" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
-        {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
-        </a>
-    </li>
-
-    {{ end }}
-    </ul>
-
-    <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" id="menu-close"
-            data-target="#main-menu" aria-controls="navbar" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
-        {{ readFile "static/img/close.svg" | safeHTML }}
-    </button>
+        <button type="button" class="nav-close navbar-toggler ml-auto" data-toggle="collapse" id="menu-close"
+                data-target="#main-menu" aria-controls="navbar" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
+            {{ readFile "static/img/close.svg" | safeHTML }}
+        </button>
     </div>
+
+    <div class="nav-bg desktop" data-toggle="collapse" data-target="#main-menu"></div>
 </nav><!-- /.navbar-collapse -->

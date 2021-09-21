@@ -18,19 +18,21 @@
 
   <h1 class="hidden" >{{ $title }}</h1>
 
-    <aside class="fnt-s">
+    <aside class="mobile-aside fnt-s">
       <div class="wrapper">
       <div class="aside-head">
-        <h1 class="color-blue fnt-s bold">{{i18n "publication"}}</h1>
+        <div class="page-context fnt-s">
+          <a href="/{{ .Lang }}/publication" class="blue bold">{{i18n "publication"}}</a>
+        </div>
         <button class="d-md-block d-lg-none btn btn-info toggleCollapse" type="button" data-toggle="collapse" data-target=".aside-collapse">Info</button>
       </div>
 
       <div class="aside-collapse dont-collapse-sm">
-        <div class="pub-authors">
+        <div class="pub-authors bold">
           {{ partial "page_metadata_authors" $page }}
         </div>
 
-        <div class="pub-year">
+        <div class="pub-year bold">
           {{ if not (in (slice "talk" "page") $page.Type) }}
           <span class="article-date">
             {{ $date := $page.Lastmod.Format site.Params.date_format }}
@@ -90,7 +92,7 @@
           </div>
         </div>
 
-        {{ partial "share" . }}
+        <!--{{ partial "share" . }}-->
       </div>
       </div>
     </aside>
@@ -102,7 +104,7 @@
 
         <div class="article-container col-4">
 
-          <div class="h1 fnt-xl bold" >{{ $title }}</div>
+          <h1 class="h1 fnt-xl bold" >{{ $title }}</h1>
 
           {{ with $page.Params.subtitle }}
               <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
@@ -122,6 +124,8 @@
         <div class="spacer col-1"></div>
       </div>
       </div>
+
+      {{ partial "share_button" . }}
     </div>
 </main>
 {{- end -}}

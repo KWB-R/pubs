@@ -280,3 +280,6 @@
   translation: Show abstracts
 - id: abstracts_hide
   translation: Hide abstracts
+
+- id: share_article
+  translation: Share page
