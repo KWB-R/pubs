@@ -495,6 +495,7 @@ header {
             header .header-controls > div.search svg {
               opacity: 1; } }
       header .header-controls > div#language-switch {
+        font-size: 18px;
         line-height: 23px;
         width: 24px; }
         @media (orientation: portrait) and (max-width: 768px) {
@@ -936,7 +937,8 @@ aside .aside-item.image img {
 
 html,
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  height: 100%; }
 
 body {
   margin-top: 0; }
@@ -964,8 +966,6 @@ body.firefox {
     height: 100%;
     background-color: #0003E2;
     z-index: 22; }
-  body.firefox header .header-sticky {
-    width: calc(100% - 20px); }
 
 @media (orientation: portrait) and (max-width: 768px) {
   body {
@@ -980,6 +980,13 @@ body.firefox {
       background-color: #0003E2;
       z-index: 22; } }
 
+body body,
+body header .header-sticky {
+  width: calc(100% - 20px); }
+  @media (orientation: portrait) and (max-width: 768px) {
+    body body,
+    body header .header-sticky {
+      width: calc(100% - 14px); } }
 h1,
 h2,
 h3,
@@ -1408,6 +1415,9 @@ button.btn-underline {
   .navbar#navbar-main .navbar-brand {
     padding-top: 0;
     padding-bottom: 0; }
+    .navbar#navbar-main .navbar-brand img {
+      width: 165px;
+      height: 55px; }
   .navbar#navbar-main ul#language a {
     text-transform: uppercase; }
   .navbar#navbar-main ul.nav-icons {
@@ -1426,7 +1436,7 @@ button.btn-underline {
     display: block;
     color: #0003E2;
     padding: 0;
-    padding-left: 15px;
+    padding-left: 20px;
     padding-top: 1px;
     line-height: 0; }
   @media (max-width: 768px) {

@@ -21,6 +21,11 @@
     .navbar-brand {
         padding-top: 0;
         padding-bottom: 0;
+
+        img {
+            width: 165px;
+            height: 55px;
+        }
     }
 
     // .container {
@@ -57,7 +62,7 @@
         color: $blue;
         
         padding: 0;
-        padding-left: $lnh-xs / 2;
+        padding-left: $spc-v-s;
         padding-top: 1px;
 
         line-height: 0;

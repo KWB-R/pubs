@@ -1,6 +1,7 @@
 html,
 body {
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
@@ -38,10 +39,6 @@ body {
       background-color: $blue;
       z-index: 22;
     }
-
-    header .header-sticky{
-      width: calc(100% - #{$spc-v-s});
-    }
   }
 
   @include breakpoint(por) {
@@ -56,6 +53,15 @@ body {
       height: 100%;
       background-color: $blue;
       z-index: 22;
+    }
+  }
+  
+  body,
+  header .header-sticky {
+    width: calc(100% - #{$spc-v-s});
+
+    @include breakpoint(por) {
+      width: calc(100% - #{$spc-v-s-m});
     }
   }
 }

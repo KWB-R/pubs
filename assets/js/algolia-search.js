@@ -5,42 +5,31 @@ $('body').css({"--aside-h": $('main aside .aside-head').outerHeight() + "px"})
 
 // Aside Height
 
-function calculateVisibilityForDiv(div$) {
-	var windowHeight = $(window).height(),
-		docScroll = document.documentElement.scrollTop || document.scrollingElement.scrollTop,
-		divPosition = div$.offset().top,
-		divHeight = div$.height(),
-		hiddenBefore = docScroll - divPosition,
-		hiddenAfter = (divPosition + divHeight) - (docScroll + windowHeight);
-
-	// console.log(docScroll, divPosition, divHeight)
-
-	if ((docScroll > divPosition + divHeight) || (divPosition > docScroll + windowHeight)) {
-		return 0;
-	} else {
-		var result = 1;
-
-		if (hiddenBefore > 0) {
-			result -= (hiddenBefore) / divHeight;
-		}
-
-		if (hiddenAfter > 0) {
-			result -= (hiddenAfter) / divHeight;
-		}
-
-		return result * divHeight;
-	}
+let threshold = []
+let n = 0
+while (n < 1) {
+	n += 0.01
+	threshold.push(parseFloat(n.toFixed(2)))
 }
 
-window.setAsideDiff = function() {
-    let footerVisible = calculateVisibilityForDiv($('footer')) 
-    if (footerVisible > 0) footerVisible += 24
-	// console.log(footerVisible)
-    $('aside').css('--diff',footerVisible + "px")
-}
+let callback = (entries, observer) => {
+	entries.forEach(entry => {
+		$('aside').css('--diff',entry.intersectionRect.height + "px")
+	});
+};
 
-$(document).on('scroll', setAsideDiff);
-$(window).on('load', setAsideDiff);
+let options = {
+	// root: document.querySelector('body'),
+	rootMargin: '0px',
+	threshold: threshold
+}
+  
+let observer = new IntersectionObserver(callback, options);
+
+window.addEventListener('load', function() {
+  let target = document.querySelector('footer');
+  observer.observe(target);
+})
 
 
 // Show/Hide Abstract

@@ -5,22 +5,22 @@
                 <div class="sharing-wrapper">
                     <button class="fnt-xs" data-toggle="collapse" data-target="#share-options">{{ i18n "share_article" }}</button>
                     <div id="share-options" class="collapse">
-                                                    <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fdev.kompetenzwasser.de%2Fde%2Fnewsroom%2Fnews%2Fquis-non-odit-sordidos-vanos-leves-futtiles" target="_blank" >
-                                <img src="http://dev.kompetenzwasser.de/media/site/c3fe5426c0-1631808778/social-twitter-circle-blue.svg" alt="Social Icon">
-                            </a>
-                                                    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdev.kompetenzwasser.de%2Fde%2Fnewsroom%2Fnews%2Fquis-non-odit-sordidos-vanos-leves-futtiles" target="_blank" >
-                                <img src="http://dev.kompetenzwasser.de/media/site/0c8b69a269-1631808777/social-facebook-circle-white.svg" alt="Social Icon">
-                            </a>
-                                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fdev.kompetenzwasser.de%2Fde%2Fnewsroom%2Fnews%2Fquis-non-odit-sordidos-vanos-leves-futtiles" target="_blank">
-                                <img src="http://dev.kompetenzwasser.de/media/site/a8150c7370-1631808777/social-linkedin-circle-blue.svg" alt="Social Icon">
-                            </a>
-                                                    <a href="https://www.xing.com/spi/shares/new?url=http%3A%2F%2Fdev.kompetenzwasser.de%2Fde%2Fnewsroom%2Fnews%2Fquis-non-odit-sordidos-vanos-leves-futtiles" target="_blank" >
-                                <img src="http://dev.kompetenzwasser.de/media/site/bf97ba7a15-1631808779/social-xing-circle-white.svg" alt="Social Icon">
-                            </a>
-                                                    <a href="mailto:info@kompetenz-wasser.de?body=Diese%20E-Mail%20wurde%20von%20folgender%20Webseite%20verschickt%3Ahttp%3A%2F%2Fdev.kompetenzwasser.de%2Fde%2Fnewsroom%2Fnews%2Fquis-non-odit-sordidos-vanos-leves-futtiles" target="_blank" >
-                                <img src="http://dev.kompetenzwasser.de/media/site/6fd647e309-1631808777/social-email-circle-white.svg" alt="Social Icon">
-                            </a>
-                                            </div>
+                        <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-twitter-circle-blue.svg" alt="Social Icon">
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-facebook-circle-white.svg" alt="Social Icon">
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank">
+                            <img src="/img/social-linkedin-circle-blue.svg" alt="Social Icon">
+                        </a>
+                        <a href="https://www.xing.com/spi/shares/new?url={{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-xing-circle-white.svg" alt="Social Icon">
+                        </a>
+                        <a href="mailto:info@kompetenz-wasser.de?body=Diese%20E-Mail%20wurde%20von%20folgender%20Webseite%20verschickt%3A{{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-email-circle-white.svg" alt="Social Icon">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
