@@ -104,6 +104,10 @@
 
         <div class="article-container col-4">
 
+          <div class="pub-authors bold mobile">
+            {{ partial "page_metadata_authors" $page }}
+          </div>
+
           <h1 class="h1 fnt-xl bold" >{{ $title }}</h1>
 
           {{ with $page.Params.subtitle }}
