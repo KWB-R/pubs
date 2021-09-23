@@ -12,7 +12,7 @@
 
     color: white;
 
-    @include breakpoint(sm) {
+    @include breakpoint(por) {
         // height: 70px;
         padding: $spc-v-s-m;
         padding-bottom: 0;
@@ -25,6 +25,11 @@
         img {
             width: 165px;
             height: 55px;
+
+            @include breakpoint(por) {
+                width: 100px;
+                height: 34px;
+            }
         }
     }
 
@@ -55,6 +60,10 @@
         display: flex;
         align-items: center;
         height: 30px;
+
+        button {
+            border-radius: 0;
+        }
     }
 
     .navbar-toggler {

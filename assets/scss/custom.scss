@@ -131,6 +131,36 @@ strong {
 .color-blue {
   color: #0003E2; }
 
+.headings h2 {
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: -0.04em;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin-bottom: 27.5px; }
+  @media (orientation: portrait) and (max-width: 768px) {
+    .headings h2 {
+      font-size: 35px;
+      line-height: 40px;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px; } }
+.headings h3 {
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: -0.04em;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin-bottom: 20px; }
+  @media (orientation: portrait) and (max-width: 768px) {
+    .headings h3 {
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: -0.04em;
+      margin-bottom: 12.5px; } }
+.headings h4 {
+  font-weight: bold;
+  letter-spacing: 0; }
+
 .row {
   display: flex;
   flex-direction: row;
@@ -1408,7 +1438,7 @@ button.btn-underline {
   box-shadow: none;
   font-family: "Pangea", Helvetica, Arial, sans-serif;
   color: white; }
-  @media (max-width: 768px) {
+  @media (orientation: portrait) and (max-width: 768px) {
     .navbar#navbar-main {
       padding: 14px;
       padding-bottom: 0; } }
@@ -1418,6 +1448,10 @@ button.btn-underline {
     .navbar#navbar-main .navbar-brand img {
       width: 165px;
       height: 55px; }
+      @media (orientation: portrait) and (max-width: 768px) {
+        .navbar#navbar-main .navbar-brand img {
+          width: 100px;
+          height: 34px; } }
   .navbar#navbar-main ul#language a {
     text-transform: uppercase; }
   .navbar#navbar-main ul.nav-icons {
@@ -1432,6 +1466,8 @@ button.btn-underline {
     display: flex;
     align-items: center;
     height: 30px; }
+    .navbar#navbar-main .nav-controls button {
+      border-radius: 0; }
   .navbar#navbar-main .navbar-toggler {
     display: block;
     color: #0003E2;
