@@ -38,8 +38,8 @@
   weight = 7
 
 [[main]]
-  name = "Products"
-  url = "https://dev.kompetenzwasser.de/en/forschung/produkte"
+  name = "Services"
+  url = "https://dev.kompetenzwasser.de/en/forschung/dienstleistungen"
   weight = 8
   
 [[main]]

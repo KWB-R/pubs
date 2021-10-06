@@ -34,7 +34,9 @@ window.addEventListener('load', function() {
 
 // Show/Hide Abstract
 
-let abstractCollapsed = sessionStorage.getItem('abstractCollapsed') === 'true' || false
+let abstractCollapsed = sessionStorage.getItem('kwb-abstractCollapsed') === 'true' || false
+// if (window.innerWidth < 720) abstractCollapsed = true
+
 const collapseAll = function() {
   setTimeout(function() {
     if (abstractCollapsed === true) {
@@ -56,7 +58,7 @@ $(document).ready(collapseAll)
 $('#abstracts-toggle').click(function() {
   abstractCollapsed = !abstractCollapsed
   setButtonText(abstractCollapsed)
-  sessionStorage.setItem('abstractCollapsed',abstractCollapsed)
+  sessionStorage.setItem('kwb-abstractCollapsed',abstractCollapsed)
 })
 
 // Aside Toggle
@@ -421,7 +423,7 @@ search.addWidgets([
         } else {
           return (
             publication +
-            '<div class="abstract-area d-none d-sm-block">' +
+            '<div class="abstract-area">' +
 			      abstract +
             '<div id="' +
             abstract_id +
