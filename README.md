@@ -13,8 +13,7 @@ Repository for Generating KWB`s Publications Website based on Hugo and friends
 as well as for pull requests against this or "master" branch, with a "deploy-preview"
 mode feature
   
-  
-**2. Production** 
+### 2. Production 
 
 ***Netlify***: is now used for *production*, commits to *master* will be pushed to: 
 
