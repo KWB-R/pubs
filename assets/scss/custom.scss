@@ -66,18 +66,18 @@ h1, h2, h3, h4 {
       .fnt-s p {
         margin-bottom: 19px; } }
 .fnt-xs {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 22px;
   letter-spacing: -0.02em; }
   .fnt-xs p {
-    margin-bottom: 18px; }
+    margin-bottom: 22px; }
   @media (max-width: 768px) {
     .fnt-xs {
-      font-size: 15px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
       letter-spacing: -0.02em; }
       .fnt-xs p {
-        margin-bottom: 18px; } }
+        margin-bottom: 22px; } }
 .fnt-m {
   font-size: 20px;
   line-height: 30px;
@@ -533,8 +533,7 @@ aside {
   width: 25%;
   --diff: 0px;
   height: calc(100vh - 130px);
-  height: calc(100vh - 130px - var(--diff));
-  overflow: hidden; }
+  height: calc(100vh - 130px - var(--diff)); }
   @media (max-width: 1000px) {
     aside {
       word-break: break-all; } }
@@ -579,6 +578,8 @@ header {
     @media (orientation: portrait) and (max-width: 768px) {
       header .header-controls {
         height: 100%; } }
+    header .header-controls.bg-white {
+      background-color: white; }
     header .header-controls > div {
       margin-left: 20px; }
       header .header-controls > div.search {
@@ -753,7 +754,8 @@ nav#main-menu {
   nav#main-menu.show {
     transform: translateX(0) translateZ(20px);
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: transform 0s, width 0s; }
     nav#main-menu.show .nav-bg {
       opacity: 1; }
@@ -1246,8 +1248,8 @@ button.btn-underline {
     vertical-align: -1px; }
     @media (max-width: 768px) {
       .ais-RefinementList-label:before {
-        height: 11.25px;
-        width: 11.25px;
+        height: 12px;
+        width: 12px;
         vertical-align: -1px; } }
   .ais-RefinementList-label input[type=checkbox] {
     position: absolute;
@@ -1265,7 +1267,7 @@ button.btn-underline {
   color: inherit;
   background-color: transparent;
   border-radius: none;
-  margin-left: 4.5px; }
+  margin-left: 5.5px; }
   .ais-HierarchicalMenu-count:before,
   .ais-Menu-count:before,
   .ais-RefinementList-count:before,
@@ -1288,8 +1290,8 @@ button.btn-underline {
     color: #0003E2;
     font-style: italic;
     box-sizing: border-box;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 22px;
     letter-spacing: -0.02em;
     line-height: 24px;
     padding: 2px 31px; }
@@ -1471,8 +1473,8 @@ button.btn-underline {
   color: black; }
 
 .ais-Pagination-item .ais-Pagination-link {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 22px;
   letter-spacing: -0.02em;
   line-height: 24px;
   width: 30px;
@@ -1500,10 +1502,10 @@ button.btn-underline {
   background-color: transparent; }
 
 .ais-ClearRefinements-button, .ais-CurrentRefinements-reset, .ais-GeoSearch-redo, .ais-GeoSearch-reset, .ais-HierarchicalMenu-showMore, .ais-InfiniteHits-loadMore, .ais-InfiniteHits-loadPrevious, .ais-InfiniteResults-loadMore, .ais-Menu-showMore, .ais-RefinementList-showMore {
-  font-size: 15px; }
+  font-size: 16px; }
   @media (max-width: 768px) {
     .ais-ClearRefinements-button, .ais-CurrentRefinements-reset, .ais-GeoSearch-redo, .ais-GeoSearch-reset, .ais-HierarchicalMenu-showMore, .ais-InfiniteHits-loadMore, .ais-InfiniteHits-loadPrevious, .ais-InfiniteResults-loadMore, .ais-Menu-showMore, .ais-RefinementList-showMore {
-      font-size: 15px; } }
+      font-size: 16px; } }
 .ais-Breadcrumb-link,
 .ais-HierarchicalMenu-link,
 .ais-Menu-link,
@@ -1609,7 +1611,7 @@ button.btn-underline {
   .pub .author.media-body .card-subtitle {
     margin-top: 0; }
   .pub .author.media-body .card-text {
-    margin-bottom: 6px; }
+    margin-bottom: 7.33333333px; }
   .pub .author.media-body .network-icon img {
     width: 24px;
     height: 24px; }
