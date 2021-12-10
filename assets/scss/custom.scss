@@ -1,3 +1,4 @@
+/* Helvetica */
 body {
   font-family: "Pangea", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -1014,13 +1015,10 @@ button,
     margin-top: -1px;
     line-height: 0; }
     .social-sharing a img {
-      width: 1em;
-      height: 1em;
+      width: 24px;
+      height: 24px;
       line-height: 0;
-      transform: translateY(-1.5px); }
-      @media (orientation: portrait) and (max-width: 768px) {
-        .social-sharing a img {
-          transform: translateY(1px); } }
+      transform: translateY(1px); }
   .social-sharing .share-options {
     height: 1em;
     display: none; }
