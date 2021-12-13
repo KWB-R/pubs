@@ -2,7 +2,7 @@
 {{ $page := .page }}
 {{ $link := "" }}
 
-{{/* ***** TODO: Deprecate `url_preprint` in favour of `url_pdf` given there's now a dedicated "Preprint" pub. type. ***** */}}
+{{/* ***** TODO: Deprecate url_preprint in favour of url_pdf given theres now a dedicated Preprint pub. type. ***** */}}
 {{ with $page.Params.url_preprint }}
   {{ $resource := $page.Resources.GetMatch . }}
   {{ if $resource }}

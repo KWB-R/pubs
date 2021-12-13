@@ -1,0 +1,27 @@
+<div class="social-sharing grid">
+    <div class="row">
+        <div class="col-1"></div>
+            <div class="col-4">
+                <div class="sharing-wrapper">
+                    <button class="fnt-xs" data-toggle="collapse" data-target="#share-options">{{ i18n "share_article" }}</button>
+                    <div id="share-options" class="collapse">
+                        <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-twitter-circle-blue.svg" alt="Social Icon">
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-facebook-circle-white.svg" alt="Social Icon">
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank">
+                            <img src="/img/social-linkedin-circle-blue.svg" alt="Social Icon">
+                        </a>
+                        <a href="https://www.xing.com/spi/shares/new?url={{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-xing-circle-white.svg" alt="Social Icon">
+                        </a>
+                        <a href="mailto:info@kompetenz-wasser.de?body=Diese%20E-Mail%20wurde%20von%20folgender%20Webseite%20verschickt%3A{{ .Permalink }}" target="_blank" >
+                            <img src="/img/social-email-circle-white.svg" alt="Social Icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

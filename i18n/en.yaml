@@ -118,6 +118,9 @@
 
 # Contact widget
 
+- id: contact
+  translation: Contact
+
 - id: contact_name
   translation: Name
 
@@ -226,7 +229,7 @@
   translation: Search...
 
 - id: search_results
-  translation: publications
+  translation: Publications
 
 - id: search_found_in
   translation: found in
@@ -270,3 +273,13 @@
 
 - id: cookie_learn
   translation: Learn more
+
+# Abstracts Show/Hide Button
+
+- id: abstracts_show
+  translation: Show abstracts
+- id: abstracts_hide
+  translation: Hide abstracts
+
+- id: share_article
+  translation: Share page

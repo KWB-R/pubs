@@ -5,12 +5,17 @@ name = "kwb"
 light = true
 
 # Primary
-primary = "#007CA0"
+primary = "#0003E2"
+link = "#0003E2"
+
+# Font
+font_size = "16px"
+font_size_small = "16px"
 
 # Menu
 menu_primary = "#fff"
 menu_text = "#34495e"
-menu_text_active = "#007CA0"
+menu_text_active = "#0003E2"
 menu_title = "#2b2b2b"
 
 # Home sections

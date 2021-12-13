@@ -1,0 +1,19 @@
+.site-footer {
+    position: relative;
+    
+    background-color: $blue;
+    color: white;
+    margin-top: 0;
+
+    a {
+        color: white;
+    }
+
+    .back-to-top {
+        position: absolute;
+        top: 50%;
+        right: $spc-v-s;
+
+        transform: translateY(-50%);
+    }
+}

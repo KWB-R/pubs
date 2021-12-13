@@ -17,26 +17,27 @@
 # URL: https://dev--kwb.netlify.app/  
 [context.dev.environment]
   HUGO_VERSION = "0.74.3"
-  HUGO_ENV = "dev"
+  HUGO_ENV = "development"
   HUGO_ENABLEGITINFO = "false"
   ALGOLIA_DE_PUBS_INDEX_NAME = "dev_kwb_de_pubs"
   ALGOLIA_EN_PUBS_INDEX_NAME = "dev_kwb_en_pubs"
 
 [context.dev]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && algolia/run-index-upload.sh -p"
+  
 [context.deploy-preview]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.74.3"
-  HUGO_ENV = "dev"
+  HUGO_ENV = "development"
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.74.3"
-  HUGO_ENV = "dev"
+  HUGO_ENV = "development"
 
 [[headers]]
   for = "*.webmanifest"
