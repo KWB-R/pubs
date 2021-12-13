@@ -1,0 +1,137 @@
+.navbar#navbar-main {
+    position: relative;
+    display: block;
+    height:     0px;
+
+    padding: 0 $spc-v-s;
+    // padding-top: $spc-v-s;
+
+    box-shadow: none;
+
+    font-family: $fnt;
+
+    color: white;
+
+    @include breakpoint(por) {
+        // height: 70px;
+        padding: $spc-v-s-m;
+        padding-bottom: 0;
+    }
+
+    .navbar-brand {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        img {
+            width: 165px;
+            height: 55px;
+
+            @include breakpoint(por) {
+                width: 100px;
+                height: 34px;
+            }
+        }
+    }
+
+    // .container {
+    //     max-width: none;
+    //     padding: 0;
+    //     align-items: flex-start;
+    // }
+
+    ul#language a {
+        text-transform: uppercase;
+    }
+
+    ul.nav-icons {
+        padding: 0;
+        line-height: 24px;
+
+        @include breakpoint(por) {
+            line-height: 17px;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    .header-controls {
+        display: flex;
+        align-items: center;
+        height: 30px;
+
+        button {
+            border-radius: 0;
+        }
+    }
+
+    .navbar-toggler {
+        display: block;
+        color: $blue;
+        
+        padding: 0;
+        padding-left: $spc-v-s;
+        padding-top: 1px;
+
+        line-height: 0;
+    }
+
+    .main-menu-item {
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+
+        // width: calc(75% + 4px);
+        // height: 100vh;
+
+        // background-color: $blue;
+
+        // padding: $spc-v-s;
+
+        // transform: translateX(100%);
+        // transition: transform .5s ease;
+
+        // z-index: 1200;
+
+        @include breakpoint(sm) {
+            // padding: $spc-v-s-m;
+
+            .nav-item,
+            .nav-item a {
+                padding: 0 !important;
+            }
+        }
+
+        ul li .nav-link {
+            color: white;
+            margin: 0;
+            padding: 0;
+
+            &.active {
+                color: white !important;
+                // font-weight: normal !important;
+                // text-decoration: underline;
+            }
+        }
+
+        .cluster-title:not(:first-child) {
+            margin-top: $lnh-l
+        }
+
+        &.show {
+            transform: translate(0);
+        }
+
+        button#menu-close {
+            position: absolute;
+            // top: $spc-v-s;
+            // right: $spc-v-s;
+            color: white;
+        }
+    }
+
+    .navbar-nav {
+        display: block !important; 
+    }
+}

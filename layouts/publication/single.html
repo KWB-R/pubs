@@ -1,57 +1,136 @@
 {{- define "main" -}}
 
-<div class="pub">
+{{ $page := . }}
 
-  {{ partial "page_header.html" . }}
+{{/* Set default titles for node pages */}}
+{{ $title := .Title }}
+{{ if and (not $title) .IsNode }}
+  {{ if eq .Type "post" }}
+    {{ $title = i18n "posts" }}
+  {{ else if eq .Type "talk" }}
+    {{ $title = i18n "talks" }}
+  {{ else if eq .Type "publication" }}
+    {{ $title = i18n "publications" }}
+  {{end}}
+{{end}}
 
-  <div class="article-container">
+<main class="pub">
 
-    {{ if .Params.abstract }}
-    <h3>{{ i18n "abstract" }}</h3>
-    <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
-    {{ end }}
+  <h1 class="hidden" >{{ $title }}</h1>
 
-    {{ if and (.Params.publication_types) (ne (index .Params.publication_types 0) "0") }}
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">{{ i18n "publication_type" }}</div>
-          <div class="col-12 col-md-9">
-            {{ $pub_types := partial "functions/get_pub_types" $ }}
-            {{ range $index, $pubtype := .Params.publication_types }}
-            <a href='{{ "publication/" | relLangURL }}?type={{ index $pub_types (int .) }}'>
-              {{ index $pub_types (int .) }}
-            </a>
+    <aside class="mobile-aside fnt-s">
+      <div class="wrapper">
+      <div class="aside-head">
+        <div class="page-context fnt-s">
+          <a href="/{{ .Lang }}/publication" class="blue bold">{{i18n "publication"}}</a>
+        </div>
+        <button class="d-md-block d-lg-none btn btn-info toggleCollapse" type="button" data-toggle="collapse" data-target=".aside-collapse">Info</button>
+      </div>
+
+      <div class="aside-collapse dont-collapse-sm">
+        <div class="pub-authors bold">
+          {{ partial "page_metadata_authors" $page }}
+        </div>
+
+        <div class="pub-year bold">
+          {{ if not (in (slice "talk" "page") $page.Type) }}
+          <span class="article-date">
+            {{ $date := $page.Lastmod.Format site.Params.date_format }}
+            {{ if eq $page.Type "publication" }}
+              {{ $date = $page.Date.Format (site.Params.publications.date_format | default "January, 2006") }}
+            {{ else }}
+              {{ if ne $page.Params.Lastmod $page.Params.Date }}
+                  {{ i18n "last_updated" }}
+              {{ end }}
+            {{ end }}
+            {{ $date }}
+          </span>
+          {{ end }}
+        </div>
+
+        <div class="pub-links">
+          {{ partial "page_links_div.html" $page }}
+        </div>
+
+        <div class="pub-project listing">
+          <h2>{{ i18n "project" }}</h2>
+          <div>
+            {{ if $page.Params.projects }}
+              {{ range $page.Params.projects }}
+                <a class="my-1 mr-1 piwik_link" href='{{"publication/"| relLangURL }}?project={{.}}'>
+                  {{.}}
+                </a>
+              {{ end }}
             {{ end }}
           </div>
         </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    {{ end }}
 
-    {{ if .Params.publication }}
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">{{ i18n "publication" }}</div>
-          <div class="col-12 col-md-9">{{ .Params.publication | markdownify }}</div>
+        <div class="pub-project listing">
+          <h2>{{ i18n "publication_type" }}</h2>
+          <div>
+            {{ $pub_types := partial "functions/get_pub_types" $ }}
+            {{ range $index, $pubtype := .Params.publication_types }}
+              <a href='{{ "publication/" | relLangURL }}?type={{ index $pub_types (int .) }}'>
+                {{ index $pub_types (int .) }}
+              </a>
+            {{ end }}
+          </div>
         </div>
+
+        <div class="pub-project listing">
+          <h2>{{ i18n "publication" }}</h2>
+          <div>
+            {{ $pub_types := partial "functions/get_pub_types" $ }}
+            {{ .Params.publication | markdownify }}
+          </div>
+        </div>
+
+        <div class="pub-project listing">
+          <h2>{{ i18n "contact" }}</h2>
+          <div>
+            {{ partial "page_author" . }}
+          </div>
+        </div>
+
+        <!--{{ partial "share" . }}-->
       </div>
-      <div class="col-md-1"></div>
+      </div>
+    </aside>
+
+    <div class="content">
+      <div class="grid">
+      <div class="row">
+        <div class="spacer col-1"></div>
+        
+        <div class="article-container col-4">
+
+          <div class="pub-authors bold mobile">
+            {{ partial "page_metadata_authors" $page }}
+            <br/><br/>
+          </div>
+
+          <h1 class="h1 fnt-xl bold" >{{ $title }}</h1>
+
+          {{ with $page.Params.subtitle }}
+              <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
+          {{end}}
+
+          {{ if .Params.abstract }}
+            <!--<h2>{{ i18n "abstract" }}</h2>-->
+            <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
+          {{ end }}
+
+          <div class="article-style">{{ .Content }}</div>
+
+          {{ partial "page_footer" . }}
+
+        </div>
+
+        <div class="spacer col-1"></div>
+      </div>
+      </div>
+
+      {{ partial "share_button" . }}
     </div>
-    <div class="d-md-none space-below"></div>
-    {{ end }}
-
-    <div class="space-below"></div>
-
-    <div class="article-style">{{ .Content }}</div>
-
-    {{ partial "page_footer" . }}
-
-  </div>
-</div>
+</main>
 {{- end -}}

@@ -1,0 +1,33 @@
+/*************************************************
+* STARt EXTERNAL PART
+**************************************************/
+
+@import "./../../../kwb/src/scss/modules/variables";
+@import "./../../../kwb/src/scss/vendors/mixins";
+
+@import "./../../../kwb/src/scss/modules/typography";
+@import "./../../../kwb/src/scss/modules/flexgrid";
+
+@import "./../../../kwb/src/scss/modules/reset";
+@import "./../../../kwb/src/scss/modules/layout";
+
+@import "./../../../kwb/src/scss/modules/header";
+@import "./../../../kwb/src/scss/modules/footer";
+@import "./../../../kwb/src/scss/modules/nav";
+@import "./../../../kwb/src/scss/modules/aside";
+
+@import "./../../../kwb/src/scss/modules/classes";
+
+@import './../../../kwb/src/scss/templates/pages/page/social-sharing';
+@import './../../../kwb/src/scss/templates/pages/page/page-aside';
+
+/*************************************************
+* END EXTERNAL PART
+**************************************************/
+
+@import 'font';
+@import 'root';
+@import 'algolia';
+@import 'publication';
+@import 'navbar';
+@import 'footer';
