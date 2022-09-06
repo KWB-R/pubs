@@ -3,16 +3,15 @@
   command = "hugo --gc --minify"
 
 # URL: https://publications.kompetenz-wasser.de/ 
-[context.production.environment]
-  HUGO_VERSION = "0.74.3"
-  HUGO_ENV = "production"
-  HUGO_BASEURL = "https://publications.kompetenz-wasser.de/"
-  HUGO_ENABLEGITINFO = "false"
-  ALGOLIA_DE_PUBS_INDEX_NAME = "prod_kwb_de_pubs"
-  ALGOLIA_EN_PUBS_INDEX_NAME = "prod_kwb_en_pubs"
-  
 [context.production]
   command = "hugo --gc --minify && algolia/run-index-upload.sh -p"
+  [context.production.environment]
+    HUGO_VERSION = "0.74.3"
+    HUGO_ENV = "production"
+    HUGO_BASEURL = "https://publications.kompetenz-wasser.de/"
+    HUGO_ENABLEGITINFO = "false"
+    ALGOLIA_DE_PUBS_INDEX_NAME = "prod_kwb_de_pubs"
+    ALGOLIA_EN_PUBS_INDEX_NAME = "prod_kwb_en_pubs"
 
 # URL: https://dev--kwb.netlify.app/  
 [context.dev.environment]
