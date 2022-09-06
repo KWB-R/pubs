@@ -14,15 +14,14 @@
     ALGOLIA_EN_PUBS_INDEX_NAME = "prod_kwb_en_pubs"
 
 # URL: https://dev--kwb.netlify.app/  
-[context.dev.environment]
-  HUGO_VERSION = "0.74.3"
-  HUGO_ENV = "development"
-  HUGO_ENABLEGITINFO = "false"
-  ALGOLIA_DE_PUBS_INDEX_NAME = "dev_kwb_de_pubs"
-  ALGOLIA_EN_PUBS_INDEX_NAME = "dev_kwb_en_pubs"
-
 [context.dev]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && algolia/run-index-upload.sh -p"
+  [context.dev.environment]
+    HUGO_VERSION = "0.74.3"
+    HUGO_ENV = "development"
+    HUGO_ENABLEGITINFO = "false"
+    ALGOLIA_DE_PUBS_INDEX_NAME = "dev_kwb_de_pubs"
+    ALGOLIA_EN_PUBS_INDEX_NAME = "dev_kwb_en_pubs"
   
 [context.deploy-preview]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
