@@ -2,11 +2,11 @@
   publish = "public"
   command = "hugo --gc --minify"
 
-# URL: https://publications.kompetenz-wasser.de/ 
+# URL: https://kwb.netlify.app/ 
 [context.production.environment]
   HUGO_VERSION = "0.74.3"
   HUGO_ENV = "production"
-  HUGO_BASEURL = "https://publications.kompetenz-wasser.de/"
+  #HUGO_BASEURL = "https://kwb.netlify.app/"
   HUGO_ENABLEGITINFO = "false"
   ALGOLIA_DE_PUBS_INDEX_NAME = "prod_kwb_de_pubs"
   ALGOLIA_EN_PUBS_INDEX_NAME = "prod_kwb_en_pubs"
