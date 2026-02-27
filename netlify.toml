@@ -2,43 +2,57 @@
   publish = "public"
   command = "hugo --gc --minify"
 
-# URL: https://kwb.netlify.app/ 
-[context.production.environment]
+# Globale Umgebungsvariablen für alle Builds (spart Wiederholungen)
+[build.environment]
   HUGO_VERSION = "0.74.3"
-  HUGO_ENV = "production"
-  #HUGO_BASEURL = "https://kwb.netlify.app/"
   HUGO_ENABLEGITINFO = "false"
-  ALGOLIA_DE_PUBS_INDEX_NAME = "prod_kwb_de_pubs"
-  ALGOLIA_EN_PUBS_INDEX_NAME = "prod_kwb_en_pubs"
-  
+
+# ------------------------------------------------------------------
+# PRODUCTION CONTEXT
+# URL: https://publications.kompetenz-wasser.io/  
+# ------------------------------------------------------------------
 [context.production]
   command = "hugo --gc --minify && algolia/run-index-upload.sh -p"
 
+[context.production.environment]
+  HUGO_ENV = "production"
+  HUGO_BASEURL = "https://publications.kompetenz-wasser.io/"
+  ALGOLIA_DE_PUBS_INDEX_NAME = "prod_kwb_de_pubs"
+  ALGOLIA_EN_PUBS_INDEX_NAME = "prod_kwb_en_pubs"
+
+# ------------------------------------------------------------------
+# DEV BRANCH CONTEXT
 # URL: https://dev--kwb.netlify.app/  
+# ------------------------------------------------------------------
+[context.dev]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && algolia/run-index-upload.sh -p"
+
 [context.dev.environment]
-  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "development"
-  HUGO_ENABLEGITINFO = "false"
   ALGOLIA_DE_PUBS_INDEX_NAME = "dev_kwb_de_pubs"
   ALGOLIA_EN_PUBS_INDEX_NAME = "dev_kwb_en_pubs"
 
-[context.dev]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && algolia/run-index-upload.sh -p"
-  
+# ------------------------------------------------------------------
+# DEPLOY PREVIEW CONTEXT (Pull Requests)
+# ------------------------------------------------------------------
 [context.deploy-preview]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "development"
 
+# ------------------------------------------------------------------
+# BRANCH DEPLOY CONTEXT (Andere Branches)
+# ------------------------------------------------------------------
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.74.3"
   HUGO_ENV = "development"
 
+# ------------------------------------------------------------------
+# HEADERS
+# ------------------------------------------------------------------
 [[headers]]
   for = "*.webmanifest"
   [headers.values]

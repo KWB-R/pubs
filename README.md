@@ -17,12 +17,12 @@ mode feature
 
 ***Netlify***: is now used for *production*, commits to *master* will be pushed to: 
 
-https://publications.kompetenz-wasser.de/de/publications
+https://publications.kompetenz-wasser.io/de/publications
 
 
 ### Former Deploy Workflows
 
-  + ***GitLab Pages*** (https://publications.kompetenz-wasser.de/publications): currently redirected to KWB subdomain, otherwise: https://kwb-r.gitlab.io/pubs (CI-build: https://gitlab.com/KWB-R/pubs/-/pipelines)
+  + ***GitLab Pages*** (https://publications.kompetenz-wasser.io/publications): currently redirected to KWB subdomain, otherwise: https://kwb-r.gitlab.io/pubs (CI-build: https://gitlab.com/KWB-R/pubs/-/pipelines)
    
   + ***GitHub Pages*** (https://kwb-r.github.io/pubs): only for "dev" branch, ends with free contingent of Travis for private repos): [![Travis](https://travis-ci.com/KWB-R/pubs.svg?token=xLsqyFUTkNjVT34QzX9D&branch=dev)](https://travis-ci.com/KWB-R/pubs)
  
